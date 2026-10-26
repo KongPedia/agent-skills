@@ -10,8 +10,8 @@
       "origin": "Original Project Blueprints framework-boundary guidance with official documentation links; not an upstream documentation or skill import.",
       "local": "skills/fastapi-backend/SKILL.md",
       "canonical_source": "source/.agents/skills/fastapi-backend/SKILL.md",
-      "source_sha256": "babde8bddfceb002892212934caf312f06ab05c8fbc9d20839c8996321e9ef7c",
-      "payload_sha256": "babde8bddfceb002892212934caf312f06ab05c8fbc9d20839c8996321e9ef7c",
+      "source_sha256": "d0f1e0b3fbfe642b24ba135c75d918a783e4ae7cb3c9867144f22c762054ac87",
+      "payload_sha256": "43f2e5efdcb96a7688de4ff35caf06cb5ebd82b7fe7c1356d8dbfa3f1f0268e9",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     }
   ],

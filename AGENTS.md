@@ -7,9 +7,10 @@ own consuming projects' code layouts, commands, domain contracts, credentials, t
 
 - Follow the latest user request and consuming project authority. Do not publish, commit, tag, add remotes, install
   plugins or change host settings without the corresponding authorization. Public publication is not yet authorized.
-- Current release authorization covers private creation/push of `KongPedia/agent-skills` and
-  `KongPedia/project-blueprints`, with matching `v0.1.0` tags/releases. It does not authorize public visibility or
-  unrelated releases/host changes. Git/publication work belongs to the assigned integration owner, not sibling doc workers.
+- Existing release history is not authorization for new commits, pushes, tags, publication or host changes.
+  Obtain corresponding task-specific authority; Git/publication work belongs to the assigned integration owner.
+  Shared maintainer docs stay generic. Keep consumer-specific migration receipts in that consumer or external task evidence,
+  not in this reusable provider; preserve accurate upstream/derivation provenance even when it names an originating repository.
 - `catalog.json` owns stable bundle identities, the release version and exactly one owner per reusable skill.
   `requires` documents composition; it is not a host dependency schema or automatic installation mechanism.
 - Canonical generic roles live in `source/agents`; Claude adapters and optional Codex exports are generated, not two authored copies. Codex plugin role auto-loading is not supported in the inspected clients.

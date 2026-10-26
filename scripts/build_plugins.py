@@ -17,6 +17,13 @@ from urllib.parse import unquote, urlsplit
 INLINE = re.compile(r"!?\[([^\]\n]*)\]\(([^)\n]+)\)")
 REFERENCE = re.compile(r"^\[([^\]\n]+)\]:\s*(\S+)", re.MULTILINE)
 IDENTIFIER = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
+# SemVer 2.0.0: https://semver.org/ (numeric prerelease identifiers have no leading zeroes).
+SEMVER = re.compile(
+    r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)"
+    r"(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)"
+    r"(?:\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?"
+    r"(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
+)
 # These are consuming-project contracts, not files installed from a plugin cache.
 PROJECT_CONTEXT = {
     "README.md", ".agents/README.md",
@@ -53,10 +60,12 @@ def json_bytes(value) -> bytes:
 
 def local_target(raw: str) -> tuple[str, str] | None:
     target = raw.split(' "', 1)[0].strip("<>")
-    if not target or target.startswith("#") or urlsplit(target).scheme:
-        return None
-    if target.startswith(("/", "\\")):
+    decoded = unquote(target).lstrip()
+    scheme = urlsplit(decoded).scheme
+    if decoded.startswith(("/", "\\")) or re.match(r"^[A-Za-z]:", decoded) or scheme == "file":
         raise ValueError(f"Absolute Markdown resource is not portable: {target}")
+    if not target or target.startswith("#") or scheme:
+        return None
     path, _, anchor = target.partition("#")
     return unquote(path), anchor
 
@@ -84,7 +93,7 @@ def load_source(root: Path):
     catalog = json.loads((root / "catalog.json").read_text())
     if catalog.get("schema_version") != 1 or not IDENTIFIER.fullmatch(catalog.get("marketplace", "")):
         raise ValueError("Invalid catalog schema or marketplace identity")
-    if not re.fullmatch(r"\d+\.\d+\.\d+(?:-[a-zA-Z0-9.-]+)?", catalog.get("version", "")):
+    if not SEMVER.fullmatch(catalog.get("version", "")):
         raise ValueError("Catalog version must be an explicit semantic version")
     plugins = catalog.get("plugins", [])
     ids = [p["id"] for p in plugins]

@@ -9,7 +9,7 @@ For `plugin X not found in marketplace konglabs-agent-skills`, check that the re
 If it has not, register it **once** on the host:
 
 ```bash
-codex plugin marketplace add ~/Desktop/workspace/konglabs/agent-skills
+codex plugin marketplace add /path/to/agent-skills
 ```
 
 Or, from the reviewed `agent-skills` checkout:
@@ -29,7 +29,7 @@ registration and refresh. Machine paths, caches, credentials and trust records d
 
 ## Native Copier generation
 
-The authorized private destinations are [agent-skills](https://github.com/KongPedia/agent-skills) and
+The existing published private sources are [agent-skills](https://github.com/KongPedia/agent-skills) and
 [project-blueprints](https://github.com/KongPedia/project-blueprints), with matching first-release `v0.1.0` tags/releases.
 With Codex available, this marketplace registered and the project repository answer left empty:
 

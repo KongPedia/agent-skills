@@ -7,6 +7,18 @@ description: Master REST and GraphQL API design principles to build intuitive, s
 
 Master REST and GraphQL API design principles to build intuitive, scalable, and maintainable APIs that delight developers and stand the test of time.
 
+## Framework boundary
+
+REST/GraphQL resource, status, validation, pagination, authorization and error contracts are framework-neutral.
+Both FastAPI and Litestar projects select this `api-contracts` procedure together with their framework bundle;
+use `fastapi:fastapi-backend` or `litestar:litestar-backend` only for that framework's routing, DI, lifecycle and tests.
+Neither framework is a prerequisite for applying the common contract principles.
+
+Use the [REST contract reference](references/rest-best-practices.md) and [API checklist](assets/api-design-checklist.md)
+for shared review. The included [REST example](assets/rest-api-template.py) is specifically a FastAPI illustration,
+not a universal scaffold or production-ready implementation. Do not copy its FastAPI imports, dependency overrides
+or exception machinery into Litestar; adapt the same wire contract through the selected framework's native APIs.
+
 ## When to Use This Skill
 
 - Designing new REST or GraphQL APIs

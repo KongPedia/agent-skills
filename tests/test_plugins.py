@@ -1,6 +1,8 @@
 """Offline payload and trust-boundary checks; no model, host configuration or hardware."""
 from __future__ import annotations
 
+import ast
+import asyncio
 import hashlib
 import importlib.util
 import json
@@ -9,6 +11,7 @@ import shutil
 import subprocess
 import sys
 import tomllib
+from types import SimpleNamespace
 
 import pytest
 
@@ -24,6 +27,116 @@ def builder():
 
 def files(root):
     return {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob("*") if p.is_file()}
+
+
+@pytest.fixture
+def source_repo(tmp_path):
+    source = tmp_path / "source-repo"
+    shutil.copytree(ROOT / "source", source / "source")
+    shutil.copytree(ROOT / "hooks", source / "hooks")
+    shutil.copy(ROOT / "catalog.json", source / "catalog.json")
+    return source
+
+
+def add_reviewed_markdown(source, text):
+    relative = ".agents/skills/nextjs-app-router/portability.md"
+    path = source / "source" / relative
+    path.write_text(text)
+    manifest_path = source / "source/.agents/skill-sources.json"
+    manifest = json.loads(manifest_path.read_text())
+    authored = next(item for item in manifest["authored_skills"] if item["name"] == "nextjs-app-router")
+    authored["files"].append({"local": relative, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
+    manifest_path.write_text(json.dumps(manifest))
+
+
+@pytest.mark.parametrize("target", [
+    "file:///tmp/private.md", "FILE:///tmp/private.md",
+    "C:/private.md", r"C:\private.md", r"\\server\share\private.md", "//server/share/private.md",
+    "%2Ftmp%2Fprivate.md", "%5C%5Cserver%5Cshare%5Cprivate.md",
+    "C%3A%5Cprivate.md", "file%3A%2F%2F%2Ftmp%2Fprivate.md",
+    " C:/private.md", "%20C%3A%5Cprivate.md",
+])
+@pytest.mark.parametrize("reference", [False, True])
+def test_machine_local_markdown_is_rejected_without_output_changes(tmp_path, source_repo, target, reference):
+    text = f"[private][resource]\n\n[resource]: {target}\n" if reference else f"[private]({target})\n"
+    add_reviewed_markdown(source_repo, text)
+    output = tmp_path / "output"
+    for relative in ("plugins/common/keep.txt", ".agents/plugins/marketplace.json", ".claude-plugin/marketplace.json"):
+        path = output / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"existing output")
+    before = files(output)
+    with pytest.raises(ValueError):
+        builder().build(source_repo, output)
+    assert files(output) == before
+
+
+def test_external_and_fragment_markdown_links_are_preserved(tmp_path, source_repo):
+    text = ("# Portable links\n\n"
+            "[website](https://example.com/guide?q=yes#section)\n"
+            "[email](mailto:maintainer@example.com)\n"
+            "[local](#portable-links)\n\n"
+            "[website-ref]: https://example.com/guide?q=yes#section\n"
+            "[email-ref]: mailto:maintainer@example.com\n"
+            "[local-ref]: #portable-links\n")
+    add_reviewed_markdown(source_repo, text)
+    output = tmp_path / "output"
+    builder().build(source_repo, output)
+    assert (output / "plugins/nextjs/skills/nextjs-app-router/portability.md").read_text() == text
+
+
+@pytest.mark.parametrize("version", ["01.2.3", "1.2.3-.", "1.2.3-a..b", "1.2.3-01"])
+def test_invalid_semantic_version_is_rejected_before_output_changes(tmp_path, source_repo, version):
+    catalog_path = source_repo / "catalog.json"
+    catalog = json.loads(catalog_path.read_text())
+    catalog["version"] = version
+    catalog_path.write_text(json.dumps(catalog))
+    output = tmp_path / "output"
+    output.mkdir()
+    (output / "keep.txt").write_bytes(b"existing output")
+    before = files(output)
+    with pytest.raises(ValueError, match="explicit semantic version"):
+        builder().build(source_repo, output)
+    assert files(output) == before
+
+
+@pytest.mark.parametrize("version", ["0.1.1-rc.1", "1.2.3-alpha.0.z-1", "1.2.3+build.01", "1.2.3-rc.1+sha.abc"])
+def test_semantic_prerelease_and_build_versions_reach_generated_manifests(tmp_path, source_repo, version):
+    catalog_path = source_repo / "catalog.json"
+    catalog = json.loads(catalog_path.read_text())
+    catalog["version"] = version
+    catalog_path.write_text(json.dumps(catalog))
+    output = tmp_path / "output"
+    builder().build(source_repo, output)
+    for plugin in catalog["plugins"]:
+        for relative in ("plugin.json", ".claude-plugin/plugin.json", "provenance.json"):
+            assert json.loads((output / "plugins" / plugin["id"] / relative).read_text())["version"] == version
+
+
+def test_rest_api_missing_user_emits_structured_error_details():
+    """Exercise the real route body, not FastAPI routing or Pydantic validation."""
+    path = ROOT / "source/.agents/skills/api-design-principles/assets/rest-api-template.py"
+    module = ast.parse(path.read_text())
+    route = next(node for node in module.body if isinstance(node, ast.AsyncFunctionDef) and node.name == "get_user")
+    # Remove only import-time FastAPI decorator/default wiring; keep the route body intact.
+    route.decorator_list = []
+    route.args.defaults = []
+
+    class CapturedHTTPException(Exception):
+        def __init__(self, *, status_code, detail):
+            self.status_code = status_code
+            self.detail = detail
+            super().__init__(detail)
+
+    namespace = {"HTTPException": CapturedHTTPException, "status": SimpleNamespace(HTTP_404_NOT_FOUND=404)}
+    exec(compile(ast.Module(body=[route], type_ignores=[]), str(path), "exec"), namespace)
+    with pytest.raises(CapturedHTTPException) as raised:
+        asyncio.run(namespace["get_user"]("999"))
+    assert raised.value.status_code == 404
+    assert raised.value.detail == {
+        "message": "User not found",
+        "details": [{"field": "user_id", "message": "User 999 not found", "code": "not_found"}],
+    }
 
 
 def test_catalog_has_exact_nonoverlapping_owners():

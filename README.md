@@ -5,7 +5,7 @@ framework bundles are folders in this repository, not separate repositories and 
 
 **Private first-release destinations:** [KongPedia/agent-skills](https://github.com/KongPedia/agent-skills) and
 [KongPedia/project-blueprints](https://github.com/KongPedia/project-blueprints), with matching `v0.1.0` tags/releases.
-Private creation/push/release is authorized; public publication is not. A marketplace is a plugin index, not a public
+Existing releases do not authorize new publication or visibility changes. A marketplace is a plugin index, not a public
 store: this checkout or the authenticated private Git source works without a directory listing.
 
 ## First-run recovery: plugin not found
@@ -14,7 +14,7 @@ If Codex reports `plugin X not found in marketplace konglabs-agent-skills`, firs
 has been registered on this host. If not, register it **once**:
 
 ```bash
-codex plugin marketplace add ~/Desktop/workspace/konglabs/agent-skills
+codex plugin marketplace add /path/to/agent-skills
 ```
 
 Or, from this `agent-skills` checkout:
@@ -89,6 +89,11 @@ The Copier profile supplies composition; this repository's catalog contains the 
 | C++ firmware | `common`, `cpp-firmware` |
 | Python API + React / Next.js monorepo | Union of those selections; common cross-package guidance is task-triggered |
 | Any project requesting a session reminder | Separately opt in to `session-guidance` and review hook trust |
+
+REST/API contracts are shared, not FastAPI-specific: both FastAPI and Litestar select `api-contracts` plus their
+respective framework bundle. Framework skills implement the same wire-contract principles through their own routing,
+DI, errors and test APIs. The API-design skill's Python REST asset is an illustrative FastAPI example, not a Litestar
+scaffold or a reason to install FastAPI in another framework.
 
 A single Next.js project gets no dedicated Python bundle. In a mixed-language monorepo the host has the union, while
 project package routing chooses the relevant instructions for the actual task. Skill metadata can still be visible;
