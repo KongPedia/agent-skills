@@ -1,0 +1,8 @@
+{
+  "name": "cpp-firmware",
+  "version": "0.1.0",
+  "description": "C++ firmware ownership, timing, resources and non-actuating checks",
+  "author": {
+    "name": "Konglabs"
+  }
+}

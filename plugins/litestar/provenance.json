@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "bundle": "litestar",
+  "version": "0.1.0",
+  "sources": [],
+  "files": [],
+  "authored_files": [
+    {
+      "name": "litestar-backend",
+      "origin": "Original Project Blueprints Litestar development/review procedure linked to official versioned documentation; no upstream skill prose or ecosystem policy imported.",
+      "local": "skills/litestar-backend/SKILL.md",
+      "canonical_source": "source/.agents/skills/litestar-backend/SKILL.md",
+      "source_sha256": "307fd40c493d769a3c7ff0fac1257a3f8bc328f439c54d54b33cbe5cf2188a98",
+      "payload_sha256": "3a1568f185c1044a630e1cf54479576ab0014b9006be13e8b1c8d782a67d0a5a",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "supporting_resources": [],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+}

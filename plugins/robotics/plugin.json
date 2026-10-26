@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "robotics",
+  "version": "0.1.0",
+  "description": "Robot/device units, clocks, authority, freshness and safety boundaries",
+  "author": {
+    "name": "Konglabs"
+  }
+}

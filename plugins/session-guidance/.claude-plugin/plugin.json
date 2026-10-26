@@ -1,0 +1,8 @@
+{
+  "name": "session-guidance",
+  "version": "0.1.0",
+  "description": "Optional advisory-only SessionStart reminder; requires separate hook trust",
+  "author": {
+    "name": "Konglabs"
+  }
+}

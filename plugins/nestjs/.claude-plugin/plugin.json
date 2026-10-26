@@ -1,0 +1,8 @@
+{
+  "name": "nestjs",
+  "version": "0.1.0",
+  "description": "NestJS modules, providers, DTO and HTTP boundaries",
+  "author": {
+    "name": "Konglabs"
+  }
+}

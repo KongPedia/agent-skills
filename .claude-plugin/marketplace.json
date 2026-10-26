@@ -1,0 +1,73 @@
+{
+  "name": "konglabs-agent-skills",
+  "owner": {
+    "name": "Konglabs"
+  },
+  "plugins": [
+    {
+      "name": "common",
+      "source": "./plugins/common",
+      "description": "Task-scoped shared engineering, design, testing and review procedures"
+    },
+    {
+      "name": "python",
+      "source": "./plugins/python",
+      "description": "Python package, design, error, resource, async and testing procedures"
+    },
+    {
+      "name": "typescript",
+      "source": "./plugins/typescript",
+      "description": "TypeScript runtime, module, package and type boundaries"
+    },
+    {
+      "name": "react-ui",
+      "source": "./plugins/react-ui",
+      "description": "React composition, frontend design, performance and accessibility"
+    },
+    {
+      "name": "api-contracts",
+      "source": "./plugins/api-contracts",
+      "description": "API and wire contract design and review"
+    },
+    {
+      "name": "fastapi",
+      "source": "./plugins/fastapi",
+      "description": "FastAPI HTTP, dependency and lifecycle boundaries"
+    },
+    {
+      "name": "litestar",
+      "source": "./plugins/litestar",
+      "description": "Litestar HTTP, dependency and lifecycle boundaries"
+    },
+    {
+      "name": "nestjs",
+      "source": "./plugins/nestjs",
+      "description": "NestJS modules, providers, DTO and HTTP boundaries"
+    },
+    {
+      "name": "nextjs",
+      "source": "./plugins/nextjs",
+      "description": "Next.js App Router, server/client, data and HTTP boundaries"
+    },
+    {
+      "name": "rust",
+      "source": "./plugins/rust",
+      "description": "Rust ownership, fallibility, public modules and native checks"
+    },
+    {
+      "name": "cpp-firmware",
+      "source": "./plugins/cpp-firmware",
+      "description": "C++ firmware ownership, timing, resources and non-actuating checks"
+    },
+    {
+      "name": "robotics",
+      "source": "./plugins/robotics",
+      "description": "Robot/device units, clocks, authority, freshness and safety boundaries"
+    },
+    {
+      "name": "session-guidance",
+      "source": "./plugins/session-guidance",
+      "description": "Optional advisory-only SessionStart reminder; requires separate hook trust"
+    }
+  ]
+}

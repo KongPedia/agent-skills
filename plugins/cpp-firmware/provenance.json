@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "bundle": "cpp-firmware",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "id": "jeffallan",
+      "repository": "https://github.com/Jeffallan/claude-skills.git",
+      "revision": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+      "license": "licenses/jeffallan-LICENSE",
+      "skills": [
+        "embedded-systems"
+      ],
+      "resource_scope": "Selected optional C++ firmware skill entrypoints and all referenced resources, derived from inspected ESP guidance; neutral target criteria only, no product runtime, board/pin defaults, hooks, tools or deployment commands."
+    },
+    {
+      "id": "wshobson",
+      "repository": "https://github.com/wshobson/agents.git",
+      "revision": "46891e7e60da0e52baf1050b7b6391b64e84c6d9",
+      "license": "licenses/wshobson-LICENSE",
+      "skills": [
+        "memory-safety-patterns"
+      ],
+      "dependencies": {}
+    }
+  ],
+  "files": [
+    {
+      "source_id": "jeffallan",
+      "source": "LICENSE",
+      "upstream_sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/licenses/jeffallan-LICENSE",
+        "sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241"
+      },
+      "local": "licenses/jeffallan-LICENSE",
+      "canonical_source": "source/.agents/licenses/jeffallan-LICENSE",
+      "source_sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
+      "payload_sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "LICENSE",
+      "upstream_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+      "modifications": "Removed trailing whitespace only; upstream license terms and notice are unchanged.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/wshobson-LICENSE",
+        "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
+      },
+      "local": "licenses/wshobson-LICENSE",
+      "canonical_source": "source/.agents/licenses/wshobson-LICENSE",
+      "source_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+      "payload_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/SKILL.md",
+      "upstream_sha256": "536161470752d40a2bfc3ec4b17ab5c34fd3593a8960bf8089b0ea59b6ddec1f",
+      "modifications": "Added ESP32/API/version/scope boundaries and removed null metadata. Preserved reviewed hardware profiles; removed unsupported ISR/task/register-blink copy skeletons, including unchecked queue saturation, and references existing topic criteria instead. Scoped workflow/output to necessary changes rather than mandatory drivers/tasks or hardware execution. Project Blueprints: Neutralized ESP product assumptions into optional selected-target firmware guidance; qualified ESP-IDF rules, generalized queue/persistence owners and linked generic firmware criteria; retained all five existing topic references.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/SKILL.md",
+        "sha256": "d1041af2bbfb5dfc2c82cf167860cbf26fa8654b8df7ba5109797b5c0d8f5909"
+      },
+      "local": "skills/embedded-systems/SKILL.md",
+      "canonical_source": "source/.agents/skills/embedded-systems/SKILL.md",
+      "source_sha256": "c139324c2e171bdb45550d7551a5013289dbc39a23a59d9b128de5bae52d381c",
+      "payload_sha256": "c139324c2e171bdb45550d7551a5013289dbc39a23a59d9b128de5bae52d381c",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/communication-protocols.md",
+      "upstream_sha256": "c11b9462c6bdc07aa82fe9a0d7c991e84c80416351328efb8006b33580e7da32",
+      "modifications": "Retained upstream protocol topics; removed non-ESP register-level I2C/SPI-DMA/UART/CAN implementations, including unsigned timeout wrap and fixed eight-byte reads. Added bounded error/length/ownership criteria and existing production protocol/queue pointers; no replacement driver code. Project Blueprints: Generalized selected MCU/SDK boundary; removed source-product queue paths and replaced them with explicit admission, partial-consumption and synchronization contracts; preserved timeout, length, CRC, DMA lifetime and safe saturation semantics.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/communication-protocols.md",
+        "sha256": "3697ec9d7d5694d74096f9f7202d9b77b903b23b8dbd381b74b09126fdaf0caf"
+      },
+      "local": "skills/embedded-systems/references/communication-protocols.md",
+      "canonical_source": "source/.agents/skills/embedded-systems/references/communication-protocols.md",
+      "source_sha256": "696c692b1aca6e389dd40b9ed28cc961a6eb3a05b51cc944ed8c52925574e5bd",
+      "payload_sha256": "696c692b1aca6e389dd40b9ed28cc961a6eb3a05b51cc944ed8c52925574e5bd",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/memory-optimization.md",
+      "upstream_sha256": "573eb22555200e5446dbf0c69bbb9c31b0e1e8c8f5061fc3cdd7c96a7b8668a6",
+      "modifications": "Retained upstream topic structure; replaced unsupported implementation recipes with concise ESP32/repository review criteria. Removed unsafe raw-flash/recursive-retry, live-stack painting/scanning and unchecked pool/ring-buffer/allocation/linker examples; points to existing bounded queue and ScopedPreferences and version-checked SDK headroom measurement. Project Blueprints: Generalized target/persistence terminology; replaced source-product NVS/queue links with scoped persistence and bounded-queue ownership criteria; preserved bounds, resource, power-loss and failure handling.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/memory-optimization.md",
+        "sha256": "271bd099c0ce1d3ed7a9034ac6bb4ae4795de825a67abcf0201324536f179a7d"
+      },
+      "local": "skills/embedded-systems/references/memory-optimization.md",
+      "canonical_source": "source/.agents/skills/embedded-systems/references/memory-optimization.md",
+      "source_sha256": "ce7884ca3e14d39d0a51c3a22109cfb303e0634754936f3fdd69dc7e1fd3fdc9",
+      "payload_sha256": "ce7884ca3e14d39d0a51c3a22109cfb303e0634754936f3fdd69dc7e1fd3fdc9",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/microcontroller-programming.md",
+      "upstream_sha256": "d35352d4e3a0d573e2f10037895c0658dbf44a710b6c57777ce10080ec1a1ce6",
+      "modifications": "Retained upstream peripheral topics with explicit ESP32/API/scope limits; removed STM32/ARM register/HAL, interrupt, blocking-poll, PWM/ADC/DMA/UART/clock/watchdog/sleep copy recipes in favor of source/datasheet-backed review criteria. Project Blueprints: Generalized target SDK, GPIO and interrupt guidance; removed Go2 binary-stream/product assumptions while preserving selected-protocol separation and safe no-replay behavior.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/microcontroller-programming.md",
+        "sha256": "0361bf7eaf0c2c0bb52df1be3fbded65c18cbaa9fd1aab6c5db88386ed70dceb"
+      },
+      "local": "skills/embedded-systems/references/microcontroller-programming.md",
+      "canonical_source": "source/.agents/skills/embedded-systems/references/microcontroller-programming.md",
+      "source_sha256": "531e1423a2fcec2ca2d38c66f288485ecde057349e1ed12df4f6a71bd2a71881",
+      "payload_sha256": "531e1423a2fcec2ca2d38c66f288485ecde057349e1ed12df4f6a71bd2a71881",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/power-optimization.md",
+      "upstream_sha256": "935d9bb0d93e8935479beff2eb986fac4538d965ad0dddb43bee6a48b05466a9",
+      "modifications": "Retained upstream power topics with ESP32/scope limits; removed uncalibrated sleep/clock/peripheral/GPIO/ADC/battery/RTC/current-estimator implementations. Requires existing product safe outputs, actual hardware constraints and separately authorized measurement. Project Blueprints: Generalized selected MCU/SDK and product safety terminology; retained safe outputs, actuator lease/deadline, wake, calibration and separately authorized measurement constraints.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/power-optimization.md",
+        "sha256": "54186ec70eb24cba60bc5426abc5ad74e8d57958462f3f8686199f4760445327"
+      },
+      "local": "skills/embedded-systems/references/power-optimization.md",
+      "canonical_source": "source/.agents/skills/embedded-systems/references/power-optimization.md",
+      "source_sha256": "edb1a1a2c27c360e277dc0349e523af0251a58f1503d86f7399a661bbb32e4ea",
+      "payload_sha256": "edb1a1a2c27c360e277dc0349e523af0251a58f1503d86f7399a661bbb32e4ea",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/rtos-patterns.md",
+      "upstream_sha256": "feab7e2d9a8026c602ea92cb0ac4d6ad47714291d373ab18201979b7ac4f2931",
+      "modifications": "Retained upstream RTOS topics with ESP-IDF byte-unit/framework-scheduler/SMP/volatile/private-config limits; removed unsupported task/queue/mutex/semaphore/timer/event/memory/notification skeletons rather than presenting unchecked platform/error-handling examples. Project Blueprints: Generalized selected RTOS/API scope and explicitly qualified framework-owned ESP scheduler/config assumptions; preserved task/queue failure handling, stack units, ISR safety and synchronization criteria.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/rtos-patterns.md",
+        "sha256": "39b8debafb19d471e49e83b74d8098a497b73d3e02b949a4860385c1b13258bb"
+      },
+      "local": "skills/embedded-systems/references/rtos-patterns.md",
+      "canonical_source": "source/.agents/skills/embedded-systems/references/rtos-patterns.md",
+      "source_sha256": "d84515ac17031aacf025eb833d42f28943efef047879b546d35b3db57cb0c3fa",
+      "payload_sha256": "d84515ac17031aacf025eb833d42f28943efef047879b546d35b3db57cb0c3fa",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/systems-programming/skills/memory-safety-patterns/SKILL.md",
+      "upstream_sha256": "e23ee740f583c16e7633be4ee76ff028b8c9c486c6417fdfb69e0beb886327ca",
+      "modifications": "Added ESP32/C++ standard, ownership, allocation, tool and authorization boundaries; corrected blanket raw-pointer prohibition. Project Blueprints: Neutralized ESP-only applicability into explicit optional native/firmware scope; added precise routing, firmware reference and conditional host diagnostics; removed incorrect total language-safety ordering.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/memory-safety-patterns/SKILL.md",
+        "sha256": "63a43567f4656199946939d3894ba2fc0b7c61c77640f2b1f52c65e4159d67af"
+      },
+      "local": "skills/memory-safety-patterns/SKILL.md",
+      "canonical_source": "source/.agents/skills/memory-safety-patterns/SKILL.md",
+      "source_sha256": "8cfe5997826228741f4cac7e886f38c7dd91fa91f77e1fe9f52960068131ee34",
+      "payload_sha256": "8cfe5997826228741f4cac7e886f38c7dd91fa91f77e1fe9f52960068131ee34",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/systems-programming/skills/memory-safety-patterns/references/details.md",
+      "upstream_sha256": "c07b8a66b6fd7afc6e957e3443cdbfa17787370d41e2ef16372eb7dd2b551a44",
+      "modifications": "Added ESP applicability boundary; Database shares one mutable mutex and const find-based reads; socket deleter frees invalid-descriptor storage; removed throwing generic destructor rollback; corrected shared_ptr exception-safety claim. Made host socket acquisition exception-safe by owning allocated descriptor storage before socket(); scoped Rust read guard before write acquisition to prevent self-deadlock. Project Blueprints: Neutralized ESP-only applicability; added firmware reference and excerpt limits. Checked moved-from unique ownership and socket acquisition failure, matched GCC C cleanup callback pointer type, exposed buffered file-write status, initialized context capacity, clarified span lifetime limits, supplied missing illustrative definitions/includes/types.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/memory-safety-patterns/references/details.md",
+        "sha256": "91d450b3a66444872d56ce4061e4126de416510172494fe7f6cf4c937ca1b882"
+      },
+      "local": "skills/memory-safety-patterns/references/details.md",
+      "canonical_source": "source/.agents/skills/memory-safety-patterns/references/details.md",
+      "source_sha256": "50ea510e76ae9feb328fa6ab6ede7a857e18d7fa3446b92cd7a588b4813b33c6",
+      "payload_sha256": "50ea510e76ae9feb328fa6ab6ede7a857e18d7fa3446b92cd7a588b4813b33c6",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "authored_files": [],
+  "supporting_resources": [
+    {
+      "local": "references/architecture.md",
+      "canonical_source": "source/.agents/references/architecture.md",
+      "source_sha256": "0996b7537b72ed63748bd288cbacc210eaf0969c7b57a97b2709dd2efec83978",
+      "payload_sha256": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "local": "references/cpp-firmware.md",
+      "canonical_source": "source/.agents/references/cpp-firmware.md",
+      "source_sha256": "3ca63b29c6554b1da42d9d49aef243b654c91258a1bf210138ab5a5d039a7d34",
+      "payload_sha256": "3ca63b29c6554b1da42d9d49aef243b654c91258a1bf210138ab5a5d039a7d34",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "local": "references/development.md",
+      "canonical_source": "source/.agents/references/development.md",
+      "source_sha256": "d3247be5b674a951db7e135ae6dfa2e7adddc1bda993a735a7d07fca0f67f8e6",
+      "payload_sha256": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "local": "references/engineering.md",
+      "canonical_source": "source/.agents/references/engineering.md",
+      "source_sha256": "1dad6033ffb06ab9f633e1d562e57c12bf1527a45943807f4599c37038067b1b",
+      "payload_sha256": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+}

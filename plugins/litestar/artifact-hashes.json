@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "df3a0cb052798b6c7da16b1419d325514e7da6d61db2b086b92170b2852304bb",
+    "DEPENDENCIES.md": "855c2c79fc296021be56773f9fb560ab0e27b38c1943148dd45b9e0743cabf40",
+    "THIRD-PARTY-NOTICES.md": "64c9725e1939e7e4bdfcd9cf3a956dc964c93e0d1582e0dfa2fa43d6f79263b7",
+    "plugin.json": "45d01bcf3e93b661d617aa78da50cb7e0069ed2a620e9ca43ee9647e66a74ffe",
+    "provenance.json": "f35afb50d0c91b453aebf62071f1fc0049e5410c296ffcee89b809a1225078a6",
+    "skills/litestar-backend/SKILL.md": "3a1568f185c1044a630e1cf54479576ab0014b9006be13e8b1c8d782a67d0a5a"
+  }
+}

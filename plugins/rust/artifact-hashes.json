@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "8aa150d9c2f73dd1b1af64bde50fe437d7d9fd9079225aed74f3f024eeaf5e76",
+    "DEPENDENCIES.md": "ce2ab7efa52dd9cedd43a76ad940a71cc796b5eccf4f93acaa0b638c68a708bd",
+    "THIRD-PARTY-NOTICES.md": "cb2d34b8f325a4f8d9885174cc08736e82f3886637e2a99d4cb56849f3f95ea0",
+    "licenses/wshobson-LICENSE": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+    "plugin.json": "3900cc0fc44aab08414f4f0ffeb6d3d0238d4fe7c556e1222de159682083d052",
+    "provenance.json": "57d328e1ef86455270717de446f013d4fc2a0c335e82c2ac6a71a408ca9abaff",
+    "references/architecture.md": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+    "references/development.md": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+    "references/engineering.md": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
+    "references/rust.md": "60e2c77abd4e93db3c9fc5f39922788cd6677a02d8bb097f8e53eabfdcd5156c",
+    "skills/rust-async-patterns/SKILL.md": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
+    "skills/rust-async-patterns/references/details.md": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
+    "skills/rust-best-practices/SKILL.md": "0adacbf41980b03a2bb77cc6423dd115568af53b1d238b726f65e6758345af14",
+    "skills/rust-best-practices/references/apollo-LICENSE.md": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
+    "skills/rust-best-practices/references/chapter_01.md": "5445dc21afdbed2868f36ed0af83453003b5e251d3b0007811fe84db7e723e16",
+    "skills/rust-best-practices/references/chapter_02.md": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093",
+    "skills/rust-best-practices/references/chapter_03.md": "d4804891228cbb81cb8fab8465302bddac356c2d777ba55f0261adf999b9425b",
+    "skills/rust-best-practices/references/chapter_04.md": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88",
+    "skills/rust-best-practices/references/chapter_05.md": "2f1c8da1bab7eecb105c31575ae6e015ec2e87f3f8ed11c4a3eed25ab46bf0b3",
+    "skills/rust-best-practices/references/chapter_06.md": "311f124a563f0be390e1ef5d45900f87990b3fe2f971dab57b7cfbf29b00616b",
+    "skills/rust-best-practices/references/chapter_07.md": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2",
+    "skills/rust-best-practices/references/chapter_08.md": "893ca1f0b4bd9e0383feac48f6fb675bd02c8e6afc84575f82b9d3ac0ad91ff1",
+    "skills/rust-best-practices/references/chapter_09.md": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344",
+    "skills/rust-best-practices/references/google-rust-style-guide.md": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
+    "skills/rust-best-practices/references/google-styleguide-LICENSE.md": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+    "skills/rust-best-practices/references/google-styleguide-licensing.md": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33"
+  }
+}

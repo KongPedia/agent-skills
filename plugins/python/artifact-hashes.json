@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "975c4f783f67ec73fcad5ae3acdd994e1922db1e86c09333491a95884b1cf48d",
+    "DEPENDENCIES.md": "ff3f52ec5abda76883870c2c203ef2ae9ca0ec1929df7c58b95e3749217d1e79",
+    "THIRD-PARTY-NOTICES.md": "c3beedfa82457314ac786d91756408324ef3d257336459e123055a2a91c15230",
+    "licenses/wshobson-LICENSE": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+    "licenses/wshobson-python-type-safety-LICENSE": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+    "plugin.json": "ccd667bf512abd48cdebe445dd57f9a532bf9d248ab17e169487272426c7a9b0",
+    "provenance.json": "cd4fcf7c4983251bda5ab456e643ec7a6bbdfdc497fed0afcc45a48abb97e9d6",
+    "skills/async-python-patterns/SKILL.md": "2ed2ed3ff8c1825c28ee8dfbd0be16c2563a4f79e303176ce2ac3d7bf0fe1e72",
+    "skills/async-python-patterns/references/details.md": "4ae9e006d2639335063d66307fc81b0d8d8c7d8a42bb1f932b842561bfe87654",
+    "skills/python-design-patterns/SKILL.md": "6d9cc7c9fdbf5f2c5cd0f5506fab3e65af59ee415aefae82335198371af44db3",
+    "skills/python-design-patterns/references/details.md": "0215f81ef2f88c46c01577961cdc2e118ecf38e7613f8ebc509df16a49ce3e5e",
+    "skills/python-error-handling/SKILL.md": "8c73c550a1e3f2af5cae08983451b7292d3c780cfde59b32f70a11d65615fb31",
+    "skills/python-error-handling/references/details.md": "3692f80007c71dadf2a5e60d63f1a10c5750c01a1e579a6616835f5e738dc3b0",
+    "skills/python-project-structure/SKILL.md": "4291f3118075342c742730bb34ed2c200f14faf2a40d0c760d8013a23350dcc8",
+    "skills/python-resource-management/SKILL.md": "1f079d34fc2d88789803bd56aa42d29e783e4f3142ea8f9e310aad88d6d616d7",
+    "skills/python-resource-management/references/details.md": "b9cf1a36f6172812c3509e8a88e2d19de76d9e1fe2c4598df10558b372e88022",
+    "skills/python-testing-patterns/SKILL.md": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175",
+    "skills/python-testing-patterns/references/advanced-patterns.md": "f560ee8b3cffc0fe971e78269bed21dc74f541c2056eae58d34259d9e537176a",
+    "skills/python-testing-patterns/references/details.md": "a616d3e599292973659287da4fde30ccea30a947074210104364b81cd5f3f634",
+    "skills/python-type-safety/SKILL.md": "85aae48eebd63b3cc66fb5f066e61dffcec1fc37b5d6b202572e9146a2728354",
+    "skills/python-type-safety/references/details.md": "8710f742ae943026df67744aaafbcfdaf815775e9498d7cc3ddc6db8667e19cc"
+  }
+}

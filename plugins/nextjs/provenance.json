@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "bundle": "nextjs",
+  "version": "0.1.0",
+  "sources": [],
+  "files": [],
+  "authored_files": [
+    {
+      "name": "nextjs-app-router",
+      "origin": "Original Project Blueprints framework-boundary guidance with official documentation links; not an upstream documentation or skill import.",
+      "local": "skills/nextjs-app-router/SKILL.md",
+      "canonical_source": "source/.agents/skills/nextjs-app-router/SKILL.md",
+      "source_sha256": "4555af7abb344d118534a846e628f15a053c85e82a019205f3bcb75c87cb20e0",
+      "payload_sha256": "4555af7abb344d118534a846e628f15a053c85e82a019205f3bcb75c87cb20e0",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "supporting_resources": [],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+}

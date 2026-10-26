@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "api-contracts",
+  "version": "0.1.0",
+  "description": "API and wire contract design and review",
+  "author": {
+    "name": "Konglabs"
+  }
+}

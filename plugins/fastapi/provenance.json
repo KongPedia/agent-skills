@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "bundle": "fastapi",
+  "version": "0.1.0",
+  "sources": [],
+  "files": [],
+  "authored_files": [
+    {
+      "name": "fastapi-backend",
+      "origin": "Original Project Blueprints framework-boundary guidance with official documentation links; not an upstream documentation or skill import.",
+      "local": "skills/fastapi-backend/SKILL.md",
+      "canonical_source": "source/.agents/skills/fastapi-backend/SKILL.md",
+      "source_sha256": "babde8bddfceb002892212934caf312f06ab05c8fbc9d20839c8996321e9ef7c",
+      "payload_sha256": "babde8bddfceb002892212934caf312f06ab05c8fbc9d20839c8996321e9ef7c",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "supporting_resources": [],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "16a1e60bb9c6bb149164186535a3edc822f2f41f060dd140958fc0249681ccbd",
+    "DEPENDENCIES.md": "89491b06121d68555daf911c10aa337e90b0ae7411b3270275e3e84ee7acbc33",
+    "THIRD-PARTY-NOTICES.md": "aa2160681a9939cdd7d7bcaae1ebb38846bdd964e40e9c082e707cdc5ec5bd1a",
+    "plugin.json": "923fce41c9ef1fff15904cc44a6c10ba531be70e13e6eda7373b7a7e80afc49b",
+    "provenance.json": "b30b8827458322b06b575dcefbf6ddbe7bd1fb74f49d628ce60bf6d3f0bb5354",
+    "skills/nestjs-backend/SKILL.md": "cea37ee0cf5b7443d7fec1a6e5e8370febad8b96b775a6370076c50aee5a3f28"
+  }
+}

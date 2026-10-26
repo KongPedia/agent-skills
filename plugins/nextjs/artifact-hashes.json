@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "28295da9f7d4a07703b15bdd4c0dcecd5ecbd98801331b50c1e0a06b24a3dc5f",
+    "DEPENDENCIES.md": "97c3def40b02faf2fda0c38af8f359cfe6f6b910a1e8060f8424488e488e479f",
+    "THIRD-PARTY-NOTICES.md": "7fb2cb2518e5ef47168a0ee7310f3887a3ab4c59f02b8f42846bc4093ddfeb5b",
+    "plugin.json": "87cc2dd59d0a8e1157c192d733430532520115d02efac1412d347b0ded11190b",
+    "provenance.json": "77900fa799e3cf48ee143efd59d8be9abfe7cc526c0f74a21481c526b6ad90c8",
+    "skills/nextjs-app-router/SKILL.md": "4555af7abb344d118534a846e628f15a053c85e82a019205f3bcb75c87cb20e0"
+  }
+}

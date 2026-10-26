@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "bundle": "api-contracts",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "id": "wshobson",
+      "repository": "https://github.com/wshobson/agents.git",
+      "revision": "46891e7e60da0e52baf1050b7b6391b64e84c6d9",
+      "license": "licenses/wshobson-LICENSE",
+      "skills": [
+        "api-design-principles"
+      ],
+      "dependencies": {}
+    }
+  ],
+  "files": [
+    {
+      "source_id": "wshobson",
+      "source": "LICENSE",
+      "upstream_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+      "modifications": "Removed trailing whitespace only; upstream license terms and notice are unchanged.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/wshobson-LICENSE",
+        "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
+      },
+      "local": "licenses/wshobson-LICENSE",
+      "canonical_source": "source/.agents/licenses/wshobson-LICENSE",
+      "source_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+      "payload_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/SKILL.md",
+      "upstream_sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/SKILL.md",
+        "sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013"
+      },
+      "local": "skills/api-design-principles/SKILL.md",
+      "canonical_source": "source/.agents/skills/api-design-principles/SKILL.md",
+      "source_sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
+      "payload_sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/assets/api-design-checklist.md",
+      "upstream_sha256": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/assets/api-design-checklist.md",
+        "sha256": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5"
+      },
+      "local": "skills/api-design-principles/assets/api-design-checklist.md",
+      "canonical_source": "source/.agents/skills/api-design-principles/assets/api-design-checklist.md",
+      "source_sha256": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5",
+      "payload_sha256": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/assets/rest-api-template.py",
+      "upstream_sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/assets/rest-api-template.py",
+        "sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c"
+      },
+      "local": "skills/api-design-principles/assets/rest-api-template.py",
+      "canonical_source": "source/.agents/skills/api-design-principles/assets/rest-api-template.py",
+      "source_sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
+      "payload_sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/references/details.md",
+      "upstream_sha256": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/references/details.md",
+        "sha256": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649"
+      },
+      "local": "skills/api-design-principles/references/details.md",
+      "canonical_source": "source/.agents/skills/api-design-principles/references/details.md",
+      "source_sha256": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649",
+      "payload_sha256": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/references/graphql-schema-design.md",
+      "upstream_sha256": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/references/graphql-schema-design.md",
+        "sha256": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638"
+      },
+      "local": "skills/api-design-principles/references/graphql-schema-design.md",
+      "canonical_source": "source/.agents/skills/api-design-principles/references/graphql-schema-design.md",
+      "source_sha256": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638",
+      "payload_sha256": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/references/rest-best-practices.md",
+      "upstream_sha256": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/references/rest-best-practices.md",
+        "sha256": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae"
+      },
+      "local": "skills/api-design-principles/references/rest-best-practices.md",
+      "canonical_source": "source/.agents/skills/api-design-principles/references/rest-best-practices.md",
+      "source_sha256": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae",
+      "payload_sha256": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "authored_files": [],
+  "supporting_resources": [],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+}

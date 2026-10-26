@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "common",
+  "version": "0.1.0",
+  "description": "Task-scoped shared engineering, design, testing and review procedures",
+  "author": {
+    "name": "Konglabs"
+  }
+}

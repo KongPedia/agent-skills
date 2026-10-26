@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cpp-firmware",
+  "version": "0.1.0",
+  "description": "C++ firmware ownership, timing, resources and non-actuating checks",
+  "author": {
+    "name": "Konglabs"
+  }
+}

@@ -1,0 +1,2864 @@
+{
+  "version": 1,
+  "status": "Canonical reusable instructions/resources for generated plugin releases; installed payloads are derived artifacts, not execution or adherence proof.",
+  "recorded_on": "2026-10-26",
+  "source_resolution": "Each imported file resolves source_id to one immutable source revision; derivation records the inspected source-controlled intermediate snapshot. sha256 is final local bytes; upstream_sha256 is original upstream bytes.",
+  "sources": [
+    {
+      "id": "wshobson",
+      "repository": "https://github.com/wshobson/agents.git",
+      "revision": "46891e7e60da0e52baf1050b7b6391b64e84c6d9",
+      "license": ".agents/licenses/wshobson-LICENSE",
+      "skills": [
+        "architecture-patterns",
+        "api-design-principles",
+        "python-design-patterns",
+        "python-testing-patterns",
+        "async-python-patterns",
+        "python-resource-management",
+        "python-error-handling",
+        "code-review-excellence",
+        "python-project-structure",
+        "rust-async-patterns",
+        "memory-safety-patterns"
+      ],
+      "dependencies": {
+        "python-design-patterns": [
+          "python-testing-patterns",
+          "python-project-structure"
+        ]
+      }
+    },
+    {
+      "id": "superpowers",
+      "repository": "https://github.com/obra/superpowers.git",
+      "revision": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "license": ".agents/licenses/superpowers-LICENSE",
+      "skills": [
+        "test-driven-development",
+        "systematic-debugging",
+        "verification-before-completion",
+        "brainstorming",
+        "writing-plans"
+      ],
+      "resource_scope": "Selected instruction-only debugging, TDD, verification, brainstorming and planning skills plus necessary text resources; excludes using-superpowers meta-routing, visual-companion runtime, plugins, hooks, installers and worktree/runtime tools."
+    },
+    {
+      "id": "anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official.git",
+      "revision": "465f09344424225c25d438f2e052732c3d688d2f",
+      "license": ".agents/licenses/anthropic-LICENSE",
+      "skills": [
+        "frontend-design"
+      ]
+    },
+    {
+      "id": "openai",
+      "repository": "https://github.com/openai/openai-agents-python.git",
+      "revision": "0dc4cf152bff1f50bdc0e41f28808563406545b2",
+      "license": ".agents/licenses/openai-LICENSE",
+      "skills": [
+        "docs-sync"
+      ]
+    },
+    {
+      "id": "vercel-agent-skills",
+      "repository": "https://github.com/vercel-labs/agent-skills.git",
+      "revision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "license": ".agents/licenses/vercel-agent-skills-README.md",
+      "license_note": "Upstream has no LICENSE/COPYING file at this revision. Its full unmodified README declares MIT, and React/composition SKILL frontmatter also declares MIT. Preserve that declaration as evidence; no copyright notice or license text has been fabricated.",
+      "skills": [
+        "vercel-react-best-practices",
+        "vercel-composition-patterns",
+        "web-design-guidelines"
+      ],
+      "resource_scope": "Three selected SKILL.md entrypoints plus all 70 React and 8 composition rule files. Excludes duplicate generated AGENTS.md compilations, contributor README/build metadata and rule templates/section metadata. Entrypoints retain original names/frontmatter; compiled-document pointers use lazy individual rules and web guidance reads a separately pinned local reference. Trailing whitespace in 15 rule files is normalized for the repository whitespace gate; all differences are recorded per file."
+    },
+    {
+      "id": "vercel-web-interface-guidelines",
+      "repository": "https://github.com/vercel-labs/web-interface-guidelines.git",
+      "revision": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "license": ".agents/licenses/vercel-web-interface-guidelines-LICENSE",
+      "skills": [
+        "web-design-guidelines"
+      ],
+      "resource_scope": "Unmodified command.md guideline snapshot and its MIT license only; excludes install.sh, duplicate AGENTS.md, and README."
+    },
+    {
+      "id": "ponytail",
+      "repository": "https://github.com/DietrichGebert/ponytail.git",
+      "revision": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
+      "license": ".agents/licenses/ponytail-LICENSE",
+      "skills": [
+        "ponytail"
+      ],
+      "resource_scope": "Self-contained skill entrypoint only; excludes upstream plugin manifests, hooks, commands, session mode and installer."
+    },
+    {
+      "id": "impeccable",
+      "repository": "https://github.com/pbakaus/impeccable.git",
+      "revision": "936867543ac2576920d663cc9803597f6044f3ac",
+      "license": ".agents/licenses/impeccable-LICENSE",
+      "skills": [
+        "impeccable"
+      ],
+      "resource_scope": "Adapted selected instruction-only web audit/critique/polish/harden entrypoint plus craft-floor and Operate text references and upstream NOTICE; excludes launchers, binaries/downloads, scripts/detector, hooks, native agents/platform refs, storage/live/generation/document-setup workflows."
+    },
+    {
+      "id": "mattpocock",
+      "repository": "https://github.com/mattpocock/skills.git",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "license": ".agents/licenses/mattpocock-LICENSE",
+      "skills": [
+        "codebase-design",
+        "writing-for-agents",
+        "domain-modeling"
+      ],
+      "resource_scope": "Selected original skill entrypoints, DEEPENING.md, DESIGN-IT-TWICE.md and SKILL-MECHANICS.md; excludes upstream routers, plugin/agent metadata, docs duplicates and installers. Adapted vocabulary/testing/delegation and platform-specific invocation guidance to local scope and safety. Also includes the complete domain-modeling directory, its glossary/ADR format references and agents/openai.yaml interface metadata, with explicit project/write authority adaptation."
+    },
+    {
+      "id": "addyosmani",
+      "repository": "https://github.com/addyosmani/agent-skills.git",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "license": ".agents/licenses/addyosmani-LICENSE",
+      "skills": [
+        "security-and-hardening",
+        "observability-and-instrumentation"
+      ],
+      "resource_scope": "Selected original skill entrypoints, security hardening patterns and two root-shared checklists relocated into their owning skill references. Excludes upstream routers, other skills, evals, plugin metadata and installers. Web/vendor/deployment examples are scoped references, not required framework or live-operation changes."
+    },
+    {
+      "id": "apollo-rust-best-practices",
+      "repository": "https://github.com/apollographql/skills",
+      "revision": "f9843dce86b1a561e3bfbb024e65c28a6cbbe38c",
+      "license": ".agents/skills/rust-best-practices/references/apollo-LICENSE.md",
+      "skills": [
+        "rust-best-practices"
+      ],
+      "resource_scope": "Selected rust-best-practices entrypoint and all nine text reference chapters; excludes marketplace/plugin configuration and other Apollo skills."
+    },
+    {
+      "id": "google-rust-styleguide",
+      "repository": "https://github.com/google/styleguide",
+      "revision": "ac81bb465fdc5f0f68f64b72a90024c7c52442cc",
+      "license": ".agents/skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+      "skills": [
+        "rust-best-practices"
+      ],
+      "license_note": "Google README Licensing identifies prose as CC-BY-3.0 and code samples as Apache-2.0; faithful licensing excerpt, attribution and original license URLs are preserved locally.",
+      "resource_scope": "Unmodified rustguide.md and CC-BY-3.0 LICENSE plus adapted README Licensing excerpt with attribution and immutable source links; excludes unrelated Google guides and Google-specific build tooling."
+    },
+    {
+      "id": "addy-deprecation-and-migration",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "license": ".agents/skills/deprecation-and-migration/references/addy-LICENSE.md",
+      "skills": [
+        "deprecation-and-migration"
+      ],
+      "resource_scope": "Selected original deprecation-and-migration entrypoint adapted for explicit SDK removal/API migration and unchanged MIT LICENSE; excludes sibling skills, database deployment guidance, plugins and role configuration."
+    },
+    {
+      "id": "oh-my-codex",
+      "repository": "https://github.com/Yeachan-Heo/oh-my-codex.git",
+      "revision": "1dcf51359f3caeeebfed0bcbeea867ff0838d533",
+      "license": ".agents/licenses/oh-my-codex-LICENSE",
+      "skills": [
+        "best-practice-research"
+      ],
+      "resource_scope": "Adapted instruction-only best-practice-research entrypoint and unchanged MIT license, verified against installed 0.21.7 and immutable upstream bytes; excludes OMX CLI/runtime, hooks, auth, state, agent/model settings and all other skills."
+    },
+    {
+      "id": "jeffallan",
+      "repository": "https://github.com/Jeffallan/claude-skills.git",
+      "revision": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+      "license": ".agents/licenses/jeffallan-LICENSE",
+      "skills": [
+        "embedded-systems"
+      ],
+      "resource_scope": "Selected optional C++ firmware skill entrypoints and all referenced resources, derived from inspected ESP guidance; neutral target criteria only, no product runtime, board/pin defaults, hooks, tools or deployment commands."
+    },
+    {
+      "id": "wshobson-python-type-safety",
+      "repository": "https://github.com/wshobson/agents.git",
+      "revision": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+      "license": ".agents/licenses/wshobson-python-type-safety-LICENSE",
+      "skills": [
+        "python-type-safety"
+      ],
+      "resource_scope": "Complete python-type-safety directory (SKILL.md and references/details.md), narrowly adapted for version/checker authority and example correctness. Distinct revision and license from older imported wshobson skills."
+    }
+  ],
+  "files": [
+    {
+      "local": ".agents/licenses/wshobson-LICENSE",
+      "source_id": "wshobson",
+      "source": "LICENSE",
+      "upstream_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+      "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+      "modifications": "Removed trailing whitespace only; upstream license terms and notice are unchanged.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/wshobson-LICENSE",
+        "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
+      }
+    },
+    {
+      "local": ".agents/skills/architecture-patterns/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/architecture-patterns/SKILL.md",
+      "upstream_sha256": "350caf22b856b7d2908a10a69a8cc13e743c757ba9838716051b4e29fc1d7595",
+      "sha256": "5a78130cb40317e49b0963b36156bf1e19747843df6c05bfffca08f71286a882",
+      "modifications": "Integration review: local skill pointers, accurate public-export semantics and optional architecture boundaries; migration policy is language-neutral. Instruction/distribution audit: Language-neutral trigger and actual-seam contracts; concrete collaborators are sufficient without real substitution needs, rather than mandatory abstract interfaces at every layer.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/architecture-patterns/SKILL.md",
+        "sha256": "350caf22b856b7d2908a10a69a8cc13e743c757ba9838716051b4e29fc1d7595"
+      }
+    },
+    {
+      "local": ".agents/skills/architecture-patterns/references/advanced-patterns.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/architecture-patterns/references/advanced-patterns.md",
+      "upstream_sha256": "e1cb31c83b532e579991de277836a1ea5e3d88b2ca30fc8ac16f6047ceca439e",
+      "sha256": "e1cb31c83b532e579991de277836a1ea5e3d88b2ca30fc8ac16f6047ceca439e",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/architecture-patterns/references/advanced-patterns.md",
+        "sha256": "e1cb31c83b532e579991de277836a1ea5e3d88b2ca30fc8ac16f6047ceca439e"
+      }
+    },
+    {
+      "local": ".agents/skills/architecture-patterns/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/architecture-patterns/references/details.md",
+      "upstream_sha256": "a53411600b253b343247db9d86140f3136ee7bd26a67aa8411962bcc1f5ff981",
+      "sha256": "a53411600b253b343247db9d86140f3136ee7bd26a67aa8411962bcc1f5ff981",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/architecture-patterns/references/details.md",
+        "sha256": "a53411600b253b343247db9d86140f3136ee7bd26a67aa8411962bcc1f5ff981"
+      }
+    },
+    {
+      "local": ".agents/skills/api-design-principles/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/SKILL.md",
+      "upstream_sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
+      "sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/SKILL.md",
+        "sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013"
+      }
+    },
+    {
+      "local": ".agents/skills/api-design-principles/assets/api-design-checklist.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/assets/api-design-checklist.md",
+      "upstream_sha256": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5",
+      "sha256": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/assets/api-design-checklist.md",
+        "sha256": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5"
+      }
+    },
+    {
+      "local": ".agents/skills/api-design-principles/assets/rest-api-template.py",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/assets/rest-api-template.py",
+      "upstream_sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
+      "sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/assets/rest-api-template.py",
+        "sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c"
+      }
+    },
+    {
+      "local": ".agents/skills/api-design-principles/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/references/details.md",
+      "upstream_sha256": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649",
+      "sha256": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/references/details.md",
+        "sha256": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649"
+      }
+    },
+    {
+      "local": ".agents/skills/api-design-principles/references/graphql-schema-design.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/references/graphql-schema-design.md",
+      "upstream_sha256": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638",
+      "sha256": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/references/graphql-schema-design.md",
+        "sha256": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638"
+      }
+    },
+    {
+      "local": ".agents/skills/api-design-principles/references/rest-best-practices.md",
+      "source_id": "wshobson",
+      "source": "plugins/backend-development/skills/api-design-principles/references/rest-best-practices.md",
+      "upstream_sha256": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae",
+      "sha256": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/api-design-principles/references/rest-best-practices.md",
+        "sha256": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae"
+      }
+    },
+    {
+      "local": ".agents/skills/python-design-patterns/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-design-patterns/SKILL.md",
+      "upstream_sha256": "42c99b3bc55a56a65cd3f16aa24ea50672ce0fa4893eb0f34bba0cdb8a0e3319",
+      "sha256": "6d9cc7c9fdbf5f2c5cd0f5506fab3e65af59ee415aefae82335198371af44db3",
+      "modifications": "Instruction/distribution audit: Python-owning task trigger; caller/ownership/lifecycle evidence rather than fixed copy, function-size, parameter-count or wrapper-depth rules.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-design-patterns/SKILL.md",
+        "sha256": "42c99b3bc55a56a65cd3f16aa24ea50672ce0fa4893eb0f34bba0cdb8a0e3319"
+      }
+    },
+    {
+      "local": ".agents/skills/python-design-patterns/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-design-patterns/references/details.md",
+      "upstream_sha256": "5d85b7a1745446432060bb31ee1fa686d5a41d86cfaf3687dd2710b47b72e5ea",
+      "sha256": "0215f81ef2f88c46c01577961cdc2e118ecf38e7613f8ebc509df16a49ce3e5e",
+      "modifications": "Instruction/distribution audit: Qualifies repeated-copy and function/nesting heuristics consistently with entrypoint; preserves worked Python examples and failure/ordering contracts.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-design-patterns/references/details.md",
+        "sha256": "5d85b7a1745446432060bb31ee1fa686d5a41d86cfaf3687dd2710b47b72e5ea"
+      }
+    },
+    {
+      "local": ".agents/skills/python-testing-patterns/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-testing-patterns/SKILL.md",
+      "upstream_sha256": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175",
+      "sha256": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-testing-patterns/SKILL.md",
+        "sha256": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175"
+      }
+    },
+    {
+      "local": ".agents/skills/python-testing-patterns/references/advanced-patterns.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-testing-patterns/references/advanced-patterns.md",
+      "upstream_sha256": "f560ee8b3cffc0fe971e78269bed21dc74f541c2056eae58d34259d9e537176a",
+      "sha256": "f560ee8b3cffc0fe971e78269bed21dc74f541c2056eae58d34259d9e537176a",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-testing-patterns/references/advanced-patterns.md",
+        "sha256": "f560ee8b3cffc0fe971e78269bed21dc74f541c2056eae58d34259d9e537176a"
+      }
+    },
+    {
+      "local": ".agents/skills/python-testing-patterns/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-testing-patterns/references/details.md",
+      "upstream_sha256": "baaa88e2997d960c19f981248b9e3e850e36e2cdf4d97b50297f5d9764826349",
+      "sha256": "baaa88e2997d960c19f981248b9e3e850e36e2cdf4d97b50297f5d9764826349",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-testing-patterns/references/details.md",
+        "sha256": "baaa88e2997d960c19f981248b9e3e850e36e2cdf4d97b50297f5d9764826349"
+      }
+    },
+    {
+      "local": ".agents/skills/async-python-patterns/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/async-python-patterns/SKILL.md",
+      "upstream_sha256": "beeac92f802f21a968088e5d12fc587833b772ad69806eddf6812f1a2e9c7a57",
+      "sha256": "2ed2ed3ff8c1825c28ee8dfbd0be16c2563a4f79e303176ce2ac3d7bf0fe1e72",
+      "modifications": " Project Blueprints Python/robotics review: Distinguishes CPython I/O thread offload from CPU execution, qualifies Python 3.11 APIs and cancellation/side-effect uncertainty; fixes None failure accounting and propagates gathered child cancellation.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/async-python-patterns/SKILL.md",
+        "sha256": "beeac92f802f21a968088e5d12fc587833b772ad69806eddf6812f1a2e9c7a57"
+      }
+    },
+    {
+      "local": ".agents/skills/async-python-patterns/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/async-python-patterns/references/details.md",
+      "upstream_sha256": "94df4840e91f1d237ba9d3d9bbcb7073be90c42e17ea94ebcb364370920081fa",
+      "sha256": "4ae9e006d2639335063d66307fc81b0d8d8c7d8a42bb1f932b842561bfe87654",
+      "modifications": " Project Blueprints Python/robotics review: Qualifies CPU/GIL and runtime measurement for thread offload, bounded ownership and underlying I/O cancellation limits. Project Blueprints review closeout: Moves waiting ThreadPoolExecutor lifetime outside asyncio.run; passes the owned executor to coroutines and explains external shutdown/cancellation bounds.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/async-python-patterns/references/details.md",
+        "sha256": "94df4840e91f1d237ba9d3d9bbcb7073be90c42e17ea94ebcb364370920081fa"
+      }
+    },
+    {
+      "local": ".agents/skills/python-resource-management/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-resource-management/SKILL.md",
+      "upstream_sha256": "1d60cbc5ce7a9e86fa7f64e147f04f21d5d174b56bf96f5f628c905892068aa5",
+      "sha256": "1f079d34fc2d88789803bd56aa42d29e783e4f3142ea8f9e310aad88d6d616d7",
+      "modifications": " Project Blueprints Python/robotics review: Qualifies successful-entry/partial-acquisition cleanup and abrupt termination; keeps independent cleanup attempts with ExitStack, propagates failures, and includes cancellation rollback limits.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-resource-management/SKILL.md",
+        "sha256": "1d60cbc5ce7a9e86fa7f64e147f04f21d5d174b56bf96f5f628c905892068aa5"
+      }
+    },
+    {
+      "local": ".agents/skills/python-resource-management/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-resource-management/references/details.md",
+      "upstream_sha256": "b9cf1a36f6172812c3509e8a88e2d19de76d9e1fe2c4598df10558b372e88022",
+      "sha256": "b9cf1a36f6172812c3509e8a88e2d19de76d9e1fe2c4598df10558b372e88022",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-resource-management/references/details.md",
+        "sha256": "b9cf1a36f6172812c3509e8a88e2d19de76d9e1fe2c4598df10558b372e88022"
+      }
+    },
+    {
+      "local": ".agents/skills/python-error-handling/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-error-handling/SKILL.md",
+      "upstream_sha256": "796346a50615010c4fea52ecb93784ebf232c5d4c9f0691bfc668529d9592543",
+      "sha256": "8c73c550a1e3f2af5cae08983451b7292d3c780cfde59b32f70a11d65615fb31",
+      "modifications": "Project Blueprints review closeout: Qualifies partial-batch continuation by recoverability and the actual batch contract; atomicity, authorization, safety and cancellation may require aborting.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-error-handling/SKILL.md",
+        "sha256": "796346a50615010c4fea52ecb93784ebf232c5d4c9f0691bfc668529d9592543"
+      }
+    },
+    {
+      "local": ".agents/skills/python-error-handling/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-error-handling/references/details.md",
+      "upstream_sha256": "022c6c6bfb362d861258763712a05f62ccac09120866355582f874db14735c82",
+      "sha256": "3692f80007c71dadf2a5e60d63f1a10c5750c01a1e579a6616835f5e738dc3b0",
+      "modifications": " Project Blueprints review closeout: Uses TypeVar/Generic for the supported Python 3.10/3.11 example syntax instead of unqualified 3.12-only type parameters; qualifies partial-batch policy rather than forcing continuation after atomic/safety failures.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-error-handling/references/details.md",
+        "sha256": "022c6c6bfb362d861258763712a05f62ccac09120866355582f874db14735c82"
+      }
+    },
+    {
+      "local": ".agents/skills/code-review-excellence/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+      "upstream_sha256": "014fff1c8db75807106484d5b16451607f0dde266ae50182a2753d68ad3449ed",
+      "sha256": "67b80d06dbb25b64c72301692f75f1d200e374a8a828392eb1ac3b0a6bcfea98",
+      "modifications": "Instruction/distribution audit: Reviewability and coherent dependency boundaries replace mandatory numeric PR split/max rules; no new approval handoff.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/code-review-excellence/SKILL.md",
+        "sha256": "014fff1c8db75807106484d5b16451607f0dde266ae50182a2753d68ad3449ed"
+      }
+    },
+    {
+      "local": ".agents/licenses/superpowers-LICENSE",
+      "source_id": "superpowers",
+      "source": "LICENSE",
+      "upstream_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/superpowers-LICENSE",
+        "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+      }
+    },
+    {
+      "local": ".agents/skills/test-driven-development/SKILL.md",
+      "source_id": "superpowers",
+      "source": "skills/test-driven-development/SKILL.md",
+      "upstream_sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "sha256": "095172e7fbf4edf775c77d0deaf5a1dffb916d92b450b11fc0554bd13b873c56",
+      "modifications": "Scope adaptation: behavioral TDD versus characterization/static guidance checks; remove destructive delete/restart and repeated permission requirements; preserve meaningful regression evidence. Independent review correction: replace remaining rationalization/restart rules with safe baseline, characterization, scope and honest evidence recovery; no delete/rewrite ritual. Instruction/distribution audit: Declared owning-package gates remain subject to authorized execution scope; report unrelated failures without unrequested repairs or generic command assumptions.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/test-driven-development/SKILL.md",
+        "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+      }
+    },
+    {
+      "local": ".agents/skills/test-driven-development/writing-good-tests.md",
+      "source_id": "superpowers",
+      "source": "skills/test-driven-development/writing-good-tests.md",
+      "upstream_sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1",
+      "sha256": "24b66b4052ea85992f027f0608bf47a5ff90469b6f6fc482731ee05531a4ec2f",
+      "modifications": "Integration review: local skill pointers, accurate public-export semantics and optional architecture boundaries; migration policy is language-neutral.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/test-driven-development/writing-good-tests.md",
+        "sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1"
+      }
+    },
+    {
+      "local": ".agents/skills/systematic-debugging/SKILL.md",
+      "source_id": "superpowers",
+      "source": "skills/systematic-debugging/SKILL.md",
+      "upstream_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "sha256": "621ebc5e5a514553ffa7e6831f6458e4bfb24234bda719468ae7d3522834e410",
+      "modifications": "Replace plugin-qualified dependency with exact repository-local TDD pointer and scope-aware regression distinction. Integration review: local skill pointers, accurate public-export semantics and optional architecture boundaries; migration policy is language-neutral.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/systematic-debugging/SKILL.md",
+        "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+      }
+    },
+    {
+      "local": ".agents/skills/systematic-debugging/condition-based-waiting-example.ts",
+      "source_id": "superpowers",
+      "source": "skills/systematic-debugging/condition-based-waiting-example.ts",
+      "upstream_sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+      "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/systematic-debugging/condition-based-waiting-example.ts",
+        "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e"
+      }
+    },
+    {
+      "local": ".agents/skills/systematic-debugging/condition-based-waiting.md",
+      "source_id": "superpowers",
+      "source": "skills/systematic-debugging/condition-based-waiting.md",
+      "upstream_sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+      "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/systematic-debugging/condition-based-waiting.md",
+        "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26"
+      }
+    },
+    {
+      "local": ".agents/skills/systematic-debugging/defense-in-depth.md",
+      "source_id": "superpowers",
+      "source": "skills/systematic-debugging/defense-in-depth.md",
+      "upstream_sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+      "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/systematic-debugging/defense-in-depth.md",
+        "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7"
+      }
+    },
+    {
+      "local": ".agents/skills/systematic-debugging/find-polluter.sh",
+      "source_id": "superpowers",
+      "source": "skills/systematic-debugging/find-polluter.sh",
+      "upstream_sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+      "sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/systematic-debugging/find-polluter.sh",
+        "sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c"
+      }
+    },
+    {
+      "local": ".agents/skills/systematic-debugging/root-cause-tracing.md",
+      "source_id": "superpowers",
+      "source": "skills/systematic-debugging/root-cause-tracing.md",
+      "upstream_sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+      "sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/systematic-debugging/root-cause-tracing.md",
+        "sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8"
+      }
+    },
+    {
+      "local": ".agents/skills/verification-before-completion/SKILL.md",
+      "source_id": "superpowers",
+      "source": "skills/verification-before-completion/SKILL.md",
+      "upstream_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "sha256": "a6af924113498b6b913f5f274e28ee64d020a3263d5620ae6c6c5143539ed892",
+      "modifications": "Add evidence-layer and execution-scope distinctions for metadata/scaffolds; no automatic application or commit authority.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/verification-before-completion/SKILL.md",
+        "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+      }
+    },
+    {
+      "local": ".agents/licenses/anthropic-LICENSE",
+      "source_id": "anthropic",
+      "source": "LICENSE",
+      "upstream_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/anthropic-LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      }
+    },
+    {
+      "local": ".agents/skills/frontend-design/LICENSE.txt",
+      "source_id": "anthropic",
+      "source": "plugins/frontend-design/skills/frontend-design/LICENSE.txt",
+      "upstream_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/frontend-design/LICENSE.txt",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      }
+    },
+    {
+      "local": ".agents/skills/frontend-design/SKILL.md",
+      "source_id": "anthropic",
+      "source": "plugins/frontend-design/skills/frontend-design/SKILL.md",
+      "upstream_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/frontend-design/SKILL.md",
+        "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+      }
+    },
+    {
+      "local": ".agents/licenses/openai-LICENSE",
+      "source_id": "openai",
+      "source": "LICENSE",
+      "upstream_sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915",
+      "sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/openai-LICENSE",
+        "sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915"
+      }
+    },
+    {
+      "local": ".agents/skills/docs-sync/SKILL.md",
+      "source_id": "openai",
+      "source": ".agents/skills/docs-sync/SKILL.md",
+      "upstream_sha256": "e5989e548a13d73e1b91ecc32e89a1e53af509cc2688b98d72a9ec48c2ab6d57",
+      "sha256": "98ff9d77851d2bea157811e76c9b74c4952eeed13313ea7274c759bf095d7e03",
+      "modifications": "Adapt SDK/English-only documentation paths, release assumptions and build/tool dependencies to BattleBang docs/.agents, current-branch evidence, authorization boundaries and static-only guidance checks; retain doc-first/code-first procedure. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained. Linked optional organization-authored assets or preserved ADR evidence/rollback cautions; asset authorship is recorded separately from upstream imports.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/docs-sync/SKILL.md",
+        "sha256": "834b7216cdf43be783a664e50f8a8f6e76cf36110f5f8b185c3f129f77edbce1"
+      }
+    },
+    {
+      "local": ".agents/skills/docs-sync/agents/openai.yaml",
+      "source_id": "openai",
+      "source": ".agents/skills/docs-sync/agents/openai.yaml",
+      "upstream_sha256": "2e62bee17a95e89aa6455cb2ef56474d34c43c7bf608b337621b0dcca17c09ad",
+      "sha256": "2e62bee17a95e89aa6455cb2ef56474d34c43c7bf608b337621b0dcca17c09ad",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/docs-sync/agents/openai.yaml",
+        "sha256": "2e62bee17a95e89aa6455cb2ef56474d34c43c7bf608b337621b0dcca17c09ad"
+      }
+    },
+    {
+      "local": ".agents/skills/docs-sync/references/doc-coverage-checklist.md",
+      "source_id": "openai",
+      "source": ".agents/skills/docs-sync/references/doc-coverage-checklist.md",
+      "upstream_sha256": "066aae6de4b25c3c600b0ae87d94954479f197415c5f745e1fdf2a7401a37977",
+      "sha256": "4d67ba35d38a4faab1b74088fc9cdd636e5a7a1ee968cf3217655c83fdec39f4",
+      "modifications": "Adapt SDK/English-only documentation paths, release assumptions and build/tool dependencies to BattleBang docs/.agents, current-branch evidence, authorization boundaries and static-only guidance checks; retain doc-first/code-first procedure.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/docs-sync/references/doc-coverage-checklist.md",
+        "sha256": "4d67ba35d38a4faab1b74088fc9cdd636e5a7a1ee968cf3217655c83fdec39f4"
+      }
+    },
+    {
+      "local": ".agents/skills/python-project-structure/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/python-development/skills/python-project-structure/SKILL.md",
+      "upstream_sha256": "c53696fb8d9014abc280fc0e64220cae0d087766a16380e211a6745e481dae65",
+      "sha256": "4291f3118075342c742730bb34ed2c200f14faf2a40d0c760d8013a23350dcc8",
+      "modifications": "Integration review: local skill pointers, accurate public-export semantics and optional architecture boundaries; migration policy is language-neutral. Project Blueprints Python/robotics review: Aligns summary with optional __all__, responsibility-based rather than fixed-LOC splitting, and package-appropriate import boundaries.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/python-project-structure/SKILL.md",
+        "sha256": "c53696fb8d9014abc280fc0e64220cae0d087766a16380e211a6745e481dae65"
+      }
+    },
+    {
+      "local": ".agents/licenses/vercel-agent-skills-README.md",
+      "source_id": "vercel-agent-skills",
+      "source": "README.md",
+      "upstream_sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651",
+      "sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/vercel-agent-skills-README.md",
+        "sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651"
+      }
+    },
+    {
+      "local": ".agents/licenses/vercel-web-interface-guidelines-LICENSE",
+      "source_id": "vercel-web-interface-guidelines",
+      "source": "LICENSE",
+      "upstream_sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2",
+      "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/vercel-web-interface-guidelines-LICENSE",
+        "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/SKILL.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/SKILL.md",
+      "upstream_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02",
+      "modifications": "Replace pointer to omitted duplicate compiled AGENTS.md with lazy reading of the preserved individual rules; original frontmatter and guidance otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/SKILL.md",
+        "sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/architecture-avoid-boolean-props.md",
+      "upstream_sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5",
+      "sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/architecture-avoid-boolean-props.md",
+        "sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/architecture-compound-components.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/architecture-compound-components.md",
+      "upstream_sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457",
+      "sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/architecture-compound-components.md",
+        "sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/patterns-children-over-render-props.md",
+      "upstream_sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad",
+      "sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/patterns-children-over-render-props.md",
+        "sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/patterns-explicit-variants.md",
+      "upstream_sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e",
+      "sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/patterns-explicit-variants.md",
+        "sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/react19-no-forwardref.md",
+      "upstream_sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227",
+      "sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/react19-no-forwardref.md",
+        "sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/state-context-interface.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/state-context-interface.md",
+      "upstream_sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3",
+      "sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/state-context-interface.md",
+        "sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/state-decouple-implementation.md",
+      "upstream_sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3",
+      "sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/state-decouple-implementation.md",
+        "sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-composition-patterns/rules/state-lift-state.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/composition-patterns/rules/state-lift-state.md",
+      "upstream_sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b",
+      "sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/composition-patterns/rules/state-lift-state.md",
+        "sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/SKILL.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/SKILL.md",
+      "upstream_sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9",
+      "modifications": "Replace pointer to omitted duplicate compiled AGENTS.md with lazy reading of the preserved individual rules; original frontmatter and guidance otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/SKILL.md",
+        "sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/advanced-effect-event-deps.md",
+      "upstream_sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
+      "sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/advanced-effect-event-deps.md",
+        "sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/advanced-event-handler-refs.md",
+      "upstream_sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
+      "sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/advanced-event-handler-refs.md",
+        "sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/advanced-init-once.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/advanced-init-once.md",
+      "upstream_sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
+      "sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/advanced-init-once.md",
+        "sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/advanced-use-latest.md",
+      "upstream_sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
+      "sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/advanced-use-latest.md",
+        "sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/async-api-routes.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/async-api-routes.md",
+      "upstream_sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
+      "sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/async-api-routes.md",
+        "sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/async-cheap-condition-before-await.md",
+      "upstream_sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
+      "sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/async-cheap-condition-before-await.md",
+        "sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/async-defer-await.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/async-defer-await.md",
+      "upstream_sha256": "f3c142d090615abdcc99d31c123be37b31f0f1ed8d9ec9f7789a3bc6883ae0fb",
+      "sha256": "2791408daed30eda451bf779d5520add2655822ca2c0138d8e252f483a4b443e",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/async-defer-await.md",
+        "sha256": "2791408daed30eda451bf779d5520add2655822ca2c0138d8e252f483a4b443e"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/async-dependencies.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/async-dependencies.md",
+      "upstream_sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
+      "sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/async-dependencies.md",
+        "sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/async-parallel.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/async-parallel.md",
+      "upstream_sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
+      "sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/async-parallel.md",
+        "sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/async-suspense-boundaries.md",
+      "upstream_sha256": "de05fedac2eb7ae563b887b5a424464ec3dfaf84e5b7797467ebe2a796ac8afc",
+      "sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/async-suspense-boundaries.md",
+        "sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/bundle-analyzable-paths.md",
+      "upstream_sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
+      "sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/bundle-analyzable-paths.md",
+        "sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/bundle-barrel-imports.md",
+      "upstream_sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
+      "sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/bundle-barrel-imports.md",
+        "sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/bundle-conditional.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/bundle-conditional.md",
+      "upstream_sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
+      "sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/bundle-conditional.md",
+        "sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/bundle-defer-third-party.md",
+      "upstream_sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
+      "sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/bundle-defer-third-party.md",
+        "sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/bundle-dynamic-imports.md",
+      "upstream_sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
+      "sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/bundle-dynamic-imports.md",
+        "sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/bundle-preload.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/bundle-preload.md",
+      "upstream_sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
+      "sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/bundle-preload.md",
+        "sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/client-event-listeners.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/client-event-listeners.md",
+      "upstream_sha256": "242a873349febc1ce685e85617994784dbab92c2eaa68aed7fed5a83e7680e93",
+      "sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/client-event-listeners.md",
+        "sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/client-localstorage-schema.md",
+      "upstream_sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
+      "sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/client-localstorage-schema.md",
+        "sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/client-passive-event-listeners.md",
+      "upstream_sha256": "1f35016f9053de69e884ee9be00654e37979c2ca85f5e57764dc2626ff7acb4b",
+      "sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/client-passive-event-listeners.md",
+        "sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/client-swr-dedup.md",
+      "upstream_sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
+      "sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/client-swr-dedup.md",
+        "sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-batch-dom-css.md",
+      "upstream_sha256": "480b891b9eaf96e929dc1e964274a4828e3a78009b7d00ccd965a0d425215959",
+      "sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-batch-dom-css.md",
+        "sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-cache-function-results.md",
+      "upstream_sha256": "3daaa11d24f4295cb6be8bc6f407f2ce83cc7b5bd1f0e68891ea8ab835721dc7",
+      "sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-cache-function-results.md",
+        "sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-cache-property-access.md",
+      "upstream_sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
+      "sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-cache-property-access.md",
+        "sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-cache-storage.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-cache-storage.md",
+      "upstream_sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
+      "sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-cache-storage.md",
+        "sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-combine-iterations.md",
+      "upstream_sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
+      "sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-combine-iterations.md",
+        "sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-early-exit.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-early-exit.md",
+      "upstream_sha256": "925ce5ce87f3347186ca62212f29cc6baa2b8c85a96d2720ad07c3d0abf781c0",
+      "sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-early-exit.md",
+        "sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-flatmap-filter.md",
+      "upstream_sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
+      "sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-flatmap-filter.md",
+        "sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-hoist-regexp.md",
+      "upstream_sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
+      "sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-hoist-regexp.md",
+        "sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-index-maps.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-index-maps.md",
+      "upstream_sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
+      "sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-index-maps.md",
+        "sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-length-check-first.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-length-check-first.md",
+      "upstream_sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
+      "sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-length-check-first.md",
+        "sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-min-max-loop.md",
+      "upstream_sha256": "87dfb67e2f39df6ad8bcfb5b78c5fb364d3c07554ad188a202408d99f3763421",
+      "sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-min-max-loop.md",
+        "sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-request-idle-callback.md",
+      "upstream_sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
+      "sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-request-idle-callback.md",
+        "sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-set-map-lookups.md",
+      "upstream_sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
+      "sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-set-map-lookups.md",
+        "sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/js-tosorted-immutable.md",
+      "upstream_sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
+      "sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/js-tosorted-immutable.md",
+        "sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-activity.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-activity.md",
+      "upstream_sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
+      "sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-activity.md",
+        "sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-animate-svg-wrapper.md",
+      "upstream_sha256": "9c6ae0ca7a51434e803887c64cded760956579a1452ccb80a461a03f9c937c77",
+      "sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-animate-svg-wrapper.md",
+        "sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-conditional-render.md",
+      "upstream_sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
+      "sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-conditional-render.md",
+        "sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-content-visibility.md",
+      "upstream_sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
+      "sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-content-visibility.md",
+        "sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-hoist-jsx.md",
+      "upstream_sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
+      "sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-hoist-jsx.md",
+        "sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-hydration-no-flicker.md",
+      "upstream_sha256": "dc7ab358c67c177bca6e6f360fbc935ebe4efa928c0ba3ebd3f9f3d9e2000ca3",
+      "sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-hydration-no-flicker.md",
+        "sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-hydration-suppress-warning.md",
+      "upstream_sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
+      "sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-hydration-suppress-warning.md",
+        "sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-resource-hints.md",
+      "upstream_sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
+      "sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-resource-hints.md",
+        "sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-script-defer-async.md",
+      "upstream_sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
+      "sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-script-defer-async.md",
+        "sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-svg-precision.md",
+      "upstream_sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
+      "sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-svg-precision.md",
+        "sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rendering-usetransition-loading.md",
+      "upstream_sha256": "3a1249c3f13026b6f54ab5712c388df219d6af01b12aa542749acd99a46f4bc1",
+      "sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rendering-usetransition-loading.md",
+        "sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-defer-reads.md",
+      "upstream_sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
+      "sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-defer-reads.md",
+        "sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-dependencies.md",
+      "upstream_sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
+      "sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-dependencies.md",
+        "sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-derived-state-no-effect.md",
+      "upstream_sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
+      "sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-derived-state-no-effect.md",
+        "sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-derived-state.md",
+      "upstream_sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
+      "sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-derived-state.md",
+        "sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-functional-setstate.md",
+      "upstream_sha256": "5e68df6b2ae8058e67f476ff1ac67bde159f5a9d18df439e46eabcdeb7b52e58",
+      "sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-functional-setstate.md",
+        "sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-lazy-state-init.md",
+      "upstream_sha256": "4ae844740f266fc8cbf050701230286624a2440ec5be67b9a63d9edc3c580573",
+      "sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-lazy-state-init.md",
+        "sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-memo-with-default-value.md",
+      "upstream_sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
+      "sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-memo-with-default-value.md",
+        "sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-memo.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-memo.md",
+      "upstream_sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
+      "sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-memo.md",
+        "sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-move-effect-to-event.md",
+      "upstream_sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
+      "sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-move-effect-to-event.md",
+        "sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-no-inline-components.md",
+      "upstream_sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
+      "sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-no-inline-components.md",
+        "sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-simple-expression-in-memo.md",
+      "upstream_sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
+      "sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-simple-expression-in-memo.md",
+        "sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-split-combined-hooks.md",
+      "upstream_sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
+      "sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-split-combined-hooks.md",
+        "sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-transitions.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-transitions.md",
+      "upstream_sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
+      "sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-transitions.md",
+        "sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-use-deferred-value.md",
+      "upstream_sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
+      "sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-use-deferred-value.md",
+        "sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/rerender-use-ref-transient-values.md",
+      "upstream_sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
+      "sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/rerender-use-ref-transient-values.md",
+        "sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-after-nonblocking.md",
+      "upstream_sha256": "d0b8d24a3db9f0f65f9e2bddbf230b0e03a5f60e1229d93a4a18f5e7a991c7c2",
+      "sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-after-nonblocking.md",
+        "sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-auth-actions.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-auth-actions.md",
+      "upstream_sha256": "a2ca8aa102839251c7971ec784560fab943c20b36fe6f80365d4110c13260c23",
+      "sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-auth-actions.md",
+        "sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-cache-lru.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-cache-lru.md",
+      "upstream_sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
+      "sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-cache-lru.md",
+        "sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-cache-react.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-cache-react.md",
+      "upstream_sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
+      "sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-cache-react.md",
+        "sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-dedup-props.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-dedup-props.md",
+      "upstream_sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
+      "sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-dedup-props.md",
+        "sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-hoist-static-io.md",
+      "upstream_sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
+      "sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-hoist-static-io.md",
+        "sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-no-shared-module-state.md",
+      "upstream_sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
+      "sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-no-shared-module-state.md",
+        "sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-parallel-fetching.md",
+      "upstream_sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
+      "sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-parallel-fetching.md",
+        "sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-parallel-nested-fetching.md",
+      "upstream_sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
+      "sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-parallel-nested-fetching.md",
+        "sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3"
+      }
+    },
+    {
+      "local": ".agents/skills/vercel-react-best-practices/rules/server-serialization.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/react-best-practices/rules/server-serialization.md",
+      "upstream_sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
+      "sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
+      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/react-best-practices/rules/server-serialization.md",
+        "sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f"
+      }
+    },
+    {
+      "local": ".agents/skills/web-design-guidelines/SKILL.md",
+      "source_id": "vercel-agent-skills",
+      "source": "skills/web-design-guidelines/SKILL.md",
+      "upstream_sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880",
+      "modifications": "Replace floating network fetch instructions with reading the vendored local guidelines, and record their immutable upstream URL; original frontmatter, review workflow and output format otherwise unchanged. Infer a bounded review target from the explicit package/diff before asking; preserve read-only scope rather than require redundant file-selection questions. Clarify keyboard operability/native semantics so the upstream explicit-handler rule cannot demand redundant handlers or duplicated activation.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/web-design-guidelines/SKILL.md",
+        "sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880"
+      }
+    },
+    {
+      "local": ".agents/skills/web-design-guidelines/references/web-interface-guidelines.md",
+      "source_id": "vercel-web-interface-guidelines",
+      "source": "command.md",
+      "upstream_sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234",
+      "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/web-design-guidelines/references/web-interface-guidelines.md",
+        "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
+      }
+    },
+    {
+      "local": ".agents/skills/ponytail/SKILL.md",
+      "source_id": "ponytail",
+      "source": "skills/ponytail/SKILL.md",
+      "upstream_sha256": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
+      "sha256": "38320a1eabc197118a8b0ae427a505af4fece0ffc5f1e27f4aa3309375595211",
+      "modifications": "Narrow discovery to new functionality/refactor/abstraction-dependency decisions; remove persistent plugin mode, level-switching/slash commands and mandatory lite permission handoff; preserve smallest-complete-change guidance under AGENTS/README authority and required regression/package checks. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/ponytail/SKILL.md",
+        "sha256": "eacf6bdf73abe7889c719a76d44027ddf2788142795eaa5d98ca2926ddeeeb61"
+      }
+    },
+    {
+      "local": ".agents/licenses/ponytail-LICENSE",
+      "source_id": "ponytail",
+      "source": "LICENSE",
+      "upstream_sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+      "sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/ponytail-LICENSE",
+        "sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab"
+      }
+    },
+    {
+      "local": ".agents/licenses/impeccable-LICENSE",
+      "source_id": "impeccable",
+      "source": "LICENSE",
+      "upstream_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/impeccable-LICENSE",
+        "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+      }
+    },
+    {
+      "local": ".agents/licenses/impeccable-NOTICE.md",
+      "source_id": "impeccable",
+      "source": "NOTICE.md",
+      "upstream_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+      "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/impeccable-NOTICE.md",
+        "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb"
+      }
+    },
+    {
+      "local": ".agents/skills/impeccable/SKILL.md",
+      "source_id": "impeccable",
+      "source": ".agents/skills/impeccable/SKILL.md",
+      "upstream_sha256": "c26d6963fe2278f570930ea083ec89609ba094ee93b1ae825719ff5d29b9ac3c",
+      "sha256": "a57de157c8e09fb901957941e70d743bca7c20fd1004206a9ec0b2f26a1d7bbd",
+      "modifications": "Retain name/version and design principles; replace launcher/plugin setup, runtime commands, native assets/agents and document mutation with selected manual web audit/critique/polish/harden routing, project authority and explicit evidence limits. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/impeccable/SKILL.md",
+        "sha256": "5dee7a723f4a6d9f66801ca00d8a42ef13a527ca9e9beef402b11ec82a5aa2bf"
+      }
+    },
+    {
+      "local": ".agents/skills/impeccable/reference/audit.md",
+      "source_id": "impeccable",
+      "source": ".agents/skills/impeccable/reference/audit.md",
+      "upstream_sha256": "5ba9e3a090fc4c4d212c8cbfa5a48f7454ceb10fa81a284b4a7b4e8351ece2f1",
+      "sha256": "e64e596c3dccb93bab1a70470e40d205a6fd8315b459f88dac01fb8186ba2d70",
+      "modifications": "Replace mandatory detector/CDP/native tooling with manual authorized source/render checks; preserve five audit dimensions and concrete findings; scope scores/features to inspected product states and avoid conformance claims; limit recommendations to imported workflows. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/impeccable/reference/audit.md",
+        "sha256": "a87903b0b1a0cfe2a7870a6baf925617a78b63ddea81d2c0aad1d3c1892eb828"
+      }
+    },
+    {
+      "local": ".agents/skills/impeccable/reference/critique.md",
+      "source_id": "impeccable",
+      "source": ".agents/skills/impeccable/reference/critique.md",
+      "upstream_sha256": "c210c9506877c6c8d88880a337fddd95d4315daf70ed6bc631ee6520481f1a0c",
+      "sha256": "7ed90dadf13dc630bb5cba578691c1c82dc36ef370e54d83a532b6e9a8de9f0c",
+      "modifications": "Replace mandatory isolated agents/detector/browser injection, storage/trend and forced-question procedure with truthful manual read-only critique and optional actual independent evidence; retain cognitive-load/Nielsen/persona reference material while making numeric/style heuristics contextual and scores non-approving. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/impeccable/reference/critique.md",
+        "sha256": "ae9f1a6eb893e93c69b6d5cee0ed4a2e408c9e4abeec70b26dd693fa298f386d"
+      }
+    },
+    {
+      "local": ".agents/skills/impeccable/reference/polish.md",
+      "source_id": "impeccable",
+      "source": ".agents/skills/impeccable/reference/polish.md",
+      "upstream_sha256": "81666fc7f783b4e3514db6554e713dc0479bd9cdedb06e93d15f8b579aae869a",
+      "sha256": "4f7440aa8b9072919b1783a19ae4aecb9a10276a5383d3cffcea351a9f20bf5d",
+      "modifications": "Keep refinement/system/path checks; replace critique-storage/context/hooks/native runtime procedures with current supplied findings, authorized web evidence and project verification; remove nonexistent commands and automatic snapshot lifecycle. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/impeccable/reference/polish.md",
+        "sha256": "8b4516afa38c4b690ea6fb466decf23e43392fdb3e4da72c85480803691fbe16"
+      }
+    },
+    {
+      "local": ".agents/skills/impeccable/reference/craft-floor.md",
+      "source_id": "impeccable",
+      "source": ".agents/skills/impeccable/reference/craft-floor.md",
+      "upstream_sha256": "808a50e0e6c74617a07b0eaf7fd80f58d8e48a13f48e47c658c7534b1724e5c2",
+      "sha256": "55e371ebb9920c769c4d399652b97f43f8e56861aab4dfd1b3f3fec5c03d8ae1",
+      "modifications": "Remove automatic hook claims and absolute aesthetic bans; preserve manual craft checks while subordinating typography/motion/cards/eyebrows/fonts/radii examples to the actual brief, Operate use case, approved tokens and execution scope. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/impeccable/reference/craft-floor.md",
+        "sha256": "4cd085aa5c6fd75c859b5ff5c0ce238b456b1f2765ab7a76d56dbb3f31a9bda9"
+      }
+    },
+    {
+      "local": ".agents/skills/impeccable/reference/harden.md",
+      "source_id": "impeccable",
+      "source": ".agents/skills/impeccable/reference/harden.md",
+      "upstream_sha256": "4167eb7fc456cdfe09ff0ac2dbcb5e59cee57e590137aab6cc8ec08aafb6d775",
+      "sha256": "03e63bf24554fbc6445c1776f7ad0d677bf183bd532d6f3fbec2d914259d27bc",
+      "modifications": "Retain input/overflow/error/gesture/a11y/lifetime resilience reference; constrain examples to supported product scope and safe tests, preserve auth/server/hardware truth and existing app architecture, remove implied new polyfill/SSR/offline requirements; trim trailing whitespace only. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/impeccable/reference/harden.md",
+        "sha256": "efaabafb5e323f35a3d9e277ea6078f7d0a45bcce10d5e5f219c0ac79fcc7834"
+      }
+    },
+    {
+      "local": ".agents/skills/impeccable/reference/operate.md",
+      "source_id": "impeccable",
+      "source": ".agents/skills/impeccable/reference/operate.md",
+      "upstream_sha256": "a9d2203acd45ca33a13d5c68b02b23ed512425ac15f0e8438318ed124b43729d",
+      "sha256": "c28c4c8b894ee767dc28a19692488495659abb492f11b8a2ec75ab7dc32459d5",
+      "modifications": "Add prominent instruction-only adaptation notice and make numeric/style examples subordinate to established operator design, existing components and scope; retain upstream Operate/Read guidance. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/impeccable/reference/operate.md",
+        "sha256": "7573cb221807d138f235264841758e6b40e73123c027ec7918127a53fb090262"
+      }
+    },
+    {
+      "local": ".agents/skills/codebase-design/SKILL.md",
+      "source_id": "mattpocock",
+      "source": "skills/engineering/codebase-design/SKILL.md",
+      "upstream_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+      "sha256": "8dcacd4d5d6c84619e385a3abf31e85ee0f5e79fb2a1b7679d815be60ff94587",
+      "modifications": "Add local adaptation/provenance links; preserve deep-module vocabulary as optional design language rather than a renaming mandate; replace interface-only testing and fixed adapter-count absolutes with responsibility/safety criteria; keep explicit effects and consumer surfaces; make alternative-design delegation proportional. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/codebase-design/SKILL.md",
+        "sha256": "e96da1fc5a7e419f9b5902224bffc0585b89a8ac77376cc4786764b129a3906d"
+      }
+    },
+    {
+      "local": ".agents/skills/codebase-design/DEEPENING.md",
+      "source_id": "mattpocock",
+      "source": "skills/engineering/codebase-design/DEEPENING.md",
+      "upstream_sha256": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+      "sha256": "97114f24e447c07dd8974532b0fed3b4da881d5a294f3560d0b9f4c6bf0b76af",
+      "modifications": "Replace automatic merging, required ports and adapter-count rules with cohesive ownership/existing seam criteria; replace blanket unit-test deletion/interface-only tests with demonstrated equivalent coverage and retained low-level/safety/integration regressions.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/codebase-design/DEEPENING.md",
+        "sha256": "97114f24e447c07dd8974532b0fed3b4da881d5a294f3560d0b9f4c6bf0b76af"
+      }
+    },
+    {
+      "local": ".agents/skills/codebase-design/DESIGN-IT-TWICE.md",
+      "source_id": "mattpocock",
+      "source": "skills/engineering/codebase-design/DESIGN-IT-TWICE.md",
+      "upstream_sha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010",
+      "sha256": "61ae7455d6f6bf3ae221a21f85e090394c8db364bff850e2841393fd9306e9d9",
+      "modifications": "Replace mandatory 3+ agents and entry-point count with proportional native comparison/delegation; replace missing GLOSSARY.md requirement with existing engineering vocabulary; preserve authorized continuation and owned-file/concurrency constraints. Relink naming criteria to the neutral engineering heading.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/codebase-design/DESIGN-IT-TWICE.md",
+        "sha256": "58c19398ff7119925ba4a838c2ccbf1431da3bc963a83b6c45ce3373ceed35f5"
+      }
+    },
+    {
+      "local": ".agents/skills/writing-for-agents/SKILL.md",
+      "source_id": "mattpocock",
+      "source": "skills/productivity/writing-for-agents/SKILL.md",
+      "upstream_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+      "sha256": "0de3f0ab8f06bc7c56d212f4a5ea922e18fa9554b2167cdb5b8e2033efda4012",
+      "modifications": "Narrow discovery to substantive agent guidance; qualify deterministic-process/context-erasure claims; add canonical adaptation/provenance links; constrain exhaustive criteria to task scope and preserve explicit safety/authority/lifecycle/rollback rules during positive wording or no-op pruning. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/writing-for-agents/SKILL.md",
+        "sha256": "6b90406a3e7f604e77532e0736ae4262dc48812e7a63bd4314b21d4759be08f1"
+      }
+    },
+    {
+      "local": ".agents/skills/writing-for-agents/SKILL-MECHANICS.md",
+      "source_id": "mattpocock",
+      "source": "skills/productivity/writing-for-agents/SKILL-MECHANICS.md",
+      "upstream_sha256": "c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059",
+      "sha256": "e46fab2949cfc3c672f940b1d0141cb641c5ee7c2aca02270e3ec012223cce5a",
+      "modifications": "Replace Claude-specific disable-model-invocation/zero-context guarantees with harness-verified description/exact-path routing and preservation of invocation policy; retain progressive-reference/splitting guidance; point to existing catalog rather than require missing router skills. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/writing-for-agents/SKILL-MECHANICS.md",
+        "sha256": "ca2b7746c68baaafde06d7f0a47d7972bcfc1a6fbac2236b577aa8530f0a4502"
+      }
+    },
+    {
+      "local": ".agents/licenses/mattpocock-LICENSE",
+      "source_id": "mattpocock",
+      "source": "LICENSE",
+      "upstream_sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/mattpocock-LICENSE",
+        "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+      }
+    },
+    {
+      "local": ".agents/licenses/addyosmani-LICENSE",
+      "source_id": "addyosmani",
+      "source": "LICENSE",
+      "upstream_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/addyosmani-LICENSE",
+        "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+      }
+    },
+    {
+      "local": ".agents/skills/security-and-hardening/SKILL.md",
+      "source_id": "addyosmani",
+      "source": "skills/security-and-hardening/SKILL.md",
+      "upstream_sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "sha256": "bd70c6fd493c3daaa08cb331ea8e27da6d0b9c0948a24311b6576252dd93d9e8",
+      "modifications": "Narrow triggers to actual trust-boundary/security work; replace universal web controls and repeated approval list with applicability/current task authority; preserve auth/schema/error/transport contracts, locked audit environment and no-install/no-upgrade scope; qualify public SSRF rules for approved local integrations and cookie/CSRF examples; relocate shared checklist links, replace absent incident skill with existing diagnosis path, and make verification offline/scoped. Scope secret rotation/history handling to credential-owner authority. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/security-and-hardening/SKILL.md",
+        "sha256": "ca810bde7d3359a093016f07b1c7eb42b71c332d452e93e7d92bf74bd79a8104"
+      }
+    },
+    {
+      "local": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
+      "source_id": "addyosmani",
+      "source": "skills/security-and-hardening/references/hardening-patterns.md",
+      "upstream_sha256": "2e1b93a502b4cdb0258404441f3aab029b0cce4003fbbcc61af9a2de18bab9ab",
+      "sha256": "59036760247821118f8075b9209cfb2633c57badfdf2a766bd24c8c54d26dc6e",
+      "modifications": "Relocate checklist links; mark TypeScript/auth/status/vendor examples as task-scoped, not scaffolds; fail closed in illustrative absent-origin CORS case; qualify SSRF for public user-directed fetches; replace automatic dependency remediation/allowlisting/history rewriting with owner-authorized actions and existing shared rate enforcement. Replace denylist/rest-based sanitizeUser example with an explicit allowlisted public DTO and coherent illustrative types; explain that TypeScript annotations do not strip runtime properties and preserve existing public-schema ownership. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
+        "sha256": "6035031a836488a0ca2a230b16e37185c0b423721362a75a00e4b48b2970a0d0"
+      }
+    },
+    {
+      "local": ".agents/skills/security-and-hardening/references/security-checklist.md",
+      "source_id": "addyosmani",
+      "source": "references/security-checklist.md",
+      "upstream_sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "sha256": "672bb5ffac44b84e422958d8b0fbae45a09af2242ebf763943182e36c41b0d66",
+      "modifications": "Relocate root-shared checklist into skill-owned references; link entrypoint and qualify native/web/auth applicability; preserve schema/error/transport/permissions contracts; remove fixed auth timing defaults and unverified package-manager-version policies in favor of pinned official docs/existing gates; scope installs/commits/history actions and browser permissions; retain threat/destructive-path/supply-chain/OWASP material.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/security-and-hardening/references/security-checklist.md",
+        "sha256": "672bb5ffac44b84e422958d8b0fbae45a09af2242ebf763943182e36c41b0d66"
+      }
+    },
+    {
+      "local": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "source_id": "addyosmani",
+      "source": "skills/observability-and-instrumentation/SKILL.md",
+      "upstream_sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+      "sha256": "0aafb9e36edb4d7c3c6d5fa57d3bc3f84f7efe6751897755a20ef340754957b7",
+      "modifications": "Narrow discovery to requested telemetry/concrete diagnostic gaps; replace absent skill dependencies with existing diagnosis/owner workflows; preserve logger format and correlation contracts rather than mandate JSON/headers; treat metrics/OTel/vendor examples and tracing/sampling as optional scoped choices; retain bounded-cardinality/redaction/attribution/RED-USE guidance; preserve lifecycle and current alert policy; replace staging/UI/live alert actions and universal verification with offline evidence and explicit safety limits; relocate shared checklist. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/observability-and-instrumentation/SKILL.md",
+        "sha256": "b811257434ed3d9f3539f849bc11e8fb54077f14fe1813fa2afa58f3d925107f"
+      }
+    },
+    {
+      "local": ".agents/skills/observability-and-instrumentation/references/observability-checklist.md",
+      "source_id": "addyosmani",
+      "source": "references/observability-checklist.md",
+      "upstream_sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+      "sha256": "3cd74a9a5732e42b50229dbc3257a589cccf46b566b77e3b1403b6539e0b75c4",
+      "modifications": "Relocate root-shared checklist into owning references; replace mandatory JSON/all-boundary metrics/OTel/spans/two-tier alerts/dashboard/prelaunch stack gates with task-applicable existing signals and lifecycle/cost/redaction checks; preserve wire/correlation contracts; replace live staging/alert/UI verification and absent shipping-skill reference with offline fixtures, separate authority and honest omissions.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/skills/observability-and-instrumentation/references/observability-checklist.md",
+        "sha256": "3cd74a9a5732e42b50229dbc3257a589cccf46b566b77e3b1403b6539e0b75c4"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-async-patterns/SKILL.md",
+      "source": "plugins/systems-programming/skills/rust-async-patterns/SKILL.md",
+      "sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
+      "source_id": "wshobson",
+      "upstream_sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-async-patterns/SKILL.md",
+        "sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-async-patterns/references/details.md",
+      "source": "plugins/systems-programming/skills/rust-async-patterns/references/details.md",
+      "sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
+      "source_id": "wshobson",
+      "upstream_sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-async-patterns/references/details.md",
+        "sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/SKILL.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/SKILL.md",
+      "upstream_sha256": "b1651a95a2c36a8350c033449f52d07eebfdbf08e3bd1d5b22c4b7f55f7aa17c",
+      "sha256": "0adacbf41980b03a2bb77cc6423dd115568af53b1d238b726f65e6758345af14",
+      "modifications": "Preserve original skill name; replace multiline metadata with the two plain single-line fields accepted by the existing repository checker and remove allowed-tools/version/compatibility metadata. Add a modification notice linking canonical Rust adaptation rules and pinned Google text references/licenses; no runtime permissions or commands are installed. Link both canonical Rust rules and explicit external-guide applicability limits before upstream advice. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.; removed stale no-command claim and SDK-only Tokio/PyO3 target assumption; owning package native gates govern",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/SKILL.md",
+        "sha256": "5857372aefe51aa520b77cb0d16ad02a898a8f7ed6f2f614d6fbadd3d76a4106"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_01.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_01.md",
+      "upstream_sha256": "def0d5dc6ad2c8e143aed03c888c3f55b7f2b8f245c563e970f8fa951f7d7b52",
+      "sha256": "ffefea1dd08289d63036f3e587edca311e067cdea9776ec3557a80bfbbd0063b",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_01.md",
+        "sha256": "ffefea1dd08289d63036f3e587edca311e067cdea9776ec3557a80bfbbd0063b"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_02.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_02.md",
+      "upstream_sha256": "3b5d4ad26ce444770a05d91f737cc48417cb5bac94b2ab1587fc8de536bdcbb9",
+      "sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_02.md",
+        "sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_03.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_03.md",
+      "upstream_sha256": "fd673405cc1b5094d44d59eac4634e35525d7103d34b43178ee37277f392e15f",
+      "sha256": "5a575bb71809e110e511500e474175c60b8c088d951416624d6e0f474b71cd0f",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_03.md",
+        "sha256": "5a575bb71809e110e511500e474175c60b8c088d951416624d6e0f474b71cd0f"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_04.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_04.md",
+      "upstream_sha256": "5189a1118c41c25426357a14ad4e651e931443f1aefc241ea79689cb694175bf",
+      "sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_04.md",
+        "sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_05.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_05.md",
+      "upstream_sha256": "fb753a7515e11c1bc84d853d8b6d3442dd810d607f2b153595248d57232b8d38",
+      "sha256": "117b432d821efd40fd251167f83b0deef5b1cde462d239617ac53b3e29464dfd",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_05.md",
+        "sha256": "117b432d821efd40fd251167f83b0deef5b1cde462d239617ac53b3e29464dfd"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_06.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_06.md",
+      "upstream_sha256": "cff0a6826a23a9c4337700757cc67f4741aa4be81cd56925601b110752d38534",
+      "sha256": "00c9249914e6951723c5f02a088c31ec3734da9f6fd4862631581a6683241dc6",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_06.md",
+        "sha256": "00c9249914e6951723c5f02a088c31ec3734da9f6fd4862631581a6683241dc6"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_07.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_07.md",
+      "upstream_sha256": "be71105ee9123fe2dff6673d85fc854eafd281fbfa6e8778216d3f3a8d0ffaad",
+      "sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_07.md",
+        "sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_08.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_08.md",
+      "upstream_sha256": "54c1548a28586ebb373fe508ce0d885d78bc83e579aabd89836d2a53f7129a8b",
+      "sha256": "847f98424297eee067aaf7634e17b55336f227783c41d28629a15bb039448e28",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_08.md",
+        "sha256": "847f98424297eee067aaf7634e17b55336f227783c41d28629a15bb039448e28"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/chapter_09.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_09.md",
+      "upstream_sha256": "bdd59af111d402e4385c77e26fa6d53fc113e40ef678a9cf7aaff221e5c21917",
+      "sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344",
+      "modifications": "Normalize trailing whitespace/final newline; correct conditional Send/Sync reference/container bounds against Rust 1.92 standard-library sources, remove oversimplified initialization-type rows, and clarify shared-reference interior mutability, non-Copy Cell operations and raw-pointer creation versus unsafe access. Add a prominent modification notice and primary-source links; preserve other handbook examples.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_09.md",
+        "sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/apollo-LICENSE.md",
+      "source_id": "apollo-rust-best-practices",
+      "source": "LICENSE",
+      "upstream_sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
+      "sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/apollo-LICENSE.md",
+        "sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/google-rust-style-guide.md",
+      "source_id": "google-rust-styleguide",
+      "source": "rustguide.md",
+      "upstream_sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
+      "sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/google-rust-style-guide.md",
+        "sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+      "source_id": "google-rust-styleguide",
+      "source": "LICENSE",
+      "upstream_sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+        "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+      }
+    },
+    {
+      "local": ".agents/skills/rust-best-practices/references/google-styleguide-licensing.md",
+      "source_id": "google-rust-styleguide",
+      "source": "README.md",
+      "upstream_sha256": "1caced48cf6d3fec01ec04048efee99d96e1bfc21b2cecb7225bd8404c9faff1",
+      "sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33",
+      "modifications": "Retain the original Licensing section verbatim, excluding its external badge and unrelated README sections; add Google/title attribution, immutable original guide/declaration links, local license link and explicit extraction/modification notice. Preserve the prose CC-BY-3.0/code-sample Apache-2.0 distinction and both official license URLs.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/google-styleguide-licensing.md",
+        "sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33"
+      }
+    },
+    {
+      "local": ".agents/skills/deprecation-and-migration/SKILL.md",
+      "source_id": "addy-deprecation-and-migration",
+      "source": "skills/deprecation-and-migration/SKILL.md",
+      "upstream_sha256": "6a624f942e09c69863a4219b9bd5d56975026b67b0c70bc83385ffd2120b6142",
+      "sha256": "7e439ae02994790753b89697ca307af6a1e9b478d65f13a9f1664bf8b5f90b62",
+      "modifications": "Preserve original name and useful decision/advisory/consumer-migration/adapter patterns. Narrow activation to explicit SDK removal/API-migration tasks; add local adaptation/provenance/license/canonical-policy links. Account for unknown external consumers and retain supported aliases/wire fields. Replace automatic inactivity/removal, production proof/traffic and associated-test deletion mandates with scoped evidence, compatibility decision and equivalent safety coverage. Qualify optional flags/rollout illustration and remove installer example. Omit database-specific section/rationalizations/checklist and unavailable incremental-implementation reference as out of SDK scope. Preserve lifecycle/FFI/error/panic/safety documentation, rollback and authority limits. Normalize trailing whitespace/newline. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained. Integration review: local skill pointers, accurate public-export semantics and optional architecture boundaries; migration policy is language-neutral.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/deprecation-and-migration/SKILL.md",
+        "sha256": "7255540889e5402663acadbc0ee16c9b04788d1fdb001dc7b499ea928490dee5"
+      }
+    },
+    {
+      "local": ".agents/skills/deprecation-and-migration/references/addy-LICENSE.md",
+      "source_id": "addy-deprecation-and-migration",
+      "source": "LICENSE",
+      "upstream_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/deprecation-and-migration/references/addy-LICENSE.md",
+        "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+      }
+    },
+    {
+      "local": ".agents/skills/brainstorming/SKILL.md",
+      "source_id": "superpowers",
+      "source": "skills/brainstorming/SKILL.md",
+      "upstream_sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a",
+      "sha256": "af488846b9f108eacb7c09c87d245b92d431b09cb5676f4ae47e69510ff317f2",
+      "modifications": "Instruction-only portable adaptation: retain source workflow intent and evidence, remove runtime/plugin/worktree dependencies, forced reapproval, automatic commits and out-of-scope execution; resource and exact local pointers kept as applicable.",
+      "derivation": {
+        "repository": "https://github.com/obra/superpowers.git",
+        "revision": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/brainstorming/SKILL.md",
+        "sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a"
+      }
+    },
+    {
+      "local": ".agents/skills/brainstorming/builder-check-prompt.md",
+      "source_id": "superpowers",
+      "source": "skills/brainstorming/builder-check-prompt.md",
+      "upstream_sha256": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e",
+      "sha256": "7e3e05bf1064c5b7ba687b4e2443faf63fb3f720bc3c2e89920c5caa2ab6fece",
+      "modifications": "Instruction-only portable adaptation: retain source workflow intent and evidence, remove runtime/plugin/worktree dependencies, forced reapproval, automatic commits and out-of-scope execution; resource and exact local pointers kept as applicable.",
+      "derivation": {
+        "repository": "https://github.com/obra/superpowers.git",
+        "revision": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/brainstorming/builder-check-prompt.md",
+        "sha256": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e"
+      }
+    },
+    {
+      "local": ".agents/skills/writing-plans/SKILL.md",
+      "source_id": "superpowers",
+      "source": "skills/writing-plans/SKILL.md",
+      "upstream_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "sha256": "138878d7e858c872a5d0647c4ade2aec2711b5753d6019c297ce1358580b48af",
+      "modifications": "Instruction-only portable adaptation: retain source workflow intent and evidence, remove runtime/plugin/worktree dependencies, forced reapproval, automatic commits and out-of-scope execution; resource and exact local pointers kept as applicable. Linked optional organization-authored assets or preserved ADR evidence/rollback cautions; asset authorship is recorded separately from upstream imports.",
+      "derivation": {
+        "repository": "https://github.com/obra/superpowers.git",
+        "revision": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/writing-plans/SKILL.md",
+        "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+      }
+    },
+    {
+      "local": ".agents/skills/best-practice-research/SKILL.md",
+      "source_id": "oh-my-codex",
+      "source": "skills/best-practice-research/SKILL.md",
+      "upstream_sha256": "6f0525b364f03ea4ec991ceb1b77a5bf0674efc605bed5db5cb98ebfc09e7c5e",
+      "sha256": "6a8042da94003e31a748add2ba503da6438934cc6b87bd8c08e10062991d5a6f",
+      "modifications": "Instruction-only portable adaptation: retain source workflow intent and evidence, remove runtime/plugin/worktree dependencies, forced reapproval, automatic commits and out-of-scope execution; resource and exact local pointers kept as applicable.",
+      "derivation": {
+        "repository": "https://github.com/Yeachan-Heo/oh-my-codex.git",
+        "revision": "1dcf51359f3caeeebfed0bcbeea867ff0838d533",
+        "path": "skills/best-practice-research/SKILL.md",
+        "sha256": "6f0525b364f03ea4ec991ceb1b77a5bf0674efc605bed5db5cb98ebfc09e7c5e"
+      }
+    },
+    {
+      "local": ".agents/licenses/oh-my-codex-LICENSE",
+      "source_id": "oh-my-codex",
+      "source": "LICENSE",
+      "upstream_sha256": "4fd42de3188b327edb30d8997f8669b590ccfde847bb85af2e73a5c7161d4ec0",
+      "sha256": "4fd42de3188b327edb30d8997f8669b590ccfde847bb85af2e73a5c7161d4ec0",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/Yeachan-Heo/oh-my-codex.git",
+        "revision": "1dcf51359f3caeeebfed0bcbeea867ff0838d533",
+        "path": "LICENSE",
+        "sha256": "4fd42de3188b327edb30d8997f8669b590ccfde847bb85af2e73a5c7161d4ec0"
+      }
+    },
+    {
+      "local": ".agents/skills/memory-safety-patterns/SKILL.md",
+      "source_id": "wshobson",
+      "source": "plugins/systems-programming/skills/memory-safety-patterns/SKILL.md",
+      "upstream_sha256": "e23ee740f583c16e7633be4ee76ff028b8c9c486c6417fdfb69e0beb886327ca",
+      "sha256": "8cfe5997826228741f4cac7e886f38c7dd91fa91f77e1fe9f52960068131ee34",
+      "modifications": "Added ESP32/C++ standard, ownership, allocation, tool and authorization boundaries; corrected blanket raw-pointer prohibition. Project Blueprints: Neutralized ESP-only applicability into explicit optional native/firmware scope; added precise routing, firmware reference and conditional host diagnostics; removed incorrect total language-safety ordering.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/memory-safety-patterns/SKILL.md",
+        "sha256": "63a43567f4656199946939d3894ba2fc0b7c61c77640f2b1f52c65e4159d67af"
+      }
+    },
+    {
+      "local": ".agents/skills/memory-safety-patterns/references/details.md",
+      "source_id": "wshobson",
+      "source": "plugins/systems-programming/skills/memory-safety-patterns/references/details.md",
+      "upstream_sha256": "c07b8a66b6fd7afc6e957e3443cdbfa17787370d41e2ef16372eb7dd2b551a44",
+      "sha256": "50ea510e76ae9feb328fa6ab6ede7a857e18d7fa3446b92cd7a588b4813b33c6",
+      "modifications": "Added ESP applicability boundary; Database shares one mutable mutex and const find-based reads; socket deleter frees invalid-descriptor storage; removed throwing generic destructor rollback; corrected shared_ptr exception-safety claim. Made host socket acquisition exception-safe by owning allocated descriptor storage before socket(); scoped Rust read guard before write acquisition to prevent self-deadlock. Project Blueprints: Neutralized ESP-only applicability; added firmware reference and excerpt limits. Checked moved-from unique ownership and socket acquisition failure, matched GCC C cleanup callback pointer type, exposed buffered file-write status, initialized context capacity, clarified span lifetime limits, supplied missing illustrative definitions/includes/types.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/memory-safety-patterns/references/details.md",
+        "sha256": "91d450b3a66444872d56ce4061e4126de416510172494fe7f6cf4c937ca1b882"
+      }
+    },
+    {
+      "local": ".agents/licenses/jeffallan-LICENSE",
+      "source_id": "jeffallan",
+      "source": "LICENSE",
+      "upstream_sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
+      "sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/licenses/jeffallan-LICENSE",
+        "sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241"
+      }
+    },
+    {
+      "local": ".agents/skills/embedded-systems/SKILL.md",
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/SKILL.md",
+      "upstream_sha256": "536161470752d40a2bfc3ec4b17ab5c34fd3593a8960bf8089b0ea59b6ddec1f",
+      "sha256": "c139324c2e171bdb45550d7551a5013289dbc39a23a59d9b128de5bae52d381c",
+      "modifications": "Added ESP32/API/version/scope boundaries and removed null metadata. Preserved reviewed hardware profiles; removed unsupported ISR/task/register-blink copy skeletons, including unchecked queue saturation, and references existing topic criteria instead. Scoped workflow/output to necessary changes rather than mandatory drivers/tasks or hardware execution. Project Blueprints: Neutralized ESP product assumptions into optional selected-target firmware guidance; qualified ESP-IDF rules, generalized queue/persistence owners and linked generic firmware criteria; retained all five existing topic references.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/SKILL.md",
+        "sha256": "d1041af2bbfb5dfc2c82cf167860cbf26fa8654b8df7ba5109797b5c0d8f5909"
+      }
+    },
+    {
+      "local": ".agents/skills/embedded-systems/references/rtos-patterns.md",
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/rtos-patterns.md",
+      "upstream_sha256": "feab7e2d9a8026c602ea92cb0ac4d6ad47714291d373ab18201979b7ac4f2931",
+      "sha256": "d84515ac17031aacf025eb833d42f28943efef047879b546d35b3db57cb0c3fa",
+      "modifications": "Retained upstream RTOS topics with ESP-IDF byte-unit/framework-scheduler/SMP/volatile/private-config limits; removed unsupported task/queue/mutex/semaphore/timer/event/memory/notification skeletons rather than presenting unchecked platform/error-handling examples. Project Blueprints: Generalized selected RTOS/API scope and explicitly qualified framework-owned ESP scheduler/config assumptions; preserved task/queue failure handling, stack units, ISR safety and synchronization criteria.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/rtos-patterns.md",
+        "sha256": "39b8debafb19d471e49e83b74d8098a497b73d3e02b949a4860385c1b13258bb"
+      }
+    },
+    {
+      "local": ".agents/skills/embedded-systems/references/microcontroller-programming.md",
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/microcontroller-programming.md",
+      "upstream_sha256": "d35352d4e3a0d573e2f10037895c0658dbf44a710b6c57777ce10080ec1a1ce6",
+      "sha256": "531e1423a2fcec2ca2d38c66f288485ecde057349e1ed12df4f6a71bd2a71881",
+      "modifications": "Retained upstream peripheral topics with explicit ESP32/API/scope limits; removed STM32/ARM register/HAL, interrupt, blocking-poll, PWM/ADC/DMA/UART/clock/watchdog/sleep copy recipes in favor of source/datasheet-backed review criteria. Project Blueprints: Generalized target SDK, GPIO and interrupt guidance; removed Go2 binary-stream/product assumptions while preserving selected-protocol separation and safe no-replay behavior.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/microcontroller-programming.md",
+        "sha256": "0361bf7eaf0c2c0bb52df1be3fbded65c18cbaa9fd1aab6c5db88386ed70dceb"
+      }
+    },
+    {
+      "local": ".agents/skills/embedded-systems/references/power-optimization.md",
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/power-optimization.md",
+      "upstream_sha256": "935d9bb0d93e8935479beff2eb986fac4538d965ad0dddb43bee6a48b05466a9",
+      "sha256": "edb1a1a2c27c360e277dc0349e523af0251a58f1503d86f7399a661bbb32e4ea",
+      "modifications": "Retained upstream power topics with ESP32/scope limits; removed uncalibrated sleep/clock/peripheral/GPIO/ADC/battery/RTC/current-estimator implementations. Requires existing product safe outputs, actual hardware constraints and separately authorized measurement. Project Blueprints: Generalized selected MCU/SDK and product safety terminology; retained safe outputs, actuator lease/deadline, wake, calibration and separately authorized measurement constraints.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/power-optimization.md",
+        "sha256": "54186ec70eb24cba60bc5426abc5ad74e8d57958462f3f8686199f4760445327"
+      }
+    },
+    {
+      "local": ".agents/skills/embedded-systems/references/communication-protocols.md",
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/communication-protocols.md",
+      "upstream_sha256": "c11b9462c6bdc07aa82fe9a0d7c991e84c80416351328efb8006b33580e7da32",
+      "sha256": "696c692b1aca6e389dd40b9ed28cc961a6eb3a05b51cc944ed8c52925574e5bd",
+      "modifications": "Retained upstream protocol topics; removed non-ESP register-level I2C/SPI-DMA/UART/CAN implementations, including unsigned timeout wrap and fixed eight-byte reads. Added bounded error/length/ownership criteria and existing production protocol/queue pointers; no replacement driver code. Project Blueprints: Generalized selected MCU/SDK boundary; removed source-product queue paths and replaced them with explicit admission, partial-consumption and synchronization contracts; preserved timeout, length, CRC, DMA lifetime and safe saturation semantics.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/communication-protocols.md",
+        "sha256": "3697ec9d7d5694d74096f9f7202d9b77b903b23b8dbd381b74b09126fdaf0caf"
+      }
+    },
+    {
+      "local": ".agents/skills/embedded-systems/references/memory-optimization.md",
+      "source_id": "jeffallan",
+      "source": "skills/embedded-systems/references/memory-optimization.md",
+      "upstream_sha256": "573eb22555200e5446dbf0c69bbb9c31b0e1e8c8f5061fc3cdd7c96a7b8668a6",
+      "sha256": "ce7884ca3e14d39d0a51c3a22109cfb303e0634754936f3fdd69dc7e1fd3fdc9",
+      "modifications": "Retained upstream topic structure; replaced unsupported implementation recipes with concise ESP32/repository review criteria. Removed unsafe raw-flash/recursive-retry, live-stack painting/scanning and unchecked pool/ring-buffer/allocation/linker examples; points to existing bounded queue and ScopedPreferences and version-checked SDK headroom measurement. Project Blueprints: Generalized target/persistence terminology; replaced source-product NVS/queue links with scoped persistence and bounded-queue ownership criteria; preserved bounds, resource, power-loss and failure handling.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang-esp.git",
+        "revision": "2fda4fc7e9439fd65685d6bc6a8ea87fd5217d78",
+        "path": ".agents/skills/embedded-systems/references/memory-optimization.md",
+        "sha256": "271bd099c0ce1d3ed7a9034ac6bb4ae4795de825a67abcf0201324536f179a7d"
+      }
+    },
+    {
+      "local": ".agents/skills/domain-modeling/ADR-FORMAT.md",
+      "source_id": "mattpocock",
+      "source": "skills/engineering/domain-modeling/ADR-FORMAT.md",
+      "upstream_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+      "sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+      "modifications": "Unmodified upstream resource."
+    },
+    {
+      "local": ".agents/skills/domain-modeling/GLOSSARY-FORMAT.md",
+      "source_id": "mattpocock",
+      "source": "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+      "upstream_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+      "sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+      "modifications": "Unmodified upstream resource."
+    },
+    {
+      "local": ".agents/skills/domain-modeling/SKILL.md",
+      "source_id": "mattpocock",
+      "source": "skills/engineering/domain-modeling/SKILL.md",
+      "upstream_sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "sha256": "909ec41428fefb8acd2d1c7003b51e32de6e57a4b45110e75cbc458a75d5c307",
+      "modifications": "Preserved whole upstream skill directory including formats and OpenAI interface metadata. Scoped trigger, file creation and inline updates to existing consuming-project glossary/ADR conventions and explicit write authority; read-only proposals are not accepted decisions. Linked optional organization-authored assets or preserved ADR evidence/rollback cautions; asset authorship is recorded separately from upstream imports."
+    },
+    {
+      "local": ".agents/skills/domain-modeling/agents/openai.yaml",
+      "source_id": "mattpocock",
+      "source": "skills/engineering/domain-modeling/agents/openai.yaml",
+      "upstream_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+      "sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+      "modifications": "Unmodified upstream resource."
+    },
+    {
+      "local": ".agents/skills/python-type-safety/SKILL.md",
+      "source_id": "wshobson-python-type-safety",
+      "source": "plugins/python-development/skills/python-type-safety/SKILL.md",
+      "upstream_sha256": "7798dd109350b73c80bb4642f6e5a0ebaa2ae392484a213d4b44b35e9b4dad66",
+      "sha256": "85aae48eebd63b3cc66fb5f066e61dffcec1fc37b5d6b202572e9146a2728354",
+      "modifications": "Preserved complete upstream entrypoint and detailed patterns. Use actual consuming Python/checker versions and configured gates, not a hard-coded 3.12 minimum or new checker requirement. Corrected generic TypeAlias fallback for 3.10/3.11; tagged success/error state supports successful None without type ignores. Clarified annotations and runtime-checkable protocols do not perform runtime input/signature validation; Pydantic v2 example is conditional. Added local detailed-resource link."
+    },
+    {
+      "local": ".agents/skills/python-type-safety/references/details.md",
+      "source_id": "wshobson-python-type-safety",
+      "source": "plugins/python-development/skills/python-type-safety/references/details.md",
+      "upstream_sha256": "c31ae289ec8de07220ddac57434fb0b764216af8a435dcc078c446d82e6862b5",
+      "sha256": "8710f742ae943026df67744aaafbcfdaf815775e9498d7cc3ddc6db8667e19cc",
+      "modifications": "Preserved complete upstream entrypoint and detailed patterns. Use actual consuming Python/checker versions and configured gates, not a hard-coded 3.12 minimum or new checker requirement. Corrected generic TypeAlias fallback for 3.10/3.11; tagged success/error state supports successful None without type ignores. Clarified annotations and runtime-checkable protocols do not perform runtime input/signature validation; Pydantic v2 example is conditional. Added local detailed-resource link."
+    },
+    {
+      "local": ".agents/licenses/wshobson-python-type-safety-LICENSE",
+      "source_id": "wshobson-python-type-safety",
+      "source": "LICENSE",
+      "upstream_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+      "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+      "modifications": "Unmodified MIT license and copyright notice at this distinct immutable revision."
+    }
+  ],
+  "authored_skills": [
+    {
+      "name": "monorepo-contract-change",
+      "origin": "Original Project Blueprints procedure, authored for the requested scoped skeleton; not an upstream import.",
+      "files": [
+        {
+          "local": ".agents/skills/monorepo-contract-change/SKILL.md",
+          "sha256": "aee58fbb8b0a3ff788e8487b1e7f63c7375c8c84dbb6592a43dc759662bda1ea"
+        }
+      ]
+    },
+    {
+      "name": "spec-driven-development",
+      "origin": "Original Project Blueprints procedure, authored for the requested scoped skeleton; not an upstream import.",
+      "files": [
+        {
+          "local": ".agents/skills/spec-driven-development/SKILL.md",
+          "sha256": "35c4106d9fc34eda2c0d74de40a5a8a37ffd1b0e9f1503613252df0e577a731c"
+        },
+        {
+          "local": ".agents/skills/spec-driven-development/assets/change-spec.md",
+          "sha256": "7db0fdc8d8413fd6c21147ce74c377a38c9d996a2bd7b6eee329b75c96200d8d"
+        }
+      ]
+    },
+    {
+      "name": "typescript-project-structure",
+      "origin": "Original Project Blueprints procedure, authored for the requested scoped skeleton; not an upstream import.",
+      "files": [
+        {
+          "local": ".agents/skills/typescript-project-structure/SKILL.md",
+          "sha256": "c9d334b4e637fad8c2f3828d698cbb83cdd911b14a5f578d1242794e98ab902b"
+        }
+      ]
+    },
+    {
+      "name": "fastapi-backend",
+      "origin": "Original Project Blueprints framework-boundary guidance with official documentation links; not an upstream documentation or skill import.",
+      "files": [
+        {
+          "local": ".agents/skills/fastapi-backend/SKILL.md",
+          "sha256": "babde8bddfceb002892212934caf312f06ab05c8fbc9d20839c8996321e9ef7c"
+        }
+      ]
+    },
+    {
+      "name": "nestjs-backend",
+      "origin": "Original Project Blueprints framework-boundary guidance with official documentation links; not an upstream documentation or skill import.",
+      "files": [
+        {
+          "local": ".agents/skills/nestjs-backend/SKILL.md",
+          "sha256": "cea37ee0cf5b7443d7fec1a6e5e8370febad8b96b775a6370076c50aee5a3f28"
+        }
+      ]
+    },
+    {
+      "name": "nextjs-app-router",
+      "origin": "Original Project Blueprints framework-boundary guidance with official documentation links; not an upstream documentation or skill import.",
+      "files": [
+        {
+          "local": ".agents/skills/nextjs-app-router/SKILL.md",
+          "sha256": "4555af7abb344d118534a846e628f15a053c85e82a019205f3bcb75c87cb20e0"
+        }
+      ]
+    },
+    {
+      "name": "robotics-software",
+      "origin": "Original Project Blueprints conditional robotics/software-boundary procedure with primary reference links; no middleware, SDK or upstream prose import.",
+      "files": [
+        {
+          "local": ".agents/skills/robotics-software/SKILL.md",
+          "sha256": "6ca666f1f9408009cae5b487029ca2c05b9454223852b7931070918a80b11974"
+        }
+      ]
+    },
+    {
+      "name": "litestar-backend",
+      "origin": "Original Project Blueprints Litestar development/review procedure linked to official versioned documentation; no upstream skill prose or ecosystem policy imported.",
+      "files": [
+        {
+          "local": ".agents/skills/litestar-backend/SKILL.md",
+          "sha256": "307fd40c493d769a3c7ff0fac1257a3f8bc328f439c54d54b33cbe5cf2188a98"
+        }
+      ]
+    }
+  ],
+  "authored_resources": [
+    {
+      "name": "writing-plans",
+      "origin": "Original organization-authored supporting resource migrated from the reviewed Project Blueprints forms; not an upstream skill or resource import.",
+      "files": [
+        {
+          "local": ".agents/skills/writing-plans/assets/task-brief.md",
+          "sha256": "4702d07dc9b185f4b78e8aaf9ddb717496d06f60b132dde3fe7945e50cf13b0c"
+        }
+      ]
+    },
+    {
+      "name": "docs-sync",
+      "origin": "Original organization-authored supporting resource migrated from the reviewed Project Blueprints forms; not an upstream skill or resource import.",
+      "files": [
+        {
+          "local": ".agents/skills/docs-sync/assets/readme.md",
+          "sha256": "c77f8d7bd12bd3654387628b5c5e9e5b6e7133644c2f66e7bdcd3eca88798c2b"
+        }
+      ]
+    }
+  ]
+}

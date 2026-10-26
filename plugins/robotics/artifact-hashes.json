@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "80eeca400991d4df31ccbd8ced6c90739da36f7cf1d1e7c4f87be4aa5e558e23",
+    "DEPENDENCIES.md": "b74b8da1e88d646f93829bb45c1463d6e6ff7f05d02a843429cd13070c6a543f",
+    "THIRD-PARTY-NOTICES.md": "88c10240feeaddb6c15dcb57531eb41b8a163be28d0ce8156403d110e7a99714",
+    "plugin.json": "5fac3e48e4951aad1b8512bc8ae425fa7528260e28d4c0b272da4e23676717a3",
+    "provenance.json": "4d374008f9b895485951f3e839e2150a9b388841e5568b4b5a17c03d29eaf28f",
+    "references/architecture.md": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+    "references/development.md": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+    "references/robotics.md": "cc4ff5c42689bef0905dcbed33aecf1e990d75d2dd9bb98c4e125091b9f456cd",
+    "skills/robotics-software/SKILL.md": "6ca666f1f9408009cae5b487029ca2c05b9454223852b7931070918a80b11974"
+  }
+}

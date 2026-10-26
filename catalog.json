@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "marketplace": "konglabs-agent-skills",
+  "version": "0.1.0",
+  "repository": "https://github.com/KongPedia/agent-skills.git",
+  "publication_status": "Private organization source; public distribution requires separate license and proprietary-scope clearance.",
+  "plugins": [
+    {
+      "id": "common",
+      "skills": [
+        "architecture-patterns",
+        "best-practice-research",
+        "brainstorming",
+        "code-review-excellence",
+        "codebase-design",
+        "deprecation-and-migration",
+        "docs-sync",
+        "observability-and-instrumentation",
+        "ponytail",
+        "security-and-hardening",
+        "spec-driven-development",
+        "systematic-debugging",
+        "test-driven-development",
+        "verification-before-completion",
+        "writing-for-agents",
+        "writing-plans",
+        "monorepo-contract-change",
+        "domain-modeling"
+      ],
+      "requires": [],
+      "optional": false
+    },
+    {
+      "id": "python",
+      "skills": [
+        "python-project-structure",
+        "python-design-patterns",
+        "python-testing-patterns",
+        "python-error-handling",
+        "python-resource-management",
+        "async-python-patterns",
+        "python-type-safety"
+      ],
+      "requires": [],
+      "optional": false
+    },
+    {
+      "id": "typescript",
+      "skills": [
+        "typescript-project-structure"
+      ],
+      "requires": [],
+      "optional": false
+    },
+    {
+      "id": "react-ui",
+      "skills": [
+        "vercel-react-best-practices",
+        "vercel-composition-patterns",
+        "frontend-design",
+        "impeccable",
+        "web-design-guidelines"
+      ],
+      "requires": [
+        "typescript"
+      ],
+      "optional": false
+    },
+    {
+      "id": "api-contracts",
+      "skills": [
+        "api-design-principles"
+      ],
+      "requires": [],
+      "optional": false
+    },
+    {
+      "id": "fastapi",
+      "skills": [
+        "fastapi-backend"
+      ],
+      "requires": [
+        "python",
+        "api-contracts"
+      ],
+      "optional": false
+    },
+    {
+      "id": "litestar",
+      "skills": [
+        "litestar-backend"
+      ],
+      "requires": [
+        "python",
+        "api-contracts"
+      ],
+      "optional": false
+    },
+    {
+      "id": "nestjs",
+      "skills": [
+        "nestjs-backend"
+      ],
+      "requires": [
+        "typescript",
+        "api-contracts"
+      ],
+      "optional": false
+    },
+    {
+      "id": "nextjs",
+      "skills": [
+        "nextjs-app-router"
+      ],
+      "requires": [
+        "typescript",
+        "react-ui",
+        "api-contracts"
+      ],
+      "optional": false
+    },
+    {
+      "id": "rust",
+      "skills": [
+        "rust-best-practices",
+        "rust-async-patterns"
+      ],
+      "requires": [],
+      "optional": false
+    },
+    {
+      "id": "cpp-firmware",
+      "skills": [
+        "embedded-systems",
+        "memory-safety-patterns"
+      ],
+      "requires": [],
+      "optional": false
+    },
+    {
+      "id": "robotics",
+      "skills": [
+        "robotics-software"
+      ],
+      "requires": [],
+      "optional": false
+    },
+    {
+      "id": "session-guidance",
+      "skills": [],
+      "requires": [],
+      "optional": true
+    }
+  ]
+}

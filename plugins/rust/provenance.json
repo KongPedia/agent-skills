@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "bundle": "rust",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "id": "apollo-rust-best-practices",
+      "repository": "https://github.com/apollographql/skills",
+      "revision": "f9843dce86b1a561e3bfbb024e65c28a6cbbe38c",
+      "license": "skills/rust-best-practices/references/apollo-LICENSE.md",
+      "skills": [
+        "rust-best-practices"
+      ],
+      "resource_scope": "Selected rust-best-practices entrypoint and all nine text reference chapters; excludes marketplace/plugin configuration and other Apollo skills."
+    },
+    {
+      "id": "google-rust-styleguide",
+      "repository": "https://github.com/google/styleguide",
+      "revision": "ac81bb465fdc5f0f68f64b72a90024c7c52442cc",
+      "license": "skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+      "skills": [
+        "rust-best-practices"
+      ],
+      "license_note": "Google README Licensing identifies prose as CC-BY-3.0 and code samples as Apache-2.0; faithful licensing excerpt, attribution and original license URLs are preserved locally.",
+      "resource_scope": "Unmodified rustguide.md and CC-BY-3.0 LICENSE plus adapted README Licensing excerpt with attribution and immutable source links; excludes unrelated Google guides and Google-specific build tooling."
+    },
+    {
+      "id": "wshobson",
+      "repository": "https://github.com/wshobson/agents.git",
+      "revision": "46891e7e60da0e52baf1050b7b6391b64e84c6d9",
+      "license": "licenses/wshobson-LICENSE",
+      "skills": [
+        "rust-async-patterns"
+      ],
+      "dependencies": {}
+    }
+  ],
+  "files": [
+    {
+      "source_id": "wshobson",
+      "source": "LICENSE",
+      "upstream_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+      "modifications": "Removed trailing whitespace only; upstream license terms and notice are unchanged.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/battlebang.git",
+        "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
+        "path": ".agents/licenses/wshobson-LICENSE",
+        "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
+      },
+      "local": "licenses/wshobson-LICENSE",
+      "canonical_source": "source/.agents/licenses/wshobson-LICENSE",
+      "source_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+      "payload_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source": "plugins/systems-programming/skills/rust-async-patterns/SKILL.md",
+      "source_id": "wshobson",
+      "upstream_sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-async-patterns/SKILL.md",
+        "sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df"
+      },
+      "local": "skills/rust-async-patterns/SKILL.md",
+      "canonical_source": "source/.agents/skills/rust-async-patterns/SKILL.md",
+      "source_sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
+      "payload_sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source": "plugins/systems-programming/skills/rust-async-patterns/references/details.md",
+      "source_id": "wshobson",
+      "upstream_sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-async-patterns/references/details.md",
+        "sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d"
+      },
+      "local": "skills/rust-async-patterns/references/details.md",
+      "canonical_source": "source/.agents/skills/rust-async-patterns/references/details.md",
+      "source_sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
+      "payload_sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/SKILL.md",
+      "upstream_sha256": "b1651a95a2c36a8350c033449f52d07eebfdbf08e3bd1d5b22c4b7f55f7aa17c",
+      "modifications": "Preserve original skill name; replace multiline metadata with the two plain single-line fields accepted by the existing repository checker and remove allowed-tools/version/compatibility metadata. Add a modification notice linking canonical Rust adaptation rules and pinned Google text references/licenses; no runtime permissions or commands are installed. Link both canonical Rust rules and explicit external-guide applicability limits before upstream advice. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.; removed stale no-command claim and SDK-only Tokio/PyO3 target assumption; owning package native gates govern",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/SKILL.md",
+        "sha256": "5857372aefe51aa520b77cb0d16ad02a898a8f7ed6f2f614d6fbadd3d76a4106"
+      },
+      "local": "skills/rust-best-practices/SKILL.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/SKILL.md",
+      "source_sha256": "0adacbf41980b03a2bb77cc6423dd115568af53b1d238b726f65e6758345af14",
+      "payload_sha256": "0adacbf41980b03a2bb77cc6423dd115568af53b1d238b726f65e6758345af14",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "LICENSE",
+      "upstream_sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/apollo-LICENSE.md",
+        "sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361"
+      },
+      "local": "skills/rust-best-practices/references/apollo-LICENSE.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/apollo-LICENSE.md",
+      "source_sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
+      "payload_sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_01.md",
+      "upstream_sha256": "def0d5dc6ad2c8e143aed03c888c3f55b7f2b8f245c563e970f8fa951f7d7b52",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_01.md",
+        "sha256": "ffefea1dd08289d63036f3e587edca311e067cdea9776ec3557a80bfbbd0063b"
+      },
+      "local": "skills/rust-best-practices/references/chapter_01.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_01.md",
+      "source_sha256": "ffefea1dd08289d63036f3e587edca311e067cdea9776ec3557a80bfbbd0063b",
+      "payload_sha256": "5445dc21afdbed2868f36ed0af83453003b5e251d3b0007811fe84db7e723e16",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_02.md",
+      "upstream_sha256": "3b5d4ad26ce444770a05d91f737cc48417cb5bac94b2ab1587fc8de536bdcbb9",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_02.md",
+        "sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093"
+      },
+      "local": "skills/rust-best-practices/references/chapter_02.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_02.md",
+      "source_sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093",
+      "payload_sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_03.md",
+      "upstream_sha256": "fd673405cc1b5094d44d59eac4634e35525d7103d34b43178ee37277f392e15f",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_03.md",
+        "sha256": "5a575bb71809e110e511500e474175c60b8c088d951416624d6e0f474b71cd0f"
+      },
+      "local": "skills/rust-best-practices/references/chapter_03.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_03.md",
+      "source_sha256": "5a575bb71809e110e511500e474175c60b8c088d951416624d6e0f474b71cd0f",
+      "payload_sha256": "d4804891228cbb81cb8fab8465302bddac356c2d777ba55f0261adf999b9425b",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_04.md",
+      "upstream_sha256": "5189a1118c41c25426357a14ad4e651e931443f1aefc241ea79689cb694175bf",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_04.md",
+        "sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88"
+      },
+      "local": "skills/rust-best-practices/references/chapter_04.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_04.md",
+      "source_sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88",
+      "payload_sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_05.md",
+      "upstream_sha256": "fb753a7515e11c1bc84d853d8b6d3442dd810d607f2b153595248d57232b8d38",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_05.md",
+        "sha256": "117b432d821efd40fd251167f83b0deef5b1cde462d239617ac53b3e29464dfd"
+      },
+      "local": "skills/rust-best-practices/references/chapter_05.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_05.md",
+      "source_sha256": "117b432d821efd40fd251167f83b0deef5b1cde462d239617ac53b3e29464dfd",
+      "payload_sha256": "2f1c8da1bab7eecb105c31575ae6e015ec2e87f3f8ed11c4a3eed25ab46bf0b3",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_06.md",
+      "upstream_sha256": "cff0a6826a23a9c4337700757cc67f4741aa4be81cd56925601b110752d38534",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_06.md",
+        "sha256": "00c9249914e6951723c5f02a088c31ec3734da9f6fd4862631581a6683241dc6"
+      },
+      "local": "skills/rust-best-practices/references/chapter_06.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_06.md",
+      "source_sha256": "00c9249914e6951723c5f02a088c31ec3734da9f6fd4862631581a6683241dc6",
+      "payload_sha256": "311f124a563f0be390e1ef5d45900f87990b3fe2f971dab57b7cfbf29b00616b",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_07.md",
+      "upstream_sha256": "be71105ee9123fe2dff6673d85fc854eafd281fbfa6e8778216d3f3a8d0ffaad",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_07.md",
+        "sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2"
+      },
+      "local": "skills/rust-best-practices/references/chapter_07.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_07.md",
+      "source_sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2",
+      "payload_sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_08.md",
+      "upstream_sha256": "54c1548a28586ebb373fe508ce0d885d78bc83e579aabd89836d2a53f7129a8b",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_08.md",
+        "sha256": "847f98424297eee067aaf7634e17b55336f227783c41d28629a15bb039448e28"
+      },
+      "local": "skills/rust-best-practices/references/chapter_08.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_08.md",
+      "source_sha256": "847f98424297eee067aaf7634e17b55336f227783c41d28629a15bb039448e28",
+      "payload_sha256": "893ca1f0b4bd9e0383feac48f6fb675bd02c8e6afc84575f82b9d3ac0ad91ff1",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "apollo-rust-best-practices",
+      "source": "skills/rust-best-practices/references/chapter_09.md",
+      "upstream_sha256": "bdd59af111d402e4385c77e26fa6d53fc113e40ef678a9cf7aaff221e5c21917",
+      "modifications": "Normalize trailing whitespace/final newline; correct conditional Send/Sync reference/container bounds against Rust 1.92 standard-library sources, remove oversimplified initialization-type rows, and clarify shared-reference interior mutability, non-Copy Cell operations and raw-pointer creation versus unsafe access. Add a prominent modification notice and primary-source links; preserve other handbook examples.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/chapter_09.md",
+        "sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344"
+      },
+      "local": "skills/rust-best-practices/references/chapter_09.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/chapter_09.md",
+      "source_sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344",
+      "payload_sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "google-rust-styleguide",
+      "source": "rustguide.md",
+      "upstream_sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/google-rust-style-guide.md",
+        "sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3"
+      },
+      "local": "skills/rust-best-practices/references/google-rust-style-guide.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/google-rust-style-guide.md",
+      "source_sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
+      "payload_sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "google-rust-styleguide",
+      "source": "LICENSE",
+      "upstream_sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+      "modifications": "",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+        "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+      },
+      "local": "skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+      "source_sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+      "payload_sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "source_id": "google-rust-styleguide",
+      "source": "README.md",
+      "upstream_sha256": "1caced48cf6d3fec01ec04048efee99d96e1bfc21b2cecb7225bd8404c9faff1",
+      "modifications": "Retain the original Licensing section verbatim, excluding its external badge and unrelated README sections; add Google/title attribution, immutable original guide/declaration links, local license link and explicit extraction/modification notice. Preserve the prose CC-BY-3.0/code-sample Apache-2.0 distinction and both official license URLs.",
+      "derivation": {
+        "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
+        "revision": "896080943c2801ee289e51a88743fead88305643",
+        "path": ".agents/skills/rust-best-practices/references/google-styleguide-licensing.md",
+        "sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33"
+      },
+      "local": "skills/rust-best-practices/references/google-styleguide-licensing.md",
+      "canonical_source": "source/.agents/skills/rust-best-practices/references/google-styleguide-licensing.md",
+      "source_sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33",
+      "payload_sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "authored_files": [],
+  "supporting_resources": [
+    {
+      "local": "references/architecture.md",
+      "canonical_source": "source/.agents/references/architecture.md",
+      "source_sha256": "0996b7537b72ed63748bd288cbacc210eaf0969c7b57a97b2709dd2efec83978",
+      "payload_sha256": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "local": "references/development.md",
+      "canonical_source": "source/.agents/references/development.md",
+      "source_sha256": "d3247be5b674a951db7e135ae6dfa2e7adddc1bda993a735a7d07fca0f67f8e6",
+      "payload_sha256": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "local": "references/engineering.md",
+      "canonical_source": "source/.agents/references/engineering.md",
+      "source_sha256": "1dad6033ffb06ab9f633e1d562e57c12bf1527a45943807f4599c37038067b1b",
+      "payload_sha256": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    },
+    {
+      "local": "references/rust.md",
+      "canonical_source": "source/.agents/references/rust.md",
+      "source_sha256": "64968c8c4f69ddf5d6e87d7cb1ed500e2ec05a735c16d7d05f6d677b5d49b36e",
+      "payload_sha256": "60e2c77abd4e93db3c9fc5f39922788cd6677a02d8bb097f8e53eabfdcd5156c",
+      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+    }
+  ],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+}

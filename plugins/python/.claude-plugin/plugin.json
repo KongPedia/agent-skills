@@ -1,0 +1,8 @@
+{
+  "name": "python",
+  "version": "0.1.0",
+  "description": "Python package, design, error, resource, async and testing procedures",
+  "author": {
+    "name": "Konglabs"
+  }
+}

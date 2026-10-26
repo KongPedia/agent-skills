@@ -1,0 +1,8 @@
+{
+  "name": "litestar",
+  "version": "0.1.0",
+  "description": "Litestar HTTP, dependency and lifecycle boundaries",
+  "author": {
+    "name": "Konglabs"
+  }
+}

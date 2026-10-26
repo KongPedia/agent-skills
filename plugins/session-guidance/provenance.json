@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "bundle": "session-guidance",
+  "version": "0.1.0",
+  "sources": [],
+  "files": [],
+  "authored_files": [],
+  "supporting_resources": [],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+}

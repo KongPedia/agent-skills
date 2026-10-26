@@ -1,0 +1,8 @@
+{
+  "name": "fastapi",
+  "version": "0.1.0",
+  "description": "FastAPI HTTP, dependency and lifecycle boundaries",
+  "author": {
+    "name": "Konglabs"
+  }
+}

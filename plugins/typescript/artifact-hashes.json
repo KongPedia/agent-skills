@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "b7964433ea2621c836e9972b045a427455fdc7e6a9e72d236e7bc19eaafc8cef",
+    "DEPENDENCIES.md": "9b510e0f563fa9f37707373c8f13fb63cabb56414f3eae99476bccd3fe61c4a4",
+    "THIRD-PARTY-NOTICES.md": "519209a81a426f1a0711592ba1fd58273f4c60f8c2c3529bec565497295aa1ee",
+    "plugin.json": "5eb65511460e6e4fda567985e3936fc2738eb441720862c27e388ffe26300605",
+    "provenance.json": "28d3ca4d0a73eb208c12ddb14e0c7997de307aa4f98d78325807d1adbaa940ad",
+    "references/architecture.md": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+    "references/development.md": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+    "references/engineering.md": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
+    "skills/typescript-project-structure/SKILL.md": "c54b75bd0788d6a9a13b82cf99bc5878180ed927b6edd275146e83d730b096bf"
+  }
+}

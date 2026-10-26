@@ -1,0 +1,62 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main, stable]
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          version: '0.10.2'
+          python-version: '3.13'
+      - run: uv sync --locked --group dev
+      - run: uv run --locked pytest -q
+      - run: uv run --locked python scripts/build_plugins.py --check
+      - name: Verify release metadata
+        env:
+          RELEASE_REF: ${{ github.ref }}
+        run: |
+          uv run --locked python - <<'PY'
+          import json, os, pathlib, tomllib
+          root = pathlib.Path.cwd()
+          version = json.loads((root / 'catalog.json').read_text())['version']
+          project = tomllib.loads((root / 'pyproject.toml').read_text())['project']
+          assert project['version'] == version
+          locked = tomllib.loads((root / 'uv.lock').read_text())['package']
+          assert next(p['version'] for p in locked if p['name'] == project['name']) == version
+          ref = os.environ['RELEASE_REF']
+          if ref.startswith('refs/tags/'):
+              assert ref == f'refs/tags/v{version}', 'Tag must match canonical catalog version'
+          PY
+
+  blueprint-contract:
+    # Enable after both repositories are published; use a reviewed full SHA.
+    if: ${{ vars.BLUEPRINTS_CONTRACT_REF != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: agent-skills
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ github.repository_owner }}/project-blueprints
+          ref: ${{ vars.BLUEPRINTS_CONTRACT_REF }}
+          path: project-blueprints
+          persist-credentials: false
+      - run: python3 project-blueprints/scripts/check_plugin_contract.py agent-skills

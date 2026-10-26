@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": {
+    ".claude-plugin/plugin.json": "bf4051514acff6d28b2413c0e61884f9da26da7ac188d0b18a2cae9e44d84833",
+    "DEPENDENCIES.md": "d19198b53bdab69df2e6613f1e07a10615f9e133990ba6b74fde8c5eb0ad1307",
+    "THIRD-PARTY-NOTICES.md": "5574d057d1a28b4d1b7245065ed4c699c5d56f8ce59bbe5f4f718828daee5968",
+    "licenses/jeffallan-LICENSE": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
+    "licenses/wshobson-LICENSE": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
+    "plugin.json": "bcd348112415e2dd7552c21d5b524336e159a698ccbcd41d1b3f4c24174916d1",
+    "provenance.json": "fc63fc71ccf06453f9a28902c40c8cedc514daee78f13cb097e4a6e43c986305",
+    "references/architecture.md": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+    "references/cpp-firmware.md": "3ca63b29c6554b1da42d9d49aef243b654c91258a1bf210138ab5a5d039a7d34",
+    "references/development.md": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+    "references/engineering.md": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
+    "skills/embedded-systems/SKILL.md": "c139324c2e171bdb45550d7551a5013289dbc39a23a59d9b128de5bae52d381c",
+    "skills/embedded-systems/references/communication-protocols.md": "696c692b1aca6e389dd40b9ed28cc961a6eb3a05b51cc944ed8c52925574e5bd",
+    "skills/embedded-systems/references/memory-optimization.md": "ce7884ca3e14d39d0a51c3a22109cfb303e0634754936f3fdd69dc7e1fd3fdc9",
+    "skills/embedded-systems/references/microcontroller-programming.md": "531e1423a2fcec2ca2d38c66f288485ecde057349e1ed12df4f6a71bd2a71881",
+    "skills/embedded-systems/references/power-optimization.md": "edb1a1a2c27c360e277dc0349e523af0251a58f1503d86f7399a661bbb32e4ea",
+    "skills/embedded-systems/references/rtos-patterns.md": "d84515ac17031aacf025eb833d42f28943efef047879b546d35b3db57cb0c3fa",
+    "skills/memory-safety-patterns/SKILL.md": "8cfe5997826228741f4cac7e886f38c7dd91fa91f77e1fe9f52960068131ee34",
+    "skills/memory-safety-patterns/references/details.md": "50ea510e76ae9feb328fa6ab6ede7a857e18d7fa3446b92cd7a588b4813b33c6"
+  }
+}
