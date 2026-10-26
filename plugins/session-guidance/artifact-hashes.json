@@ -2,12 +2,12 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "feb3a800ed31eb9e69eb1b6c4cbf5255358cc9a8db5cc24b59dd1f1896b56b73",
+    ".claude-plugin/plugin.json": "f849f0c56361f113bfe855a2ec4aadf944edcf7794394a4cfa49fc880a751556",
     "DEPENDENCIES.md": "d1206a0651c58b49869c1ac0d0b3c96cbd03c53fb90ad1869f5429f889d6bf29",
     "THIRD-PARTY-NOTICES.md": "3698a9968535067cbb6d3ce46dbe94deae4d3f177e29b049de8bec93dfe821c5",
     "hooks/hooks.json": "c45209c413df92692681d6c333bed209e4684c442f3bf2e4ecbf35541fd2598c",
     "hooks/session-start.sh": "3ffb7d401bc7d92285dc9a0966d39b30515a955fe9eb1356bbf1b86dcdd2b030",
-    "plugin.json": "69f590eadf5a97602a08a037c1aa41a6aca5de16fd85a015ee9c44ebbdd002ec",
-    "provenance.json": "798f3c7bd3f16deccc9ca645a6bf4b69e0ada8c15455e549f9b290de8c381cab"
+    "plugin.json": "1e8c4081bf74e770cfecd2233bc132776291c83ad3d2ac04b422777517d95243",
+    "provenance.json": "a9b518fb9cef6c8ee42244c2faffa65c188426dc31e942e7ad961daee23c2dfe"
   }
 }
