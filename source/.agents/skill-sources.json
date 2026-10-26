@@ -251,8 +251,8 @@
       "source_id": "wshobson",
       "source": "plugins/backend-development/skills/api-design-principles/SKILL.md",
       "upstream_sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
-      "sha256": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
-      "modifications": "",
+      "sha256": "a49c03936941b4af94201b874b06cadf5a0a2f4928b4502fef603d8a07e7ebcf",
+      "modifications": "Clarified framework-neutral REST/GraphQL contract ownership, shared FastAPI/Litestar selection, and adapter-specific illustrative FastAPI asset boundary; retained upstream procedure and resource identities.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
@@ -279,8 +279,8 @@
       "source_id": "wshobson",
       "source": "plugins/backend-development/skills/api-design-principles/assets/rest-api-template.py",
       "upstream_sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
-      "sha256": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
-      "modifications": "",
+      "sha256": "e0ab3803015f1e037554ce28bbdc56527b37f514972696cdf4c036bf1523e694",
+      "modifications": "Label the FastAPI mock-storage example as illustrative, not production-ready; emit missing-user details as a structured ErrorDetail list matching ErrorResponse.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
@@ -2794,7 +2794,7 @@
       "files": [
         {
           "local": ".agents/skills/fastapi-backend/SKILL.md",
-          "sha256": "babde8bddfceb002892212934caf312f06ab05c8fbc9d20839c8996321e9ef7c"
+          "sha256": "d0f1e0b3fbfe642b24ba135c75d918a783e4ae7cb3c9867144f22c762054ac87"
         }
       ]
     },

@@ -19,7 +19,9 @@ an upstream preference is not permission to add a dependency or replace an exist
 ## Procedure
 
 1. Inspect the changed route and its callers: request/response schemas, status codes, auth, error mapping and existing tests.
-   Define an observable success case and the relevant rejection/failure case before changing behavior.
+   Reuse the shared [API design procedure](../api-design-principles/SKILL.md) for REST/wire contracts, just as other
+   HTTP frameworks do; this skill owns only the FastAPI-specific boundary. Define an observable success case and the
+   relevant rejection/failure case before changing behavior.
 2. Keep HTTP validation/translation at the route. Put actual policy in a named function or concrete collaborator when it
    changes independently; do not introduce repository interfaces, a database or domain layers for an empty example.
    Declare the public response schema and test that internal or sensitive fields cannot escape through serialization.

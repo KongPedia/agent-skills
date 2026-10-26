@@ -1,6 +1,6 @@
 """
-Production-ready REST API template using FastAPI.
-Includes pagination, filtering, error handling, and best practices.
+Illustrative REST API template using FastAPI, not a production-ready service.
+Demonstrates pagination, filtering, and error handling with mock storage.
 """
 
 from fastapi import FastAPI, HTTPException, Query, Path, Depends, status
@@ -145,7 +145,10 @@ async def get_user(user_id: str = Path(..., description="User ID")):
     if user_id == "999":
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail={"message": "User not found", "details": {"id": user_id}}
+            detail={
+                "message": "User not found",
+                "details": [{"field": "user_id", "message": f"User {user_id} not found", "code": "not_found"}],
+            }
         )
 
     return User(

@@ -1,6 +1,6 @@
 {
   "name": "robotics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Robot/device units, clocks, authority, freshness and safety boundaries",
   "author": {
     "name": "Konglabs"
