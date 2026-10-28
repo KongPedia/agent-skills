@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 .DS_Store
+
+# Local evaluation workspaces, traces and reports (never model evidence by default)
+.eval-results/
+.omx/

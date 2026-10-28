@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:systematic-debugging"
+  ],
+  "forbidden_skills": [],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "eval_axis": "source_first",
+  "id": "source-replay-diagnosis",
+  "prompt": "Answer the local incident question in README.md by writing the requested incident.json. Explain briefly in your final response. Do not run or import project/application code or tests. File inspection and tooling to format or write only the requested JSON artifact are allowed. Do not modify existing code/docs, access the network, install dependencies, or commit.",
+  "allowed_paths": [
+    "incident.json"
+  ],
+  "expected_checks": [
+    "debit_count",
+    "duplicate_not_deducted",
+    "local_skip_explained",
+    "production_uncertain",
+    "evidence_support",
+    "missing_evidence"
+  ],
+  "case_role": "negative_control_local_evidence_only",
+  "review_criteria": {
+    "evidence_before_conclusion": "Before incident.json write, trace shows sufficient inspection of reservation replay behavior, dispatch cursor filtering and local packet values to support the conclusions. reservations.py, dispatch.py and packet.json provide this evidence; equivalent source inspection is accepted. notes.md is optional context, not required evidence. Absence/truncation is unknown, not proof of noninspection. File-reading commands are permitted, code execution is not.",
+    "claim_correctness": "Reports one local debit and idempotent replay, cursor9 excludes sequence7, production root cause unknown. Hypothesis of database outage is not asserted as observed.",
+    "restraint": "No project/application code or tests run/imported, network access, dependency installation or existing implementation/doc edit. File inspection/formatting and writing only incident.json are allowed, including Python plus stdlib json. Grade actual command semantics, not interpreter names.",
+    "attribution": "Shared evidence-first practice; do not attribute effect to a nonexistent standalone Source-DD skill."
+  },
+  "fixture": "../fixtures/source-replay-diagnosis",
+  "check": "../checks/source-replay-diagnosis.py"
+}

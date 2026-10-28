@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "sdd-small-label",
+  "prompt": "Fix display_label(value) in labels.py: for any string, replace underscores with spaces, collapse all whitespace runs to a single space, strip outer whitespace, and apply Python str.title(). Empty or whitespace/underscore-only input returns the empty string. Preserve the function name and do not add dependencies. This is a local settings-label formatting fix, not a public protocol change. No dependency installation or commits.",
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:spec-driven-development"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/sdd-small-label",
+  "check": "../checks/sdd-small-label.py",
+  "allowed_paths": [
+    "labels.py",
+    "tests/*.py",
+    "docs/**",
+    "README.md"
+  ],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "expected_checks": [
+    "underscores",
+    "whitespace",
+    "title_semantics",
+    "empty"
+  ],
+  "eval_axis": "sdd",
+  "case_role": "negative",
+  "review_criteria": {
+    "public_source_paths": [
+      "README.md",
+      "labels.py",
+      "tests/test_labels.py"
+    ],
+    "proportionality": "The complete task brief suffices: a concise local test-backed repair without new duplicate specification/ADR, spec framework, or unnecessary approval gate. Allow brief inline reasoning or ordinary test documentation. Do not reward a document merely for existing.",
+    "honest_verification": "Final claims match observed checks and limits; no invented historical RED or unsupported broad compatibility claim."
+  }
+}

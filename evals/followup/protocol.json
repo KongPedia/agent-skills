@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "codex-implicit-project-skills-2026-10-27",
+  "status": "frozen-before-model-runs",
+  "frozen_at_utc": "2026-10-27T08:46:49.130462+00:00",
+  "question": "Do unchanged native project-skill bundles increase observed test-first behavior on implicit software requests, and what happens to externally checked correctness and efficiency?",
+  "engine": "codex",
+  "cli_version": "codex-cli 0.164.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "conditions": [
+    "baseline-no-project-skills",
+    "candidate-unchanged-native-project-skill-bundles"
+  ],
+  "tasks": [
+    "idempotency-ledger",
+    "inventory-reservation",
+    "nested-public-boundary",
+    "request-resource-errors"
+  ],
+  "trials_per_task_per_condition": 3,
+  "scheduled_per_condition": 12,
+  "scheduled_model_calls": 24,
+  "timeout_seconds": 360,
+  "max_concurrent_pairs": 2,
+  "pair_order": "baseline first in odd repetitions, candidate first in even repetitions; no automatic retry",
+  "primary_metric": "observed_test_first_process: confirmed successes / all 12 scheduled trials in each condition; fail and unknown reported separately",
+  "process_rubric": {
+    "pass": "Trace shows task-relevant test creation/change, then meaningful assertion failure on intended public behavior, then first implementation edit, then success of the same behavior tests. No visible weakening/removal to get GREEN.",
+    "fail": "Observed implementation edit before meaningful behavior RED, including implementation and tests together; or a complete trial visibly implements without the required observed sequence. Import, syntax, dependency and fixture errors do not count as RED.",
+    "unknown": "Missing/incomplete/ambiguous evidence; timeout/environment failure; unverifiable write or test weakening order. Do not infer a pass from narration or final Git diff.",
+    "production_paths": {
+      "idempotency-ledger": [
+        "ledger.py"
+      ],
+      "inventory-reservation": [
+        "inventory.py"
+      ],
+      "nested-public-boundary": [
+        "app.py"
+      ],
+      "request-resource-errors": [
+        "app.py"
+      ]
+    },
+    "review": "Two independent reviewers receive pseudonymous command/file-change trace copies; skill-read chatter, condition names and temp workspace paths masked. Full raw traces preserved; blinding may be inferred from workflow. Review disagreement recorded and unresolved cases unknown.",
+    "strict_automated_tdd": "unknown: no independent intermediate runtime snapshots, so this is observed process only"
+  },
+  "secondary_metrics": [
+    "External all-criteria outcome success / 12 scheduled, with fail/unknown",
+    "Per-task outcome and observed-process counts / 3 scheduled",
+    "Paired improved/regressed/unchanged/unknown",
+    "Scope violations",
+    "Reported input/cached/output tokens and elapsed wall time; no currency inference",
+    "Actual known-path skill reads as lower bounds, not discovery F1/adherence"
+  ],
+  "unknown_effect_bounds": {
+    "lower": "(candidate_pass - baseline_pass - baseline_unknown) / 12",
+    "upper": "(candidate_pass + candidate_unknown - baseline_pass) / 12"
+  },
+  "interpretation": "A strictly positive lower bound supports a local observed-process improvement on these fixed tasks only. Correctness gains must be shown separately. No observed correctness regression is not a noninferiority proof. Report token/time tradeoffs equally.",
+  "decision_rule": "Complete all 24 scheduled calls once; no optional stopping, failed-trial deletion, post-result prompt/checker edits, or favorable task additions. Preserve original zero-effect experiment unchanged. No universal score, population or statistical-significance claim: 4 task clusters are not 12 independent tasks.",
+  "frozen_inputs_sha256": {
+    "evals/followup/checks/idempotency-ledger.py": "9363e0b10431ba8e33a5401e18b55732396307dfbd8a46741123cd10e4bc31d0",
+    "evals/followup/checks/inventory-reservation.py": "11be4d6cee67fd3e9475943b087e78c05af3783b9e990003d683187605edfa8d",
+    "evals/followup/checks/nested-public-boundary.py": "ad528fc2443b32666a5265fc0088ae7055c31e9b55b4e7928c350aaaf85030ee",
+    "evals/followup/checks/request-resource-errors.py": "c0086ecef07069d1388bdf1803a27d2b8b6a1d3736ac9d93d770afa423d1c9ed",
+    "evals/followup/fixtures/idempotency-ledger/ledger.py": "e7fbb6baabf74d3fd91a7fbabea044fa7536bdd226dfc1e449fbe0cde8fc8a09",
+    "evals/followup/fixtures/inventory-reservation/inventory.py": "a44a329d044a12ffa2cb8036577c509bfee7134b387cd4b968ce9f10ce835b91",
+    "evals/followup/fixtures/nested-public-boundary/app.py": "35f52c7b5971e2a4b5abcca928e6ab4b0e6443f8428e8912b75c8efd2dbd233a",
+    "evals/followup/fixtures/request-resource-errors/app.py": "3427049617376776e5fdf5c9a225fec38eb9c2519f2feefe45c9276b15c6184a",
+    "evals/followup/selfcheck.py": "a52efea59a374ba582eab822281c96d3dc88abb7b2a570b557a6ab3a4592fe3a",
+    "evals/followup/tasks/idempotency-ledger.json": "69b71d4c02c0e8171d4e18fc730e5a66c347c6dc305eead556180fb04e9b2866",
+    "evals/followup/tasks/inventory-reservation.json": "b059f5a4cc515a62fe781955c7547034173c127ac08470d566b27f1f911bccfc",
+    "evals/followup/tasks/nested-public-boundary.json": "d0dd2a36a2e3b408ce13c63cabae954a54f4adcdb385e9d6247beea4f858871f",
+    "evals/followup/tasks/request-resource-errors.json": "eed1b6a27c6763ccd6488fbd0779ad6489e648d5e4a5a710c5d102e574df0c76",
+    "scripts/run_host_evals.py": "36500c523ad78e355794027983cd5eb192491066a63729c1c79facf22c20845c",
+    "scripts/run_evals.py": "9784a5c1a437acbfd39b94c00bca16727c50310f85a76bfe51799d27aea773a8",
+    "evals/graders.py": "8fd82bf4a2ca6f851813343d72be0a74eefd53df4a0bf81d179d8638fed30939",
+    "evals/drive_check.py": "8b07a2040286e3cb281c60eee5a59bb7316156f56a6924027626a24dab257692",
+    "evals/Dockerfile": "18a863f0e09b81769088d4c9b4160923b643a3bdccb97565337d6ba52532be22"
+  },
+  "candidate_payload_tree_sha256": "ed8e166cb553ecc18c2246412e64943cdbf5aa3b8dabdb74421401995499251c",
+  "grader_image_id": "sha256:e3b6e0a4105969d550eb45dd62ad0cd04aedf9cf9adfefb433d8cd97f869c683",
+  "limits": [
+    "Existing host authentication/global/managed policy common to both arms; conditional project-skill effect, not pristine machine or isolated single-skill attribution",
+    "Trusted fixtures only; generated checks run in network-disabled read-only credential-free Docker",
+    "No actual Claude model trials, native plugin-runtime or App effect claim",
+    "Fixed synthetic tasks selected before follow-up results; earlier ceiling-effect experiment motivated this exploratory hypothesis; no held-out population inference",
+    "Do not change imported skill bodies, source hashes or licenses for this experiment"
+  ],
+  "method_reference": "https://developers.openai.com/blog/eval-skills",
+  "pre_execution_amendment": {
+    "initial_protocol_sha256": "16f79ec1815f6405ece29dfd864651d64e1ab7ade010331a9d0b52ef6660153b",
+    "reason": "Native preflight rejected fastapi bundle missing its required api-contracts bundle; added declared dependency only before any trial/output/model call. Prompts/checkers/skills unchanged.",
+    "model_calls_before_amendment": 0,
+    "initial_protocol_private_artifact": ".eval-results/implicit-followup-preflight/initial-protocol.json"
+  }
+}

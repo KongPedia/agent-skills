@@ -150,3 +150,11 @@ original-material license selection and a secret/proprietary-scope audit; local 
 - [Host configuration and update boundaries](docs/hosts.md)
 - [Upstream selection audit](docs/upstream-audit.md)
 - [Maintainer contract](AGENTS.md)
+
+## Opt-in agent behavior evaluations
+
+[Agent evals](docs/evals.md) live in `evals/`. `scripts/run_host_evals.py` compares native project skills using existing
+Codex authentication and isolated Docker grading; `scripts/run_evals.py` runs both Codex/Claude inside disposable
+containers. Both are opt-in. The evaluator tests check the harness offline and never call a model. Existing software
+checks remain separate from observed skill reads, behavioral adherence and generated-code outcomes. No model eval is
+added to ordinary PR CI, no host authentication is copied, and no automatic A+ score is awarded.

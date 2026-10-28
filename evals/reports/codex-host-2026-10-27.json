@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "experiment_id": "codex-host-project-skills-2026-10-27",
+  "measurement_status": "completed",
+  "positive_effect_demonstrated": false,
+  "scope": "Conditional effect of native project skills under fixed existing-host policy; not pristine Vanilla, plugin installation or Claude.",
+  "engine": "codex",
+  "model": "gpt-6.1-sol",
+  "cli_version": "codex-cli 0.164.0",
+  "reasoning_effort": "medium",
+  "grader_image_id": "sha256:78af421059fd30cae12081c15104848701d46e914f97676d9f0cb1d5ac8986cb",
+  "protocol_sha256": "b1b9cde2a9ff312ca64e11d791b5dcce278be0d9acd099970c3141495fe53bf2",
+  "frozen_inputs_sha256": {
+    "evals/tasks/api-boundary.json": "843a0753a4a5b1daf276b0d335914c20e239c12fc4666ca7db13e81120c89877",
+    "evals/tasks/docs-only.json": "f8909630bb7ab870beda1cfb4cf6085170ee629b20c26085cd077177fd453ab5",
+    "evals/tasks/fastapi-lifecycle.json": "d4dc19a13814bb9de8248e01966b8d5dd68608b061ace15c9d301112d580020c",
+    "evals/tasks/python-tdd.json": "445c3b81bd2db6f59cfe53f117cbf5c1510c36e412cc40d3c69b9ed4ae1cacc7",
+    "evals/tasks/readonly-analysis.json": "8e2e6af41d97dba4f8be176135768c24730ff70bf432742599f054ebf3d0c509",
+    "evals/tasks/simple-script.json": "159fcbcc12cdf1c9a8e6d39b8d4ef5bd63e5bfd91e4d94289078790e0d06be7d",
+    "evals/fixtures/api-boundary/app.py": "d98cc7069185edeb45d3af18eceee98f9f952902eac3fd7d56bd2509c803cc8e",
+    "evals/fixtures/docs-only/README.md": "9775e7964c21b42a35ecc3116b71e929d1fe5a4248e50aadf0a7c5519dd5024a",
+    "evals/fixtures/docs-only/utility.py": "b80792336156c7b0f7fe02eeef24610d2d52a10d1810397744471d1dc5738180",
+    "evals/fixtures/fastapi-lifecycle/app.py": "fc8ff6547381a017c04f9dd1e9d7fe921d7364c5e14efbcb89caab629a1b59df",
+    "evals/fixtures/python-tdd/points.py": "c395e4df3798d0ea5c4bb0b4f6c44c636394ed71b76340ec1a4334d4c2dda1da",
+    "evals/fixtures/readonly-analysis/price.py": "5f7112fb4dc52f962afbbbae02a3b3a40dcaa8852fa32d25066e15f0ec5f3265",
+    "evals/fixtures/simple-script/summary.py": "bd36afeeabd102597ceaf3e6546f0ffcd25be339b88916444dc7802dd436985f",
+    "evals/checks/boundary.py": "a9283f4d63e5b7af5b488b1fe73fe2a786725f77eaaeba54d139ce2fbe7786c6",
+    "evals/checks/docs.py": "02ea22842fcf5247ce458d0c839667504818cb77ad623bb88a3aa19a3c693d42",
+    "evals/checks/lifecycle.py": "2429cdf85bf7386cd90951810d995ade6e3323ab64710a92f30c73ff50875ec0",
+    "evals/checks/points.py": "da9fc5239a1f2391ebd40855648c73c04e6d96d7d609444d8ed934a5f3987e96",
+    "evals/checks/summary.py": "f38735d065c4301fcbbf7d72cb42be1481c6dc9d0607e9654ccc8859b7e30721"
+  },
+  "scheduled_model_calls": 36,
+  "summary": {
+    "conditions": {
+      "baseline": {
+        "trials": 18,
+        "trial_statuses": {
+          "completed": 17,
+          "timeout": 1
+        },
+        "outcome_known": 14,
+        "outcome_pass": 14,
+        "outcome_unknown": 4,
+        "outcome_rate": 1.0,
+        "behavior": {
+          "commands": {
+            "not_applicable": 12,
+            "unknown": 6
+          },
+          "forbidden_skills": {
+            "not_applicable": 15,
+            "unknown": 3
+          },
+          "required_skills": {
+            "unknown": 9,
+            "not_applicable": 9
+          },
+          "scope": {
+            "pass": 18
+          },
+          "tdd": {
+            "not_applicable": 15,
+            "unknown": 3
+          }
+        }
+      },
+      "candidate": {
+        "trials": 18,
+        "trial_statuses": {
+          "timeout": 1,
+          "completed": 17
+        },
+        "outcome_known": 14,
+        "outcome_pass": 14,
+        "outcome_unknown": 4,
+        "outcome_rate": 1.0,
+        "behavior": {
+          "commands": {
+            "not_applicable": 12,
+            "unknown": 6
+          },
+          "forbidden_skills": {
+            "not_applicable": 15,
+            "unknown": 3
+          },
+          "required_skills": {
+            "unknown": 5,
+            "not_applicable": 9,
+            "pass": 4
+          },
+          "scope": {
+            "pass": 18
+          },
+          "tdd": {
+            "not_applicable": 15,
+            "unknown": 3
+          }
+        }
+      }
+    },
+    "paired_outcomes": {
+      "comparable": 13,
+      "improved": 0,
+      "regressed": 0,
+      "unchanged": 13,
+      "unknown": 5
+    },
+    "paired_behavior": {
+      "commands": {
+        "comparable": 0,
+        "improved": 0,
+        "regressed": 0,
+        "unchanged": 0,
+        "unknown": 18
+      },
+      "forbidden_skills": {
+        "comparable": 0,
+        "improved": 0,
+        "regressed": 0,
+        "unchanged": 0,
+        "unknown": 18
+      },
+      "required_skills": {
+        "comparable": 0,
+        "improved": 0,
+        "regressed": 0,
+        "unchanged": 0,
+        "unknown": 18
+      },
+      "scope": {
+        "comparable": 16,
+        "improved": 0,
+        "regressed": 0,
+        "unchanged": 16,
+        "unknown": 2
+      },
+      "tdd": {
+        "comparable": 0,
+        "improved": 0,
+        "regressed": 0,
+        "unchanged": 0,
+        "unknown": 18
+      }
+    }
+  },
+  "outcomes": {
+    "baseline": {
+      "scheduled": 15,
+      "pass": 14,
+      "fail": 0,
+      "unknown": 1,
+      "statuses": {
+        "completed": 14,
+        "timeout": 1
+      }
+    },
+    "candidate": {
+      "scheduled": 15,
+      "pass": 14,
+      "fail": 0,
+      "unknown": 1,
+      "statuses": {
+        "timeout": 1,
+        "completed": 14
+      }
+    }
+  },
+  "per_task": {
+    "api-boundary": {
+      "baseline": {
+        "statuses": {
+          "completed": 2,
+          "timeout": 1
+        },
+        "outcomes": {
+          "pass": 2,
+          "unknown": 1
+        }
+      },
+      "candidate": {
+        "statuses": {
+          "timeout": 1,
+          "completed": 2
+        },
+        "outcomes": {
+          "unknown": 1,
+          "pass": 2
+        }
+      }
+    },
+    "docs-only": {
+      "baseline": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      }
+    },
+    "fastapi-lifecycle": {
+      "baseline": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      }
+    },
+    "python-tdd": {
+      "baseline": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      }
+    },
+    "readonly-analysis": {
+      "baseline": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "unknown": 3
+        }
+      },
+      "candidate": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "unknown": 3
+        }
+      }
+    },
+    "simple-script": {
+      "baseline": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "statuses": {
+          "completed": 3
+        },
+        "outcomes": {
+          "pass": 3
+        }
+      }
+    }
+  },
+  "reported_usage": {
+    "baseline": {
+      "reported_trials": 17,
+      "totals": {
+        "input_tokens": 883495,
+        "cached_input_tokens": 603520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 12367,
+        "reasoning_output_tokens": 364
+      },
+      "caveat": "Reported CLI usage only; no currency cost inference or statistical significance claim."
+    },
+    "candidate": {
+      "reported_trials": 17,
+      "totals": {
+        "input_tokens": 1362684,
+        "cached_input_tokens": 1004544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14821,
+        "reasoning_output_tokens": 775
+      },
+      "caveat": "Reported CLI usage only; no currency cost inference or statistical significance claim."
+    }
+  },
+  "reviewed_observations": {
+    "method": "Root agent transcript review independently checked by verifier; not independent intermediate runtime-state attestation.",
+    "readonly_semantic_correct": {
+      "baseline": 3,
+      "candidate": 3,
+      "scheduled_per_condition": 3
+    },
+    "observed_test_red_implementation_green": {
+      "baseline": 3,
+      "candidate": 3,
+      "scheduled_per_condition": 3,
+      "strict_automated_tdd": "unknown"
+    }
+  },
+  "read_evidence": "Actual native SKILL.md tool reads observed. Conservative parser counts are lower bounds, not triggering precision/recall.",
+  "artifact_location": ".eval-results/codex-project-skills-final-20261027/ (private, ignored, not included in fresh checkout)",
+  "limits": [
+    "Existing host global AGENTS and managed policy may remain common to both arms; conditional project-skill effect, not pristine Vanilla.",
+    "Native project-local skill loading, not plugin installation/runtime effect.",
+    "Six fixed scenarios are exploratory, not proof of 41-skill population quality or a universal A+ score.",
+    "Prompts already prescribe several correct behaviors; ceiling effects are possible.",
+    "No actual Claude effect claim without authenticated Claude trials.",
+    "Two CLI wall-time budget expirations, one per condition; causes unconfirmed and not hidden by retry.",
+    "First pilot was aborted for grader-isolation repair, not used in the final 36 calls.",
+    "No universal A+ score, statistically established uplift, or claim of all-skill effectiveness."
+  ]
+}

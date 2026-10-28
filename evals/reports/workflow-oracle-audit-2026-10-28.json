@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "kind": "posthoc-oracle-validity-audit",
+  "created_at_utc": "2026-10-28T02:12:25.344855+00:00",
+  "experiment_id": "codex-workflow-axes-2026-10-28",
+  "affected_case": "ddd-labels",
+  "defect": "Frozen invalid_text requires ValueError for nonstring1,None,True although README specifies ValueError only for empty/overlong strings. Completed trial implementations use TypeError, not an agent defect under the public contract.",
+  "confirmatory_policy": "All six affected outcomes remain unknown/oracle-invalid in confirmatory summaries, regardless arm/raw result. Raw frozen outcomes preserved and execution errors stay distinct.",
+  "diagnostic_scope": "Separate posthoc narrower publicly specified STRING-domain outcome checks: remove nonstring exception-type assertions, retain all seven original check names and all other assertions. Not a replacement confirmatory grade, not new causal evidence.",
+  "original_checker": {
+    "path": "evals/workflows/checks/ddd-labels.py",
+    "sha256": "3230ac939d6325d5d9748453d588d72c2679fac97fc8e1c7b65aad99dc20f9bf"
+  },
+  "public_contract": {
+    "path": "evals/workflows/fixtures/ddd-labels/README.md",
+    "sha256": "81c32c6bd360043e25682eedbffea2b8bccdd6b6959ee2ac0c3523d42cfb9a46"
+  },
+  "diagnostic_checker": {
+    "path": "evals/audits/ddd-labels-string-domain-2026-10-28.py",
+    "sha256": "eb4cae4fbcc8cbbb7e7ad5229d7dd96cda421394be60bc4c30568eaddca5dbb4"
+  },
+  "grader_image_id": "sha256:e3b6e0a4105969d550eb45dd62ad0cd04aedf9cf9adfefb433d8cd97f869c683",
+  "model_calls_added": 0,
+  "frozen_inputs_changed": false,
+  "trials": [
+    {
+      "trial": 1,
+      "condition": "baseline",
+      "execution_status": "completed",
+      "raw_frozen_outcome": {
+        "status": "fail",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": false,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check reported a failed criterion."
+      },
+      "confirmatory_outcome": "unknown/oracle-invalid",
+      "posthoc_diagnostic": {
+        "status": "pass",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": true,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "cleanup_confirmed": true
+    },
+    {
+      "trial": 1,
+      "condition": "candidate",
+      "execution_status": "completed",
+      "raw_frozen_outcome": {
+        "status": "fail",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": false,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check reported a failed criterion."
+      },
+      "confirmatory_outcome": "unknown/oracle-invalid",
+      "posthoc_diagnostic": {
+        "status": "pass",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": true,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "cleanup_confirmed": true
+    },
+    {
+      "trial": 2,
+      "condition": "baseline",
+      "execution_status": "completed",
+      "raw_frozen_outcome": {
+        "status": "fail",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": false,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check reported a failed criterion."
+      },
+      "confirmatory_outcome": "unknown/oracle-invalid",
+      "posthoc_diagnostic": {
+        "status": "pass",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": true,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "cleanup_confirmed": true
+    },
+    {
+      "trial": 2,
+      "condition": "candidate",
+      "execution_status": "completed",
+      "raw_frozen_outcome": {
+        "status": "fail",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": false,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check reported a failed criterion."
+      },
+      "confirmatory_outcome": "unknown/oracle-invalid",
+      "posthoc_diagnostic": {
+        "status": "pass",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": true,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "cleanup_confirmed": true
+    },
+    {
+      "trial": 3,
+      "condition": "baseline",
+      "execution_status": "completed",
+      "raw_frozen_outcome": {
+        "status": "fail",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": false,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check reported a failed criterion."
+      },
+      "confirmatory_outcome": "unknown/oracle-invalid",
+      "posthoc_diagnostic": {
+        "status": "pass",
+        "checks": {
+          "rename_independent": true,
+          "trim": true,
+          "invalid_text": true,
+          "unknown_key": true,
+          "duplicate_casefold": true,
+          "own_name": true,
+          "order_preserved": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "cleanup_confirmed": true
+    },
+    {
+      "trial": 3,
+      "condition": "candidate",
+      "execution_status": "agent_error",
+      "raw_frozen_outcome": {
+        "status": "unknown"
+      },
+      "confirmatory_outcome": "unknown/oracle-invalid",
+      "posthoc_diagnostic": {
+        "status": "unknown",
+        "reason": "Not eligible: agent run did not complete; no artifact diagnostic is treated as an agent success."
+      }
+    }
+  ]
+}

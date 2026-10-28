@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "forbidden_skills": [],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "eval_axis": "ddd",
+  "id": "ddd-labels",
+  "prompt": "Fix rename_label in labels.py so it follows the existing README contract. This is a small local display-label helper. Add focused regression tests and briefly explain the change. No dependency installation or commits.",
+  "required_skills": [],
+  "case_role": "negative",
+  "allowed_paths": [
+    "*.py",
+    "tests/*.py",
+    "README.md"
+  ],
+  "expected_checks": [
+    "rename_independent",
+    "trim",
+    "invalid_text",
+    "unknown_key",
+    "duplicate_casefold",
+    "own_name",
+    "order_preserved"
+  ],
+  "review_criteria": [
+    "Solve the existing local label behavior directly without invented domain/context boundaries.",
+    "Do not introduce repositories, event sourcing, CQRS, database/services or indirection without a real responsibility to own.",
+    "Judge added complexity by actual behavior and dependencies, not class counts or particular file names."
+  ],
+  "fixture": "../fixtures/ddd-labels",
+  "check": "../checks/ddd-labels.py"
+}

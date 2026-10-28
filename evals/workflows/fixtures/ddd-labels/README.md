@@ -1,0 +1,3 @@
+# Local label helper
+This application only keeps a dict of label IDs to display names. There is no database, server, event bus, concurrency or planned extension point.
+rename_label(labels, key, text), in labels.py, returns a new dict with only key renamed. Leave the input unchanged; unknown key raises KeyError. text must be a str, stripped of surrounding whitespace; empty or over 30 characters raises ValueError. Names must be unique ignoring case using str.casefold(), excluding the key being renamed; duplicate raises ValueError. Keep unrelated values and insertion order. No dependency installation or commits. Tests may use stdlib unittest.

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:domain-modeling"
+  ],
+  "forbidden_skills": [],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "eval_axis": "ddd",
+  "id": "ddd-domain-evolution",
+  "prompt": "Product asked to \"suspend this member\u2019s account\" for one organization. Prepare the proposal.json requested in README.md using this repository\u2019s existing behavior and terminology. This is a proposal only. Do not run or import project/application code or tests. File inspection and tooling to format or write only the requested JSON artifact are allowed. Do not modify existing code/docs, access the network, install dependencies, or commit.",
+  "case_role": "active_domain_modeling_proposal",
+  "allowed_paths": [
+    "proposal.json"
+  ],
+  "expected_checks": [
+    "proposal_schema",
+    "context_facts",
+    "existing_term_coverage",
+    "evidence_paths",
+    "competing_models",
+    "unresolved_questions",
+    "proposal_not_implementation"
+  ],
+  "review_criteria": {
+    "existing_model": "Correctly distinguish Account and Member in both existing contexts using code/glossary evidence, not generic architecture definitions.",
+    "new_model": "Define a proposed workspace-only temporary access capability and responsibility owner coherent with global sign-in/membership invariants; no exact term, class or owner naming is required.",
+    "competing_models": "Compare at least two genuinely different models (for example lifecycle state versus orthogonal access restriction), with real consequences rather than synonym alternatives.",
+    "uncertainty": "Treat reinstatement, authority and existing-session behavior as unresolved business choices; do not falsely claim accepted ADR or existing implementation.",
+    "source_before_proposal": "Inspect enough existing code/glossary/accepted-decision evidence before proposal write. Equivalent reads count; missing/truncated trace is unknown.",
+    "proportionality": "A bounded proposal only; avoid invented repositories/service trees and unrequested accepted glossary/ADR edits. Do not run/import project/application code or tests. File inspection/formatting and writing only proposal.json with ordinary tools (including Python plus stdlib json) are allowed."
+  },
+  "fixture": "../fixtures/ddd-domain-evolution",
+  "check": "../checks/ddd-domain-evolution.py"
+}

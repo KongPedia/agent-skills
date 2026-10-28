@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "codex-host-project-skills-2026-10-27",
+  "status": "frozen-before-comparative-runs",
+  "question": "Under identical existing-host policy, do native project-local skills improve fixed-task outcomes or observed scope adherence?",
+  "conditions": [
+    "baseline-no-project-skills",
+    "candidate-native-project-skills"
+  ],
+  "model": "gpt-6.1-sol",
+  "cli_version": "codex-cli 0.164.0",
+  "reasoning_effort": "medium",
+  "trials_per_task_per_condition": 3,
+  "timeout_seconds": 240,
+  "max_concurrent_pairs": 2,
+  "tasks": [
+    "api-boundary",
+    "docs-only",
+    "fastapi-lifecycle",
+    "python-tdd",
+    "readonly-analysis",
+    "simple-script"
+  ],
+  "frozen_inputs_sha256": {
+    "evals/tasks/api-boundary.json": "843a0753a4a5b1daf276b0d335914c20e239c12fc4666ca7db13e81120c89877",
+    "evals/tasks/docs-only.json": "f8909630bb7ab870beda1cfb4cf6085170ee629b20c26085cd077177fd453ab5",
+    "evals/tasks/fastapi-lifecycle.json": "d4dc19a13814bb9de8248e01966b8d5dd68608b061ace15c9d301112d580020c",
+    "evals/tasks/python-tdd.json": "445c3b81bd2db6f59cfe53f117cbf5c1510c36e412cc40d3c69b9ed4ae1cacc7",
+    "evals/tasks/readonly-analysis.json": "8e2e6af41d97dba4f8be176135768c24730ff70bf432742599f054ebf3d0c509",
+    "evals/tasks/simple-script.json": "159fcbcc12cdf1c9a8e6d39b8d4ef5bd63e5bfd91e4d94289078790e0d06be7d",
+    "evals/fixtures/api-boundary/app.py": "d98cc7069185edeb45d3af18eceee98f9f952902eac3fd7d56bd2509c803cc8e",
+    "evals/fixtures/docs-only/README.md": "9775e7964c21b42a35ecc3116b71e929d1fe5a4248e50aadf0a7c5519dd5024a",
+    "evals/fixtures/docs-only/utility.py": "b80792336156c7b0f7fe02eeef24610d2d52a10d1810397744471d1dc5738180",
+    "evals/fixtures/fastapi-lifecycle/app.py": "fc8ff6547381a017c04f9dd1e9d7fe921d7364c5e14efbcb89caab629a1b59df",
+    "evals/fixtures/python-tdd/points.py": "c395e4df3798d0ea5c4bb0b4f6c44c636394ed71b76340ec1a4334d4c2dda1da",
+    "evals/fixtures/readonly-analysis/price.py": "5f7112fb4dc52f962afbbbae02a3b3a40dcaa8852fa32d25066e15f0ec5f3265",
+    "evals/fixtures/simple-script/summary.py": "bd36afeeabd102597ceaf3e6546f0ffcd25be339b88916444dc7802dd436985f",
+    "evals/checks/boundary.py": "a9283f4d63e5b7af5b488b1fe73fe2a786725f77eaaeba54d139ce2fbe7786c6",
+    "evals/checks/docs.py": "02ea22842fcf5247ce458d0c839667504818cb77ad623bb88a3aa19a3c693d42",
+    "evals/checks/lifecycle.py": "2429cdf85bf7386cd90951810d995ade6e3323ab64710a92f30c73ff50875ec0",
+    "evals/checks/points.py": "da9fc5239a1f2391ebd40855648c73c04e6d96d7d609444d8ed934a5f3987e96",
+    "evals/checks/summary.py": "f38735d065c4301fcbbf7d72cb42be1481c6dc9d0607e9654ccc8859b7e30721"
+  },
+  "primary_metric": "Five externally checkable tasks: complete task-run outcome passes / 15 scheduled trials per condition; separately report known denominator and infrastructure errors.",
+  "secondary_metrics": [
+    "Per-task outcome passes / 3 scheduled trials per condition",
+    "Paired improved/regressed/unchanged/unknown counts",
+    "Observed scope violations",
+    "Observed forbidden commands",
+    "Observed required/forbidden native skill reads; missing reads unknown, not success"
+  ],
+  "manual_review": [
+    "readonly-analysis answer: identifies percentage scaling and proposes discount_percent / 100 without implementation; separate from code outcome rate",
+    "python-tdd raw trace: test file edit, meaningful assertion failure, implementation edit, passing tests; observed sequence only, automated TDD remains unknown"
+  ],
+  "decision_rule": "Report zero or negative observed effect unchanged. Measurement completion is not evidence of a positive effect. No unplanned favorable prompt/grader edits after inspecting results.",
+  "limits": [
+    "Existing host global AGENTS and managed policy may remain common to both arms; conditional project-skill effect, not pristine Vanilla.",
+    "Native project-local skill loading, not plugin installation/runtime effect.",
+    "Six fixed scenarios are exploratory, not proof of 41-skill population quality or a universal A+ score.",
+    "Prompts already prescribe several correct behaviors; ceiling effects are possible.",
+    "No actual Claude effect claim without authenticated Claude trials."
+  ],
+  "grading_boundary": "Host Codex model; external checks in an existing reviewed network-disabled Docker container without credentials, with read-only workspace/checks.",
+  "pilot_exclusion": "An initial run was stopped for grader isolation repair, not outcome selection; its artifacts remain separately marked aborted. Final matrix starts fresh with the same frozen inputs."
+}

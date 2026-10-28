@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "api-boundary",
+  "prompt": "Fix app.py GET /users/{user_id}: an existing user returns exactly id (integer) and name (string), never password_hash, token, or future private fields. Define and use a FastAPI response model to enforce that public boundary. Unknown IDs return 404 {\"detail\":\"user not found\"}. Preserve USERS and app, do not mutate source records. Modify app.py and optional tests/*.py only. FastAPI/httpx are installed; no dependency installation or commits.",
+  "bundles": [
+    "common",
+    "python",
+    "fastapi",
+    "api-contracts"
+  ],
+  "required_skills": [
+    "fastapi:fastapi-backend",
+    "api-contracts:api-design-principles"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/api-boundary",
+  "check": "../checks/boundary.py",
+  "allowed_paths": [
+    "app.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [
+    "fastapi",
+    "httpx"
+  ],
+  "expected_checks": [
+    "public_response",
+    "not_found",
+    "public_response_model",
+    "source_unchanged"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "simple-script",
+  "prompt": "Update summary.summarize(values), a standalone stdlib Python utility: consume an iterable of numbers once and return {\"count\": count, \"total\": sum, \"mean\": arithmetic_mean}; empty input has total 0 and mean None. No framework or robotics work is involved. Add unittest coverage if useful. Modify summary.py and tests/*.py only; no dependencies or commits.",
+  "bundles": [
+    "common",
+    "python",
+    "fastapi",
+    "api-contracts",
+    "robotics"
+  ],
+  "required_skills": [],
+  "forbidden_skills": [
+    "fastapi:fastapi-backend",
+    "api-contracts:api-design-principles",
+    "robotics:robotics-software"
+  ],
+  "fixture": "../fixtures/simple-script",
+  "check": "../checks/summary.py",
+  "allowed_paths": [
+    "summary.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "expected_checks": [
+    "empty",
+    "generator_once",
+    "fractional"
+  ]
+}

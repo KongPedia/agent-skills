@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "docs-only",
+  "prompt": "Documentation-only task. Initial README.md content is exactly \"# Local utility\\n\\nRun with Python.\\n\" and utility.py contains print(\"hello\") followed by a newline. Without executing commands, tests, services, or programs, use an edit tool to replace only \"Run with Python.\" with \"Run with Python 3.11 or newer.\" Preserve the heading and all other files. The full relevant contents are supplied here so shell reads are unnecessary. Do not install anything or commit. Explain the edit and state that execution was not performed.",
+  "bundles": [
+    "common"
+  ],
+  "required_skills": [],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/docs-only",
+  "check": "../checks/docs.py",
+  "allowed_paths": [
+    "README.md"
+  ],
+  "forbid_commands": true,
+  "tdd": false,
+  "runtime_modules": [],
+  "expected_checks": [
+    "readme_exact"
+  ]
+}
