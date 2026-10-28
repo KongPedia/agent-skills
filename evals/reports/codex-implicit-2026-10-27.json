@@ -1,0 +1,1688 @@
+{
+  "schema_version": 1,
+  "experiment_id": "codex-implicit-project-skills-2026-10-27",
+  "measurement_status": "completed",
+  "generated_at_utc": "2026-10-27T09:00:25.639608+00:00",
+  "protocol_sha256": "00455aa487ce0b2145dae56c995c28b1fe7afaf41cd6d406b305dca93adb68c6",
+  "engine": "codex",
+  "model": "gpt-6.1-sol",
+  "cli_version": "codex-cli 0.164.0",
+  "reasoning_effort": "medium",
+  "grader_image_id": "sha256:e3b6e0a4105969d550eb45dd62ad0cd04aedf9cf9adfefb433d8cd97f869c683",
+  "candidate_payload_tree_sha256": "ed8e166cb553ecc18c2246412e64943cdbf5aa3b8dabdb74421401995499251c",
+  "scheduled_agent_cli_sessions": 24,
+  "summary": {
+    "baseline": {
+      "scheduled": 12,
+      "trial_statuses": {
+        "completed": 12
+      },
+      "outcome": {
+        "pass": 12
+      },
+      "observed_test_first_process": {
+        "pass": 0,
+        "fail": 12,
+        "unknown": 0
+      },
+      "scope": {
+        "pass": 12
+      },
+      "reported_usage_trials": 12,
+      "reported_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 652160,
+        "input_tokens": 842910,
+        "output_tokens": 19964,
+        "reasoning_output_tokens": 1014
+      },
+      "elapsed_seconds": {
+        "total": 612.185,
+        "mean": 51.015,
+        "median": 45.954
+      }
+    },
+    "candidate": {
+      "scheduled": 12,
+      "trial_statuses": {
+        "completed": 12
+      },
+      "outcome": {
+        "pass": 12
+      },
+      "observed_test_first_process": {
+        "pass": 11,
+        "fail": 0,
+        "unknown": 1
+      },
+      "scope": {
+        "pass": 12
+      },
+      "reported_usage_trials": 12,
+      "reported_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1160064,
+        "input_tokens": 1490304,
+        "output_tokens": 24896,
+        "reasoning_output_tokens": 1374
+      },
+      "elapsed_seconds": {
+        "total": 765.751,
+        "mean": 63.813,
+        "median": 62.085
+      }
+    }
+  },
+  "primary_unknown_effect_bounds": {
+    "lower_percentage_points": 91.6667,
+    "upper_percentage_points": 100.0
+  },
+  "local_observed_process_gain_demonstrated": true,
+  "general_skill_effectiveness_established": false,
+  "coding_quality_improvement_established": false,
+  "paired_observed_process": {
+    "improved": 11,
+    "regressed": 0,
+    "unchanged": 0,
+    "unknown": 1
+  },
+  "paired_outcomes": {
+    "comparable": 12,
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 12,
+    "unknown": 0
+  },
+  "reported_input_token_delta_percent": 76.8,
+  "review_disagreements": [],
+  "per_task": {
+    "idempotency-ledger": {
+      "baseline": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "fail": 3
+        },
+        "outcome": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "pass": 3
+        },
+        "outcome": {
+          "pass": 3
+        }
+      }
+    },
+    "inventory-reservation": {
+      "baseline": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "fail": 3
+        },
+        "outcome": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "pass": 3
+        },
+        "outcome": {
+          "pass": 3
+        }
+      }
+    },
+    "nested-public-boundary": {
+      "baseline": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "fail": 3
+        },
+        "outcome": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "pass": 2,
+          "unknown": 1
+        },
+        "outcome": {
+          "pass": 3
+        }
+      }
+    },
+    "request-resource-errors": {
+      "baseline": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "fail": 3
+        },
+        "outcome": {
+          "pass": 3
+        }
+      },
+      "candidate": {
+        "scheduled": 3,
+        "observed_test_first_process": {
+          "pass": 3
+        },
+        "outcome": {
+          "pass": 3
+        }
+      }
+    }
+  },
+  "trials": [
+    {
+      "task": "idempotency-ledger",
+      "trial": 1,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "constructor_validation": true,
+          "replay_no_extension_exact_expiry": true,
+          "conflict_preserves_live_entry": true,
+          "deep_snapshot": true,
+          "capacity_expiry_and_no_eviction": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 75080,
+        "cached_input_tokens": 58752,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1797,
+        "reasoning_output_tokens": 137
+      },
+      "seconds": 63.257,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['ledger.py', 'tests/test_ledger.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R22",
+      "review_a": {
+        "review_id": "R22",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Event 4 displays the initial ledger implementation but performs no test run. Events 5-6 then update ledger.py and add tests/test_ledger.py together. Event 8 reports six passing tests, with no earlier meaningful behavior RED. Source and tests changing simultaneously before RED fails the required observed sequence; Git cache warnings do not count as RED and final behavior is not disproved."
+      },
+      "review_b": {
+        "review_id": "R22",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update ledger.py and add tests/test_ledger.py simultaneously. Event 8 reports six passing tests on the first observed test run; no meaningful assertion failure precedes implementation. Event 4 is source inspection plus Git warnings, not behavior RED. The order directly fails the rubric; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "e1a7141c8701ea8b55c83b17ca88d9658684df79004e34b3835a91bea017ccd4",
+      "review_packet_sha256": "3bd6fd96d2c61fbedd00b3c1550c2d077fdcee618b10d444ddd657e10ad54361"
+    },
+    {
+      "task": "idempotency-ledger",
+      "trial": 1,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "constructor_validation": true,
+          "replay_no_extension_exact_expiry": true,
+          "conflict_preserves_live_entry": true,
+          "deep_snapshot": true,
+          "capacity_expiry_and_no_eviction": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 119421,
+        "cached_input_tokens": 88192,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1776,
+        "reasoning_output_tokens": 50
+      },
+      "seconds": 58.076,
+      "staged_skill_file_count": 25,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['ledger.py', 'tests/test_ledger.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R10",
+      "review_a": {
+        "review_id": "R10",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_ledger.py. Event 6 runs six relevant tests and reports 19 assertion failures, including missing conflict/capacity exceptions and False instead of True at inclusive expiry. Only then do events 7-8 first update ledger.py. Event 10 explicitly reports the same six named tests OK; its multi-command shell exit alone is not relied upon. No subsequent test change or weakening is visible. Pass is bounded to observed process, not independently snapshotted TDD."
+      },
+      "review_b": {
+        "review_id": "R10",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_ledger.py. Event 6 runs six task-relevant tests and shows 19 assertion failures, including inclusive expiry returning False instead of True and missing conflict/capacity exceptions. The first observed ledger.py implementation change is events 7-8. Event 10 shows the same six tests passing; no intervening test edit or visible weakening appears. Git warnings occur after the successful test output and do not obscure GREEN. This supports observed test-first process only, not independently snapshotted strict TDD."
+      },
+      "raw_trace_sha256": "25ddd6c887aa81beac1b15e130340dd1f91530072362dfacdfdb4ddd70854213",
+      "review_packet_sha256": "92d14a8a682918eb4a3f29f8f78aa2bd98a0e875f93bdb1494d3d1a2835b8a09"
+    },
+    {
+      "task": "idempotency-ledger",
+      "trial": 2,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "constructor_validation": true,
+          "replay_no_extension_exact_expiry": true,
+          "conflict_preserves_live_entry": true,
+          "deep_snapshot": true,
+          "capacity_expiry_and_no_eviction": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 59474,
+        "cached_input_tokens": 32640,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1585,
+        "reasoning_output_tokens": 46
+      },
+      "seconds": 52.239,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['ledger.py', 'tests/test_ledger.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R03",
+      "review_a": {
+        "review_id": "R03",
+        "verdict": "fail",
+        "test_edit_event": 4,
+        "red_event": null,
+        "implementation_event": 4,
+        "green_event": 6,
+        "reason": "Events 3-4 update ledger.py and add tests/test_ledger.py together before any test command. Event 6 reports six passing behavior tests; no prior meaningful assertion RED exists. The simultaneous first implementation/test edit violates the observed test-first sequence. This is a process failure, not evidence of incorrect final behavior; independent intermediate snapshots are unavailable."
+      },
+      "review_b": {
+        "review_id": "R03",
+        "verdict": "fail",
+        "test_edit_event": 4,
+        "red_event": null,
+        "implementation_event": 4,
+        "green_event": 6,
+        "reason": "Events 3-4 update ledger.py and add tests/test_ledger.py together before any test execution. Event 6 reports six passing behavior tests, but no prior meaningful assertion failure is observed. This directly fails the required order; no ordering ambiguity changes the verdict. Evidence is observed CLI process, not independent intermediate snapshots."
+      },
+      "raw_trace_sha256": "3b7485dd81d77e5da48ee893cbd8401e85b079e949d4c5dcadc8923f77a40696",
+      "review_packet_sha256": "3a7077f5011397e74e27f602e6a6b70ae0522c62ef5e3ca5aa01d9881b061b13"
+    },
+    {
+      "task": "idempotency-ledger",
+      "trial": 2,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "constructor_validation": true,
+          "replay_no_extension_exact_expiry": true,
+          "conflict_preserves_live_entry": true,
+          "deep_snapshot": true,
+          "capacity_expiry_and_no_eviction": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 118705,
+        "cached_input_tokens": 90880,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1907,
+        "reasoning_output_tokens": 55
+      },
+      "seconds": 86.58,
+      "staged_skill_file_count": 25,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['ledger.py', 'tests/test_ledger.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R11",
+      "review_a": {
+        "review_id": "R11",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_ledger.py. Event 6 reports seven tests with 19 meaningful assertion failures covering invalid constructor limits, conflicts, capacity, snapshots and inclusive expiry. The first production edit is events 7-8, after that RED. Event 10 reruns the same seven named tests successfully with exit 0; no intervening test edits or weakening are visible. Independent runtime snapshots are unavailable, so this establishes observed process only."
+      },
+      "review_b": {
+        "review_id": "R11",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_ledger.py. Event 6 shows meaningful public-behavior assertion failures, including inclusive expiry and missing conflict/capacity exceptions, across a seven-test run with 19 failures. The first observed production edit is ledger.py at events 7-8. Event 10 runs the same seven tests successfully, with no intervening test edit or visible weakening. Later Git warnings do not affect the test run. This supports observed test-first process only; independent intermediate runtime snapshots are unavailable."
+      },
+      "raw_trace_sha256": "4549f1e5acece2eacd212bcc531d34407a7d3558415958b8ddbe29cc37efd13b",
+      "review_packet_sha256": "c498e278fa700397092bda897c791182a9dc2d2e29c97e519bb263d343f9f768"
+    },
+    {
+      "task": "idempotency-ledger",
+      "trial": 3,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "constructor_validation": true,
+          "replay_no_extension_exact_expiry": true,
+          "conflict_preserves_live_entry": true,
+          "deep_snapshot": true,
+          "capacity_expiry_and_no_eviction": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 59478,
+        "cached_input_tokens": 43904,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1574,
+        "reasoning_output_tokens": 24
+      },
+      "seconds": 46.799,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['ledger.py', 'tests/test_ledger.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R13",
+      "review_a": {
+        "review_id": "R13",
+        "verdict": "fail",
+        "test_edit_event": 4,
+        "red_event": null,
+        "implementation_event": 4,
+        "green_event": 6,
+        "reason": "Events 3-4 update ledger.py and add tests/test_ledger.py simultaneously. The only test run, events 5-6, reports six tests OK, with no meaningful assertion failure before the first production change. This directly fails the observed test-first ordering despite GREEN final tests; final correctness and independent snapshots are outside this verdict."
+      },
+      "review_b": {
+        "review_id": "R13",
+        "verdict": "fail",
+        "test_edit_event": 4,
+        "red_event": null,
+        "implementation_event": 4,
+        "green_event": 6,
+        "reason": "Events 3-4 modify ledger.py and add tests/test_ledger.py together. Event 6 is the first observed test result and reports six passing behavior tests. No meaningful assertion failure occurred before the first production change, so the observed sequence fails the frozen rubric. No material ordering uncertainty is visible; independent intermediate snapshots are not available."
+      },
+      "raw_trace_sha256": "223390b217a736c0c15ee0e4ea1f57d974db751eb88a712891a74fa873e09d97",
+      "review_packet_sha256": "3b0b7d96cbf7972ab43c5d173312e82c16e6fd134988a4fc8ebd345d7014fe8a"
+    },
+    {
+      "task": "idempotency-ledger",
+      "trial": 3,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "constructor_validation": true,
+          "replay_no_extension_exact_expiry": true,
+          "conflict_preserves_live_entry": true,
+          "deep_snapshot": true,
+          "capacity_expiry_and_no_eviction": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 122398,
+        "cached_input_tokens": 104448,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2182,
+        "reasoning_output_tokens": 47
+      },
+      "seconds": 50.677,
+      "staged_skill_file_count": 25,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['ledger.py', 'tests/test_ledger.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R17",
+      "review_a": {
+        "review_id": "R17",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_ledger.py. Event 6 runs nine tests and records 19 assertion failures, including missing constructor/conflict/capacity exceptions and an incorrect expiry replay result. The first ledger.py change occurs at events 7-8. Event 10 reports the same nine named tests OK with exit 0, with no visible test modification or weakening between RED and GREEN. Evidence proves the observed sequence only; intermediate states were not independently snapshotted."
+      },
+      "review_b": {
+        "review_id": "R17",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_ledger.py. Event 6 executes nine behavior tests and shows 19 assertion failures, including duplicate expiry returning False instead of True and missing live-claim conflict/capacity errors. The first observed ledger.py implementation change is events 7-8. Event 10 shows the same nine tests GREEN, with no intervening test edits or visible weakening. This establishes the requested observed process, not independently snapshotted strict TDD."
+      },
+      "raw_trace_sha256": "cf04584cd5084db22645382713b8d97c225775a7057a98ff450f1dab0c1deebe",
+      "review_packet_sha256": "f06e23a004f62ba6ab18dc8f28b6cad1626b5fd128eb4eb140ceb13d9d3783c6"
+    },
+    {
+      "task": "inventory-reservation",
+      "trial": 1,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "normal": true,
+          "duplicate_aggregation": true,
+          "aggregate_insufficient": true,
+          "unknown_sku": true,
+          "invalid_quantities": true,
+          "input_ownership": true,
+          "failure_atomic": true,
+          "empty_independent": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 59152,
+        "cached_input_tokens": 32768,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1336,
+        "reasoning_output_tokens": 31
+      },
+      "seconds": 37.654,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['inventory.py', 'tests/test_inventory.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R06",
+      "review_a": {
+        "review_id": "R06",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update inventory.py and add tests/test_inventory.py in the same file-change operation. The first test run at events 7-8 already passes all six reservation tests; no preceding assertion failure is observed. Git cache warnings at event 4 are not behavior RED. Simultaneous source/tests before RED fails the process criterion; final behavior is not disproved."
+      },
+      "review_b": {
+        "review_id": "R06",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update inventory.py and add tests/test_inventory.py in the same file-change operation. The first observed test execution completes GREEN at event 8 with six behavior tests. No meaningful RED precedes production implementation, so the required order fails. Git cache warnings at event 4 are not behavior RED. Evidence is observed CLI process, not independent intermediate snapshots."
+      },
+      "raw_trace_sha256": "c2651aa6088a0625476b556d09db8a6cb57550c8ca981a0a6c8c6f0dc3e10828",
+      "review_packet_sha256": "18717907fa0e963fecad4cc07f1db106b14a59361f0734d6cd88eabcdf588060"
+    },
+    {
+      "task": "inventory-reservation",
+      "trial": 1,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "normal": true,
+          "duplicate_aggregation": true,
+          "aggregate_insufficient": true,
+          "unknown_sku": true,
+          "invalid_quantities": true,
+          "input_ownership": true,
+          "failure_atomic": true,
+          "empty_independent": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 120186,
+        "cached_input_tokens": 91392,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1718,
+        "reasoning_output_tokens": 82
+      },
+      "seconds": 42.01,
+      "staged_skill_file_count": 25,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['inventory.py', 'tests/test_inventory.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R23",
+      "review_a": {
+        "review_id": "R23",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_inventory.py. Event 8 reports six tests with 18 assertion failures and six runtime TypeErrors; qualifying assertion failures include returning the original stock dict, not raising ValueError and mutating stock on unknown SKU. This RED does not rely on the TypeErrors. Events 9-10 are the first visible production edit, updating inventory.py only. Event 12 reports the same six named tests OK with exit 0 and no visible test edits or weakening. Event 3 command text is masked, but event 4 shows the initial implementation; the verdict is limited to visible file-change/command observations, not independent snapshots."
+      },
+      "review_b": {
+        "review_id": "R23",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_inventory.py. Event 8 shows 18 meaningful assertion failures as well as six runtime errors; qualifying failures include returning the original stock object, missing quantity/shortage errors, and mutating stock before an unknown-SKU failure. The first observed inventory.py implementation edit is events 9-10. Event 12 reruns the same six tests successfully, with no intervening test edit or visible weakening. Event 4 has an empty command field but its output is inspection/guidance, not evidence of a production write. The verdict concerns observed process only; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "8e883674662d2f89a04766c335d7591f45f767aab7c3ca172012c5c6f2631b38",
+      "review_packet_sha256": "dd5a2050a8a86ddfca8e7a8d39ec11a34fcbcff5906fc7a8a74c51768eb46fd8"
+    },
+    {
+      "task": "inventory-reservation",
+      "trial": 2,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "normal": true,
+          "duplicate_aggregation": true,
+          "aggregate_insufficient": true,
+          "unknown_sku": true,
+          "invalid_quantities": true,
+          "input_ownership": true,
+          "failure_atomic": true,
+          "empty_independent": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 58882,
+        "cached_input_tokens": 43648,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1321,
+        "reasoning_output_tokens": 54
+      },
+      "seconds": 41.062,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['inventory.py', 'tests/test_inventory.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R18",
+      "review_a": {
+        "review_id": "R18",
+        "verdict": "fail",
+        "test_edit_event": 4,
+        "red_event": null,
+        "implementation_event": 4,
+        "green_event": 6,
+        "reason": "Events 3-4 update inventory.py and add tests/test_inventory.py simultaneously. Event 6 reports five tests OK on the first visible execution, with no prior meaningful assertion failure. Source/tests together before RED directly violate observed test-first ordering despite GREEN tests. This verdict concerns process only, not final functional correctness or independently snapshotted runtime states."
+      },
+      "review_b": {
+        "review_id": "R18",
+        "verdict": "fail",
+        "test_edit_event": 4,
+        "red_event": null,
+        "implementation_event": 4,
+        "green_event": 6,
+        "reason": "Events 3-4 update inventory.py and add tests/test_inventory.py simultaneously. Event 6 then reports five passing behavior tests on the first observed test execution. There is no meaningful assertion failure before the production change, directly failing the required order. No material ordering uncertainty is visible; this conclusion concerns observed CLI process, not independent intermediate snapshots."
+      },
+      "raw_trace_sha256": "e4e14310dee76f3691fc0cd7dbb7bf8f45900c0cc296d9508113e740c4bf5982",
+      "review_packet_sha256": "dae3aeeb8991a5482844e1e55ba1e4dfe14689c94dae6b33135b4504212614d9"
+    },
+    {
+      "task": "inventory-reservation",
+      "trial": 2,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "normal": true,
+          "duplicate_aggregation": true,
+          "aggregate_insufficient": true,
+          "unknown_sku": true,
+          "invalid_quantities": true,
+          "input_ownership": true,
+          "failure_atomic": true,
+          "empty_independent": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 118055,
+        "cached_input_tokens": 94976,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1664,
+        "reasoning_output_tokens": 114
+      },
+      "seconds": 50.005,
+      "staged_skill_file_count": 25,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['inventory.py', 'tests/test_inventory.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R09",
+      "review_a": {
+        "review_id": "R09",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_inventory.py. Event 8 runs six tests with 11 assertion failures plus ten runtime errors. Qualifying assertion failures establish wrong object identity for empty/successful orders, missing ValueError for shortage/invalid quantities and stock mutation before unknown SKU; RED does not rely on the runtime TypeErrors/KeyErrors. The first inventory.py edit is events 9-10. Event 12 reports the same six named tests OK with exit 0 and no visible intervening test change or weakening. Evidence is bounded to observed process, not independent intermediate snapshots."
+      },
+      "review_b": {
+        "review_id": "R09",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_inventory.py. Event 8 shows 11 meaningful assertion failures plus 10 runtime errors across six tests, including missing invalid-quantity errors, mutation before unknown-SKU failure, and returning the original stock dict. The first observed inventory.py implementation edit is events 9-10. Event 12 reruns the same six tests successfully, with no intervening test edit or visible weakening. Git cache warnings do not affect these test results. This supports observed test-first process only; independent intermediate runtime snapshots are unavailable."
+      },
+      "raw_trace_sha256": "f92d32594d98813baedbbd20eabcbd83b35ad1b62ae206f52f19210534f642a4",
+      "review_packet_sha256": "d391c45b24186dc758b72149fdc219d2e25b97cfd500a681499a4ab450534b11"
+    },
+    {
+      "task": "inventory-reservation",
+      "trial": 3,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "normal": true,
+          "duplicate_aggregation": true,
+          "aggregate_insufficient": true,
+          "unknown_sku": true,
+          "invalid_quantities": true,
+          "input_ownership": true,
+          "failure_atomic": true,
+          "empty_independent": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 58965,
+        "cached_input_tokens": 43776,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1194,
+        "reasoning_output_tokens": 45
+      },
+      "seconds": 45.109,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['inventory.py', 'tests/test_inventory.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R12",
+      "review_a": {
+        "review_id": "R12",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update inventory.py and add tests/test_inventory.py together. The first test execution at events 7-8 already reports all four tests OK; no preceding meaningful behavior assertion failure is observed. The simultaneous implementation/tests edit before RED fails the frozen process criterion. Initial source inspection and Git cache warnings at event 4 do not constitute RED; final behavior is not disproved."
+      },
+      "review_b": {
+        "review_id": "R12",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update inventory.py and add tests/test_inventory.py in one file-change operation. Event 8 is the first observed test result and reports four behavior tests GREEN. No meaningful assertion failure precedes implementation, so the required order fails. Earlier source inspection and Git warnings are not behavior RED. No material ordering uncertainty is visible; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "dbad24838d0a4a9a5c0596575499563eef25398e60f4d0f4d5145759fef80919",
+      "review_packet_sha256": "284a0a6353df02908bdbd208e5b0ebf9b0a19b3439459e8a17fade8856ef5704"
+    },
+    {
+      "task": "inventory-reservation",
+      "trial": 3,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "normal": true,
+          "duplicate_aggregation": true,
+          "aggregate_insufficient": true,
+          "unknown_sku": true,
+          "invalid_quantities": true,
+          "input_ownership": true,
+          "failure_atomic": true,
+          "empty_independent": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 120557,
+        "cached_input_tokens": 103040,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1899,
+        "reasoning_output_tokens": 125
+      },
+      "seconds": 81.5,
+      "staged_skill_file_count": 25,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['inventory.py', 'tests/test_inventory.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R19",
+      "review_a": {
+        "review_id": "R19",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_inventory.py. Event 8 reports eight tests with 20 assertion failures and four runtime TypeErrors; qualifying assertions include input mutation, returning the same dict, missing ValueError for invalid/excess demand and accepting demand against zero stock. RED does not rely on the TypeErrors. Events 9-10 then first visibly update inventory.py only. Event 12 reports the same eight named tests OK with exit 0; no test changes or weakening are visible. Event 3 command text is masked, while event 4 displays the initial implementation. Pass is limited to observable trace ordering, not independent snapshots."
+      },
+      "review_b": {
+        "review_id": "R19",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_inventory.py. Event 8 executes eight task-relevant tests and shows 20 assertion failures plus four runtime errors; qualifying failures include input mutation, missing shortage/invalid-quantity errors, and empty-order aliasing. The first observed inventory.py implementation edit is events 9-10. Event 12 reruns the same eight tests GREEN, with no intervening test edit or visible weakening. Event 4 has an empty command field, but its output shows inspection of the original implementation and no production-write evidence. The verdict establishes observed process only; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "066485bc4ee5d5ae67a1c0b542067a3beecd6571637ed0df7f8c0a9313b23dda",
+      "review_packet_sha256": "8ae01b75cef3b6c69a9ac1bf6211f084ad301c855c45724346ca0a2fdfb01290"
+    },
+    {
+      "task": "nested-public-boundary",
+      "trial": 1,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "detail_allowlist": true,
+          "missing_404": true,
+          "sorted_default_list": true,
+          "pagination_total": true,
+          "invalid_pagination": true,
+          "future_private_fields": true,
+          "source_unchanged": true,
+          "openapi_public_shapes": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 108456,
+        "cached_input_tokens": 103424,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2434,
+        "reasoning_output_tokens": 80
+      },
+      "seconds": 85.12,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_customers.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R16",
+      "review_a": {
+        "review_id": "R16",
+        "verdict": "fail",
+        "test_edit_event": 10,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 12,
+        "reason": "Events 5-6 first update app.py, before tests/test_customers.py is added at events 9-10. Event 12 reports six tests OK, with no behavior RED before implementation; event 8 is only an import/version check. This directly fails test-first ordering. Events 13-14 later modify the test file without a subsequent test run or visible patch contents, so final test contents and any weakening are unverified; that uncertainty does not erase the already-observed ordering failure."
+      },
+      "review_b": {
+        "review_id": "R16",
+        "verdict": "fail",
+        "test_edit_event": 10,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 12,
+        "reason": "Events 5-6 change app.py before tests/test_customers.py is added at events 9-10. Event 12 reports six public-contract tests GREEN, without any prior meaningful assertion RED. The dependency-version check at event 8 is not a behavior test. Events 13-14 subsequently edit the tests without an observed rerun, so event 12 does not establish the final test state; regardless, the earlier production-first order conclusively fails the process rubric. Independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "259b79f4d5e16b5ade4d1b8c60a8b0d0a2c3f9f25101d57d285ba9371c57191c",
+      "review_packet_sha256": "3ee127b1813aadc1a8e91ae8e4e2eec574418d9889e9257c89b4d3b62adbec39"
+    },
+    {
+      "task": "nested-public-boundary",
+      "trial": 1,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "detail_allowlist": true,
+          "missing_404": true,
+          "sorted_default_list": true,
+          "pagination_total": true,
+          "invalid_pagination": true,
+          "future_private_fields": true,
+          "source_unchanged": true,
+          "openapi_public_shapes": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 117508,
+        "cached_input_tokens": 87040,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2755,
+        "reasoning_output_tokens": 130
+      },
+      "seconds": 62.991,
+      "staged_skill_file_count": 27,
+      "observed_skill_reads": [
+        "common:test-driven-development",
+        "common:verification-before-completion",
+        "fastapi:fastapi-backend"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_customers.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R15",
+      "review_a": {
+        "review_id": "R15",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_customers.py. Event 6 runs seven tests with ten meaningful assertion failures covering order, pagination validation, private-field exclusion and missing-ID status; the additional OpenAPI KeyError is not relied on for RED. Events 7-8 first update app.py only. Event 10 reports the same seven named tests OK with exit 0 and no visible test change or weakening. This establishes the observed sequence, not independently snapshotted TDD."
+      },
+      "review_b": {
+        "review_id": "R15",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_customers.py. Event 6 runs seven public-contract tests with 10 assertion failures and one error; meaningful failures include leaking private fields, wrong paginated content, and returning HTTP 200 instead of 404 for a missing customer. The first observed app.py implementation change is events 7-8. Event 10 reruns the same seven tests successfully, with no intervening test edit or visible weakening. The schema-test error does not invalidate the separately observed assertion RED. This establishes observed process only, not independently snapshotted strict TDD."
+      },
+      "raw_trace_sha256": "8f7d31dbf7c0e12911c301e35fdadfb9f5ad79295e1b9d1ec295ec58a1dd56ea",
+      "review_packet_sha256": "6cc4137d99c76c6f680e9bbb96b59dde9200eb03b92b11307134c8308729c133"
+    },
+    {
+      "task": "nested-public-boundary",
+      "trial": 2,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "detail_allowlist": true,
+          "missing_404": true,
+          "sorted_default_list": true,
+          "pagination_total": true,
+          "invalid_pagination": true,
+          "future_private_fields": true,
+          "source_unchanged": true,
+          "openapi_public_shapes": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 76151,
+        "cached_input_tokens": 64896,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2262,
+        "reasoning_output_tokens": 90
+      },
+      "seconds": 49.641,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_customers.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R01",
+      "review_a": {
+        "review_id": "R01",
+        "verdict": "fail",
+        "test_edit_event": 12,
+        "red_event": null,
+        "implementation_event": 8,
+        "green_event": 14,
+        "reason": "Events 7-8 update app.py before tests/test_customers.py is added at events 11-12. Event 14 runs seven relevant API contract tests successfully, but no test run or meaningful assertion RED precedes the first production edit. Event 10 only checks dependency imports/versions and is not RED. This is a definite observed process failure, not evidence that the final response contract is incorrect; independent intermediate snapshots are unavailable."
+      },
+      "review_b": {
+        "review_id": "R01",
+        "verdict": "fail",
+        "test_edit_event": 12,
+        "red_event": null,
+        "implementation_event": 8,
+        "green_event": 14,
+        "reason": "The first observed app.py implementation edit occurs at events 7-8, before tests/test_customers.py is added at events 11-12. Event 14 reports seven public-contract tests GREEN, but no meaningful assertion failure precedes implementation. Event 10 only checks dependency versions, not behavior. The production-before-test order unambiguously fails the frozen rubric; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "e4ccf7be36adf56df2ab3b106fdda29dd08d23ee0cbb4eb88bb3cce6237f80ef",
+      "review_packet_sha256": "993239d5ae32465705564b4a9b5506225a4e470d0ec7a2f3278e3c38bbad7df7"
+    },
+    {
+      "task": "nested-public-boundary",
+      "trial": 2,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "detail_allowlist": true,
+          "missing_404": true,
+          "sorted_default_list": true,
+          "pagination_total": true,
+          "invalid_pagination": true,
+          "future_private_fields": true,
+          "source_unchanged": true,
+          "openapi_public_shapes": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 114089,
+        "cached_input_tokens": 76160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2428,
+        "reasoning_output_tokens": 58
+      },
+      "seconds": 57.937,
+      "staged_skill_file_count": 27,
+      "observed_skill_reads": [
+        "common:test-driven-development",
+        "common:verification-before-completion",
+        "fastapi:fastapi-backend"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_customers.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R08",
+      "review_a": {
+        "review_id": "R08",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_customers.py. Event 8 runs seven tests with 11 meaningful assertion failures, including leaked private fields, incorrect ordering, 200 instead of 422 for invalid pagination and 200 instead of 404 for missing IDs. Its additional OpenAPI KeyError is not needed to establish RED. The first app.py edit occurs at events 9-10. Event 12 reports the same seven named tests OK with exit 0; no test edits or weakening are visible between RED and GREEN. Pass establishes observed process only, without independent runtime snapshots."
+      },
+      "review_b": {
+        "review_id": "R08",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_customers.py. Event 8 runs seven task-relevant tests with 11 assertion failures and one error; meaningful failures include private fields appearing in public JSON, invalid pagination acceptance, wrong ordering, and missing-customer behavior. The first observed app.py implementation change is events 9-10. Event 12 shows the same seven tests GREEN, with no intervening test edit or visible weakening. The extra schema-test error does not invalidate the separately observed assertion RED. This establishes observed process only, not independently snapshotted strict TDD."
+      },
+      "raw_trace_sha256": "6ce50faf6d314a4ba366e760a9de2c6523e1578d27256130e98b7428e6354375",
+      "review_packet_sha256": "7a9244901d0921c3fb2dd3cf03328823434a070ab4704c8339e5d486e6a5255c"
+    },
+    {
+      "task": "nested-public-boundary",
+      "trial": 3,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "detail_allowlist": true,
+          "missing_404": true,
+          "sorted_default_list": true,
+          "pagination_total": true,
+          "invalid_pagination": true,
+          "future_private_fields": true,
+          "source_unchanged": true,
+          "openapi_public_shapes": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 75863,
+        "cached_input_tokens": 49664,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2171,
+        "reasoning_output_tokens": 100
+      },
+      "seconds": 71.482,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_app.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R04",
+      "review_a": {
+        "review_id": "R04",
+        "verdict": "fail",
+        "test_edit_event": 10,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 12,
+        "reason": "Events 5-6 update app.py before events 9-10 add tests/test_app.py. Event 8 only checks dependency versions. Event 12 then reports five API contract tests OK without an earlier behavior assertion failure. Production implementation before meaningful RED directly fails the required process, regardless of final GREEN tests; independent intermediate snapshots are unavailable."
+      },
+      "review_b": {
+        "review_id": "R04",
+        "verdict": "fail",
+        "test_edit_event": 10,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 12,
+        "reason": "Events 5-6 change app.py before tests/test_app.py is created at events 9-10. Event 12 reports five public-contract tests GREEN with no earlier meaningful assertion failure. Event 8 checks dependency versions only. The production-before-tests order unambiguously fails the frozen rubric; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "96999d3d2307eda50402ca57b698bb9393282b1d3accb72649fa8772293a4785",
+      "review_packet_sha256": "b74cd4c3083aecfe8df3b5e21e03cb642f5170b6e7ce5c33087aa4968e3d4d01"
+    },
+    {
+      "task": "nested-public-boundary",
+      "trial": 3,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "detail_allowlist": true,
+          "missing_404": true,
+          "sorted_default_list": true,
+          "pagination_total": true,
+          "invalid_pagination": true,
+          "future_private_fields": true,
+          "source_unchanged": true,
+          "openapi_public_shapes": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 146081,
+        "cached_input_tokens": 86528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2723,
+        "reasoning_output_tokens": 167
+      },
+      "seconds": 67.407,
+      "staged_skill_file_count": 27,
+      "observed_skill_reads": [
+        "api-contracts:api-design-principles",
+        "common:test-driven-development",
+        "common:verification-before-completion",
+        "fastapi:fastapi-backend"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_customers.py']"
+      },
+      "observed_test_first_process": "unknown",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R14",
+      "review_a": {
+        "review_id": "R14",
+        "verdict": "unknown",
+        "test_edit_event": 8,
+        "red_event": 10,
+        "implementation_event": 12,
+        "green_event": 14,
+        "reason": "Events 7-8 add tests/test_customers.py before production changes. Event 10 establishes meaningful RED with 11 assertion failures on private-field filtering, pagination, order and missing-ID status, plus an OpenAPI KeyError not needed for RED. Events 11-12 then update both app.py and tests/test_customers.py. Event 14 reports the same seven named tests GREEN, but the packet contains no patch contents or before/after test text for the intervening test update. Thus no weakening or preservation of the same behavior assertions can be verified. Ordering is visible; the required no-weakening condition remains ambiguous, so the frozen rubric requires unknown rather than inferring pass or fail."
+      },
+      "review_b": {
+        "review_id": "R14",
+        "verdict": "unknown",
+        "test_edit_event": 8,
+        "red_event": 10,
+        "implementation_event": 12,
+        "green_event": 14,
+        "reason": "Events 7-8 add tests/test_customers.py, and event 10 provides meaningful public-behavior RED with 11 assertion failures plus one schema-test error, including incorrect sorted/paginated IDs. The first app.py implementation edit is events 11-12, after RED, but that same operation also updates tests/test_customers.py. Event 14 shows the same seven test names GREEN. The packet contains only changed-path metadata, not the test update contents, so preservation versus weakening/correction of the failing assertions cannot be verified. The order alone is compatible with test-first process, but the no-weakening requirement is unresolved; neither a pass nor a confirmed weakening failure is justified. Independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "c5f8dc0c2d40f152339acb19da7dcf440ba35178e7d38d0a9da64aa682e585fb",
+      "review_packet_sha256": "cbf96db0a4dc07f0c28ca38145e4132ff921683906e2493d78b73a3b569e4f18"
+    },
+    {
+      "task": "request-resource-errors",
+      "trial": 1,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "no_import_acquisition": true,
+          "no_startup_acquisition": true,
+          "response_1": true,
+          "cleanup_1": true,
+          "response_2": true,
+          "cleanup_2": true,
+          "response_3": true,
+          "cleanup_3": true,
+          "response_4": true,
+          "cleanup_4": true,
+          "no_shutdown_release": true,
+          "replacement_response_1": true,
+          "replacement_cleanup_1": true,
+          "replacement_response_2": true,
+          "replacement_cleanup_2": true,
+          "replacement_response_3": true,
+          "replacement_cleanup_3": true,
+          "replacement_service_called": true,
+          "original_resource_unchanged": true,
+          "replacement_no_shutdown_release": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 59577,
+        "cached_input_tokens": 55424,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1490,
+        "reasoning_output_tokens": 157
+      },
+      "seconds": 38.781,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_app.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R21",
+      "review_a": {
+        "review_id": "R21",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update app.py and add tests/test_app.py together before any test execution. Event 8 reports all six resource/error-path tests OK on their first visible run. No meaningful assertion RED precedes the first production implementation change, so the simultaneous edit fails the observed test-first criterion. Final behavior is not disproved."
+      },
+      "review_b": {
+        "review_id": "R21",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update app.py and add tests/test_app.py together before any behavior test execution. Event 8 reports six resource/error tests GREEN on the first observed run. No meaningful assertion RED precedes production implementation, directly failing the required order. Earlier inspection and Git cache warnings do not count as behavior RED. No material ordering uncertainty is visible; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "92a1e26e94f8fe56a86de7c7a7f694538591ad29187a9022a44fe3ffe6e10e84",
+      "review_packet_sha256": "cf76d0f443add751ffb5e268bb604159415050f92d94bf64bd56208dc16b81e0"
+    },
+    {
+      "task": "request-resource-errors",
+      "trial": 1,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "no_import_acquisition": true,
+          "no_startup_acquisition": true,
+          "response_1": true,
+          "cleanup_1": true,
+          "response_2": true,
+          "cleanup_2": true,
+          "response_3": true,
+          "cleanup_3": true,
+          "response_4": true,
+          "cleanup_4": true,
+          "no_shutdown_release": true,
+          "replacement_response_1": true,
+          "replacement_cleanup_1": true,
+          "replacement_response_2": true,
+          "replacement_cleanup_2": true,
+          "replacement_response_3": true,
+          "replacement_cleanup_3": true,
+          "replacement_service_called": true,
+          "original_resource_unchanged": true,
+          "replacement_no_shutdown_release": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 149041,
+        "cached_input_tokens": 125440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2128,
+        "reasoning_output_tokens": 152
+      },
+      "seconds": 71.928,
+      "staged_skill_file_count": 27,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_app.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R20",
+      "review_a": {
+        "review_id": "R20",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_app.py. Event 6 runs six tests with three assertion failures: missing lookups return 500 rather than 404, and unexpected failures leave closed-resource counts at zero instead of one. Events 7-8 then first update app.py. Event 10 reruns the same six named tests successfully with exit 0 and no visible test modification or weakening. Event 14 independently checks fresh-import counters in the trace, but the process verdict rests on the preceding RED-to-GREEN ordering; intermediate snapshots remain unavailable."
+      },
+      "review_b": {
+        "review_id": "R20",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_app.py. Event 6 runs six resource/error behavior tests and shows three meaningful assertion failures: missing-job HTTP 500 instead of 404 and resource.closed remaining 0 instead of 1 after unexpected failures. The first observed app.py implementation change is events 7-8. Event 10 shows the same six tests GREEN, with no intervening test edit or visible weakening. Event 14 additionally confirms fresh-import counters remain zero, but is not needed to establish RED-to-GREEN. This supports observed process only; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "1390c5523fee10e22ef914b06bff25372c84c28d51fee05498b481a373e086c2",
+      "review_packet_sha256": "e622a3af4a493734d25c2f345ec43e36178fa3bcb30a9e1cea96c8431e2eccc9"
+    },
+    {
+      "task": "request-resource-errors",
+      "trial": 2,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "no_import_acquisition": true,
+          "no_startup_acquisition": true,
+          "response_1": true,
+          "cleanup_1": true,
+          "response_2": true,
+          "cleanup_2": true,
+          "response_3": true,
+          "cleanup_3": true,
+          "response_4": true,
+          "cleanup_4": true,
+          "no_shutdown_release": true,
+          "replacement_response_1": true,
+          "replacement_cleanup_1": true,
+          "replacement_response_2": true,
+          "replacement_cleanup_2": true,
+          "replacement_response_3": true,
+          "replacement_cleanup_3": true,
+          "replacement_service_called": true,
+          "original_resource_unchanged": true,
+          "replacement_no_shutdown_release": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 59403,
+        "cached_input_tokens": 45440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1287,
+        "reasoning_output_tokens": 86
+      },
+      "seconds": 39.056,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_jobs.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R07",
+      "review_a": {
+        "review_id": "R07",
+        "verdict": "fail",
+        "test_edit_event": 10,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 12,
+        "reason": "Events 5-6 first update app.py. Tests/test_jobs.py is not added until events 9-10, after a mkdir command at event 8. The first test execution at events 11-12 passes two tests and no prior meaningful behavior RED exists. This is a definite test-first ordering failure, not proof of a defective final implementation."
+      },
+      "review_b": {
+        "review_id": "R07",
+        "verdict": "fail",
+        "test_edit_event": 10,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 12,
+        "reason": "Events 5-6 update app.py before tests/test_jobs.py is added at events 9-10. Event 12 is the first observed test execution and reports two passing resource/error behavior tests. No meaningful assertion RED precedes implementation, so the required sequence fails. Creating the tests directory at event 8 is not behavior RED. No material ordering ambiguity is visible; independent intermediate snapshots are unavailable."
+      },
+      "raw_trace_sha256": "590c85fbac53380dd6aa00b706d9e047e8634be322d349c32c80560439772257",
+      "review_packet_sha256": "9f761be5e9f1e9d5ac4655bb8f34e35d4cf008a531aeba4831449ded01e03c5e"
+    },
+    {
+      "task": "request-resource-errors",
+      "trial": 2,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "no_import_acquisition": true,
+          "no_startup_acquisition": true,
+          "response_1": true,
+          "cleanup_1": true,
+          "response_2": true,
+          "cleanup_2": true,
+          "response_3": true,
+          "cleanup_3": true,
+          "response_4": true,
+          "cleanup_4": true,
+          "no_shutdown_release": true,
+          "replacement_response_1": true,
+          "replacement_cleanup_1": true,
+          "replacement_response_2": true,
+          "replacement_cleanup_2": true,
+          "replacement_response_3": true,
+          "replacement_cleanup_3": true,
+          "replacement_service_called": true,
+          "original_resource_unchanged": true,
+          "replacement_no_shutdown_release": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 121951,
+        "cached_input_tokens": 104832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1887,
+        "reasoning_output_tokens": 214
+      },
+      "seconds": 75.46,
+      "staged_skill_file_count": 27,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion",
+        "fastapi:fastapi-backend"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_app.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R24",
+      "review_a": {
+        "review_id": "R24",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_app.py. Event 6 runs four tests and records five meaningful assertion failures showing unbalanced opened/closed/active counters after missing and unexpected failures and subsequent requests, including (1,0,1) instead of (1,1,0). The first app.py edit is events 7-8. Event 10 reports the same four named tests OK with exit 0 and no visible test changes or weakening. Evidence supports observed process only, not independent runtime snapshots."
+      },
+      "review_b": {
+        "review_id": "R24",
+        "verdict": "pass",
+        "test_edit_event": 4,
+        "red_event": 6,
+        "implementation_event": 8,
+        "green_event": 10,
+        "reason": "Events 3-4 add only tests/test_app.py. Event 6 executes four resource/error behavior tests and shows five assertion failures, including resource counters (4,2,2) instead of (4,4,0) after requests and (1,0,1) instead of (1,1,0) after a propagated unexpected failure. The first observed app.py implementation edit is events 7-8. Event 10 shows the same four tests GREEN, with no intervening test edit or visible weakening. Later Git warnings do not affect these results. This establishes observed test-first process only; independent intermediate runtime snapshots are unavailable."
+      },
+      "raw_trace_sha256": "282ac5daaa0e07e70b2cb759c80bc353c1dcbf0c14e5ad2daf3b7ad2c7864086",
+      "review_packet_sha256": "29970e471797479675cf8f4f9709b8021823803a6cd846107ec3ffce47c3f790"
+    },
+    {
+      "task": "request-resource-errors",
+      "trial": 3,
+      "condition": "baseline",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "no_import_acquisition": true,
+          "no_startup_acquisition": true,
+          "response_1": true,
+          "cleanup_1": true,
+          "response_2": true,
+          "cleanup_2": true,
+          "response_3": true,
+          "cleanup_3": true,
+          "response_4": true,
+          "cleanup_4": true,
+          "no_shutdown_release": true,
+          "replacement_response_1": true,
+          "replacement_cleanup_1": true,
+          "replacement_response_2": true,
+          "replacement_cleanup_2": true,
+          "replacement_response_3": true,
+          "replacement_cleanup_3": true,
+          "replacement_service_called": true,
+          "original_resource_unchanged": true,
+          "replacement_no_shutdown_release": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 92429,
+        "cached_input_tokens": 77824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1513,
+        "reasoning_output_tokens": 164
+      },
+      "seconds": 41.985,
+      "staged_skill_file_count": 0,
+      "observed_skill_reads": [],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_app.py']"
+      },
+      "observed_test_first_process": "fail",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R02",
+      "review_a": {
+        "review_id": "R02",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update app.py and add tests/test_app.py in the same operation. The first test run at events 7-8 already passes three resource-lifecycle tests; no meaningful assertion RED precedes the production edit. This fails observed test-first ordering. Later source display at event 10 cannot supply missing process evidence; final functional correctness is not disproved."
+      },
+      "review_b": {
+        "review_id": "R02",
+        "verdict": "fail",
+        "test_edit_event": 6,
+        "red_event": null,
+        "implementation_event": 6,
+        "green_event": 8,
+        "reason": "Events 5-6 update app.py and add tests/test_app.py in the same operation before any behavior test execution. Event 8 reports three resource/error behavior tests GREEN, but no meaningful assertion RED precedes the first production change. The simultaneous edit conclusively fails the required order. Later cache cleanup/source printing is not RED. Evidence is observed process, not independent intermediate snapshots."
+      },
+      "raw_trace_sha256": "eb0e3499227456f4b45db1dffd470bf9fb0040a6e4bc87da5320a4c2a5d5e46e",
+      "review_packet_sha256": "aa5985112e9c05e6a599518f2b5a5a86efd1bc3f9faa671e5c01534fccb47708"
+    },
+    {
+      "task": "request-resource-errors",
+      "trial": 3,
+      "condition": "candidate",
+      "status": "completed",
+      "outcome": {
+        "status": "pass",
+        "checks": {
+          "no_import_acquisition": true,
+          "no_startup_acquisition": true,
+          "response_1": true,
+          "cleanup_1": true,
+          "response_2": true,
+          "cleanup_2": true,
+          "response_3": true,
+          "cleanup_3": true,
+          "response_4": true,
+          "cleanup_4": true,
+          "no_shutdown_release": true,
+          "replacement_response_1": true,
+          "replacement_cleanup_1": true,
+          "replacement_response_2": true,
+          "replacement_cleanup_2": true,
+          "replacement_response_3": true,
+          "replacement_cleanup_3": true,
+          "replacement_service_called": true,
+          "original_resource_unchanged": true,
+          "replacement_no_shutdown_release": true
+        },
+        "reason": "Trusted check completed with all expected criteria true."
+      },
+      "usage": {
+        "input_tokens": 122312,
+        "cached_input_tokens": 107136,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1829,
+        "reasoning_output_tokens": 180
+      },
+      "seconds": 61.18,
+      "staged_skill_file_count": 27,
+      "observed_skill_reads": [
+        "common:systematic-debugging",
+        "common:test-driven-development",
+        "common:verification-before-completion",
+        "fastapi:fastapi-backend"
+      ],
+      "scope": {
+        "status": "pass",
+        "reason": "Out-of-scope changed paths: []; changed paths: ['app.py', 'tests/test_app.py']"
+      },
+      "observed_test_first_process": "pass",
+      "strict_automated_tdd": "unknown",
+      "review_id": "R05",
+      "review_a": {
+        "review_id": "R05",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_app.py. Event 8 runs six tests and records six assertion failures on closed-resource counts after missing/unexpected lookup failures and repeated requests, establishing task-relevant behavior RED. The first app.py edit follows at events 9-10. Event 12 reports the same six named tests OK with exit 0 and no visible intervening test edits or weakening. Pass proves observed process only, without independent intermediate snapshots."
+      },
+      "review_b": {
+        "review_id": "R05",
+        "verdict": "pass",
+        "test_edit_event": 6,
+        "red_event": 8,
+        "implementation_event": 10,
+        "green_event": 12,
+        "reason": "Events 5-6 add only tests/test_app.py. Event 8 executes six task-relevant tests and shows six assertion failures, including resource.closed being 0 rather than 1 after missing-job and unexpected-error responses. The first observed app.py implementation edit is events 9-10. Event 12 shows the same six tests passing, with no intervening test edit or visible weakening. Later Git cache warnings do not affect the test evidence. This supports observed test-first process only, not independently snapshotted strict TDD."
+      },
+      "raw_trace_sha256": "b1d99af08d3a3ab751515a04c6cea9dd23faff677d3df3b6a988aa5b35a2cc62",
+      "review_packet_sha256": "9d03472fad9a5752121cf63a7ed079e0b68f13e7be5fe69943f19ee72dbe9605"
+    }
+  ],
+  "frozen_inputs_sha256": {
+    "evals/followup/checks/idempotency-ledger.py": "9363e0b10431ba8e33a5401e18b55732396307dfbd8a46741123cd10e4bc31d0",
+    "evals/followup/checks/inventory-reservation.py": "11be4d6cee67fd3e9475943b087e78c05af3783b9e990003d683187605edfa8d",
+    "evals/followup/checks/nested-public-boundary.py": "ad528fc2443b32666a5265fc0088ae7055c31e9b55b4e7928c350aaaf85030ee",
+    "evals/followup/checks/request-resource-errors.py": "c0086ecef07069d1388bdf1803a27d2b8b6a1d3736ac9d93d770afa423d1c9ed",
+    "evals/followup/fixtures/idempotency-ledger/ledger.py": "e7fbb6baabf74d3fd91a7fbabea044fa7536bdd226dfc1e449fbe0cde8fc8a09",
+    "evals/followup/fixtures/inventory-reservation/inventory.py": "a44a329d044a12ffa2cb8036577c509bfee7134b387cd4b968ce9f10ce835b91",
+    "evals/followup/fixtures/nested-public-boundary/app.py": "35f52c7b5971e2a4b5abcca928e6ab4b0e6443f8428e8912b75c8efd2dbd233a",
+    "evals/followup/fixtures/request-resource-errors/app.py": "3427049617376776e5fdf5c9a225fec38eb9c2519f2feefe45c9276b15c6184a",
+    "evals/followup/selfcheck.py": "a52efea59a374ba582eab822281c96d3dc88abb7b2a570b557a6ab3a4592fe3a",
+    "evals/followup/tasks/idempotency-ledger.json": "69b71d4c02c0e8171d4e18fc730e5a66c347c6dc305eead556180fb04e9b2866",
+    "evals/followup/tasks/inventory-reservation.json": "b059f5a4cc515a62fe781955c7547034173c127ac08470d566b27f1f911bccfc",
+    "evals/followup/tasks/nested-public-boundary.json": "d0dd2a36a2e3b408ce13c63cabae954a54f4adcdb385e9d6247beea4f858871f",
+    "evals/followup/tasks/request-resource-errors.json": "eed1b6a27c6763ccd6488fbd0779ad6489e648d5e4a5a710c5d102e574df0c76",
+    "scripts/run_host_evals.py": "36500c523ad78e355794027983cd5eb192491066a63729c1c79facf22c20845c",
+    "scripts/run_evals.py": "9784a5c1a437acbfd39b94c00bca16727c50310f85a76bfe51799d27aea773a8",
+    "evals/graders.py": "8fd82bf4a2ca6f851813343d72be0a74eefd53df4a0bf81d179d8638fed30939",
+    "evals/drive_check.py": "8b07a2040286e3cb281c60eee5a59bb7316156f56a6924027626a24dab257692",
+    "evals/Dockerfile": "18a863f0e09b81769088d4c9b4160923b643a3bdccb97565337d6ba52532be22"
+  },
+  "review_method": "Two independent native agent reviewers; condition names and guidance chatter masked, workflow may reveal condition. Disagreements conservatively unknown. No independent intermediate runtime snapshots.",
+  "limits": [
+    "Existing host authentication/global/managed policy common to both arms; conditional project-skill effect, not pristine machine or isolated single-skill attribution",
+    "Trusted fixtures only; generated checks run in network-disabled read-only credential-free Docker",
+    "No actual Claude model trials, native plugin-runtime or App effect claim",
+    "Fixed synthetic tasks selected before follow-up results; earlier ceiling-effect experiment motivated this exploratory hypothesis; no held-out population inference",
+    "Do not change imported skill bodies, source hashes or licenses for this experiment",
+    "Twelve repeated trials cover only four task clusters; no population statistical significance, noninferiority or universal A+ score",
+    "Primary observed-process improvement is distinct from final-code correctness; no currency cost inferred from reported tokens",
+    "24 counts agent CLI sessions, not underlying provider API requests; no automatic retry or optional stopping"
+  ],
+  "artifact_location": ".eval-results/codex-implicit-skills-20261027/ (private, ignored; not included in fresh checkout)"
+}

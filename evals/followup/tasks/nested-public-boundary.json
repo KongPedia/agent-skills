@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "nested-public-boundary",
+  "prompt": "Fix the customer API's public response contract without modifying stored records. GET /customers/{customer_id} returns exactly {id:int,name:str,contact:{city:str}}, excluding all other top-level and nested fields, including future private fields. Missing IDs return 404 {\"detail\":\"customer not found\"}. GET /customers returns {\"items\":[public customers],\"total\":N}; order ascending by id, apply offset>=0 (default0) and 1<=limit<=50 (default20), with total before pagination. Invalid pagination returns 422. Enforce these public shapes with FastAPI response models on both routes, so the OpenAPI response schemas also show no private fields. Preserve CUSTOMERS and app and do not mutate source dicts. Use installed FastAPI/httpx. Modify only app.py and optional tests/*.py. Preserve the public API. No dependency installation or commits.",
+  "bundles": [
+    "common",
+    "python",
+    "fastapi",
+    "api-contracts"
+  ],
+  "required_skills": [
+    "common:test-driven-development",
+    "fastapi:fastapi-backend",
+    "api-contracts:api-design-principles"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/nested-public-boundary",
+  "check": "../checks/nested-public-boundary.py",
+  "allowed_paths": [
+    "app.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": true,
+  "runtime_modules": [
+    "fastapi",
+    "httpx"
+  ],
+  "expected_checks": [
+    "detail_allowlist",
+    "missing_404",
+    "sorted_default_list",
+    "pagination_total",
+    "invalid_pagination",
+    "future_private_fields",
+    "source_unchanged",
+    "openapi_public_shapes"
+  ]
+}

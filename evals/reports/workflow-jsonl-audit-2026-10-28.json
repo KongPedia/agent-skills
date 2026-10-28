@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "posthoc-jsonl-framing-audit",
+  "created_at_utc": "2026-10-28T02:17:15.017991+00:00",
+  "experiment_id": "codex-workflow-axes-2026-10-28",
+  "affected_trial": "sdd-small-label-3-candidate",
+  "defect": "str.splitlines() treats valid literal U+2028 inside JSON string as a record boundary. JSONL is LF-delimited. Parser falsely classified otherwise completed trace as agent_error.",
+  "trace_sha256": "630afc79c3b05c9a01e58ab91eaacb26dba84abbb13eb4fb4d79eeb7d6bf48d7",
+  "result_sha256": "601808c29277057371b2f23bddf5e63e818e46e83ab8c30f957d95f0efe1369e",
+  "original_execution_status": "agent_error",
+  "original_outcome": {
+    "status": "unknown"
+  },
+  "original_parse_errors": [
+    "Line 18: Unterminated string starting at: line 1 column 158 (char 157)",
+    "Line 19: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "lf_only_replay": {
+    "json_records": 24,
+    "turn_completed": true,
+    "cli_error_events": 0,
+    "literal_u2028_count": 1
+  },
+  "posthoc_same_frozen_checker_outcome": {
+    "status": "pass",
+    "checks": {
+      "underscores": true,
+      "whitespace": true,
+      "title_semantics": true,
+      "empty": true
+    },
+    "reason": "Trusted check completed with all expected criteria true."
+  },
+  "checker_sha256": "b659f64147f25c80d15075525b1d7079cbcfa1db8aeb6c3879a9b8a32696b0f4",
+  "grader_image_id": "sha256:e3b6e0a4105969d550eb45dd62ad0cd04aedf9cf9adfefb433d8cd97f869c683",
+  "cleanup_confirmed": true,
+  "confirmatory_policy": "Original agent_error, outcome unknown and both blinded primary review verdicts remain unchanged. Recovery is separate posthoc diagnostic only. No model retry or new skill-effect claim.",
+  "model_calls_added": 0,
+  "frozen_inputs_changed": false
+}

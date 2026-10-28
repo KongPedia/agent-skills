@@ -1,0 +1,25 @@
+{
+  "scope": "local reproduction only",
+  "initial_stock": 10,
+  "events": [
+    {
+      "request_id": "r1",
+      "quantity": 2
+    },
+    {
+      "request_id": "r1",
+      "quantity": 2
+    }
+  ],
+  "logs": [
+    "reservation received r1",
+    "reservation received r1"
+  ],
+  "orders": [
+    {
+      "id": "A",
+      "sequence": 7
+    }
+  ],
+  "cursor": 9
+}

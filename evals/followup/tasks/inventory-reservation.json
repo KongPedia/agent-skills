@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "inventory-reservation",
+  "prompt": "Fix reserve(stock, lines) for order checkout. stock maps SKU strings to nonnegative integer stock; lines is a list of (SKU, quantity) pairs. Return a NEW stock dict after reserving the entire order. Duplicate SKUs must be aggregated. Empty lines returns an equal independent dict. Each quantity must be a positive integer (bool is not an integer here); invalid quantities raise ValueError. Unknown SKU raises KeyError; aggregated demand exceeding stock raises ValueError. Never mutate stock or lines, including when a later line fails. Validation must reject every invalid quantity even when another line already exceeds stock; which error occurs first otherwise is unspecified. Modify only inventory.py and optional tests/*.py. Preserve the public API. No dependency installation or commits.",
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:test-driven-development"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/inventory-reservation",
+  "check": "../checks/inventory-reservation.py",
+  "allowed_paths": [
+    "inventory.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": true,
+  "runtime_modules": [],
+  "expected_checks": [
+    "normal",
+    "duplicate_aggregation",
+    "aggregate_insufficient",
+    "unknown_sku",
+    "invalid_quantities",
+    "input_ownership",
+    "failure_atomic",
+    "empty_independent"
+  ]
+}

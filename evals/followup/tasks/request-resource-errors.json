@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "request-resource-errors",
+  "prompt": "Repair GET /jobs/{job_id}. Each request must acquire the existing resource once and await its release once, even when service.lookup raises. Successful lookups return 200 {\"id\":job_id,\"active\":1}. LookupError maps to 404 {\"detail\":\"job not found\"}; other exceptions remain server errors (do not turn them into successful responses). Resource counters must show no open resources after each response, including unexpected failures. No acquire at import or app startup, no extra release at shutdown. Keep resource and service objects replaceable for consumer tests; preserve the existing lookup behavior and counters. Use installed FastAPI/httpx. Modify only app.py and optional tests/*.py. Preserve the public API. No dependency installation or commits.",
+  "bundles": [
+    "common",
+    "python",
+    "fastapi",
+    "api-contracts"
+  ],
+  "required_skills": [
+    "common:test-driven-development",
+    "fastapi:fastapi-backend"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/request-resource-errors",
+  "check": "../checks/request-resource-errors.py",
+  "allowed_paths": [
+    "app.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": true,
+  "runtime_modules": [
+    "fastapi",
+    "httpx"
+  ],
+  "expected_checks": [
+    "no_import_acquisition",
+    "no_startup_acquisition",
+    "response_1",
+    "cleanup_1",
+    "response_2",
+    "cleanup_2",
+    "response_3",
+    "cleanup_3",
+    "response_4",
+    "cleanup_4",
+    "no_shutdown_release",
+    "replacement_response_1",
+    "replacement_cleanup_1",
+    "replacement_response_2",
+    "replacement_cleanup_2",
+    "replacement_response_3",
+    "replacement_cleanup_3",
+    "replacement_service_called",
+    "original_resource_unchanged",
+    "replacement_no_shutdown_release"
+  ]
+}

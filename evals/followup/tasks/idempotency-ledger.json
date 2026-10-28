@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "idempotency-ledger",
+  "prompt": "Fix Ledger(ttl, capacity).claim(key, payload, now) for duplicate request suppression. ttl and capacity are positive integers (reject bool), otherwise constructor raises ValueError. now is a caller-provided integer clock; no wall clock access. A new key returns True, records a deep snapshot of payload, and expires at now+ttl. An unexpired identical payload returns False WITHOUT extending its expiry. An unexpired different payload raises ValueError. Expiry is inclusive: at now >= expiry it is a new claim. Remove expired entries before capacity checks; a new live key at full capacity raises OverflowError without evicting live entries. Payloads are JSON-compatible dicts; caller mutations must not change stored snapshots. A conflict or capacity failure must not extend or overwrite live entries. All scenarios use nondecreasing now values. Modify only ledger.py and optional tests/*.py. Preserve the public API. No dependency installation or commits.",
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:test-driven-development"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/idempotency-ledger",
+  "check": "../checks/idempotency-ledger.py",
+  "allowed_paths": [
+    "ledger.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": true,
+  "runtime_modules": [],
+  "expected_checks": [
+    "constructor_validation",
+    "replay_no_extension_exact_expiry",
+    "conflict_preserves_live_entry",
+    "deep_snapshot",
+    "capacity_expiry_and_no_eviction"
+  ]
+}

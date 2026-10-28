@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "forbidden_skills": [],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "eval_axis": "ddd",
+  "id": "ddd-cancellation",
+  "prompt": "Fix cancellation and refund handling in this checkout project. Users report a shipped order can be cancelled, partial refunds are overpaid, and provider failures make retries unsafe. Preserve the public APIs and implement the behavior documented in CONTRACT.md. Add focused regression tests and explain which module owns each state transition. No dependency installation or commits.",
+  "required_skills": [
+    "common:architecture-patterns"
+  ],
+  "case_role": "positive",
+  "allowed_paths": [
+    "*.py",
+    "tests/*.py",
+    "docs/*.md",
+    "GLOSSARY-MAP.md",
+    "CONTRACT.md"
+  ],
+  "expected_checks": [
+    "open_cancel",
+    "shipped_guard",
+    "partial_refund",
+    "provider_failure",
+    "retry_once",
+    "zero_outstanding",
+    "amount_invariants",
+    "input_ownership",
+    "domain_direct"
+  ],
+  "review_criteria": [
+    "Use existing glossary distinction: cancellation stops fulfilment, not proof of refund.",
+    "Ordering owns order transitions; Billing owns refunded/captured invariants; checkout coordinates without duplicating either policy.",
+    "Reason about partial refund, failed provider and cancelled-order retry; do not invent atomic rollback across provider boundary.",
+    "Domain policy remains usable independently of transport/storage, with proportional concrete collaborators rather than mandatory infrastructure patterns."
+  ],
+  "fixture": "../fixtures/ddd-cancellation",
+  "check": "../checks/ddd-cancellation.py"
+}

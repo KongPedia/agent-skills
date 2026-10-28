@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "sdd-shared-page",
+  "prompt": "Update the task board library to support paginated listing. list_tasks(records, cursor=0, limit=2) must return exactly {\"items\": [...], \"next_cursor\": int or None}. Records have unique integer IDs and string titles; sort by increasing ID before slicing. cursor is a nonnegative integer offset, limit an integer from 1 through 50; bool is invalid for both and invalid values raise ValueError. An offset at or beyond the end returns empty items and next_cursor=None. next_cursor is the next offset only when more items remain. Do not mutate the input; returned item dictionaries must be independent of input dictionaries. render_tasks(records, limit=2) returns the first page of titles; export_ids(records) follows all pages and returns all IDs in sorted order, including inputs larger than 50 records. Both consumers ship with the producer; replacing the previous list return type is authorized and no compatibility adapter is needed. Keep existing module/function names. Keep maintained project documentation accurate. No dependency installation or commits.",
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:spec-driven-development"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/sdd-shared-page",
+  "check": "../checks/sdd-shared-page.py",
+  "allowed_paths": [
+    "provider.py",
+    "web.py",
+    "export.py",
+    "tests/*.py",
+    "docs/**",
+    "README.md"
+  ],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "expected_checks": [
+    "page_shape_and_sort",
+    "cursor_and_end",
+    "validation",
+    "input_ownership",
+    "web_first_page",
+    "export_all_pages"
+  ],
+  "eval_axis": "sdd",
+  "case_role": "positive",
+  "review_criteria": {
+    "public_source_paths": [
+      "README.md",
+      "docs/specs/task-page.md",
+      "provider.py",
+      "web.py",
+      "export.py",
+      "tests/test_current.py"
+    ],
+    "contract_before_implementation": "Before production implementation changes, trace evidence must identify the maintained contract and both consumers, record intended page shape, ordering/end/validation acceptance and authorized breaking compatibility. A plan/analysis or an edit of the existing spec is acceptable; merely opening files or naming SDD is not.",
+    "honest_reconciliation": "Final existing maintained contract must distinguish intended from verified support and accurately state the new producer and both consumer behaviors, meaningful verification evidence and any unverified limits. Do not count a status keyword or new document alone as success.",
+    "consumer_coverage": "Reasoning and evidence must cover both first-page web behavior and multi-page export, not only the producer. Acceptance-to-test linkage may be narrative, no prescribed format.",
+    "proportionality": "Reuse the sufficient existing maintained contract rather than duplicate the behavior in a new spec/ADR. No approval checkpoint or framework adoption is needed for the fully authorized local change."
+  }
+}

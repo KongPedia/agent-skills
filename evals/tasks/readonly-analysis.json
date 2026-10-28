@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "readonly-analysis",
+  "prompt": "Read-only diagnosis. The complete price.py contents are:\n\ndef final_price(price, discount_percent):\n    return price * (1 - discount_percent)\n\nfinal_price(100, 20) should return 80, but does not. Analyze the supplied code and explain the exact arithmetic bug and smallest proposed repair in your final response. Do not edit, create, or delete files, install dependencies, commit, or execute commands/programs. Do not implement the repair. No file reads are necessary because the complete source is supplied.",
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/readonly-analysis",
+  "check": null,
+  "allowed_paths": [],
+  "forbid_commands": true,
+  "tdd": false,
+  "runtime_modules": [],
+  "expected_checks": []
+}

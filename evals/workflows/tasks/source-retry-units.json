@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:systematic-debugging"
+  ],
+  "forbidden_skills": [],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [],
+  "eval_axis": "source_first",
+  "id": "source-retry-units",
+  "prompt": "Fix the HTTP retry timing bug described in README.md without breaking existing consumers. Modify only http_retry.py and optional tests/*.py; preserve public APIs. Explain the cause, repair and verification in your final response. No dependency installation or commits.",
+  "allowed_paths": [
+    "http_retry.py",
+    "tests/*.py"
+  ],
+  "expected_checks": [
+    "millisecond_conversion",
+    "default_seconds",
+    "invalid_headers",
+    "worker_unchanged",
+    "sdk_contract"
+  ],
+  "case_role": "repair_with_stale_guidance",
+  "review_criteria": {
+    "evidence_before_change": "Before first implementation edit, trace shows sufficient evidence of the live HTTP adapter, SDK seconds contract/version and existing worker caller. Reading retry_sdk.py supplies the authoritative declared2.4.0 seconds API; dependencies.lock is optional corroboration, not a mandatory file. Equivalent source inspection is accepted. Combined reads count; absent/truncated trace is unknown, not proof of noninspection. README alone is insufficient.",
+    "claim_correctness": "Final cause identifies HTTP adapter unit mismatch against local SDK2.4 seconds contract; does not claim SDK delay is globally milliseconds or production deployment verified.",
+    "consumer_preservation": "Repair confined to HTTP adapter; worker30-second behavior and SDK unchanged; tests demonstrate HTTP2500ms->2.5seconds.",
+    "attribution": "Compare installed bundle arm against baseline; this shared practice is not an isolated source-first skill."
+  },
+  "fixture": "../fixtures/source-retry-units",
+  "check": "../checks/source-retry-units.py"
+}

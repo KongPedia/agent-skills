@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "fastapi-lifecycle",
+  "prompt": "Fix app.py GET /work. Acquire the module resource exactly once per request, await release exactly once on success and failure using a request-scoped FastAPI yield dependency. On success respond 200 with {\"active\": 1}; ?fail=true responds 409 with {\"detail\":\"requested failure\"}. No resource acquisition at import/startup. Preserve resource counters and public app/resource names so sequential requests can verify no leak. Modify app.py and optional tests/*.py only. Use the existing installed FastAPI/httpx dependencies; do not install packages or commit.",
+  "bundles": [
+    "common",
+    "python",
+    "fastapi",
+    "api-contracts"
+  ],
+  "required_skills": [
+    "fastapi:fastapi-backend"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/fastapi-lifecycle",
+  "check": "../checks/lifecycle.py",
+  "allowed_paths": [
+    "app.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": false,
+  "runtime_modules": [
+    "fastapi",
+    "httpx"
+  ],
+  "expected_checks": [
+    "no_import_acquisition",
+    "no_startup_acquisition",
+    "response_1",
+    "cleanup_1",
+    "response_2",
+    "cleanup_2",
+    "response_3",
+    "cleanup_3",
+    "response_4",
+    "cleanup_4",
+    "no_shutdown_double_release"
+  ]
+}

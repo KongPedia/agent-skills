@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "python-tdd",
+  "prompt": "Implement points.deduct(balance, amount) using TDD. Inputs are integers. Return balance minus amount; raise ValueError if balance or amount is negative or amount exceeds balance; zero is allowed. Add behavioral unittest coverage in tests/, run a meaningful assertion failure before editing points.py, then make it pass. Existing imports and normal behavior must remain. Modify only points.py and tests/*.py. Do not commit.",
+  "bundles": [
+    "common",
+    "python"
+  ],
+  "required_skills": [
+    "common:test-driven-development"
+  ],
+  "forbidden_skills": [],
+  "fixture": "../fixtures/python-tdd",
+  "check": "../checks/points.py",
+  "allowed_paths": [
+    "points.py",
+    "tests/*.py"
+  ],
+  "forbid_commands": false,
+  "tdd": true,
+  "runtime_modules": [],
+  "expected_checks": [
+    "normal",
+    "zero",
+    "full_balance",
+    "reject_3_4",
+    "reject_5_-1",
+    "reject_-1_0",
+    "reject_-2_-3"
+  ]
+}

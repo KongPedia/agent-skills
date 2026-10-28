@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "id": "codex-workflow-axes-2026-10-28",
+  "status": "frozen-before-model-runs",
+  "frozen_at_utc": "2026-10-28T01:51:27.532747+00:00",
+  "question": "Do unchanged common/python project-skill bundles improve SDD contract discipline, local source-grounded work and DDD boundary/modeling discipline without causing unnecessary ceremony?",
+  "engine": "codex",
+  "cli_version": "codex-cli 0.164.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "conditions": [
+    "baseline-no-project-skills",
+    "candidate-unchanged-native-common-python-bundles"
+  ],
+  "tasks": [
+    "ddd-cancellation",
+    "ddd-domain-evolution",
+    "ddd-labels",
+    "sdd-shared-page",
+    "sdd-small-label",
+    "source-replay-diagnosis",
+    "source-retry-units"
+  ],
+  "cases": {
+    "ddd-cancellation": {
+      "axis": "ddd",
+      "case_role": "positive",
+      "scheduled_per_condition": 3,
+      "semantic_review_criteria": {
+        "criterion_1": "Use existing glossary distinction: cancellation stops fulfilment, not proof of refund.",
+        "criterion_2": "Ordering owns order transitions; Billing owns refunded/captured invariants; checkout coordinates without duplicating either policy.",
+        "criterion_3": "Reason about partial refund, failed provider and cancelled-order retry; do not invent atomic rollback across provider boundary.",
+        "criterion_4": "Domain policy remains usable independently of transport/storage, with proportional concrete collaborators rather than mandatory infrastructure patterns."
+      },
+      "expected_outcome_checks": [
+        "open_cancel",
+        "shipped_guard",
+        "partial_refund",
+        "provider_failure",
+        "retry_once",
+        "zero_outstanding",
+        "amount_invariants",
+        "input_ownership",
+        "domain_direct"
+      ]
+    },
+    "ddd-domain-evolution": {
+      "axis": "ddd",
+      "case_role": "active_domain_modeling_proposal",
+      "scheduled_per_condition": 3,
+      "semantic_review_criteria": {
+        "existing_model": "Correctly distinguish Account and Member in both existing contexts using code/glossary evidence, not generic architecture definitions.",
+        "new_model": "Define a proposed workspace-only temporary access capability and responsibility owner coherent with global sign-in/membership invariants; no exact term, class or owner naming is required.",
+        "competing_models": "Compare at least two genuinely different models (for example lifecycle state versus orthogonal access restriction), with real consequences rather than synonym alternatives.",
+        "uncertainty": "Treat reinstatement, authority and existing-session behavior as unresolved business choices; do not falsely claim accepted ADR or existing implementation.",
+        "source_before_proposal": "Inspect enough existing code/glossary/accepted-decision evidence before proposal write. Equivalent reads count; missing/truncated trace is unknown.",
+        "proportionality": "A bounded proposal only; avoid invented repositories/service trees and unrequested accepted glossary/ADR edits. Do not run/import project/application code or tests. File inspection/formatting and writing only proposal.json with ordinary tools (including Python plus stdlib json) are allowed."
+      },
+      "expected_outcome_checks": [
+        "proposal_schema",
+        "context_facts",
+        "existing_term_coverage",
+        "evidence_paths",
+        "competing_models",
+        "unresolved_questions",
+        "proposal_not_implementation"
+      ]
+    },
+    "ddd-labels": {
+      "axis": "ddd",
+      "case_role": "negative",
+      "scheduled_per_condition": 3,
+      "semantic_review_criteria": {
+        "criterion_1": "Solve the existing local label behavior directly without invented domain/context boundaries.",
+        "criterion_2": "Do not introduce repositories, event sourcing, CQRS, database/services or indirection without a real responsibility to own.",
+        "criterion_3": "Judge added complexity by actual behavior and dependencies, not class counts or particular file names."
+      },
+      "expected_outcome_checks": [
+        "rename_independent",
+        "trim",
+        "invalid_text",
+        "unknown_key",
+        "duplicate_casefold",
+        "own_name",
+        "order_preserved"
+      ]
+    },
+    "sdd-shared-page": {
+      "axis": "sdd",
+      "case_role": "positive",
+      "scheduled_per_condition": 3,
+      "semantic_review_criteria": {
+        "public_source_paths": [
+          "README.md",
+          "docs/specs/task-page.md",
+          "provider.py",
+          "web.py",
+          "export.py",
+          "tests/test_current.py"
+        ],
+        "contract_before_implementation": "Before production implementation changes, trace evidence must identify the maintained contract and both consumers, record intended page shape, ordering/end/validation acceptance and authorized breaking compatibility. A plan/analysis or an edit of the existing spec is acceptable; merely opening files or naming SDD is not.",
+        "honest_reconciliation": "Final existing maintained contract must distinguish intended from verified support and accurately state the new producer and both consumer behaviors, meaningful verification evidence and any unverified limits. Do not count a status keyword or new document alone as success.",
+        "consumer_coverage": "Reasoning and evidence must cover both first-page web behavior and multi-page export, not only the producer. Acceptance-to-test linkage may be narrative, no prescribed format.",
+        "proportionality": "Reuse the sufficient existing maintained contract rather than duplicate the behavior in a new spec/ADR. No approval checkpoint or framework adoption is needed for the fully authorized local change."
+      },
+      "expected_outcome_checks": [
+        "page_shape_and_sort",
+        "cursor_and_end",
+        "validation",
+        "input_ownership",
+        "web_first_page",
+        "export_all_pages"
+      ]
+    },
+    "sdd-small-label": {
+      "axis": "sdd",
+      "case_role": "negative",
+      "scheduled_per_condition": 3,
+      "semantic_review_criteria": {
+        "public_source_paths": [
+          "README.md",
+          "labels.py",
+          "tests/test_labels.py"
+        ],
+        "proportionality": "The complete task brief suffices: a concise local test-backed repair without new duplicate specification/ADR, spec framework, or unnecessary approval gate. Allow brief inline reasoning or ordinary test documentation. Do not reward a document merely for existing.",
+        "honest_verification": "Final claims match observed checks and limits; no invented historical RED or unsupported broad compatibility claim."
+      },
+      "expected_outcome_checks": [
+        "underscores",
+        "whitespace",
+        "title_semantics",
+        "empty"
+      ]
+    },
+    "source-replay-diagnosis": {
+      "axis": "source_first",
+      "case_role": "negative_control_local_evidence_only",
+      "scheduled_per_condition": 3,
+      "semantic_review_criteria": {
+        "evidence_before_conclusion": "Before incident.json write, trace shows sufficient inspection of reservation replay behavior, dispatch cursor filtering and local packet values to support the conclusions. reservations.py, dispatch.py and packet.json provide this evidence; equivalent source inspection is accepted. notes.md is optional context, not required evidence. Absence/truncation is unknown, not proof of noninspection. File-reading commands are permitted, code execution is not.",
+        "claim_correctness": "Reports one local debit and idempotent replay, cursor9 excludes sequence7, production root cause unknown. Hypothesis of database outage is not asserted as observed.",
+        "restraint": "No project/application code or tests run/imported, network access, dependency installation or existing implementation/doc edit. File inspection/formatting and writing only incident.json are allowed, including Python plus stdlib json. Grade actual command semantics, not interpreter names.",
+        "attribution": "Shared evidence-first practice; do not attribute effect to a nonexistent standalone Source-DD skill."
+      },
+      "expected_outcome_checks": [
+        "debit_count",
+        "duplicate_not_deducted",
+        "local_skip_explained",
+        "production_uncertain",
+        "evidence_support",
+        "missing_evidence"
+      ]
+    },
+    "source-retry-units": {
+      "axis": "source_first",
+      "case_role": "repair_with_stale_guidance",
+      "scheduled_per_condition": 3,
+      "semantic_review_criteria": {
+        "evidence_before_change": "Before first implementation edit, trace shows sufficient evidence of the live HTTP adapter, SDK seconds contract/version and existing worker caller. Reading retry_sdk.py supplies the authoritative declared2.4.0 seconds API; dependencies.lock is optional corroboration, not a mandatory file. Equivalent source inspection is accepted. Combined reads count; absent/truncated trace is unknown, not proof of noninspection. README alone is insufficient.",
+        "claim_correctness": "Final cause identifies HTTP adapter unit mismatch against local SDK2.4 seconds contract; does not claim SDK delay is globally milliseconds or production deployment verified.",
+        "consumer_preservation": "Repair confined to HTTP adapter; worker30-second behavior and SDK unchanged; tests demonstrate HTTP2500ms->2.5seconds.",
+        "attribution": "Compare installed bundle arm against baseline; this shared practice is not an isolated source-first skill."
+      },
+      "expected_outcome_checks": [
+        "millisecond_conversion",
+        "default_seconds",
+        "invalid_headers",
+        "worker_unchanged",
+        "sdk_contract"
+      ]
+    }
+  },
+  "trials_per_task_per_condition": 3,
+  "scheduled_per_condition": 21,
+  "scheduled_agent_cli_sessions": 42,
+  "scheduled_per_axis_per_condition": {
+    "ddd": 9,
+    "sdd": 6,
+    "source_first": 6
+  },
+  "timeout_seconds": 360,
+  "max_concurrent_pairs": 2,
+  "pair_order": "Baseline first odd repetitions, candidate first even repetitions; both arms same prompt/model/settings/fixture/time budget. No automatic retry.",
+  "primary_metric": "Case-specific observed workflow/semantic adherence: confirmed pass/fail/unknown out of all3 scheduled per condition per case. Report each axis and positive/negative cases separately; no combined A+ score.",
+  "review_rules": {
+    "pass": "All substantive criteria for the case supported by visible trace and final artifacts. Judge semantic fit, evidence sufficiency, contracts, ownership, honest status and justified scope, not keyword/file/class counts.",
+    "fail": "At least one visible criterion violation, false factual/status/verification claim, incorrect boundary/invariant, unjustified architecture/ceremony, explicit scope breach or conclusive missing publicly required artifact content.",
+    "unknown": "Missing/incomplete/ambiguous evidence or unclear chronology; do not infer hidden reasoning. Missing read is not proof of no reading. Runtime/timeout/environment failure yields workflow unknown unless a conclusive violation is visible; all42scheduled remain counted.",
+    "criterion_reduction": "Judge substantive semantic criteria separately; informational public_source_paths/attribution entries are context, not independent scored requirements. All scored criteria pass => pass; any fail => fail; otherwise unknown.",
+    "method": "Two independent native-agent reviewers receive pseudonymous sanitized trace+initial/final artifacts+diff, with condition names/temp paths/guidance reads masked. Preserve visible agent_message/plan events and actual contract/glossary/code contents. Workflow may reveal arm; no strict double-blind claim. Original traces retained.",
+    "disagreement": "Preserve each verdict; disagreeing case verdict conservatively unknown, not favorable adjudication.",
+    "evidence_limit": "CLI observations and final files, not independent intermediate snapshots or private chain-of-thought. No keyword-only proof of SDD/DDD/model quality.",
+    "artifact_only_tasks": "For source-replay-diagnosis and ddd-domain-evolution, file inspection/formatting and writing requested JSON with ordinary tools including Python+stdlibjson are allowed; importing/running project/application code/tests, network or unrequested existing-file edits are violations."
+  },
+  "secondary_metrics": [
+    "External all-criteria outcome success/fail/unknown per scheduled case and axis",
+    "Paired improved/regressed/unchanged/unknown per case",
+    "Scope preservation",
+    "Known-path native skill reads lower bounds, not discovery F1/adherence",
+    "CLI reported input/cached/output tokens, per-axis trial elapsed median/mean; no currency inference"
+  ],
+  "unknown_bounds": {
+    "lower": "(candidate_pass-baseline_pass-baseline_unknown)/scheduled",
+    "upper": "(candidate_pass+candidate_unknown-baseline_pass)/scheduled"
+  },
+  "decision_rule": "Complete all42 fixed sessions once regardless of early results. No post-result prompt/checker/skill edits, dropped unknowns, optional stopping, favorable task additions or retries. Report null/negative results unchanged. Only strictly positive conservative lower bound supports local observed improvement; costs and negative controls remain visible.",
+  "frozen_inputs_sha256": {
+    "evals/workflows/checks/ddd-cancellation.py": "f0f1f8a5a4e281d1f40b9bd6967f33fb1b626c5d7220ba91ebeacdac82dd2e8d",
+    "evals/workflows/checks/ddd-domain-evolution.py": "016a57befab46197f89fa72a70b8d46635b8050fe12a97120b2e3a663d343441",
+    "evals/workflows/checks/ddd-labels.py": "3230ac939d6325d5d9748453d588d72c2679fac97fc8e1c7b65aad99dc20f9bf",
+    "evals/workflows/checks/sdd-shared-page.py": "2438c421e2ccb9e15cbdc5c1a6e06f42c813ea5a32f49be421b9e44e58040f8f",
+    "evals/workflows/checks/sdd-small-label.py": "b659f64147f25c80d15075525b1d7079cbcfa1db8aeb6c3879a9b8a32696b0f4",
+    "evals/workflows/checks/source-replay-diagnosis.py": "55982a220b2be73ba06258a48094c9f001f3405ed197cbbafe9123e138ce4d53",
+    "evals/workflows/checks/source-retry-units.py": "32347f7b00a96f1c5911389630a3cef81a8f4391a51edc44cf07be6bd5a9aabe",
+    "evals/workflows/fixtures/ddd-cancellation/CONTRACT.md": "05ce9ef81a5e3eda38856bb53f2f17405203343d1324c1f6f3ece9a1519cd02f",
+    "evals/workflows/fixtures/ddd-cancellation/GLOSSARY-MAP.md": "cbb72323e8278a9e64e24e5bda2bf9c7a5cf966f0ed719ff2a784bedb4e00ead",
+    "evals/workflows/fixtures/ddd-cancellation/billing.py": "ced84036c00ec99dd4f14a77172413490c6b05ccf6fa5e1f179898a9209a3f11",
+    "evals/workflows/fixtures/ddd-cancellation/checkout.py": "682bacea3c9b0b228ae6d7aa6614d9de19b516e9f483791b09eac74a19d4dab2",
+    "evals/workflows/fixtures/ddd-cancellation/docs/billing-glossary.md": "6efd0d4a5101054111b3b9718171bb0dda2c99c285e0bc71625982a457d75894",
+    "evals/workflows/fixtures/ddd-cancellation/docs/ordering-glossary.md": "4b90aa366bf3b0565ed51aebedf3784accf095af9636b83244e0486575378906",
+    "evals/workflows/fixtures/ddd-cancellation/ordering.py": "6fc310363818fa8e5e211230d7e799d034ce1d0c6fd38c035e02b876a3e1568d",
+    "evals/workflows/fixtures/ddd-domain-evolution/GLOSSARY-MAP.md": "d284c82affa675c705f0a81e625428127c947b423c9e6c72264e47ab0cb5e49b",
+    "evals/workflows/fixtures/ddd-domain-evolution/README.md": "605337c55dd2837396429b5339ba853b91eec178fe6850bd1293998d9f0d8ebe",
+    "evals/workflows/fixtures/ddd-domain-evolution/docs/adr/0001-separate-identity-and-memberships.md": "a3b475778040f5447107bedc8c6caeab51c7ccd085c1a0a38d5821e3a1b7de1e",
+    "evals/workflows/fixtures/ddd-domain-evolution/identity/GLOSSARY.md": "51aa9b1b1d664f7963333e42419c7a58ed6ff8a05c145d0b0e0c6f8c77371bd4",
+    "evals/workflows/fixtures/ddd-domain-evolution/identity/accounts.py": "318f0193e4db4cec246dd1b9956c405ad813ea73c8b2c02b02eb115605ef818d",
+    "evals/workflows/fixtures/ddd-domain-evolution/workspaces/GLOSSARY.md": "9710026d472d727e2a53b7455f095fdf239e48b5e950ac58a9729c958677dac3",
+    "evals/workflows/fixtures/ddd-domain-evolution/workspaces/access.py": "c7aee245ed5553202a244debee1425a5e03f0f0ea8db62ab74c10155169e7deb",
+    "evals/workflows/fixtures/ddd-labels/README.md": "81c32c6bd360043e25682eedbffea2b8bccdd6b6959ee2ac0c3523d42cfb9a46",
+    "evals/workflows/fixtures/ddd-labels/labels.py": "80a6b232a2b6ab4c3077e379f6c7e92a480aae735f33194292c4d23accd91ce4",
+    "evals/workflows/fixtures/sdd-shared-page/README.md": "03898e568b155152f03ed41376970d2b4304aae664446bff42201ad25dc2abaa",
+    "evals/workflows/fixtures/sdd-shared-page/docs/specs/task-page.md": "60e335b40c3256c582d4bf010ae284a36afee830b1e365d2aa7160f514e1c040",
+    "evals/workflows/fixtures/sdd-shared-page/export.py": "30f3b1be9a9b6f653a5251863525838d3f3a5f68300c22efc04c6215ee891041",
+    "evals/workflows/fixtures/sdd-shared-page/provider.py": "9b8c24bd7267dec39a59b2bf820c7c7ce403f805fb999c7daae2880ec816786b",
+    "evals/workflows/fixtures/sdd-shared-page/tests/test_current.py": "3411341770b40370242491e36215e030995cc6c07f39e0e22fb4dbd0737d2281",
+    "evals/workflows/fixtures/sdd-shared-page/web.py": "0337e2f8c034a602de11a7bd934a6e5ab7c5579eac2f2f439eaed6cbc8a35ce9",
+    "evals/workflows/fixtures/sdd-small-label/README.md": "64d30b111157624db2c13c865acee5a25428aa5b2cda7d6408b06d497749221a",
+    "evals/workflows/fixtures/sdd-small-label/labels.py": "9d0c6042d950290708c724692bbb1e94c28ca845e93a2a042d334f6a1a0eac7d",
+    "evals/workflows/fixtures/sdd-small-label/tests/test_labels.py": "ebac9f7656e23d603bfc34f5851660808adac5bbe0e017bddcdc4724913b0645",
+    "evals/workflows/fixtures/source-replay-diagnosis/README.md": "aafbc676fc58d63f8b1118e101f10d8ca058a4350d7135f8651690861519e570",
+    "evals/workflows/fixtures/source-replay-diagnosis/dispatch.py": "25031682cfafb97fd08f33a9b64d0b367107357779908180150ddb4159c2296e",
+    "evals/workflows/fixtures/source-replay-diagnosis/notes.md": "7bec3a815df1d3c2c3b3f560d343170376dd34ea68d4fedc8073d5a8337c9ab0",
+    "evals/workflows/fixtures/source-replay-diagnosis/packet.json": "02085f4502abc42decc5abbc536055feb843babba2fe1cb6d628bae0de1fe115",
+    "evals/workflows/fixtures/source-replay-diagnosis/reservations.py": "b9e3c639ce1e7e40d4a6c51a78e9213b61fbc5eba0948fcf661c53f8538d2084",
+    "evals/workflows/fixtures/source-retry-units/README.md": "4427e4e583ee523097a617eb454eb1e55df7732db8200416aaf4f3e4eb56215b",
+    "evals/workflows/fixtures/source-retry-units/dependencies.lock": "f7237ccf8ecf6ae665f661e87ea305de86c7093a2f69ac3f3564a8c276581805",
+    "evals/workflows/fixtures/source-retry-units/http_retry.py": "539c962c3bd5360a62548a1fda0255855a255523842daa38f1209c7a1fadd1ff",
+    "evals/workflows/fixtures/source-retry-units/retry_sdk.py": "3ad1b988353fa162f0b853541c12d9c05353c9fe610365e1aee2bdcac8226196",
+    "evals/workflows/fixtures/source-retry-units/tests/test_worker.py": "c6e3c196b0b664c5c4eff16e7f39727215916f22c470b5e842e9568556da3e4b",
+    "evals/workflows/fixtures/source-retry-units/worker.py": "26f0c43bf872c3e93a31f045e1607cd5eaa44b15002eb2a4f7574b59e7fe4f3d",
+    "evals/workflows/selfcheck_ddd.py": "cb9d5c3de7b1c7c9b1015433bb2ae84e837e9b127562d0e2877ad7d94401842a",
+    "evals/workflows/selfcheck_sdd.py": "7ec73f0f05e6d3c56495826cce7a59f86057a5eb81e92f981b410a02010e216e",
+    "evals/workflows/selfcheck_source.py": "143878afd78de394f880b097c6ac57c06deb182409c2a898d4e5fc17c926000e",
+    "evals/workflows/tasks/ddd-cancellation.json": "47ac67e014dea0ddd83d007f50804c95cdefaf4149b0ac56f370816050767dff",
+    "evals/workflows/tasks/ddd-domain-evolution.json": "d9b9dc57af24bd7c5cf3d402f4847f473ad7603f7bb4d68d84220cbf14699665",
+    "evals/workflows/tasks/ddd-labels.json": "b44e3f38a5a095fe64a6d7f350ec414e805938524b3023daf84c72e9dbe5a4c4",
+    "evals/workflows/tasks/sdd-shared-page.json": "5a8b0967c0e3bf3567bba4224571a30e4c54a44cd2cfd8f96651df104224a96c",
+    "evals/workflows/tasks/sdd-small-label.json": "b2bd8043328b5a473a3ff16b5bc63c046cb2474aa7a6eb57a8c7f76ab67d18ab",
+    "evals/workflows/tasks/source-replay-diagnosis.json": "4435c2e2427fb471b42be6516b2ecbebe4bc438971a2b7f92926acda773d9fa6",
+    "evals/workflows/tasks/source-retry-units.json": "16b141d60a0b9750caa22ea7dd346ae90998019116dd17b6155dc324e6ea0593",
+    "scripts/run_evals.py": "9784a5c1a437acbfd39b94c00bca16727c50310f85a76bfe51799d27aea773a8",
+    "scripts/run_host_evals.py": "36500c523ad78e355794027983cd5eb192491066a63729c1c79facf22c20845c",
+    "evals/graders.py": "8fd82bf4a2ca6f851813343d72be0a74eefd53df4a0bf81d179d8638fed30939",
+    "evals/drive_check.py": "8b07a2040286e3cb281c60eee5a59bb7316156f56a6924027626a24dab257692",
+    "evals/Dockerfile": "18a863f0e09b81769088d4c9b4160923b643a3bdccb97565337d6ba52532be22"
+  },
+  "candidate_payload_tree_sha256": "ed8e166cb553ecc18c2246412e64943cdbf5aa3b8dabdb74421401995499251c",
+  "grader_image_id": "sha256:e3b6e0a4105969d550eb45dd62ad0cd04aedf9cf9adfefb433d8cd97f869c683",
+  "pre_execution_design_notes": [
+    "Expanded6to7 cases before any model call to cover active domain-model evolution in addition to tacticalDDD; all seven frozen together.",
+    "Clarified artifact-only task prompts/README/rubrics before any model call: JSON tooling allowed, project application/test execution prohibited.",
+    "Independent oracle review found shipped policy misplaced in checkout false positive; direct ordering.cancel(shipped) guard check added and mutant rejected before freeze."
+  ],
+  "claude_availability": {
+    "host_cli": "only shim; actual target not found, exit127",
+    "disposable_image_cli": "2.1.118 present; auth status loggedIn=false authMethod=none",
+    "dedicated_api_key_available": false,
+    "provider_api_key_available": false,
+    "oauth_env_available": false,
+    "model_sessions_scheduled": 0,
+    "status": "not executable under current no-new-login/no-personal-auth-copy constraint; existing authenticated execution path requested asynchronously"
+  },
+  "limits": [
+    "Fixed seven synthetic tasks; SDD/source2taskclusters,DDD3; repeats are not independent task samples or population significance.",
+    "Shared bundle comparison does not isolate any single skill; source-first is shared practice, not a standalone Source-DD skill.",
+    "Source-first measures local source/caller/version evidence, not online latest official-document research.",
+    "Existing host global/managed policy and auth common to both arms; native project-local loading, not pristine vanilla, plugin-runtime or App proof.",
+    "Trusted fixtures; generated checks only in credential-free network-disabled read-only nonroot resource-limited Docker; not adversarial-kernel isolation.",
+    "No skill bodies, licenses, source provenance or previous measurement reports changed; Claude needs an available authorized execution environment."
+  ],
+  "method_references": [
+    "https://developers.openai.com/blog/eval-skills",
+    "https://code.claude.com/docs/en/headless"
+  ]
+}
