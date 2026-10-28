@@ -2,11 +2,11 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "de0a80518461009d64e5eb75ffa5b82fc0e2f3b17ed49249bd99594d3adc6cd1",
+    ".claude-plugin/plugin.json": "bf9d93008e5591973415a50c5c13b2ba57636f64fb444216b96547892e03cc5a",
     "DEPENDENCIES.md": "89491b06121d68555daf911c10aa337e90b0ae7411b3270275e3e84ee7acbc33",
     "THIRD-PARTY-NOTICES.md": "aa2160681a9939cdd7d7bcaae1ebb38846bdd964e40e9c082e707cdc5ec5bd1a",
-    "plugin.json": "147a09754e5599eee0c919dd84f17445ed7e48bbf6605b462b7f908f1c4c481d",
-    "provenance.json": "210d9b495006aa24da1d16e6567d63ebb76251cb195db033b233cde3d53c3814",
+    "plugin.json": "a5d81dc1a22f78d3d449ff11e9786f0ce86b80c93ab01d99fd1b1f495c40cdba",
+    "provenance.json": "16a9fd0d41e4d303688f74f748b375f7a1cf79804b8db13cdf1a5b8ef9f03928",
     "skills/nestjs-backend/SKILL.md": "cea37ee0cf5b7443d7fec1a6e5e8370febad8b96b775a6370076c50aee5a3f28"
   }
 }

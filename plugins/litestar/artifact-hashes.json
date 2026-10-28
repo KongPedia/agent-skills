@@ -2,11 +2,11 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "439ebb79683a87dc52b2e57342057ddcb094e8795d292f5f9cf658e3aa0ce6d6",
+    ".claude-plugin/plugin.json": "04823cb161a81857ed225a0fa8b46388ee2f65e52897c9906d068f702b5ee778",
     "DEPENDENCIES.md": "855c2c79fc296021be56773f9fb560ab0e27b38c1943148dd45b9e0743cabf40",
     "THIRD-PARTY-NOTICES.md": "64c9725e1939e7e4bdfcd9cf3a956dc964c93e0d1582e0dfa2fa43d6f79263b7",
-    "plugin.json": "444d8d5c63e38496d252fe0860d6d96f4504e0da51924144e1eb20a1148cceb4",
-    "provenance.json": "0354c5e30e4d58174b42e24a1270fd73498e51650d6152476a1aa5483c3e87b0",
+    "plugin.json": "ec4b3e19f0438085458790c05f454a98f72f7b8c48bd86b9c6e87176f0513f64",
+    "provenance.json": "a0ce626a67fc2328b5d72593e91668b20a6fa614d8804f45d6822384c9df2552",
     "skills/litestar-backend/SKILL.md": "3a1568f185c1044a630e1cf54479576ab0014b9006be13e8b1c8d782a67d0a5a"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "api-contracts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "API and wire contract design and review",
   "author": {
     "name": "Konglabs"

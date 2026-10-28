@@ -1,6 +1,6 @@
 {
   "name": "rust",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Rust ownership, fallibility, public modules and native checks",
   "author": {
     "name": "Konglabs"

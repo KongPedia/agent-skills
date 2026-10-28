@@ -2,11 +2,11 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "b52bc69bc75357b0b85bc04a185f3045c94160a9fcd05f044c1707a765d75580",
+    ".claude-plugin/plugin.json": "e822f3d43843b0daff58db2228a2a7412a84ddf4a3df3bfcbc0876de61fe19d0",
     "DEPENDENCIES.md": "bc8eee728d55b638b3ee5fdf94b519c8a9ceb5ce588ba240ff5c453fe77a2ed0",
     "THIRD-PARTY-NOTICES.md": "55b48008764dfb4df1036e8a2c5d5fbdb2276181e53688ed00cd9fd93c112f28",
-    "plugin.json": "bbfd2d3b06cb503349475f9fb8e0eaf687d5a5186c9040edfec55f3dfd628bbd",
-    "provenance.json": "2dd3ff21ef2d97958b29d528fe42553c239a76e8585fc816419cac5213e55c0f",
+    "plugin.json": "66f51d638f62c5a34588be48a503065cc23b840c1db3aa86a9e0d8103c520f7e",
+    "provenance.json": "666c19bb47dcdd39e175df3b24e59da61a610d9a871dd3d55a3dac39b47334dc",
     "skills/fastapi-backend/SKILL.md": "43f2e5efdcb96a7688de4ff35caf06cb5ebd82b7fe7c1356d8dbfa3f1f0268e9"
   }
 }

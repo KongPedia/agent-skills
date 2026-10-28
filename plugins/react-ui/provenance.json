@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "react-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "sources": [
     {
       "id": "anthropic",

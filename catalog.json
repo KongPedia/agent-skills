@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "marketplace": "konglabs-agent-skills",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "https://github.com/KongPedia/agent-skills.git",
   "publication_status": "Private organization source; public distribution requires separate license and proprietary-scope clearance.",
   "plugins": [
