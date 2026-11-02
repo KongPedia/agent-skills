@@ -5,14 +5,14 @@ description: Implement or review an existing FastAPI backend's request contracts
 
 # FastAPI backend
 
-Use the owning package's README, `pyproject.toml`, lock and installed FastAPI/Pydantic versions. In a monorepo,
+Use the owning package's README, manifest and lock where present, and installed FastAPI/Pydantic versions. In a monorepo,
 work from that backend package, not a different root environment. This is original project guidance, not vendored
 FastAPI documentation; use the [official testing guide](https://fastapi.tiangolo.com/tutorial/testing/) for current APIs.
 
 For version-sensitive behavior, inspect the matching installed package's bundled `fastapi/.agents/skills/fastapi/`
 when available; the [official tutorial](https://fastapi.tiangolo.com/tutorial/#ai-agent-skills) explains this resource.
-The starter's [0.162.0 skill and references](https://github.com/fastapi/fastapi/tree/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/fastapi/.agents/skills/fastapi)
-are first-party development guidance. This local procedure deliberately does not bundle their broader Asyncer,
+The [0.162.0 skill and references](https://github.com/fastapi/fastapi/tree/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/fastapi/.agents/skills/fastapi)
+are first-party guidance for that release, not the consumer's assumed version. This procedure deliberately does not bundle their broader Asyncer,
 SQLModel, CLI or telemetry preferences. Reuse the project's selected tools and check examples for blocking I/O;
 an upstream preference is not permission to add a dependency or replace an existing architecture.
 
@@ -38,5 +38,5 @@ an upstream preference is not permission to add a dependency or replace an exist
 ## Completion
 
 Report changed routes/contracts, behavior protected by tests, exact package checks and omitted checks. A health endpoint
-is a starter smoke check, not readiness, security, production deployment or product acceptance. Preserve auth and response
+is a smoke check, not readiness, security, production deployment or product acceptance. Preserve auth and response
 compatibility during refactors. This skill does not authorize dependency installation/upgrades, publishing or deployment.

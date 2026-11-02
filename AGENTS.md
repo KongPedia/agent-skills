@@ -6,7 +6,7 @@ own consuming projects' code layouts, commands, domain contracts, credentials, t
 ## Authority and ownership
 
 - Follow the latest user request and consuming project authority. Do not publish, commit, tag, add remotes, install
-  plugins or change host settings without the corresponding authorization. Public publication is not yet authorized.
+  plugins or change host settings without the corresponding task-specific authorization and applicable review.
 - Existing release history is not authorization for new commits, pushes, tags, publication or host changes.
   Obtain corresponding task-specific authority; Git/publication work belongs to the assigned integration owner.
   Shared maintainer docs stay generic. Keep consumer-specific migration receipts in that consumer or external task evidence,
@@ -14,11 +14,11 @@ own consuming projects' code layouts, commands, domain contracts, credentials, t
 - `catalog.json` owns stable bundle identities, the release version and exactly one owner per reusable skill.
   `requires` documents composition; it is not a host dependency schema or automatic installation mechanism.
 - Canonical generic roles live in `source/agents`; Claude adapters and optional Codex exports are generated, not two authored copies. Codex plugin role auto-loading is not supported in the inspected clients.
-- Canonical procedures/resources live in `source/.agents/skills`; pinned sources, upstream/local hashes and licenses
+- Canonical procedures/resources live in `source/skills`; pinned sources, upstream/local hashes and licenses
   live beside them. Bootstrap/adoption instructions belong to the Copier repository documentation, not a duplicated skill here.
 - `scripts/build_plugins.py` owns deterministic generation of `plugins/` and both marketplace adapters. Never hand-edit
   generated plugin files. The template repository consumes stable plugin identities, not a skill snapshot; do not edit it during sibling tasks.
-- Read the exact relevant `source/.agents/skills/writing-for-agents/SKILL.md`, `codebase-design/SKILL.md`,
+- Read the exact relevant `source/skills/writing-for-agents/SKILL.md`, `codebase-design/SKILL.md`,
   `test-driven-development/SKILL.md` and `verification-before-completion/SKILL.md` for substantive changes. Source
   project-context paths are declared lookups, not instructions to assume a particular template layout exists here.
 - Preserve other workers' changes. Keep shared catalog/build integration sequential; delegate only bounded owned files.

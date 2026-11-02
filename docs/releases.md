@@ -3,7 +3,8 @@
 The first private release was published to [KongPedia/agent-skills](https://github.com/KongPedia/agent-skills) and
 [KongPedia/project-blueprints](https://github.com/KongPedia/project-blueprints), with matching `v0.1.0` tags/releases.
 Local/private indexes need no public-directory listing. Private distribution still must honor source licenses and
-access rights; public visibility remains separately unauthorized and requires original-material licensing and scope review.
+access rights. The Git repository is currently public; a new release or visibility change still requires task-specific
+authorization and license/proprietary-scope review. No blanket license is selected for original material.
 New commits, tags, pushes, releases and visibility changes require current task-specific authorization; historical
 publication and this document grant none. Record actual GitHub publication/CI results separately.
 

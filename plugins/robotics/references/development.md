@@ -1,8 +1,8 @@
 # 개발 workflow
 
 이 문서는 설치된 common plugin의 공유 개발 기준이다. 프로젝트마다 같은 지침을 복사하지 않는다. 현재 package, 제공 기능과 실제
-명령은 프로젝트 README (look up `README.md` in the consuming repository; its current project guidance remains authoritative)를 기준으로 확인한다. 작업별 shared skill과 common plugin의
-naming·설계·review resource는 .agents routing (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative)을 통해 찾는다.
+명령은 적용되는 프로젝트 지침, 문서와 native manifest에서 확인한다. 작업별 shared skill과 common plugin의
+naming·설계·review resource는 실제 작업 경계에 맞춰 선택한다.
 문서가 있다는 사실은 실행 또는 LLM 준수의 증거가 아니다.
 
 ## 작업을 먼저 분류한다
@@ -25,7 +25,7 @@ Runtime/build/deployment/CI 설정은 문서가 아니라 application 검증 범
 **SDD — specification-driven development:** 의미 있는 행동/호환성 변경에서 outcome, invariants와 acceptance를
 먼저 명확히 한다. Spec의 입력·결과·실패 의미가 테스트에서 관찰 가능해야 한다. 작은 수정은 충분한
 issue/task brief로 끝내고, 여러 package나 protocol을 조율할 때
-change spec (shared skill `common:spec-driven-development`; select the `common` bundle when that task boundary is in scope)을 쓴다. 유지되는 계약은 specs (look up `docs/specs/README.md` in the consuming repository; its current project guidance remains authoritative)에 두며
+change spec (shared skill `common:spec-driven-development`; select the `common` bundle when that task boundary is in scope)을 사용할 수 있다. 유지되는 계약은 프로젝트의 기존 명세 위치와 관례에 두며
 proposed/implementing/current/superseded 상태를 구분한다. 검증 후 실제 계약을 동기화하며 미구현 의도를 현재
 지원으로 표시하지 않는다. Spec Kit/OpenSpec 설치와 모든 작업의 문서 의식은 요구하지 않는다.
 

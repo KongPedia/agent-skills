@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "python",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "sources": [
     {
       "id": "wshobson",
@@ -47,7 +47,7 @@
         "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
       },
       "local": "licenses/wshobson-LICENSE",
-      "canonical_source": "source/.agents/licenses/wshobson-LICENSE",
+      "canonical_source": "source/licenses/wshobson-LICENSE",
       "source_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
       "payload_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -58,7 +58,7 @@
       "upstream_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
       "modifications": "Unmodified MIT license and copyright notice at this distinct immutable revision.",
       "local": "licenses/wshobson-python-type-safety-LICENSE",
-      "canonical_source": "source/.agents/licenses/wshobson-python-type-safety-LICENSE",
+      "canonical_source": "source/licenses/wshobson-python-type-safety-LICENSE",
       "source_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
       "payload_sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -75,7 +75,7 @@
         "sha256": "beeac92f802f21a968088e5d12fc587833b772ad69806eddf6812f1a2e9c7a57"
       },
       "local": "skills/async-python-patterns/SKILL.md",
-      "canonical_source": "source/.agents/skills/async-python-patterns/SKILL.md",
+      "canonical_source": "source/skills/async-python-patterns/SKILL.md",
       "source_sha256": "2ed2ed3ff8c1825c28ee8dfbd0be16c2563a4f79e303176ce2ac3d7bf0fe1e72",
       "payload_sha256": "2ed2ed3ff8c1825c28ee8dfbd0be16c2563a4f79e303176ce2ac3d7bf0fe1e72",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -92,7 +92,7 @@
         "sha256": "94df4840e91f1d237ba9d3d9bbcb7073be90c42e17ea94ebcb364370920081fa"
       },
       "local": "skills/async-python-patterns/references/details.md",
-      "canonical_source": "source/.agents/skills/async-python-patterns/references/details.md",
+      "canonical_source": "source/skills/async-python-patterns/references/details.md",
       "source_sha256": "4ae9e006d2639335063d66307fc81b0d8d8c7d8a42bb1f932b842561bfe87654",
       "payload_sha256": "4ae9e006d2639335063d66307fc81b0d8d8c7d8a42bb1f932b842561bfe87654",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -109,7 +109,7 @@
         "sha256": "42c99b3bc55a56a65cd3f16aa24ea50672ce0fa4893eb0f34bba0cdb8a0e3319"
       },
       "local": "skills/python-design-patterns/SKILL.md",
-      "canonical_source": "source/.agents/skills/python-design-patterns/SKILL.md",
+      "canonical_source": "source/skills/python-design-patterns/SKILL.md",
       "source_sha256": "6d9cc7c9fdbf5f2c5cd0f5506fab3e65af59ee415aefae82335198371af44db3",
       "payload_sha256": "6d9cc7c9fdbf5f2c5cd0f5506fab3e65af59ee415aefae82335198371af44db3",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -126,7 +126,7 @@
         "sha256": "5d85b7a1745446432060bb31ee1fa686d5a41d86cfaf3687dd2710b47b72e5ea"
       },
       "local": "skills/python-design-patterns/references/details.md",
-      "canonical_source": "source/.agents/skills/python-design-patterns/references/details.md",
+      "canonical_source": "source/skills/python-design-patterns/references/details.md",
       "source_sha256": "0215f81ef2f88c46c01577961cdc2e118ecf38e7613f8ebc509df16a49ce3e5e",
       "payload_sha256": "0215f81ef2f88c46c01577961cdc2e118ecf38e7613f8ebc509df16a49ce3e5e",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -143,7 +143,7 @@
         "sha256": "796346a50615010c4fea52ecb93784ebf232c5d4c9f0691bfc668529d9592543"
       },
       "local": "skills/python-error-handling/SKILL.md",
-      "canonical_source": "source/.agents/skills/python-error-handling/SKILL.md",
+      "canonical_source": "source/skills/python-error-handling/SKILL.md",
       "source_sha256": "8c73c550a1e3f2af5cae08983451b7292d3c780cfde59b32f70a11d65615fb31",
       "payload_sha256": "8c73c550a1e3f2af5cae08983451b7292d3c780cfde59b32f70a11d65615fb31",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -160,7 +160,7 @@
         "sha256": "022c6c6bfb362d861258763712a05f62ccac09120866355582f874db14735c82"
       },
       "local": "skills/python-error-handling/references/details.md",
-      "canonical_source": "source/.agents/skills/python-error-handling/references/details.md",
+      "canonical_source": "source/skills/python-error-handling/references/details.md",
       "source_sha256": "3692f80007c71dadf2a5e60d63f1a10c5750c01a1e579a6616835f5e738dc3b0",
       "payload_sha256": "3692f80007c71dadf2a5e60d63f1a10c5750c01a1e579a6616835f5e738dc3b0",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -177,7 +177,7 @@
         "sha256": "c53696fb8d9014abc280fc0e64220cae0d087766a16380e211a6745e481dae65"
       },
       "local": "skills/python-project-structure/SKILL.md",
-      "canonical_source": "source/.agents/skills/python-project-structure/SKILL.md",
+      "canonical_source": "source/skills/python-project-structure/SKILL.md",
       "source_sha256": "4291f3118075342c742730bb34ed2c200f14faf2a40d0c760d8013a23350dcc8",
       "payload_sha256": "4291f3118075342c742730bb34ed2c200f14faf2a40d0c760d8013a23350dcc8",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -194,7 +194,7 @@
         "sha256": "1d60cbc5ce7a9e86fa7f64e147f04f21d5d174b56bf96f5f628c905892068aa5"
       },
       "local": "skills/python-resource-management/SKILL.md",
-      "canonical_source": "source/.agents/skills/python-resource-management/SKILL.md",
+      "canonical_source": "source/skills/python-resource-management/SKILL.md",
       "source_sha256": "1f079d34fc2d88789803bd56aa42d29e783e4f3142ea8f9e310aad88d6d616d7",
       "payload_sha256": "1f079d34fc2d88789803bd56aa42d29e783e4f3142ea8f9e310aad88d6d616d7",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -211,7 +211,7 @@
         "sha256": "b9cf1a36f6172812c3509e8a88e2d19de76d9e1fe2c4598df10558b372e88022"
       },
       "local": "skills/python-resource-management/references/details.md",
-      "canonical_source": "source/.agents/skills/python-resource-management/references/details.md",
+      "canonical_source": "source/skills/python-resource-management/references/details.md",
       "source_sha256": "b9cf1a36f6172812c3509e8a88e2d19de76d9e1fe2c4598df10558b372e88022",
       "payload_sha256": "b9cf1a36f6172812c3509e8a88e2d19de76d9e1fe2c4598df10558b372e88022",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -228,7 +228,7 @@
         "sha256": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175"
       },
       "local": "skills/python-testing-patterns/SKILL.md",
-      "canonical_source": "source/.agents/skills/python-testing-patterns/SKILL.md",
+      "canonical_source": "source/skills/python-testing-patterns/SKILL.md",
       "source_sha256": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175",
       "payload_sha256": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -245,7 +245,7 @@
         "sha256": "f560ee8b3cffc0fe971e78269bed21dc74f541c2056eae58d34259d9e537176a"
       },
       "local": "skills/python-testing-patterns/references/advanced-patterns.md",
-      "canonical_source": "source/.agents/skills/python-testing-patterns/references/advanced-patterns.md",
+      "canonical_source": "source/skills/python-testing-patterns/references/advanced-patterns.md",
       "source_sha256": "f560ee8b3cffc0fe971e78269bed21dc74f541c2056eae58d34259d9e537176a",
       "payload_sha256": "f560ee8b3cffc0fe971e78269bed21dc74f541c2056eae58d34259d9e537176a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -262,7 +262,7 @@
         "sha256": "baaa88e2997d960c19f981248b9e3e850e36e2cdf4d97b50297f5d9764826349"
       },
       "local": "skills/python-testing-patterns/references/details.md",
-      "canonical_source": "source/.agents/skills/python-testing-patterns/references/details.md",
+      "canonical_source": "source/skills/python-testing-patterns/references/details.md",
       "source_sha256": "baaa88e2997d960c19f981248b9e3e850e36e2cdf4d97b50297f5d9764826349",
       "payload_sha256": "a616d3e599292973659287da4fde30ccea30a947074210104364b81cd5f3f634",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -273,7 +273,7 @@
       "upstream_sha256": "7798dd109350b73c80bb4642f6e5a0ebaa2ae392484a213d4b44b35e9b4dad66",
       "modifications": "Preserved complete upstream entrypoint and detailed patterns. Use actual consuming Python/checker versions and configured gates, not a hard-coded 3.12 minimum or new checker requirement. Corrected generic TypeAlias fallback for 3.10/3.11; tagged success/error state supports successful None without type ignores. Clarified annotations and runtime-checkable protocols do not perform runtime input/signature validation; Pydantic v2 example is conditional. Added local detailed-resource link.",
       "local": "skills/python-type-safety/SKILL.md",
-      "canonical_source": "source/.agents/skills/python-type-safety/SKILL.md",
+      "canonical_source": "source/skills/python-type-safety/SKILL.md",
       "source_sha256": "85aae48eebd63b3cc66fb5f066e61dffcec1fc37b5d6b202572e9146a2728354",
       "payload_sha256": "85aae48eebd63b3cc66fb5f066e61dffcec1fc37b5d6b202572e9146a2728354",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -284,7 +284,7 @@
       "upstream_sha256": "c31ae289ec8de07220ddac57434fb0b764216af8a435dcc078c446d82e6862b5",
       "modifications": "Preserved complete upstream entrypoint and detailed patterns. Use actual consuming Python/checker versions and configured gates, not a hard-coded 3.12 minimum or new checker requirement. Corrected generic TypeAlias fallback for 3.10/3.11; tagged success/error state supports successful None without type ignores. Clarified annotations and runtime-checkable protocols do not perform runtime input/signature validation; Pydantic v2 example is conditional. Added local detailed-resource link.",
       "local": "skills/python-type-safety/references/details.md",
-      "canonical_source": "source/.agents/skills/python-type-safety/references/details.md",
+      "canonical_source": "source/skills/python-type-safety/references/details.md",
       "source_sha256": "8710f742ae943026df67744aaafbcfdaf815775e9498d7cc3ddc6db8667e19cc",
       "payload_sha256": "8710f742ae943026df67744aaafbcfdaf815775e9498d7cc3ddc6db8667e19cc",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."

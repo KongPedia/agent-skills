@@ -39,10 +39,10 @@ def source_repo(tmp_path):
 
 
 def add_reviewed_markdown(source, text):
-    relative = ".agents/skills/nextjs-app-router/portability.md"
+    relative = "skills/nextjs-app-router/portability.md"
     path = source / "source" / relative
     path.write_text(text)
-    manifest_path = source / "source/.agents/skill-sources.json"
+    manifest_path = source / "source/skill-sources.json"
     manifest = json.loads(manifest_path.read_text())
     authored = next(item for item in manifest["authored_skills"] if item["name"] == "nextjs-app-router")
     authored["files"].append({"local": relative, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
@@ -115,7 +115,7 @@ def test_semantic_prerelease_and_build_versions_reach_generated_manifests(tmp_pa
 
 def test_rest_api_missing_user_emits_structured_error_details():
     """Exercise the real route body, not FastAPI routing or Pydantic validation."""
-    path = ROOT / "source/.agents/skills/api-design-principles/assets/rest-api-template.py"
+    path = ROOT / "source/skills/api-design-principles/assets/rest-api-template.py"
     module = ast.parse(path.read_text())
     route = next(node for node in module.body if isinstance(node, ast.AsyncFunctionDef) and node.name == "get_user")
     # Remove only import-time FastAPI decorator/default wiring; keep the route body intact.
@@ -149,9 +149,91 @@ def test_catalog_has_exact_nonoverlapping_owners():
     names = [s for p in data["plugins"] for s in p["skills"]]
     assert len(names) == len(set(names)) == 41
     assert "project-bootstrap" not in names
-    assert set(names) == {p.name for p in (ROOT / "source/.agents/skills").iterdir()}
+    assert set(names) == {p.name for p in (ROOT / "source/skills").iterdir()}
     hook = next(p for p in data["plugins"] if p["id"] == "session-guidance")
     assert hook["optional"] and not hook["skills"]
+
+
+def test_canonical_source_layout_is_flat():
+    source = ROOT / "source"
+    assert (source / "skills").is_dir()
+    assert (source / "references").is_dir()
+    assert (source / "licenses").is_dir()
+    assert (source / "skill-sources.json").is_file()
+    assert not (source / "library").exists()
+
+
+def test_authored_spec_guidance_does_not_impose_consumer_paths():
+    root = ROOT / "plugins/common/skills/spec-driven-development"
+    text = (root / "SKILL.md").read_text()
+    form = (root / "assets/change-spec.md").read_text()
+    assert "Maintain durable product/technical contracts under `docs/specs/`" not in text
+    assert ".omx/plans" not in text + form
+    assert "유지할 계약은 `docs/specs/`" not in form
+    assert "look up `.agents/README.md`" not in text
+    assert "look up `docs/adr/README.md`" not in text
+
+
+def test_authored_typescript_guidance_does_not_require_consumer_template_files():
+    text = (ROOT / "plugins/typescript/skills/typescript-project-structure/SKILL.md").read_text()
+    assert "look up `docs/structure.md`" not in text
+    assert "look up `.agents/README.md`" not in text
+
+
+def test_authored_nextjs_and_robotics_do_not_assume_consumer_layout():
+    nextjs = (ROOT / "plugins/nextjs/skills/nextjs-app-router/SKILL.md").read_text()
+    robotics = (ROOT / "plugins/robotics/skills/robotics-software/SKILL.md").read_text()
+    assert "`app/`" in nextjs
+    assert "`src/app/`" in nextjs
+    assert "across the Python agent, API and UI" not in robotics
+
+
+@pytest.mark.parametrize("relative", [
+    "common/skills/monorepo-contract-change/SKILL.md",
+    "common/skills/spec-driven-development/SKILL.md",
+    "typescript/skills/typescript-project-structure/SKILL.md",
+    "robotics/skills/robotics-software/SKILL.md",
+])
+def test_authored_reference_callers_prioritize_actual_project_conventions(relative):
+    text = " ".join((ROOT / "plugins" / relative).read_text().lower().split())
+    assert "do not override the consuming project's actual conventions" in text
+
+
+def test_shared_reference_examples_do_not_impose_template_paths():
+    for bundle in ("common", "typescript", "robotics", "rust", "cpp-firmware"):
+        root = ROOT / "plugins" / bundle / "references"
+        for name in ("architecture.md", "development.md", "engineering.md", "robotics.md", "rust.md"):
+            path = root / name
+            if path.exists():
+                text = path.read_text()
+                assert "look up `.agents/README.md`" not in text, path
+                assert "look up `docs/specs/README.md`" not in text, path
+                assert "look up `docs/adr/README.md`" not in text, path
+                assert "Standalone은 root `src/`를 product source의 출발점" not in text, path
+    assert "apps/api/" in (ROOT / "plugins/common/references/architecture.md").read_text()
+
+
+def test_flat_source_retains_selected_unmodified_upstream_files():
+    """Unmodified upstream examples remain traceable after moving their containing tree."""
+    source = ROOT / "source"
+    manifest = json.loads((source / "skill-sources.json").read_text())
+    for local in ("skills/frontend-design/SKILL.md",
+                  "skills/domain-modeling/ADR-FORMAT.md",
+                  "skills/domain-modeling/GLOSSARY-FORMAT.md"):
+        record = next(item for item in manifest["files"] if item["local"] == local)
+        assert hashlib.sha256((source / local).read_bytes()).hexdigest() == record["upstream_sha256"]
+
+
+def test_generated_brand_preserves_marketplace_identity(tmp_path):
+    builder().build(ROOT, tmp_path)
+    codex = json.loads((tmp_path / ".agents/plugins/marketplace.json").read_text())
+    claude = json.loads((tmp_path / ".claude-plugin/marketplace.json").read_text())
+    assert codex["name"] == claude["name"] == "konglabs-agent-skills"
+    assert codex["interface"]["displayName"] == "KongLabs Agent Skills"
+    assert claude["owner"]["name"] == "KongLabs"
+    for plugin in (tmp_path / "plugins").iterdir():
+        for relative in ("plugin.json", ".claude-plugin/plugin.json"):
+            assert json.loads((plugin / relative).read_text())["author"]["name"] == "KongLabs"
 
 
 def test_build_is_deterministic_and_closed(tmp_path):
@@ -181,10 +263,10 @@ def test_generated_skill_inventory_and_license_coverage(tmp_path):
         assert sorted(p.parent.name for p in plugin.glob("skills/*/SKILL.md")) == sorted(entry["skills"])
         provenance = json.loads((plugin / "provenance.json").read_text())
         selected_source_ids = {source["id"] for source in provenance["sources"]}
-        canonical = json.loads((ROOT / "source/.agents/skill-sources.json").read_text())
+        canonical = json.loads((ROOT / "source/skill-sources.json").read_text())
         for record in canonical["files"]:
-            if record["source_id"] in selected_source_ids and record["local"].startswith(".agents/licenses/"):
-                assert (plugin / record["local"].removeprefix(".agents/")).read_bytes() == (ROOT / "source" / record["local"]).read_bytes()
+            if record["source_id"] in selected_source_ids and record["local"].startswith("licenses/"):
+                assert (plugin / record["local"]).read_bytes() == (ROOT / "source" / record["local"]).read_bytes()
         for source in provenance["sources"]:
             assert source["revision"]
             assert (plugin / source["license"]).is_file()
@@ -199,8 +281,16 @@ def test_cross_bundle_reference_is_identity_not_escape(tmp_path):
     assert "api-contracts:api-design-principles" in text
     assert "../api-design-principles/SKILL.md" not in text
     ts = (tmp_path / "plugins/typescript/skills/typescript-project-structure/SKILL.md").read_text()
-    assert "consuming repository" in ts
+    assert "common:monorepo-contract-change" in ts
+    assert "react-ui:vercel-composition-patterns" in ts
     assert "../../../docs/structure.md" not in ts
+
+
+def test_imported_workflow_reference_keeps_consumer_lookup_not_provider_path(tmp_path):
+    builder().build(ROOT, tmp_path / "output")
+    text = (tmp_path / "output/plugins/common/skills/writing-for-agents/SKILL-MECHANICS.md").read_text()
+    assert "look up `.agents/README.md#required-skill-selection-and-evidence`" in text
+    assert "library/README.md" not in text
 
 
 def test_current_outputs_match_builder():
@@ -216,7 +306,7 @@ def test_invalid_source_rejected_without_partial_output(tmp_path, failure):
     shutil.copytree(ROOT / "source", source / "source")
     shutil.copytree(ROOT / "hooks", source / "hooks")
     shutil.copy(ROOT / "catalog.json", source / "catalog.json")
-    skill = source / "source/.agents/skills/nextjs-app-router"
+    skill = source / "source/skills/nextjs-app-router"
     if failure == "unknown-link":
         (skill / "new.md").write_text("[undeclared](../../../private-guide.md)\n")
     elif failure == "missing-resource":
@@ -234,16 +324,16 @@ def test_invalid_source_rejected_without_partial_output(tmp_path, failure):
         hook.unlink()
         hook.symlink_to(ROOT / "hooks/session-start.sh")
     elif failure == "tampered-authored-resource":
-        asset = source / "source/.agents/skills/writing-plans/assets/task-brief.md"
+        asset = source / "source/skills/writing-plans/assets/task-brief.md"
         asset.write_text(asset.read_text() + "\nUnreviewed original asset change.\n")
     else:
         with (skill / "SKILL.md").open("a") as stream:
             stream.write("\nUnrecorded change.\n")
     if failure in {"unknown-link", "missing-resource"}:
-        manifest_path = source / "source/.agents/skill-sources.json"
+        manifest_path = source / "source/skill-sources.json"
         manifest = json.loads(manifest_path.read_text())
         authored = next(e for e in manifest["authored_skills"] if e["name"] == "nextjs-app-router")
-        authored["files"].append({"local": ".agents/skills/nextjs-app-router/new.md",
+        authored["files"].append({"local": "skills/nextjs-app-router/new.md",
                                   "sha256": hashlib.sha256((skill / "new.md").read_bytes()).hexdigest()})
         manifest_path.write_text(json.dumps(manifest))
     output = tmp_path / "output"
@@ -289,7 +379,7 @@ def test_optional_hook_is_printf_only_and_path_with_spaces_works(tmp_path):
 
 def test_fenced_reference_examples_are_preserved_not_resolved(tmp_path):
     builder().build(ROOT, tmp_path)
-    source = ROOT / "source/.agents/skills/rust-best-practices/references/chapter_01.md"
+    source = ROOT / "source/skills/rust-best-practices/references/chapter_01.md"
     payload = tmp_path / "plugins/rust/skills/rust-best-practices/references/chapter_01.md"
     example = "// This works as a caching alternative. See: [ADR-123](link/to/adr-123)"
     assert example in source.read_text() and example in payload.read_text()
@@ -300,7 +390,7 @@ def test_recorded_notice_is_retained_with_payload_provenance(tmp_path):
     builder().build(ROOT, tmp_path)
     plugin = tmp_path / "plugins/react-ui"
     notice = plugin / "licenses/impeccable-NOTICE.md"
-    canonical = ROOT / "source/.agents/licenses/impeccable-NOTICE.md"
+    canonical = ROOT / "source/licenses/impeccable-NOTICE.md"
     assert notice.is_file(), "Selected source NOTICE is recorded even when no skill links it"
     assert notice.read_bytes() == canonical.read_bytes()
     expected_hash = hashlib.sha256(canonical.read_bytes()).hexdigest()
@@ -394,6 +484,13 @@ def test_output_root_with_parent_traversal_is_rejected(tmp_path):
     assert not (tmp_path / "output").exists()
 
 
+def test_portable_roles_read_applicable_host_guidance():
+    for path in sorted((ROOT / 'source/agents').glob('*.toml')):
+        instructions = tomllib.loads(path.read_text())['developer_instructions']
+        assert 'AGENTS.md' in instructions and 'CLAUDE.md' in instructions
+        assert 'when present' in instructions
+
+
 def test_common_native_roles_have_model_free_claude_and_explicit_codex_exports(tmp_path):
     builder().build(ROOT, tmp_path)
     plugin = tmp_path / 'plugins/common'
@@ -427,7 +524,7 @@ def test_repeat_release_uses_catalog_version_everywhere(tmp_path):
 def test_python_type_examples_support_none_and_older_generic_aliases():
     import ast
     import re
-    skill = (ROOT / 'source/.agents/skills/python-type-safety/SKILL.md').read_text()
+    skill = (ROOT / 'source/skills/python-type-safety/SKILL.md').read_text()
     code = re.search(r'### Pattern 4: Generic Classes.*?```python\n(.*?)```', skill, re.S)[1]
     code = code.split('# Usage preserves types')[0]
     namespace = {}
@@ -442,7 +539,7 @@ def test_python_type_examples_support_none_and_older_generic_aliases():
     assert failed.is_failure and failed.unwrap_or('fallback') == 'fallback'
     with pytest.raises(RuntimeError, match='failure'):
         failed.unwrap()
-    details = (ROOT / 'source/.agents/skills/python-type-safety/references/details.md').read_text()
+    details = (ROOT / 'source/skills/python-type-safety/references/details.md').read_text()
     block = re.search(r'# Python 3.10-3.11 style.*?\n(.*?)```', details, re.S)[1]
     ast.parse(block, feature_version=(3, 10))
     namespace = {'Request': str}
@@ -484,7 +581,7 @@ def test_common_forms_are_closed_authored_assets_without_consumer_template_depen
     for path in plugin.rglob("*.md"):
         assert ".agents/templates/" not in path.read_text(), f"Generic asset still assumes consumer form copies: {path}"
     assert (plugin / "skills/domain-modeling/ADR-FORMAT.md").read_bytes() == (
-        ROOT / "source/.agents/skills/domain-modeling/ADR-FORMAT.md"
+        ROOT / "source/skills/domain-modeling/ADR-FORMAT.md"
     ).read_bytes()
-    assert not (ROOT / "source/.agents/templates").exists()
+    assert not (ROOT / "source/templates").exists()
     builder().validate_links(plugin)

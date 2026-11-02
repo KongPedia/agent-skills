@@ -2,11 +2,11 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "bf9d93008e5591973415a50c5c13b2ba57636f64fb444216b96547892e03cc5a",
+    ".claude-plugin/plugin.json": "3b0e2969f7adb4660bf73c1ecd9e187d52f1e6e32a97421a6c108a100278829e",
     "DEPENDENCIES.md": "89491b06121d68555daf911c10aa337e90b0ae7411b3270275e3e84ee7acbc33",
     "THIRD-PARTY-NOTICES.md": "aa2160681a9939cdd7d7bcaae1ebb38846bdd964e40e9c082e707cdc5ec5bd1a",
-    "plugin.json": "a5d81dc1a22f78d3d449ff11e9786f0ce86b80c93ab01d99fd1b1f495c40cdba",
-    "provenance.json": "16a9fd0d41e4d303688f74f748b375f7a1cf79804b8db13cdf1a5b8ef9f03928",
-    "skills/nestjs-backend/SKILL.md": "cea37ee0cf5b7443d7fec1a6e5e8370febad8b96b775a6370076c50aee5a3f28"
+    "plugin.json": "8c836a6242daafe0e4a71bba6f00142931a4d216505fe44311130dfed7f0aa4e",
+    "provenance.json": "2061be4d58a7c2d90e02da42a623ecc25e7ca06152fa2aca2dc87e3c768a629d",
+    "skills/nestjs-backend/SKILL.md": "fc7a26720c1a571333fea233de04aad9240c0eec9b310e854758b7b73f109b30"
   }
 }

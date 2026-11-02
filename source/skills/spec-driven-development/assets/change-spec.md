@@ -1,7 +1,7 @@
 # Change specification: <observable outcome>
 
-기존 프로젝트 양식과 저장 위치를 우선한다. 명확한 issue/task brief가 충분하면 중복 생성하지 않는다. 유지할 계약은 `docs/specs/`, 임시 계획은 ignored
-`.omx/plans/`에 둔다. 아래 항목 중 해당 없는 것은 이유를 적거나 제거한다.
+기존 프로젝트 양식과 저장 위치를 우선한다. 명확한 issue/task brief가 충분하면 중복 생성하지 않는다.
+유지할 계약과 임시 계획은 프로젝트가 정한 위치와 보존 기준을 따른다. 아래 항목 중 해당 없는 것은 이유를 적거나 제거한다.
 
 ## 상태와 계약 권위
 

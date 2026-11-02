@@ -34,6 +34,22 @@ The two additions keep their full procedure directories and needed resources, wi
 recorded in provenance. New imported revisions have their own source records; an older source pin is not silently
 rewritten to make unrelated imports appear upgraded. No new Addy procedure was needed after this comparison.
 
+## Frontend and UI/UX candidates
+
+On 2026-11-02, a targeted review compared widely used UI/UX resources with the five existing `react-ui` skills.
+GitHub stars were used only to find candidates, not as evidence of skill quality, installation or model adherence.
+The [frontend workflow guide](frontend-workflows.md) maps the retained procedures to design, critique, accessibility,
+React performance and composition; the existing evaluations do not yet cover UI tasks.
+
+| Inspected candidate | Decision | Reason and limit |
+| --- | --- | --- |
+| [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/3a13158ff1f32156cbe144108de48eda2ecaed9a) | Defer | Design search/data overlaps existing guidance. Its Python search tooling and Claude plugin-root paths need host-specific compatibility and behavioral evaluation before an unmodified portable import. |
+| [Microsoft Playwright CLI skill](https://github.com/microsoft/playwright-cli/tree/c2d8d199459d1480491bebf0a6b3587136b673fa) | Defer | Useful optional browser tooling, but it needs a CLI/browser runtime. A shared skill does not authorize installation, destructive browser actions or application execution. |
+| Existing Anthropic frontend-design, Impeccable and Vercel UI skills | Retain | They already cover design direction, UI critique/polish, interface review, React performance and composition; Impeccable here is an instruction-only adaptation, not its upstream runtime. |
+
+No new skill or runtime was imported from this comparison. Reconsider a candidate only for a demonstrated gap with
+its immutable source, complete resources/licenses, compatible target hosts and independently evaluated outcomes.
+
 ## Packaging and acceptance boundary
 
 - Exactly one canonical owner per skill; bundles compose the same sources without combination-specific repositories.

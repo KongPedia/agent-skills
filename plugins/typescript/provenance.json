@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "typescript",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "sources": [],
   "files": [],
   "authored_files": [
@@ -9,32 +9,32 @@
       "name": "typescript-project-structure",
       "origin": "Original Project Blueprints procedure, authored for the requested scoped skeleton; not an upstream import.",
       "local": "skills/typescript-project-structure/SKILL.md",
-      "canonical_source": "source/.agents/skills/typescript-project-structure/SKILL.md",
-      "source_sha256": "c9d334b4e637fad8c2f3828d698cbb83cdd911b14a5f578d1242794e98ab902b",
-      "payload_sha256": "c54b75bd0788d6a9a13b82cf99bc5878180ed927b6edd275146e83d730b096bf",
+      "canonical_source": "source/skills/typescript-project-structure/SKILL.md",
+      "source_sha256": "9f650da338b13fc4b42c59c9e5e5f9174c1ece6f454c55d8370a0d64252a55b9",
+      "payload_sha256": "630bcc902023a59df1f11e6627dc4478c41ca23c83dad577191721b9ccb7bd94",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     }
   ],
   "supporting_resources": [
     {
       "local": "references/architecture.md",
-      "canonical_source": "source/.agents/references/architecture.md",
-      "source_sha256": "0996b7537b72ed63748bd288cbacc210eaf0969c7b57a97b2709dd2efec83978",
-      "payload_sha256": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+      "canonical_source": "source/references/architecture.md",
+      "source_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
+      "payload_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "references/development.md",
-      "canonical_source": "source/.agents/references/development.md",
-      "source_sha256": "d3247be5b674a951db7e135ae6dfa2e7adddc1bda993a735a7d07fca0f67f8e6",
-      "payload_sha256": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+      "canonical_source": "source/references/development.md",
+      "source_sha256": "cf10af03b16c19faec5635256ff56e07ae0a2a3dbc8e38097fb04a360674d868",
+      "payload_sha256": "7238d8f61ae74b4fc63161b320a82d746e311aed387832f03aea25b91153e5c1",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "references/engineering.md",
-      "canonical_source": "source/.agents/references/engineering.md",
-      "source_sha256": "1dad6033ffb06ab9f633e1d562e57c12bf1527a45943807f4599c37038067b1b",
-      "payload_sha256": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
+      "canonical_source": "source/references/engineering.md",
+      "source_sha256": "109d0a535695c1bb8d2fb6a938e94e664852eb5029df9f3d6900ee38c2733418",
+      "payload_sha256": "4843e65ffc4118364719c6c2124aa68c8788e046c134c1b44e9089987c0f8c57",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     }
   ],

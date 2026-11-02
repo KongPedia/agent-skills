@@ -34,4 +34,5 @@ not make languages, runtimes, locks or deployment lifecycles interchangeable.
 Provide a producer/consumer/environment matrix, schema authority, migration and rollback plan, observed native
 and boundary evidence, external handoffs and remaining compatibility risks. Do not release, publish or contact
 hardware merely because a contract is ready. See [architecture boundaries](../../references/architecture.md) and
-[engineering criteria](../../references/engineering.md).
+[engineering criteria](../../references/engineering.md); their example paths and layouts do not override the consuming
+project's actual conventions.

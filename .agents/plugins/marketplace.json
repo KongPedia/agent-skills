@@ -1,7 +1,7 @@
 {
   "name": "konglabs-agent-skills",
   "interface": {
-    "displayName": "Konglabs Agent Skills"
+    "displayName": "KongLabs Agent Skills"
   },
   "plugins": [
     {

@@ -2,13 +2,13 @@
 
 Python 로봇 프로그램은 HTTP API가 없어도 정상적인 애플리케이션입니다. 로봇 연동이라는 이유만으로 FastAPI,
 ROS, Dora, Zenoh, 특정 SDK 또는 C++ firmware를 함께 넣지 않습니다. 실제 선택된 기술과 소유 package의 계약이
-우선입니다. Sensor/command·freshness·safety/lifecycle 변경에만
-[plugin routing](../README.md)에서 `robotics-software`를 선택해 적용합니다.
+우선입니다. Sensor/command·freshness·safety/lifecycle 변경에만 사용할 수 있는
+`robotics:robotics-software`를 선택해 적용합니다.
 
 ## 한 가지 조합: 로봇 상태 조회와 명령 요청
 
-여러 프로그램과 실제 공유 코드가 필요한 시점에 monorepo를 선택합니다. 다음은 구현 명령이나 필수 디렉터리가
-아닌 책임 배치 예입니다. 각 package 내부의 `src`와 native manifest는 선택한 blueprint가 정합니다.
+여러 프로그램과 실제 공유 코드가 필요하면 monorepo를 선택할 수 있습니다. 다음은 구현 명령이나 필수 디렉터리가
+아닌 책임 배치 예입니다. 각 package의 경로와 native manifest는 실제 프로젝트가 정합니다.
 
 | Component | 기술/형태 | 책임 | 소유하지 않는 것 |
 | --- | --- | --- | --- |
@@ -40,8 +40,8 @@ ROS, Dora, Zenoh, 특정 SDK 또는 C++ firmware를 함께 넣지 않습니다. 
    cancellation·cleanup 실패를 검증합니다. API는 rejection/status/correlation을, UI는 pending/stale/unknown을
    검증합니다. 순수 policy fake 테스트만으로 실제 SDK adapter까지 검증했다고 쓰지 않습니다.
 
-[Plugin routing](../README.md)으로 common plugin의 기준을 찾아 naming·SRP·configuration·type 경계를 확인하고,
-[개발 workflow](development.md)로 명세와 회귀 증거를 연결합니다. 기능이 없는 starter에 실제 로봇 연결이나
+작업에 해당하는 common plugin의 기준을 찾아 naming·SRP·configuration·type 경계를 확인하고,
+[개발 workflow](development.md)로 명세와 회귀 증거를 연결합니다. 실제 구현 근거 없이 로봇 연결이나
 운영 성능을 가정하지 않습니다. 이 예시는 설계 설명이며 실행·물리 동작을 검증한 구현이 아닙니다.
 
 ## 완료 증거의 한계

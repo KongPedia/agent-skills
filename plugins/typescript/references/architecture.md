@@ -1,14 +1,14 @@
 # Architecture 판단 기준
 
 목표는 폴더 수가 아니라 **책임의 응집도, 호출자에게 주는 이점, 변경의 국소성**이다. 이 문서는 overview다.
-구체적인 프로젝트 결정은 ADR (look up `docs/adr/README.md` in the consuming repository; its current project guidance remains authoritative), 유지할 행동 계약은 specs (look up `docs/specs/README.md` in the consuming repository; its current project guidance remains authoritative), 실제 package와
-명령은 프로젝트 README (look up `README.md` in the consuming repository; its current project guidance remains authoritative)에 둔다. 공통 review 기준은 설치된 common plugin의 resource를
-plugin routing (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative)으로 찾아 확인한다. 예시는 해당 기능이 구현되었다는 뜻이 아니다.
+구체적인 프로젝트 결정과 유지할 행동 계약은 해당 프로젝트의 기존 ADR·명세 관례를 따른다. 실제 package와
+명령은 사용 가능한 프로젝트 지침과 native manifest에서 확인한다. 공통 review 기준은 작업 범위에 맞는
+설치된 skill과 resource를 찾아 확인한다. 예시는 해당 기능이 구현되었다는 뜻이 아니다.
 
 ## Repository groups and native package
 
-Standalone은 root `src/`를 product source의 출발점으로 삼고, monorepo는 `apps/`와 `packages/` 아래에서
-application과 재사용 package 책임을 구분한다. 이 바깥 분류가 언어의 native layout을 없애지는 않는다.
+Standalone과 monorepo 모두 실제 package manifest, 기존 소스와 호출자를 먼저 살펴 application과 재사용
+package의 책임을 구분한다. 아래 경로들은 가능한 예이며 프로젝트마다 동일한 디렉터리가 필요한 것은 아니다.
 
 | 선택한 package | Native 경계의 예 |
 | --- | --- |
@@ -17,9 +17,9 @@ application과 재사용 package 책임을 구분한다. 이 바깥 분류가 �
 | Rust | 기본 package의 `src/lib.rs` + `src/main.rs`, `Cargo.toml`, features/targets와 tests |
 | Firmware, 해당할 때 | 선택한 tool의 native source/config, board/environment와 calibration·safe-state 계약 |
 
-예를 들어 `apps/api/`는 저장소의 실행 단위이고 `apps/api/src/api_service/`는 Python import source다.
-별도의 바깥 `src/` wrapper는 필요하지 않다. 폴더만으로 package, workspace, FFI 또는 deployment가 만들어지지 않는다. Root `scripts/`와 `bin/`은
-maintenance/명령 진입점이며 product logic의 우회 배치가 아니다. 선택하지 않은 package나 빈 domain layer는 만들지 않는다.
+예를 들어 어떤 저장소에서 `apps/api/`는 실행 단위이고 `apps/api/src/api_service/`는 Python import source일 수 있다.
+별도의 바깥 `src/` wrapper는 필요하지 않다. 폴더만으로 package, workspace, FFI 또는 deployment가 만들어지지 않는다.
+`scripts/`나 `bin/`이 있으면 그 프로젝트가 정한 maintenance/명령 진입점의 책임을 따른다. 선택하지 않은 package나 빈 domain layer는 만들지 않는다.
 
 ## 기본값: 작은 package와 명확한 책임
 
@@ -111,8 +111,8 @@ Rust/C++ adapter, React operator UI도 필요한 component일 때만 조합한�
 
 ## Frontend: feature와 state ownership
 
-React 선택지는 `app -> features -> shared` 방향을 출발점으로 삼는다. `app`은 앱 조합, `features`는 사용자
-행동, `shared`는 여러 실제 consumer가 쓰는 공통 UI/기능을 맡는다. Feature 간 연결이 필요하면 무조건
+React 구조의 한 예는 `app -> features -> shared`다. 여기서 `app`은 앱 조합, `features`는 사용자
+행동, `shared`는 여러 실제 consumer가 쓰는 공통 UI/기능을 맡는다. 실제 프로젝트 구조와 소유권이 우선이다. Feature 간 연결이 필요하면 무조건
 상호 import하기보다 상위 composition 또는 실제 공유 책임을 검토한다.
 
 State는 가능한 가까운 단일 권위에 두고 derived state를 중복 보관하지 않는다. 서버의 원본 상태,
@@ -139,7 +139,7 @@ package를 나란히 놓아도 PyO3/Tokio/FFI가 자동으로 존재하지 않�
 변경은 한 integration owner가 schema, producer, 모든 active consumer, fixture와 각 native 환경을 함께
 추적한다. 외부 consumer가 없거나 검증 불가하면 그 한계를 남긴다. 동일 fixture의 byte 일치는 executed
 interoperability가 아니며, 다른 언어의 test 통과만으로 native compatibility를 주장하지 않는다.
-실행할 때는 .agents routing (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative)에서 실제 변경 경계에 맞는 contract/native skill을 선택한다.
+실행할 때는 사용 가능한 skill 중 실제 변경 경계에 맞는 contract/native 절차를 선택한다.
 
 ## 분리하면서 지켜야 할 것
 

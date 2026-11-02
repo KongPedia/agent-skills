@@ -28,7 +28,7 @@ application scaffolds. Read the relevant branch only. Keep any executable snippe
 and dependencies under source review; do not execute them merely to validate a document.
 
 Source repositories may target a specific SDK, transport, Python binding, async runtime or hardware environment. Those
-contracts do not carry into this neutral starter. Match examples to the adopted package's compiler/features, actual
+contracts do not carry into another project. Match examples to the adopted package's compiler/features, actual
 public surface and safety authority. Generic allocation, style, trait or folder recommendations are not hard gates.
 
 For guidance-only changes, verify paths, metadata, licenses/provenance and whitespace. Once a real crate exists, select
@@ -47,8 +47,8 @@ whether a deprecated re-export/adapter, staged migration or explicit breaking re
 grace period or promise compatibility for unknown external users. Preserve errors and resource semantics through any
 adapter. Document removal conditions and test old/new paths while both are supported.
 
-For cross-package or cross-language changes, use
-the relevant cross-package workflow from the local catalog (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative). Update authoritative source, generated binding
+For cross-package or cross-language changes, use the applicable `common:monorepo-contract-change` workflow when available.
+Update authoritative source, generated binding
 inputs if any, available consumers and fixtures together. Byte-equal fixtures alone do not prove executed interop; do
 not update a sibling repository or publish a crate without task authorization. Record rollback and unavailable checks.
 

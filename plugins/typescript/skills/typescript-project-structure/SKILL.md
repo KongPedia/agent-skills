@@ -6,8 +6,8 @@ description: Choose or review TypeScript library, Node service, and React packag
 # TypeScript project structure
 
 Use the owning package's runtime and published surface to choose the structure, not a generic folder tree.
-Read structure choices (look up `docs/structure.md` in the consuming repository; its current project guidance remains authoritative) and [engineering criteria](../../references/engineering.md) when
-selecting or changing a package boundary.
+Read the project's existing structure guidance and [engineering criteria](../../references/engineering.md) when
+selecting or changing a package boundary. Reference examples do not override the consuming project's actual conventions.
 
 ## Workflow
 
@@ -15,7 +15,7 @@ selecting or changing a package boundary.
    supported consumers, existing manifest/lock owner, and public entrypoints. A React component library is still a
    library; a browser app must not inherit Node-only imports. A generated baseline is not evidence of the product runtime or supported consumers.
 2. **Inspect the import graph.** Find callers, package exports, bundler/test configuration and existing tests before
-   moving files. Prefer a small `src/` tree; group React features when they own cohesive UI/state/API behavior.
+   moving files. Prefer a small cohesive source tree; group React features when they own cohesive UI/state/API behavior.
    Shared code has demonstrated consumers, not merely a convenient `shared` folder name.
 3. **Make boundaries real.** Keep library consumers on documented exports; inspect `package.json` `exports`/`types`
    and emitted declarations when a real package exists. Avoid private deep imports and dependency cycles. A
@@ -24,7 +24,7 @@ selecting or changing a package boundary.
 4. **Preserve runtime semantics.** Inspect the target's compiler/module-resolution settings rather than copying a
    universal `tsconfig`. When implementation is separately authorized, start new packages with strict type checking
    and pin toolchain/package-manager versions, lockfiles, scripts and compatible framework versions together.
-   Tightening an existing target needs a scoped migration; do not install or upgrade tools to populate this starter.
+   Tightening an existing target needs a scoped migration; do not install or upgrade tools to populate a baseline.
 5. **Verify the changed surface.** Update imports, exports, tests and docs together. For application code, use the
    declared typecheck/test/build gates and test the consumer-facing boundary; a typecheck alone does not prove
    runtime resolution. For scaffold/guidance work, check paths and metadata only and report runtime checks absent.
@@ -32,7 +32,7 @@ selecting or changing a package boundary.
 ## Output
 
 Report the package kind/runtime, dependency direction, public exports, affected callers, selected checks and limits.
-For cross-package or wire changes, select the relevant contract workflow from the local catalog (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative)
+For cross-package or wire changes, select the contract workflow (shared skill `common:monorepo-contract-change`; select the `common` bundle when that task boundary is in scope)
 and account for producer, consumer, authoritative schema and native checks.
 For React state/component work, select the relevant `vercel-react-best-practices` or
-`vercel-composition-patterns` entrypoint from the catalog (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative), not every frontend skill.
+`vercel-composition-patterns` (shared skill `react-ui:vercel-composition-patterns`; select the `react-ui` bundle when that task boundary is in scope) entrypoint when applicable, not every frontend skill.

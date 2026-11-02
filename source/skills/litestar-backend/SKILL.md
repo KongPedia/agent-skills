@@ -6,8 +6,8 @@ description: Develop or review Litestar routes, DI/lifespan ownership, typed HTT
 # Litestar backend
 
 Inspect the owning package's manifest, lock, app factory and HTTP tests first. Match its installed Litestar version,
-validation models and existing collaborators. In a monorepo, use that backend's environment. The starter targets
-Litestar 2.25; `/main/` documentation may describe an unreleased major version. This is original scoped development
+validation models and existing collaborators. In a monorepo, use that backend's environment. `/main/` documentation
+may describe an unreleased major version; consult the installed release. This is original scoped development
 guidance, not a vendored upstream skill or a mandate to adopt the surrounding Litestar ecosystem.
 
 ## Procedure
@@ -34,7 +34,7 @@ guidance, not a vendored upstream skill or a mandate to adopt the surrounding Li
    its request dependency already released. Give such work an explicit owner and test its actual lifetime.
 6. **Concurrency:** inspect I/O calls. Use async clients for async handlers; `async def` alone does not unblock a sync
    driver. Set `sync_to_thread=True` for a blocking sync handler/provider, or explicitly `False` for short nonblocking
-   work such as the starter health response. Thread offload is not CPU parallelism or cancellation of a worker/remote
+   work such as a simple health response. Thread offload is not CPU parallelism or cancellation of a worker/remote
    side effect. Preserve deadlines, bounded work and cleanup with the existing async/resource procedures.
 7. **Admission and errors:** authenticate through the existing middleware/backend and authorize through the established
    guard/policy owner. A public-route authentication bypass does not automatically bypass inherited guards. Test actual

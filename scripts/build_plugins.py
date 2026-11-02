@@ -26,11 +26,14 @@ SEMVER = re.compile(
 )
 # These are consuming-project contracts, not files installed from a plugin cache.
 PROJECT_CONTEXT = {
-    "README.md", ".agents/README.md",
-    "docs/adr/README.md", "docs/specs/README.md", "docs/structure.md",
+    "README.md": ".agents/README.md",
+    "../README.md": "README.md",
+    "../docs/adr/README.md": "docs/adr/README.md",
+    "../docs/specs/README.md": "docs/specs/README.md",
+    "../docs/structure.md": "docs/structure.md",
 }
 PORTABLE_REFERENCES = {
-    f".agents/references/{name}.md"
+    f"references/{name}.md"
     for name in ("engineering", "rust", "cpp-firmware", "development", "architecture", "robotics")
 }
 DESCRIPTIONS = {
@@ -112,10 +115,10 @@ def load_source(root: Path):
     for path in source.rglob("*"):
         if path.is_symlink():
             raise ValueError(f"Canonical source must contain ordinary files, not symlinks: {path}")
-    actual = {p.name for p in (source / ".agents/skills").iterdir() if p.is_dir()}
+    actual = {p.name for p in (source / "skills").iterdir() if p.is_dir()}
     if set(owners) != actual:
         raise ValueError(f"Skill ownership differs from canonical source: {set(owners) ^ actual}")
-    manifest = json.loads((source / ".agents/skill-sources.json").read_text())
+    manifest = json.loads((source / "skill-sources.json").read_text())
     authored = manifest["authored_skills"] + manifest.get("authored_resources", [])
     records = manifest["files"] + [f for entry in authored for f in entry["files"]]
     for record in records:
@@ -128,14 +131,14 @@ def load_source(root: Path):
         if digest(path.read_bytes()) != record["sha256"]:
             raise ValueError(f"Source hash mismatch: {record['local']}; review and record local adaptation first")
     recorded = {record["local"] for record in records}
-    for path in (source / ".agents/skills").rglob("*"):
+    for path in (source / "skills").rglob("*"):
         if path.is_file() and path.relative_to(source).as_posix() not in recorded:
             raise ValueError(f"Skill resource lacks source provenance: {path.relative_to(source)}")
     hook = root / "hooks/session-start.sh"
     if hook.is_symlink() or not hook.resolve().is_relative_to(root.resolve()) or not hook.is_file():
         raise ValueError("Optional hook source is missing or escapes this repository")
     for name in owners:
-        entry = (source / f".agents/skills/{name}/SKILL.md").read_text()
+        entry = (source / f"skills/{name}/SKILL.md").read_text()
         if not re.search(rf"^name:\s*{re.escape(name)}\s*$", entry, re.MULTILINE):
             raise ValueError(f"Skill frontmatter name differs from its canonical identity: {name}")
     return catalog, owners, manifest
@@ -159,10 +162,10 @@ def render(root: Path) -> dict[str, bytes]:
         def destination(path: str) -> str:
             if path.startswith("/") or posixpath.normpath(path) != path or "\\" in path:
                 raise ValueError(f"Resource path is not canonical: {path}")
-            if path.startswith(".agents/skills/"):
-                return path.removeprefix(".agents/")
-            if path in PORTABLE_REFERENCES or path.startswith(".agents/licenses/"):
-                return path.removeprefix(".agents/")
+            if path.startswith("skills/"):
+                return path
+            if path in PORTABLE_REFERENCES or path.startswith("licenses/"):
+                return path
             raise ValueError(f"Resource is not declared portable: {path}")
 
         def add(path: str) -> str:
@@ -187,15 +190,16 @@ def render(root: Path) -> dict[str, bytes]:
                 return original
             relative, anchor = parsed
             target = posixpath.normpath(posixpath.join(posixpath.dirname(path), relative))
-            if target == ".agents/skill-sources.json":
+            if target == "skill-sources.json":
                 resolved = "provenance.json"
             elif target in PROJECT_CONTEXT:
+                target = PROJECT_CONTEXT[target]
                 suffix = f"#{anchor}" if anchor else ""
                 return (f"{label} (look up `{target}{suffix}` in the consuming repository; "
                         "its current project guidance remains authoritative)")
-            elif target.startswith(".agents/skills/"):
+            elif target.startswith("skills/"):
                 parts = target.split("/")
-                other_skill = parts[2] if len(parts) > 2 else ""
+                other_skill = parts[1] if len(parts) > 1 else ""
                 if other_skill not in owners:
                     raise ValueError(f"Unknown shared skill resource: {path} -> {target}")
                 owner = owners[other_skill]
@@ -206,7 +210,7 @@ def render(root: Path) -> dict[str, bytes]:
                     return (f"{label} (shared skill `{owner}:{other_skill}`; select the `{owner}` "
                             "bundle when that task boundary is in scope)")
                 resolved = add(target)
-            elif target in PORTABLE_REFERENCES or target.startswith(".agents/licenses/"):
+            elif target in PORTABLE_REFERENCES or target.startswith("licenses/"):
                 resolved = add(target)
             else:
                 raise ValueError(f"Undeclared outward resource: {path} -> {target}")
@@ -228,7 +232,7 @@ def render(root: Path) -> dict[str, bytes]:
             )
 
         for skill in plugin["skills"]:
-            for path in sorted((source / ".agents/skills" / skill).rglob("*")):
+            for path in sorted((source / "skills" / skill).rglob("*")):
                 if path.is_file():
                     add(path.relative_to(source).as_posix())
         # Preserve every recorded license/NOTICE, not only the source's primary license pointer.
@@ -237,7 +241,7 @@ def render(root: Path) -> dict[str, bytes]:
             for sid in sorted(selected_sources - licensed_sources):
                 add(source_by_id[sid]["license"])
                 for record in manifest["files"]:
-                    if record["source_id"] == sid and record["local"].startswith(".agents/licenses/"):
+                    if record["source_id"] == sid and record["local"].startswith("licenses/"):
                         add(record["local"])
                 licensed_sources.add(sid)
         role_records = []
@@ -292,7 +296,7 @@ def render(root: Path) -> dict[str, bytes]:
         })
         description = DESCRIPTIONS.get(pid, f"Reviewed {pid} engineering procedures")
         base = {"name": pid, "version": catalog["version"], "description": description,
-                "author": {"name": "Konglabs"}}
+                "author": {"name": "KongLabs"}}
         payload["plugin.json"] = json_bytes({"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", **base})
         payload[".claude-plugin/plugin.json"] = json_bytes(base)
         payload["DEPENDENCIES.md"] = (
@@ -323,13 +327,13 @@ def render(root: Path) -> dict[str, bytes]:
         for path, data in payload.items():
             output[f"plugins/{pid}/{path}"] = data
     output[".agents/plugins/marketplace.json"] = json_bytes({
-        "name": catalog["marketplace"], "interface": {"displayName": "Konglabs Agent Skills"},
+        "name": catalog["marketplace"], "interface": {"displayName": "KongLabs Agent Skills"},
         "plugins": [{"name": p["id"], "source": {"source": "local", "path": f"./plugins/{p['id']}"},
                      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
                      "category": "Productivity"} for p in catalog["plugins"]],
     })
     output[".claude-plugin/marketplace.json"] = json_bytes({
-        "name": catalog["marketplace"], "owner": {"name": "Konglabs"},
+        "name": catalog["marketplace"], "owner": {"name": "KongLabs"},
         "plugins": [{"name": p["id"], "source": f"./plugins/{p['id']}",
                      "description": DESCRIPTIONS.get(p["id"], p["id"])} for p in catalog["plugins"]],
     })
