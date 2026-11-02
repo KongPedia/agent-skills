@@ -1,12 +1,14 @@
 # Source provenance and closed payloads
 
-`source/.agents` began with the reviewed Project Blueprints reusable skill/resource snapshot; Copier bootstrap
+The canonical library began at `source/.agents` with the reviewed Project Blueprints reusable skill/resource snapshot;
+it now resides under `source/`. Copier bootstrap
 instructions are not a shared skill. The canonical inventory is now 41 procedures with retained immutable upstream and
 derivation records. The initial extraction was uncommitted; do not invent a source Git revision. Historical extraction
 byte-equality counts are not a current blanket preservation claim after later recorded changes.
 
 Existing imported skill trees were not rewritten when the full development, architecture and robotics references moved
-into `source/.agents/references/`. Three authored skill routing links changed and their local hashes were recorded.
+into `source/.agents/references/` (now `source/references/`). Three authored skill routing links changed and
+their local hashes were recorded.
 The complete shared references remain canonical here; generated products keep local contracts, not copied manuals.
 
 ## One source, generated adapters
@@ -60,14 +62,16 @@ The full upstream `domain-modeling` and `python-type-safety` directories extend 
 raw hashes, local adaptations and licenses are recorded beside the bodies. The Python addition has a distinct source
 identity/revision, so earlier wshobson imports are not silently reattributed. The public source audit explains exclusions.
 Engineering/Rust/C++ and the full shared development/architecture/robotics references are canonical here and packaged
-as needed, not independently maintained in the template or copied into generated project docs.
+as needed, not independently maintained in the template or copied into generated project docs. They are maintained
+separately from imported skill trees; changes to shared references can affect guidance read by those skills even when
+their upstream-derived files remain byte-identical.
 Four model-free generic role TOMLs have one canonical source and generated Claude/native-Codex-export adapters.
 Exported role configuration is not evidence of Codex plugin agent registration.
 
 ## Shared documentation versus product artifacts
 
 Complete development, architecture and robotics worked references moved from the template into canonical
-`source/.agents/references`. They retain their useful examples, with updated consuming-project links and root
+`source/references`. They retain their useful examples, with updated consuming-project links and root
 `apps`/`packages` layout examples. Common links development/architecture; Robotics links its own example.
 These are generated closed payload resources with source/payload hashes, not copied project methodology documents.
 Project specs, ADRs, ownership, commands and local policy remain project-owned artifacts.

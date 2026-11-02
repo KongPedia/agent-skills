@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "common",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "sources": [
     {
       "id": "addy-deprecation-and-migration",
@@ -104,7 +104,7 @@
         "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
       },
       "local": "licenses/addyosmani-LICENSE",
-      "canonical_source": "source/.agents/licenses/addyosmani-LICENSE",
+      "canonical_source": "source/licenses/addyosmani-LICENSE",
       "source_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "payload_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -121,7 +121,7 @@
         "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
       },
       "local": "licenses/mattpocock-LICENSE",
-      "canonical_source": "source/.agents/licenses/mattpocock-LICENSE",
+      "canonical_source": "source/licenses/mattpocock-LICENSE",
       "source_sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "payload_sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -138,7 +138,7 @@
         "sha256": "4fd42de3188b327edb30d8997f8669b590ccfde847bb85af2e73a5c7161d4ec0"
       },
       "local": "licenses/oh-my-codex-LICENSE",
-      "canonical_source": "source/.agents/licenses/oh-my-codex-LICENSE",
+      "canonical_source": "source/licenses/oh-my-codex-LICENSE",
       "source_sha256": "4fd42de3188b327edb30d8997f8669b590ccfde847bb85af2e73a5c7161d4ec0",
       "payload_sha256": "4fd42de3188b327edb30d8997f8669b590ccfde847bb85af2e73a5c7161d4ec0",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -155,7 +155,7 @@
         "sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915"
       },
       "local": "licenses/openai-LICENSE",
-      "canonical_source": "source/.agents/licenses/openai-LICENSE",
+      "canonical_source": "source/licenses/openai-LICENSE",
       "source_sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915",
       "payload_sha256": "13df7812ca53ecaae1cb4a868844bb598373047ae1d580e4debfbef1dd5b6915",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -172,7 +172,7 @@
         "sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab"
       },
       "local": "licenses/ponytail-LICENSE",
-      "canonical_source": "source/.agents/licenses/ponytail-LICENSE",
+      "canonical_source": "source/licenses/ponytail-LICENSE",
       "source_sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
       "payload_sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -189,7 +189,7 @@
         "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
       },
       "local": "licenses/superpowers-LICENSE",
-      "canonical_source": "source/.agents/licenses/superpowers-LICENSE",
+      "canonical_source": "source/licenses/superpowers-LICENSE",
       "source_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
       "payload_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -206,7 +206,7 @@
         "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
       },
       "local": "licenses/wshobson-LICENSE",
-      "canonical_source": "source/.agents/licenses/wshobson-LICENSE",
+      "canonical_source": "source/licenses/wshobson-LICENSE",
       "source_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
       "payload_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -223,7 +223,7 @@
         "sha256": "350caf22b856b7d2908a10a69a8cc13e743c757ba9838716051b4e29fc1d7595"
       },
       "local": "skills/architecture-patterns/SKILL.md",
-      "canonical_source": "source/.agents/skills/architecture-patterns/SKILL.md",
+      "canonical_source": "source/skills/architecture-patterns/SKILL.md",
       "source_sha256": "5a78130cb40317e49b0963b36156bf1e19747843df6c05bfffca08f71286a882",
       "payload_sha256": "5a78130cb40317e49b0963b36156bf1e19747843df6c05bfffca08f71286a882",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -240,7 +240,7 @@
         "sha256": "e1cb31c83b532e579991de277836a1ea5e3d88b2ca30fc8ac16f6047ceca439e"
       },
       "local": "skills/architecture-patterns/references/advanced-patterns.md",
-      "canonical_source": "source/.agents/skills/architecture-patterns/references/advanced-patterns.md",
+      "canonical_source": "source/skills/architecture-patterns/references/advanced-patterns.md",
       "source_sha256": "e1cb31c83b532e579991de277836a1ea5e3d88b2ca30fc8ac16f6047ceca439e",
       "payload_sha256": "e1cb31c83b532e579991de277836a1ea5e3d88b2ca30fc8ac16f6047ceca439e",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -257,7 +257,7 @@
         "sha256": "a53411600b253b343247db9d86140f3136ee7bd26a67aa8411962bcc1f5ff981"
       },
       "local": "skills/architecture-patterns/references/details.md",
-      "canonical_source": "source/.agents/skills/architecture-patterns/references/details.md",
+      "canonical_source": "source/skills/architecture-patterns/references/details.md",
       "source_sha256": "a53411600b253b343247db9d86140f3136ee7bd26a67aa8411962bcc1f5ff981",
       "payload_sha256": "a53411600b253b343247db9d86140f3136ee7bd26a67aa8411962bcc1f5ff981",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -274,7 +274,7 @@
         "sha256": "6f0525b364f03ea4ec991ceb1b77a5bf0674efc605bed5db5cb98ebfc09e7c5e"
       },
       "local": "skills/best-practice-research/SKILL.md",
-      "canonical_source": "source/.agents/skills/best-practice-research/SKILL.md",
+      "canonical_source": "source/skills/best-practice-research/SKILL.md",
       "source_sha256": "6a8042da94003e31a748add2ba503da6438934cc6b87bd8c08e10062991d5a6f",
       "payload_sha256": "6c5838e73213277fb6fd92e10ce2dd292fcad62f903d3abaae7a8d1e97c7493a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -291,7 +291,7 @@
         "sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a"
       },
       "local": "skills/brainstorming/SKILL.md",
-      "canonical_source": "source/.agents/skills/brainstorming/SKILL.md",
+      "canonical_source": "source/skills/brainstorming/SKILL.md",
       "source_sha256": "af488846b9f108eacb7c09c87d245b92d431b09cb5676f4ae47e69510ff317f2",
       "payload_sha256": "2e9af4bb5d27a55595f25fc7674e540e601375dc8c704f0de56b6a15a249404b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -308,7 +308,7 @@
         "sha256": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e"
       },
       "local": "skills/brainstorming/builder-check-prompt.md",
-      "canonical_source": "source/.agents/skills/brainstorming/builder-check-prompt.md",
+      "canonical_source": "source/skills/brainstorming/builder-check-prompt.md",
       "source_sha256": "7e3e05bf1064c5b7ba687b4e2443faf63fb3f720bc3c2e89920c5caa2ab6fece",
       "payload_sha256": "7e3e05bf1064c5b7ba687b4e2443faf63fb3f720bc3c2e89920c5caa2ab6fece",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -325,7 +325,7 @@
         "sha256": "014fff1c8db75807106484d5b16451607f0dde266ae50182a2753d68ad3449ed"
       },
       "local": "skills/code-review-excellence/SKILL.md",
-      "canonical_source": "source/.agents/skills/code-review-excellence/SKILL.md",
+      "canonical_source": "source/skills/code-review-excellence/SKILL.md",
       "source_sha256": "67b80d06dbb25b64c72301692f75f1d200e374a8a828392eb1ac3b0a6bcfea98",
       "payload_sha256": "67b80d06dbb25b64c72301692f75f1d200e374a8a828392eb1ac3b0a6bcfea98",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -342,7 +342,7 @@
         "sha256": "97114f24e447c07dd8974532b0fed3b4da881d5a294f3560d0b9f4c6bf0b76af"
       },
       "local": "skills/codebase-design/DEEPENING.md",
-      "canonical_source": "source/.agents/skills/codebase-design/DEEPENING.md",
+      "canonical_source": "source/skills/codebase-design/DEEPENING.md",
       "source_sha256": "97114f24e447c07dd8974532b0fed3b4da881d5a294f3560d0b9f4c6bf0b76af",
       "payload_sha256": "97114f24e447c07dd8974532b0fed3b4da881d5a294f3560d0b9f4c6bf0b76af",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -359,7 +359,7 @@
         "sha256": "58c19398ff7119925ba4a838c2ccbf1431da3bc963a83b6c45ce3373ceed35f5"
       },
       "local": "skills/codebase-design/DESIGN-IT-TWICE.md",
-      "canonical_source": "source/.agents/skills/codebase-design/DESIGN-IT-TWICE.md",
+      "canonical_source": "source/skills/codebase-design/DESIGN-IT-TWICE.md",
       "source_sha256": "61ae7455d6f6bf3ae221a21f85e090394c8db364bff850e2841393fd9306e9d9",
       "payload_sha256": "61ae7455d6f6bf3ae221a21f85e090394c8db364bff850e2841393fd9306e9d9",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -376,7 +376,7 @@
         "sha256": "e96da1fc5a7e419f9b5902224bffc0585b89a8ac77376cc4786764b129a3906d"
       },
       "local": "skills/codebase-design/SKILL.md",
-      "canonical_source": "source/.agents/skills/codebase-design/SKILL.md",
+      "canonical_source": "source/skills/codebase-design/SKILL.md",
       "source_sha256": "8dcacd4d5d6c84619e385a3abf31e85ee0f5e79fb2a1b7679d815be60ff94587",
       "payload_sha256": "b3e52f93feeaaf74d70993d2e2aedc29b0ac015c88937ae3b75491616c44d15b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -393,7 +393,7 @@
         "sha256": "7255540889e5402663acadbc0ee16c9b04788d1fdb001dc7b499ea928490dee5"
       },
       "local": "skills/deprecation-and-migration/SKILL.md",
-      "canonical_source": "source/.agents/skills/deprecation-and-migration/SKILL.md",
+      "canonical_source": "source/skills/deprecation-and-migration/SKILL.md",
       "source_sha256": "7e439ae02994790753b89697ca307af6a1e9b478d65f13a9f1664bf8b5f90b62",
       "payload_sha256": "70267c0509caa87e9d0116d7807fff9c27b96ed01e4054f9bff5131a157509e7",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -410,7 +410,7 @@
         "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
       },
       "local": "skills/deprecation-and-migration/references/addy-LICENSE.md",
-      "canonical_source": "source/.agents/skills/deprecation-and-migration/references/addy-LICENSE.md",
+      "canonical_source": "source/skills/deprecation-and-migration/references/addy-LICENSE.md",
       "source_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "payload_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -427,7 +427,7 @@
         "sha256": "834b7216cdf43be783a664e50f8a8f6e76cf36110f5f8b185c3f129f77edbce1"
       },
       "local": "skills/docs-sync/SKILL.md",
-      "canonical_source": "source/.agents/skills/docs-sync/SKILL.md",
+      "canonical_source": "source/skills/docs-sync/SKILL.md",
       "source_sha256": "98ff9d77851d2bea157811e76c9b74c4952eeed13313ea7274c759bf095d7e03",
       "payload_sha256": "98ff9d77851d2bea157811e76c9b74c4952eeed13313ea7274c759bf095d7e03",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -444,7 +444,7 @@
         "sha256": "2e62bee17a95e89aa6455cb2ef56474d34c43c7bf608b337621b0dcca17c09ad"
       },
       "local": "skills/docs-sync/agents/openai.yaml",
-      "canonical_source": "source/.agents/skills/docs-sync/agents/openai.yaml",
+      "canonical_source": "source/skills/docs-sync/agents/openai.yaml",
       "source_sha256": "2e62bee17a95e89aa6455cb2ef56474d34c43c7bf608b337621b0dcca17c09ad",
       "payload_sha256": "2e62bee17a95e89aa6455cb2ef56474d34c43c7bf608b337621b0dcca17c09ad",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -461,7 +461,7 @@
         "sha256": "4d67ba35d38a4faab1b74088fc9cdd636e5a7a1ee968cf3217655c83fdec39f4"
       },
       "local": "skills/docs-sync/references/doc-coverage-checklist.md",
-      "canonical_source": "source/.agents/skills/docs-sync/references/doc-coverage-checklist.md",
+      "canonical_source": "source/skills/docs-sync/references/doc-coverage-checklist.md",
       "source_sha256": "4d67ba35d38a4faab1b74088fc9cdd636e5a7a1ee968cf3217655c83fdec39f4",
       "payload_sha256": "4d67ba35d38a4faab1b74088fc9cdd636e5a7a1ee968cf3217655c83fdec39f4",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -472,7 +472,7 @@
       "upstream_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
       "modifications": "Unmodified upstream resource.",
       "local": "skills/domain-modeling/ADR-FORMAT.md",
-      "canonical_source": "source/.agents/skills/domain-modeling/ADR-FORMAT.md",
+      "canonical_source": "source/skills/domain-modeling/ADR-FORMAT.md",
       "source_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
       "payload_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -483,7 +483,7 @@
       "upstream_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
       "modifications": "Unmodified upstream resource.",
       "local": "skills/domain-modeling/GLOSSARY-FORMAT.md",
-      "canonical_source": "source/.agents/skills/domain-modeling/GLOSSARY-FORMAT.md",
+      "canonical_source": "source/skills/domain-modeling/GLOSSARY-FORMAT.md",
       "source_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
       "payload_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -494,7 +494,7 @@
       "upstream_sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
       "modifications": "Preserved whole upstream skill directory including formats and OpenAI interface metadata. Scoped trigger, file creation and inline updates to existing consuming-project glossary/ADR conventions and explicit write authority; read-only proposals are not accepted decisions. Linked optional organization-authored assets or preserved ADR evidence/rollback cautions; asset authorship is recorded separately from upstream imports.",
       "local": "skills/domain-modeling/SKILL.md",
-      "canonical_source": "source/.agents/skills/domain-modeling/SKILL.md",
+      "canonical_source": "source/skills/domain-modeling/SKILL.md",
       "source_sha256": "909ec41428fefb8acd2d1c7003b51e32de6e57a4b45110e75cbc458a75d5c307",
       "payload_sha256": "d11d669a6c4baa969a3eaf991cb65967faca0808836778c9ff839a9a8207a71b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -505,7 +505,7 @@
       "upstream_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
       "modifications": "Unmodified upstream resource.",
       "local": "skills/domain-modeling/agents/openai.yaml",
-      "canonical_source": "source/.agents/skills/domain-modeling/agents/openai.yaml",
+      "canonical_source": "source/skills/domain-modeling/agents/openai.yaml",
       "source_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
       "payload_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -522,7 +522,7 @@
         "sha256": "b811257434ed3d9f3539f849bc11e8fb54077f14fe1813fa2afa58f3d925107f"
       },
       "local": "skills/observability-and-instrumentation/SKILL.md",
-      "canonical_source": "source/.agents/skills/observability-and-instrumentation/SKILL.md",
+      "canonical_source": "source/skills/observability-and-instrumentation/SKILL.md",
       "source_sha256": "0aafb9e36edb4d7c3c6d5fa57d3bc3f84f7efe6751897755a20ef340754957b7",
       "payload_sha256": "9fa17d1310fe3f8c7c5ff7f9ea19d55180c194ea9a3991aeca284dba2c2aed68",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -539,7 +539,7 @@
         "sha256": "3cd74a9a5732e42b50229dbc3257a589cccf46b566b77e3b1403b6539e0b75c4"
       },
       "local": "skills/observability-and-instrumentation/references/observability-checklist.md",
-      "canonical_source": "source/.agents/skills/observability-and-instrumentation/references/observability-checklist.md",
+      "canonical_source": "source/skills/observability-and-instrumentation/references/observability-checklist.md",
       "source_sha256": "3cd74a9a5732e42b50229dbc3257a589cccf46b566b77e3b1403b6539e0b75c4",
       "payload_sha256": "3cd74a9a5732e42b50229dbc3257a589cccf46b566b77e3b1403b6539e0b75c4",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -556,7 +556,7 @@
         "sha256": "eacf6bdf73abe7889c719a76d44027ddf2788142795eaa5d98ca2926ddeeeb61"
       },
       "local": "skills/ponytail/SKILL.md",
-      "canonical_source": "source/.agents/skills/ponytail/SKILL.md",
+      "canonical_source": "source/skills/ponytail/SKILL.md",
       "source_sha256": "38320a1eabc197118a8b0ae427a505af4fece0ffc5f1e27f4aa3309375595211",
       "payload_sha256": "38320a1eabc197118a8b0ae427a505af4fece0ffc5f1e27f4aa3309375595211",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -573,7 +573,7 @@
         "sha256": "ca810bde7d3359a093016f07b1c7eb42b71c332d452e93e7d92bf74bd79a8104"
       },
       "local": "skills/security-and-hardening/SKILL.md",
-      "canonical_source": "source/.agents/skills/security-and-hardening/SKILL.md",
+      "canonical_source": "source/skills/security-and-hardening/SKILL.md",
       "source_sha256": "bd70c6fd493c3daaa08cb331ea8e27da6d0b9c0948a24311b6576252dd93d9e8",
       "payload_sha256": "e5ff48e756afddb3533f2525856c5d2cfe8bd6498dc32285efdbeed655024b6a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -590,7 +590,7 @@
         "sha256": "6035031a836488a0ca2a230b16e37185c0b423721362a75a00e4b48b2970a0d0"
       },
       "local": "skills/security-and-hardening/references/hardening-patterns.md",
-      "canonical_source": "source/.agents/skills/security-and-hardening/references/hardening-patterns.md",
+      "canonical_source": "source/skills/security-and-hardening/references/hardening-patterns.md",
       "source_sha256": "59036760247821118f8075b9209cfb2633c57badfdf2a766bd24c8c54d26dc6e",
       "payload_sha256": "59036760247821118f8075b9209cfb2633c57badfdf2a766bd24c8c54d26dc6e",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -607,7 +607,7 @@
         "sha256": "672bb5ffac44b84e422958d8b0fbae45a09af2242ebf763943182e36c41b0d66"
       },
       "local": "skills/security-and-hardening/references/security-checklist.md",
-      "canonical_source": "source/.agents/skills/security-and-hardening/references/security-checklist.md",
+      "canonical_source": "source/skills/security-and-hardening/references/security-checklist.md",
       "source_sha256": "672bb5ffac44b84e422958d8b0fbae45a09af2242ebf763943182e36c41b0d66",
       "payload_sha256": "672bb5ffac44b84e422958d8b0fbae45a09af2242ebf763943182e36c41b0d66",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -624,7 +624,7 @@
         "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
       },
       "local": "skills/systematic-debugging/SKILL.md",
-      "canonical_source": "source/.agents/skills/systematic-debugging/SKILL.md",
+      "canonical_source": "source/skills/systematic-debugging/SKILL.md",
       "source_sha256": "621ebc5e5a514553ffa7e6831f6458e4bfb24234bda719468ae7d3522834e410",
       "payload_sha256": "621ebc5e5a514553ffa7e6831f6458e4bfb24234bda719468ae7d3522834e410",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -641,7 +641,7 @@
         "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e"
       },
       "local": "skills/systematic-debugging/condition-based-waiting-example.ts",
-      "canonical_source": "source/.agents/skills/systematic-debugging/condition-based-waiting-example.ts",
+      "canonical_source": "source/skills/systematic-debugging/condition-based-waiting-example.ts",
       "source_sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
       "payload_sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -658,7 +658,7 @@
         "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26"
       },
       "local": "skills/systematic-debugging/condition-based-waiting.md",
-      "canonical_source": "source/.agents/skills/systematic-debugging/condition-based-waiting.md",
+      "canonical_source": "source/skills/systematic-debugging/condition-based-waiting.md",
       "source_sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
       "payload_sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -675,7 +675,7 @@
         "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7"
       },
       "local": "skills/systematic-debugging/defense-in-depth.md",
-      "canonical_source": "source/.agents/skills/systematic-debugging/defense-in-depth.md",
+      "canonical_source": "source/skills/systematic-debugging/defense-in-depth.md",
       "source_sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
       "payload_sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -692,7 +692,7 @@
         "sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c"
       },
       "local": "skills/systematic-debugging/find-polluter.sh",
-      "canonical_source": "source/.agents/skills/systematic-debugging/find-polluter.sh",
+      "canonical_source": "source/skills/systematic-debugging/find-polluter.sh",
       "source_sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
       "payload_sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -709,7 +709,7 @@
         "sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8"
       },
       "local": "skills/systematic-debugging/root-cause-tracing.md",
-      "canonical_source": "source/.agents/skills/systematic-debugging/root-cause-tracing.md",
+      "canonical_source": "source/skills/systematic-debugging/root-cause-tracing.md",
       "source_sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
       "payload_sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -726,7 +726,7 @@
         "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
       },
       "local": "skills/test-driven-development/SKILL.md",
-      "canonical_source": "source/.agents/skills/test-driven-development/SKILL.md",
+      "canonical_source": "source/skills/test-driven-development/SKILL.md",
       "source_sha256": "095172e7fbf4edf775c77d0deaf5a1dffb916d92b450b11fc0554bd13b873c56",
       "payload_sha256": "095172e7fbf4edf775c77d0deaf5a1dffb916d92b450b11fc0554bd13b873c56",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -743,7 +743,7 @@
         "sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1"
       },
       "local": "skills/test-driven-development/writing-good-tests.md",
-      "canonical_source": "source/.agents/skills/test-driven-development/writing-good-tests.md",
+      "canonical_source": "source/skills/test-driven-development/writing-good-tests.md",
       "source_sha256": "24b66b4052ea85992f027f0608bf47a5ff90469b6f6fc482731ee05531a4ec2f",
       "payload_sha256": "24b66b4052ea85992f027f0608bf47a5ff90469b6f6fc482731ee05531a4ec2f",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -760,7 +760,7 @@
         "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
       },
       "local": "skills/verification-before-completion/SKILL.md",
-      "canonical_source": "source/.agents/skills/verification-before-completion/SKILL.md",
+      "canonical_source": "source/skills/verification-before-completion/SKILL.md",
       "source_sha256": "a6af924113498b6b913f5f274e28ee64d020a3263d5620ae6c6c5143539ed892",
       "payload_sha256": "a6af924113498b6b913f5f274e28ee64d020a3263d5620ae6c6c5143539ed892",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -777,7 +777,7 @@
         "sha256": "ca2b7746c68baaafde06d7f0a47d7972bcfc1a6fbac2236b577aa8530f0a4502"
       },
       "local": "skills/writing-for-agents/SKILL-MECHANICS.md",
-      "canonical_source": "source/.agents/skills/writing-for-agents/SKILL-MECHANICS.md",
+      "canonical_source": "source/skills/writing-for-agents/SKILL-MECHANICS.md",
       "source_sha256": "e46fab2949cfc3c672f940b1d0141cb641c5ee7c2aca02270e3ec012223cce5a",
       "payload_sha256": "e48e087b80c49f997c48fc641feaf1c6dae5e108cb73c9688f734b05f60ad248",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -794,7 +794,7 @@
         "sha256": "6b90406a3e7f604e77532e0736ae4262dc48812e7a63bd4314b21d4759be08f1"
       },
       "local": "skills/writing-for-agents/SKILL.md",
-      "canonical_source": "source/.agents/skills/writing-for-agents/SKILL.md",
+      "canonical_source": "source/skills/writing-for-agents/SKILL.md",
       "source_sha256": "0de3f0ab8f06bc7c56d212f4a5ea922e18fa9554b2167cdb5b8e2033efda4012",
       "payload_sha256": "a7bbf0c1278763060c661e73973465dbc55ca5b5ad99f8c91772c81e22df6e83",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -811,7 +811,7 @@
         "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
       },
       "local": "skills/writing-plans/SKILL.md",
-      "canonical_source": "source/.agents/skills/writing-plans/SKILL.md",
+      "canonical_source": "source/skills/writing-plans/SKILL.md",
       "source_sha256": "138878d7e858c872a5d0647c4ade2aec2711b5753d6019c297ce1358580b48af",
       "payload_sha256": "5d0f7c8522f7257b497618757372b11e921235c2718dc0158a0d54daac17ec07",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -822,7 +822,7 @@
       "name": "docs-sync",
       "origin": "Original organization-authored supporting resource migrated from the reviewed Project Blueprints forms; not an upstream skill or resource import.",
       "local": "skills/docs-sync/assets/readme.md",
-      "canonical_source": "source/.agents/skills/docs-sync/assets/readme.md",
+      "canonical_source": "source/skills/docs-sync/assets/readme.md",
       "source_sha256": "c77f8d7bd12bd3654387628b5c5e9e5b6e7133644c2f66e7bdcd3eca88798c2b",
       "payload_sha256": "c77f8d7bd12bd3654387628b5c5e9e5b6e7133644c2f66e7bdcd3eca88798c2b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -831,34 +831,34 @@
       "name": "monorepo-contract-change",
       "origin": "Original Project Blueprints procedure, authored for the requested scoped skeleton; not an upstream import.",
       "local": "skills/monorepo-contract-change/SKILL.md",
-      "canonical_source": "source/.agents/skills/monorepo-contract-change/SKILL.md",
-      "source_sha256": "aee58fbb8b0a3ff788e8487b1e7f63c7375c8c84dbb6592a43dc759662bda1ea",
-      "payload_sha256": "aee58fbb8b0a3ff788e8487b1e7f63c7375c8c84dbb6592a43dc759662bda1ea",
+      "canonical_source": "source/skills/monorepo-contract-change/SKILL.md",
+      "source_sha256": "8d188b5bcfd789defa9d136ecc47eff4c2b6083282ccbc7f7a9efc122068d34a",
+      "payload_sha256": "8d188b5bcfd789defa9d136ecc47eff4c2b6083282ccbc7f7a9efc122068d34a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "name": "spec-driven-development",
       "origin": "Original Project Blueprints procedure, authored for the requested scoped skeleton; not an upstream import.",
       "local": "skills/spec-driven-development/SKILL.md",
-      "canonical_source": "source/.agents/skills/spec-driven-development/SKILL.md",
-      "source_sha256": "35c4106d9fc34eda2c0d74de40a5a8a37ffd1b0e9f1503613252df0e577a731c",
-      "payload_sha256": "885a8224ea24e05d34458afedb78ce4717205db2d29adaf8ad845e414bcc8188",
+      "canonical_source": "source/skills/spec-driven-development/SKILL.md",
+      "source_sha256": "120cb278cca0fa25fbfa7867baefce1e536ec1638499f2017e3ba569cd0ab5c1",
+      "payload_sha256": "120cb278cca0fa25fbfa7867baefce1e536ec1638499f2017e3ba569cd0ab5c1",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "name": "spec-driven-development",
       "origin": "Original Project Blueprints procedure, authored for the requested scoped skeleton; not an upstream import.",
       "local": "skills/spec-driven-development/assets/change-spec.md",
-      "canonical_source": "source/.agents/skills/spec-driven-development/assets/change-spec.md",
-      "source_sha256": "7db0fdc8d8413fd6c21147ce74c377a38c9d996a2bd7b6eee329b75c96200d8d",
-      "payload_sha256": "7db0fdc8d8413fd6c21147ce74c377a38c9d996a2bd7b6eee329b75c96200d8d",
+      "canonical_source": "source/skills/spec-driven-development/assets/change-spec.md",
+      "source_sha256": "a059d23c19e10e61bf6002f0d5587485b42685d2cc52a634cb808acf08554c37",
+      "payload_sha256": "a059d23c19e10e61bf6002f0d5587485b42685d2cc52a634cb808acf08554c37",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "name": "writing-plans",
       "origin": "Original organization-authored supporting resource migrated from the reviewed Project Blueprints forms; not an upstream skill or resource import.",
       "local": "skills/writing-plans/assets/task-brief.md",
-      "canonical_source": "source/.agents/skills/writing-plans/assets/task-brief.md",
+      "canonical_source": "source/skills/writing-plans/assets/task-brief.md",
       "source_sha256": "4702d07dc9b185f4b78e8aaf9ddb717496d06f60b132dde3fe7945e50cf13b0c",
       "payload_sha256": "4702d07dc9b185f4b78e8aaf9ddb717496d06f60b132dde3fe7945e50cf13b0c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -867,79 +867,79 @@
   "supporting_resources": [
     {
       "local": "references/architecture.md",
-      "canonical_source": "source/.agents/references/architecture.md",
-      "source_sha256": "0996b7537b72ed63748bd288cbacc210eaf0969c7b57a97b2709dd2efec83978",
-      "payload_sha256": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+      "canonical_source": "source/references/architecture.md",
+      "source_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
+      "payload_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "references/development.md",
-      "canonical_source": "source/.agents/references/development.md",
-      "source_sha256": "d3247be5b674a951db7e135ae6dfa2e7adddc1bda993a735a7d07fca0f67f8e6",
-      "payload_sha256": "2167e2cc900c7ee45aa6535d43887398a22b4bd1dbee9807ee2640a7d5cd7de7",
+      "canonical_source": "source/references/development.md",
+      "source_sha256": "cf10af03b16c19faec5635256ff56e07ae0a2a3dbc8e38097fb04a360674d868",
+      "payload_sha256": "cf10af03b16c19faec5635256ff56e07ae0a2a3dbc8e38097fb04a360674d868",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "references/engineering.md",
-      "canonical_source": "source/.agents/references/engineering.md",
-      "source_sha256": "1dad6033ffb06ab9f633e1d562e57c12bf1527a45943807f4599c37038067b1b",
-      "payload_sha256": "f833d988b1679ac140d32f4b7d180e2329094aedc4f909624a43346dc7c3f9ea",
+      "canonical_source": "source/references/engineering.md",
+      "source_sha256": "109d0a535695c1bb8d2fb6a938e94e664852eb5029df9f3d6900ee38c2733418",
+      "payload_sha256": "109d0a535695c1bb8d2fb6a938e94e664852eb5029df9f3d6900ee38c2733418",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "exports/codex/agents/architect.toml",
       "canonical_source": "source/agents/architect.toml",
-      "source_sha256": "18888cac808a6b0d8be0596df10ba543c69b3a9009bcc61bc2be9110e6664b56",
-      "payload_sha256": "18888cac808a6b0d8be0596df10ba543c69b3a9009bcc61bc2be9110e6664b56",
+      "source_sha256": "cb600f54ca3b2299e48d347c3512da2ff66fe40c943a251537d5f48259c5891e",
+      "payload_sha256": "cb600f54ca3b2299e48d347c3512da2ff66fe40c943a251537d5f48259c5891e",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     },
     {
       "local": "agents/architect.md",
       "canonical_source": "source/agents/architect.toml",
-      "source_sha256": "18888cac808a6b0d8be0596df10ba543c69b3a9009bcc61bc2be9110e6664b56",
-      "payload_sha256": "48e7356245d197fceda952731a7831acf08dbb58c0ebffe786b387abd7944c57",
+      "source_sha256": "cb600f54ca3b2299e48d347c3512da2ff66fe40c943a251537d5f48259c5891e",
+      "payload_sha256": "50613debfc5e1dd829bac0b87217ba4b66b46f4d51c4a11c2845f3f1b6638be1",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     },
     {
       "local": "exports/codex/agents/code-reviewer.toml",
       "canonical_source": "source/agents/code-reviewer.toml",
-      "source_sha256": "328d6a0ab3a20e6dad0e5637111e7cc9e39598056396eaa126d079db77d752ef",
-      "payload_sha256": "328d6a0ab3a20e6dad0e5637111e7cc9e39598056396eaa126d079db77d752ef",
+      "source_sha256": "db70191347ed3b068194fe68fafaa802ebc7ddbe361e251d11416b518dca6a1d",
+      "payload_sha256": "db70191347ed3b068194fe68fafaa802ebc7ddbe361e251d11416b518dca6a1d",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     },
     {
       "local": "agents/code-reviewer.md",
       "canonical_source": "source/agents/code-reviewer.toml",
-      "source_sha256": "328d6a0ab3a20e6dad0e5637111e7cc9e39598056396eaa126d079db77d752ef",
-      "payload_sha256": "0e8804353eb799e4b032377f8c9a436ace532fe4f8e344673cafaebede77a15c",
+      "source_sha256": "db70191347ed3b068194fe68fafaa802ebc7ddbe361e251d11416b518dca6a1d",
+      "payload_sha256": "6d01d5d1eee49d6896b963aeb2747bc6b601142813725a796a077cc44151056d",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     },
     {
       "local": "exports/codex/agents/executor.toml",
       "canonical_source": "source/agents/executor.toml",
-      "source_sha256": "a415b548b4c2fc132655e168f43fe67072c0a8cbdffc16c439f93bbf167f53b7",
-      "payload_sha256": "a415b548b4c2fc132655e168f43fe67072c0a8cbdffc16c439f93bbf167f53b7",
+      "source_sha256": "49e1f07fdd17d35a177b671dfc2806563a66842813b3e93ae317e64d0a6a04a6",
+      "payload_sha256": "49e1f07fdd17d35a177b671dfc2806563a66842813b3e93ae317e64d0a6a04a6",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     },
     {
       "local": "agents/executor.md",
       "canonical_source": "source/agents/executor.toml",
-      "source_sha256": "a415b548b4c2fc132655e168f43fe67072c0a8cbdffc16c439f93bbf167f53b7",
-      "payload_sha256": "729ec263037e962d442b20209f080c8a01dc034aec747981f8f155fd19bd6b06",
+      "source_sha256": "49e1f07fdd17d35a177b671dfc2806563a66842813b3e93ae317e64d0a6a04a6",
+      "payload_sha256": "d7100ff31cc2137c9bb7a3353b203a19e566a9d13af51259323b43238d9ca658",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     },
     {
       "local": "exports/codex/agents/verifier.toml",
       "canonical_source": "source/agents/verifier.toml",
-      "source_sha256": "95be735bf64b203b2a3dbcbe2bc3f39c3d6b9601612d5c519dcc1a1302d2d374",
-      "payload_sha256": "95be735bf64b203b2a3dbcbe2bc3f39c3d6b9601612d5c519dcc1a1302d2d374",
+      "source_sha256": "bea8e25d97789e54cd2d52f5abd3f05f25dfdeb13bf0087d1090f78cf77f97e8",
+      "payload_sha256": "bea8e25d97789e54cd2d52f5abd3f05f25dfdeb13bf0087d1090f78cf77f97e8",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     },
     {
       "local": "agents/verifier.md",
       "canonical_source": "source/agents/verifier.toml",
-      "source_sha256": "95be735bf64b203b2a3dbcbe2bc3f39c3d6b9601612d5c519dcc1a1302d2d374",
-      "payload_sha256": "36ca75914b215fd084b7cd5fbcae066f347c832816d69a1a3dc264340c36da20",
+      "source_sha256": "bea8e25d97789e54cd2d52f5abd3f05f25dfdeb13bf0087d1090f78cf77f97e8",
+      "payload_sha256": "781fecb6dd6927cb90029dd6c6ff8d18e965b760b476304288e1a30cf4c60b23",
       "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."
     }
   ],

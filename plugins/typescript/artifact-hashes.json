@@ -2,14 +2,14 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "a894d29174c81d02d971622540510f342cda3e9fd12b7bfc40e15fd0a5d2124e",
-    "DEPENDENCIES.md": "9b510e0f563fa9f37707373c8f13fb63cabb56414f3eae99476bccd3fe61c4a4",
+    ".claude-plugin/plugin.json": "1b65da7871bacc44a0b8ef1c967e053e44434074dbbca4c34433d26dc4c37296",
+    "DEPENDENCIES.md": "0fd4448b6c8e7b033f15ebee3be9059a9e6558c90f34ac83bbeddff658956e49",
     "THIRD-PARTY-NOTICES.md": "519209a81a426f1a0711592ba1fd58273f4c60f8c2c3529bec565497295aa1ee",
-    "plugin.json": "759d827eb8ae1c5dabdd8feee0481641b6b025951b2ac00d9aff798b8cf34df9",
-    "provenance.json": "d2ca72c9bd39e8d0afd7f15f039e97f3d78a9a551d74a85f7a2390301df7a8dd",
-    "references/architecture.md": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
-    "references/development.md": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
-    "references/engineering.md": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
-    "skills/typescript-project-structure/SKILL.md": "c54b75bd0788d6a9a13b82cf99bc5878180ed927b6edd275146e83d730b096bf"
+    "plugin.json": "c829cda92312843aceaf3036636c947ed561750fdd84cb6235e86e1bc5f7d2e3",
+    "provenance.json": "5e6d65588093cc6356701005f68c8c2170f1b38d49f3c488f8449216b14d558f",
+    "references/architecture.md": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
+    "references/development.md": "7238d8f61ae74b4fc63161b320a82d746e311aed387832f03aea25b91153e5c1",
+    "references/engineering.md": "4843e65ffc4118364719c6c2124aa68c8788e046c134c1b44e9089987c0f8c57",
+    "skills/typescript-project-structure/SKILL.md": "630bcc902023a59df1f11e6627dc4478c41ca23c83dad577191721b9ccb7bd94"
   }
 }

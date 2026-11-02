@@ -1,9 +1,9 @@
 # Engineering criteria
 
-Use these criteria for package design, implementation and substantive review. They complement the
-task workflow (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative); the actual task, applicable `AGENTS.md` and owning package's declared contracts take
-precedence. They apply to the template source and generated projects alike. The project README (look up `README.md` in the consuming repository; its current project guidance remains authoritative)
-and native manifests establish current packages and commands; files do not prove tool enforcement or model adherence.
+Use these criteria for package design, implementation and substantive review. They complement the applicable
+task workflow; the actual task, host/project instructions and owning package's declared contracts take precedence.
+Discover current packages and commands from existing project guidance and native manifests; files do not prove tool
+enforcement or model adherence.
 
 ## Responsibility and dependency boundaries
 
@@ -132,7 +132,7 @@ guards, dependencies, loading/error behavior and accessibility. State-only work 
 | Shared/native contract | Every producer/consumer and native environment, seam regressions, compatibility limits and separate review |
 | Deployment or physical behavior | Separately authorized environment-specific evidence; not inferred from software checks |
 
-Use the actual owning package's test, typecheck, lint and build commands declared in its README/native configuration.
+Use the actual owning package's test, typecheck, lint and build commands declared in existing project guidance or native configuration.
 During iteration run focused checks; before completion run the applicable package/repository gates unless execution
 is explicitly excluded, and report every observed failure. If a gate is absent, record that gap rather than inventing
 a passing `check` command or bootstrapping applications merely to verify prose. Missing imports/broken fixtures
@@ -148,8 +148,8 @@ the new variant's success/error/lifecycle behavior. Do not trade malformed-input
 ## Curated source adaptations
 
 Applicable imported and authored skills retain substantive procedures, worked guidance and provenance/license records;
-this section is not a substitute that reduces them to names or links. The catalog (look up `.agents/README.md` in the consuming repository; its current project guidance remains authoritative) routes by actual task
-and native package, not by source author. Preserve applicable design, testing, API, architecture, naming and review
+this section is not a substitute that reduces them to names or links. Select available skills by actual task and native
+package, not by source author. Preserve applicable design, testing, API, architecture, naming and review
 procedures during imports or template updates; a source archive or summary is not their replacement. These neutral
 constraints govern all source families' generic examples; package-specific adaptations belong in the adopted target,
 not in an unrelated wrapper.
@@ -173,7 +173,7 @@ not in an unrelated wrapper.
 - **Imported tooling:** resource closure and source/local hashes are static checks, not source authenticity or runtime proof.
   Host plugin hooks, MCP connections, credentials and personal configurations are not part of a copied skill.
 
-When Rust or firmware is selected, reach its native references and available skills through the project catalog.
+When Rust or firmware is selected, find its native references and available skills through their descriptions or an existing project catalog.
 Do not import a source repository's SDK, transport, hardware or release assumptions as universal language rules.
 
 ## Review and reporting

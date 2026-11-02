@@ -1,9 +1,9 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fastapi",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "FastAPI HTTP, dependency and lifecycle boundaries",
   "author": {
-    "name": "Konglabs"
+    "name": "KongLabs"
   }
 }

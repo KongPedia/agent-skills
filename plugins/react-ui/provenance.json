@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "react-ui",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "sources": [
     {
       "id": "anthropic",
@@ -59,7 +59,7 @@
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
       },
       "local": "licenses/anthropic-LICENSE",
-      "canonical_source": "source/.agents/licenses/anthropic-LICENSE",
+      "canonical_source": "source/licenses/anthropic-LICENSE",
       "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
       "payload_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -76,7 +76,7 @@
         "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
       },
       "local": "licenses/impeccable-LICENSE",
-      "canonical_source": "source/.agents/licenses/impeccable-LICENSE",
+      "canonical_source": "source/licenses/impeccable-LICENSE",
       "source_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
       "payload_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -93,7 +93,7 @@
         "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb"
       },
       "local": "licenses/impeccable-NOTICE.md",
-      "canonical_source": "source/.agents/licenses/impeccable-NOTICE.md",
+      "canonical_source": "source/licenses/impeccable-NOTICE.md",
       "source_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
       "payload_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -110,7 +110,7 @@
         "sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651"
       },
       "local": "licenses/vercel-agent-skills-README.md",
-      "canonical_source": "source/.agents/licenses/vercel-agent-skills-README.md",
+      "canonical_source": "source/licenses/vercel-agent-skills-README.md",
       "source_sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651",
       "payload_sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -127,7 +127,7 @@
         "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
       },
       "local": "licenses/vercel-web-interface-guidelines-LICENSE",
-      "canonical_source": "source/.agents/licenses/vercel-web-interface-guidelines-LICENSE",
+      "canonical_source": "source/licenses/vercel-web-interface-guidelines-LICENSE",
       "source_sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2",
       "payload_sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -144,7 +144,7 @@
         "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
       },
       "local": "skills/frontend-design/LICENSE.txt",
-      "canonical_source": "source/.agents/skills/frontend-design/LICENSE.txt",
+      "canonical_source": "source/skills/frontend-design/LICENSE.txt",
       "source_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
       "payload_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -161,7 +161,7 @@
         "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
       },
       "local": "skills/frontend-design/SKILL.md",
-      "canonical_source": "source/.agents/skills/frontend-design/SKILL.md",
+      "canonical_source": "source/skills/frontend-design/SKILL.md",
       "source_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
       "payload_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -178,7 +178,7 @@
         "sha256": "5dee7a723f4a6d9f66801ca00d8a42ef13a527ca9e9beef402b11ec82a5aa2bf"
       },
       "local": "skills/impeccable/SKILL.md",
-      "canonical_source": "source/.agents/skills/impeccable/SKILL.md",
+      "canonical_source": "source/skills/impeccable/SKILL.md",
       "source_sha256": "a57de157c8e09fb901957941e70d743bca7c20fd1004206a9ec0b2f26a1d7bbd",
       "payload_sha256": "a57de157c8e09fb901957941e70d743bca7c20fd1004206a9ec0b2f26a1d7bbd",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -195,7 +195,7 @@
         "sha256": "a87903b0b1a0cfe2a7870a6baf925617a78b63ddea81d2c0aad1d3c1892eb828"
       },
       "local": "skills/impeccable/reference/audit.md",
-      "canonical_source": "source/.agents/skills/impeccable/reference/audit.md",
+      "canonical_source": "source/skills/impeccable/reference/audit.md",
       "source_sha256": "e64e596c3dccb93bab1a70470e40d205a6fd8315b459f88dac01fb8186ba2d70",
       "payload_sha256": "e64e596c3dccb93bab1a70470e40d205a6fd8315b459f88dac01fb8186ba2d70",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -212,7 +212,7 @@
         "sha256": "4cd085aa5c6fd75c859b5ff5c0ce238b456b1f2765ab7a76d56dbb3f31a9bda9"
       },
       "local": "skills/impeccable/reference/craft-floor.md",
-      "canonical_source": "source/.agents/skills/impeccable/reference/craft-floor.md",
+      "canonical_source": "source/skills/impeccable/reference/craft-floor.md",
       "source_sha256": "55e371ebb9920c769c4d399652b97f43f8e56861aab4dfd1b3f3fec5c03d8ae1",
       "payload_sha256": "55e371ebb9920c769c4d399652b97f43f8e56861aab4dfd1b3f3fec5c03d8ae1",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -229,7 +229,7 @@
         "sha256": "ae9f1a6eb893e93c69b6d5cee0ed4a2e408c9e4abeec70b26dd693fa298f386d"
       },
       "local": "skills/impeccable/reference/critique.md",
-      "canonical_source": "source/.agents/skills/impeccable/reference/critique.md",
+      "canonical_source": "source/skills/impeccable/reference/critique.md",
       "source_sha256": "7ed90dadf13dc630bb5cba578691c1c82dc36ef370e54d83a532b6e9a8de9f0c",
       "payload_sha256": "7ed90dadf13dc630bb5cba578691c1c82dc36ef370e54d83a532b6e9a8de9f0c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -246,7 +246,7 @@
         "sha256": "efaabafb5e323f35a3d9e277ea6078f7d0a45bcce10d5e5f219c0ac79fcc7834"
       },
       "local": "skills/impeccable/reference/harden.md",
-      "canonical_source": "source/.agents/skills/impeccable/reference/harden.md",
+      "canonical_source": "source/skills/impeccable/reference/harden.md",
       "source_sha256": "03e63bf24554fbc6445c1776f7ad0d677bf183bd532d6f3fbec2d914259d27bc",
       "payload_sha256": "03e63bf24554fbc6445c1776f7ad0d677bf183bd532d6f3fbec2d914259d27bc",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -263,7 +263,7 @@
         "sha256": "7573cb221807d138f235264841758e6b40e73123c027ec7918127a53fb090262"
       },
       "local": "skills/impeccable/reference/operate.md",
-      "canonical_source": "source/.agents/skills/impeccable/reference/operate.md",
+      "canonical_source": "source/skills/impeccable/reference/operate.md",
       "source_sha256": "c28c4c8b894ee767dc28a19692488495659abb492f11b8a2ec75ab7dc32459d5",
       "payload_sha256": "c28c4c8b894ee767dc28a19692488495659abb492f11b8a2ec75ab7dc32459d5",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -280,7 +280,7 @@
         "sha256": "8b4516afa38c4b690ea6fb466decf23e43392fdb3e4da72c85480803691fbe16"
       },
       "local": "skills/impeccable/reference/polish.md",
-      "canonical_source": "source/.agents/skills/impeccable/reference/polish.md",
+      "canonical_source": "source/skills/impeccable/reference/polish.md",
       "source_sha256": "4f7440aa8b9072919b1783a19ae4aecb9a10276a5383d3cffcea351a9f20bf5d",
       "payload_sha256": "4f7440aa8b9072919b1783a19ae4aecb9a10276a5383d3cffcea351a9f20bf5d",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -297,7 +297,7 @@
         "sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02"
       },
       "local": "skills/vercel-composition-patterns/SKILL.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/SKILL.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/SKILL.md",
       "source_sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02",
       "payload_sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -314,7 +314,7 @@
         "sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5"
       },
       "local": "skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
       "source_sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5",
       "payload_sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -331,7 +331,7 @@
         "sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457"
       },
       "local": "skills/vercel-composition-patterns/rules/architecture-compound-components.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/architecture-compound-components.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/architecture-compound-components.md",
       "source_sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457",
       "payload_sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -348,7 +348,7 @@
         "sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad"
       },
       "local": "skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
       "source_sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad",
       "payload_sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -365,7 +365,7 @@
         "sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e"
       },
       "local": "skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
       "source_sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e",
       "payload_sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -382,7 +382,7 @@
         "sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227"
       },
       "local": "skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
       "source_sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227",
       "payload_sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -399,7 +399,7 @@
         "sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3"
       },
       "local": "skills/vercel-composition-patterns/rules/state-context-interface.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/state-context-interface.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/state-context-interface.md",
       "source_sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3",
       "payload_sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -416,7 +416,7 @@
         "sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3"
       },
       "local": "skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
       "source_sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3",
       "payload_sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -433,7 +433,7 @@
         "sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b"
       },
       "local": "skills/vercel-composition-patterns/rules/state-lift-state.md",
-      "canonical_source": "source/.agents/skills/vercel-composition-patterns/rules/state-lift-state.md",
+      "canonical_source": "source/skills/vercel-composition-patterns/rules/state-lift-state.md",
       "source_sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b",
       "payload_sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -450,7 +450,7 @@
         "sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9"
       },
       "local": "skills/vercel-react-best-practices/SKILL.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/SKILL.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/SKILL.md",
       "source_sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9",
       "payload_sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -467,7 +467,7 @@
         "sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
       "source_sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
       "payload_sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -484,7 +484,7 @@
         "sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
       "source_sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
       "payload_sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -501,7 +501,7 @@
         "sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-init-once.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/advanced-init-once.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-init-once.md",
       "source_sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
       "payload_sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -518,7 +518,7 @@
         "sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-use-latest.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
       "source_sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
       "payload_sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -535,7 +535,7 @@
         "sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42"
       },
       "local": "skills/vercel-react-best-practices/rules/async-api-routes.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/async-api-routes.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-api-routes.md",
       "source_sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
       "payload_sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -552,7 +552,7 @@
         "sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c"
       },
       "local": "skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
       "source_sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
       "payload_sha256": "35cf36fe8acba53a1db56c2f2183678731d6d2e33f8e76520765f3a1729c90ae",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -569,7 +569,7 @@
         "sha256": "2791408daed30eda451bf779d5520add2655822ca2c0138d8e252f483a4b443e"
       },
       "local": "skills/vercel-react-best-practices/rules/async-defer-await.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/async-defer-await.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-defer-await.md",
       "source_sha256": "2791408daed30eda451bf779d5520add2655822ca2c0138d8e252f483a4b443e",
       "payload_sha256": "62bbd2122d0569e6489c6f5474af5ea6385a038361d13239d52ce3d313477ef9",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -586,7 +586,7 @@
         "sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a"
       },
       "local": "skills/vercel-react-best-practices/rules/async-dependencies.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/async-dependencies.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-dependencies.md",
       "source_sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
       "payload_sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -603,7 +603,7 @@
         "sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961"
       },
       "local": "skills/vercel-react-best-practices/rules/async-parallel.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/async-parallel.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-parallel.md",
       "source_sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
       "payload_sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -620,7 +620,7 @@
         "sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4"
       },
       "local": "skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
       "source_sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4",
       "payload_sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -637,7 +637,7 @@
         "sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
       "source_sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
       "payload_sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -654,7 +654,7 @@
         "sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
       "source_sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
       "payload_sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -671,7 +671,7 @@
         "sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-conditional.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/bundle-conditional.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-conditional.md",
       "source_sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
       "payload_sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -688,7 +688,7 @@
         "sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
       "source_sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
       "payload_sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -705,7 +705,7 @@
         "sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
       "source_sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
       "payload_sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -722,7 +722,7 @@
         "sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-preload.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/bundle-preload.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-preload.md",
       "source_sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
       "payload_sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -739,7 +739,7 @@
         "sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74"
       },
       "local": "skills/vercel-react-best-practices/rules/client-event-listeners.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/client-event-listeners.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-event-listeners.md",
       "source_sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74",
       "payload_sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -756,7 +756,7 @@
         "sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88"
       },
       "local": "skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
       "source_sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
       "payload_sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -773,7 +773,7 @@
         "sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52"
       },
       "local": "skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
       "source_sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52",
       "payload_sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -790,7 +790,7 @@
         "sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3"
       },
       "local": "skills/vercel-react-best-practices/rules/client-swr-dedup.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
       "source_sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
       "payload_sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -807,7 +807,7 @@
         "sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b"
       },
       "local": "skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
       "source_sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b",
       "payload_sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -824,7 +824,7 @@
         "sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf"
       },
       "local": "skills/vercel-react-best-practices/rules/js-cache-function-results.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
       "source_sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf",
       "payload_sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -841,7 +841,7 @@
         "sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311"
       },
       "local": "skills/vercel-react-best-practices/rules/js-cache-property-access.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
       "source_sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
       "payload_sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -858,7 +858,7 @@
         "sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc"
       },
       "local": "skills/vercel-react-best-practices/rules/js-cache-storage.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-cache-storage.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-cache-storage.md",
       "source_sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
       "payload_sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -875,7 +875,7 @@
         "sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746"
       },
       "local": "skills/vercel-react-best-practices/rules/js-combine-iterations.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
       "source_sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
       "payload_sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -892,7 +892,7 @@
         "sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0"
       },
       "local": "skills/vercel-react-best-practices/rules/js-early-exit.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-early-exit.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-early-exit.md",
       "source_sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0",
       "payload_sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -909,7 +909,7 @@
         "sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0"
       },
       "local": "skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
       "source_sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
       "payload_sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -926,7 +926,7 @@
         "sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4"
       },
       "local": "skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
       "source_sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
       "payload_sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -943,7 +943,7 @@
         "sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391"
       },
       "local": "skills/vercel-react-best-practices/rules/js-index-maps.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-index-maps.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-index-maps.md",
       "source_sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
       "payload_sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -960,7 +960,7 @@
         "sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624"
       },
       "local": "skills/vercel-react-best-practices/rules/js-length-check-first.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-length-check-first.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-length-check-first.md",
       "source_sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
       "payload_sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -977,7 +977,7 @@
         "sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a"
       },
       "local": "skills/vercel-react-best-practices/rules/js-min-max-loop.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
       "source_sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a",
       "payload_sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -994,7 +994,7 @@
         "sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32"
       },
       "local": "skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
       "source_sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
       "payload_sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1011,7 +1011,7 @@
         "sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b"
       },
       "local": "skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
       "source_sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
       "payload_sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1028,7 +1028,7 @@
         "sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8"
       },
       "local": "skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
       "source_sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
       "payload_sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1045,7 +1045,7 @@
         "sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-activity.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-activity.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-activity.md",
       "source_sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
       "payload_sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1062,7 +1062,7 @@
         "sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
       "source_sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e",
       "payload_sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1079,7 +1079,7 @@
         "sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
       "source_sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
       "payload_sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1096,7 +1096,7 @@
         "sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
       "source_sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
       "payload_sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1113,7 +1113,7 @@
         "sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
       "source_sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
       "payload_sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1130,7 +1130,7 @@
         "sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
       "source_sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259",
       "payload_sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1147,7 +1147,7 @@
         "sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
       "source_sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
       "payload_sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1164,7 +1164,7 @@
         "sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
       "source_sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
       "payload_sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1181,7 +1181,7 @@
         "sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
       "source_sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
       "payload_sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1198,7 +1198,7 @@
         "sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
       "source_sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
       "payload_sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1215,7 +1215,7 @@
         "sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
       "source_sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2",
       "payload_sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1232,7 +1232,7 @@
         "sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
       "source_sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
       "payload_sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1249,7 +1249,7 @@
         "sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-dependencies.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
       "source_sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
       "payload_sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1266,7 +1266,7 @@
         "sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
       "source_sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
       "payload_sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1283,7 +1283,7 @@
         "sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-derived-state.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
       "source_sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
       "payload_sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1300,7 +1300,7 @@
         "sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
       "source_sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415",
       "payload_sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1317,7 +1317,7 @@
         "sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
       "source_sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2",
       "payload_sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1334,7 +1334,7 @@
         "sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
       "source_sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
       "payload_sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1351,7 +1351,7 @@
         "sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-memo.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-memo.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-memo.md",
       "source_sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
       "payload_sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1368,7 +1368,7 @@
         "sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
       "source_sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
       "payload_sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1385,7 +1385,7 @@
         "sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
       "source_sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
       "payload_sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1402,7 +1402,7 @@
         "sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
       "source_sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
       "payload_sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1419,7 +1419,7 @@
         "sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
       "source_sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
       "payload_sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1436,7 +1436,7 @@
         "sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-transitions.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-transitions.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-transitions.md",
       "source_sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
       "payload_sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1453,7 +1453,7 @@
         "sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
       "source_sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
       "payload_sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1470,7 +1470,7 @@
         "sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
       "source_sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
       "payload_sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1487,7 +1487,7 @@
         "sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d"
       },
       "local": "skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
       "source_sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d",
       "payload_sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1504,7 +1504,7 @@
         "sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da"
       },
       "local": "skills/vercel-react-best-practices/rules/server-auth-actions.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-auth-actions.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-auth-actions.md",
       "source_sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da",
       "payload_sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1521,7 +1521,7 @@
         "sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f"
       },
       "local": "skills/vercel-react-best-practices/rules/server-cache-lru.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-cache-lru.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-cache-lru.md",
       "source_sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
       "payload_sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1538,7 +1538,7 @@
         "sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c"
       },
       "local": "skills/vercel-react-best-practices/rules/server-cache-react.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-cache-react.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-cache-react.md",
       "source_sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
       "payload_sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1555,7 +1555,7 @@
         "sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37"
       },
       "local": "skills/vercel-react-best-practices/rules/server-dedup-props.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-dedup-props.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-dedup-props.md",
       "source_sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
       "payload_sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1572,7 +1572,7 @@
         "sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f"
       },
       "local": "skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
       "source_sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
       "payload_sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1589,7 +1589,7 @@
         "sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7"
       },
       "local": "skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
       "source_sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
       "payload_sha256": "3bdd511bd8b408b7d9be735e80c8a92f2e46496423daac1fae509155498099a8",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1606,7 +1606,7 @@
         "sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472"
       },
       "local": "skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
       "source_sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
       "payload_sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1623,7 +1623,7 @@
         "sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3"
       },
       "local": "skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
       "source_sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
       "payload_sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1640,7 +1640,7 @@
         "sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f"
       },
       "local": "skills/vercel-react-best-practices/rules/server-serialization.md",
-      "canonical_source": "source/.agents/skills/vercel-react-best-practices/rules/server-serialization.md",
+      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-serialization.md",
       "source_sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
       "payload_sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1657,7 +1657,7 @@
         "sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880"
       },
       "local": "skills/web-design-guidelines/SKILL.md",
-      "canonical_source": "source/.agents/skills/web-design-guidelines/SKILL.md",
+      "canonical_source": "source/skills/web-design-guidelines/SKILL.md",
       "source_sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880",
       "payload_sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -1674,7 +1674,7 @@
         "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
       },
       "local": "skills/web-design-guidelines/references/web-interface-guidelines.md",
-      "canonical_source": "source/.agents/skills/web-design-guidelines/references/web-interface-guidelines.md",
+      "canonical_source": "source/skills/web-design-guidelines/references/web-interface-guidelines.md",
       "source_sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234",
       "payload_sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."

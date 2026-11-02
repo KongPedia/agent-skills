@@ -29,5 +29,5 @@ Nest major and HTTP adapter; framework examples are not an instruction to upgrad
 ## Completion
 
 Report the affected route/provider/module contracts, observed package checks and gaps. Keep test I/O isolated from
-production and physical devices. Do not infer product readiness from a starter health test. Installation, upgrades,
+production and physical devices. Do not infer product readiness from a health test. Installation, upgrades,
 external integrations, publishing and deployment require their own authorized scope.

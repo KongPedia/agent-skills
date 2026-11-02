@@ -1,12 +1,12 @@
-# Konglabs Agent Skills
+# KongLabs Agent Skills
 
 One versioned organization source for reusable engineering skills and **optional** advisory hooks. Language and
 framework bundles are folders in this repository, not separate repositories and not one repository per combination.
 
-**Private first-release destinations:** [KongPedia/agent-skills](https://github.com/KongPedia/agent-skills) and
+**First-release repositories:** [KongPedia/agent-skills](https://github.com/KongPedia/agent-skills) and
 [KongPedia/project-blueprints](https://github.com/KongPedia/project-blueprints), with matching `v0.1.0` tags/releases.
 Existing releases do not authorize new publication or visibility changes. A marketplace is a plugin index, not a public
-store: this checkout or the authenticated private Git source works without a directory listing.
+store: this checkout or a reviewed Git source works without a directory listing.
 
 ## First-run recovery: plugin not found
 
@@ -58,10 +58,10 @@ commit just to receive a refreshed, already-enabled bundle on that host.
 
 ```text
 catalog.json                       # One bundle owner per skill; version and composition metadata
-source/.agents/skills/             # Canonical complete procedures and resources; edit these
-source/.agents/skill-sources.json   # Immutable upstream/source provenance and local source hashes
-source/.agents/licenses/           # Imported license evidence
-source/.agents/references/         # Canonical shared engineering/methodology/worked references
+source/skills/                     # Canonical complete procedures and resources; edit these
+source/skill-sources.json          # Immutable upstream/source provenance and local source hashes
+source/licenses/                   # Imported license evidence
+source/references/                 # Canonical shared engineering/methodology/worked references
 source/agents/*.toml               # Canonical model-free generic roles
 hooks/session-start.sh             # Canonical optional printf-only advisory
 scripts/build_plugins.py           # Standard-library deterministic builder and --check
@@ -70,9 +70,18 @@ plugins/<bundle>/                  # Generated, closed installed payloads; do no
 .claude-plugin/marketplace.json    # Generated Claude marketplace adapter
 ```
 
+`source/skills/` holds the maintained skill source, not a host skill-discovery directory. The root `.agents/plugins/`
+contains the Codex marketplace index, while each generated `plugins/<bundle>/` is a separate installable package
+with its own root `plugin.json` and `skills/`. Project-local `.agents/skills/` is a separate discovery mechanism,
+not a required copy of the shared skills. Each plugin's root `plugin.json` is the portable format; a `.codex-plugin/plugin.json`
+is an optional Codex compatibility manifest rather than a required second source.
+
 Generated payloads are intended Git-managed release artifacts, not a second hand-maintained library. The builder preserves full
 procedure bodies and resources, rewrites only declared location-dependent links, retains licenses, and records
 upstream/source/payload hashes separately. Unknown outward references fail rather than silently disappearing.
+Imported skill files retain their reviewed content; authored skills use consuming-project conventions. Imported
+procedures and shared references may still contain specific paths or assumptions, so review them against the actual
+project. Static checks do not guarantee skill discovery, invocation or model adherence.
 
 ## Choose a project, not a list of skills
 
@@ -106,11 +115,11 @@ Copier bootstrap instructions live in the template's adoption documentation, not
 
 ## Shared methods, project-local contracts
 
-Full development, architecture and robotics references live under `source/.agents/references/`, reached from their
+Full development, architecture and robotics references live under `source/references/`, reached from their
 common/robotics procedures. They retain worked cases and decision criteria, not replacement summaries. Source-first
 investigation, TDD/SDD and selective DDD are shared procedures; generated product docs retain real structure/specs/ADRs
-and local authority, not another methodology manual. Monorepos use root `apps/` and `packages/`; each package keeps its
-native `src/`. Single packages retain their native layout.
+and local authority, not another methodology manual. Monorepos and single packages retain their own native layout
+and package boundaries rather than adopting a required folder tree from this repository.
 
 ## Install, activate and update deliberately
 
@@ -142,12 +151,14 @@ uv run --locked pytest
 The builder has no runtime dependencies. Python and pytest are maintainer tools only; a Next.js consumer does not
 need Python to use the skills or the optional shell hook. Do not run product applications or hardware to validate prose.
 
-Private/team use still must honor source licensing and access rights. Public publication, if later requested, needs
-original-material license selection and a secret/proprietary-scope audit; local checks do not grant that clearance.
+All use must honor source licensing and access rights. The Git repository is public, but no blanket license is selected
+for original material. A new release needs task-specific authorization and license/proprietary-scope review; local
+checks do not grant that clearance.
 
 - [Release and rollback](docs/releases.md)
 - [Source provenance and transformation](docs/provenance.md)
 - [Host configuration and update boundaries](docs/hosts.md)
+- [Frontend design and review workflows](docs/frontend-workflows.md)
 - [Upstream selection audit](docs/upstream-audit.md)
 - [Maintainer contract](AGENTS.md)
 

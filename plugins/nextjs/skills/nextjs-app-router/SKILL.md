@@ -5,8 +5,9 @@ description: Implement or review a Next.js App Router package's server/client bo
 
 # Next.js App Router
 
-Start with the owning package's manifest, lock, `src/app` routes and scoped instructions. Read relevant installed-version
-docs from that package's `node_modules/next/dist/docs/` when available, not a hoisted path guessed from the monorepo root.
+Start with the owning package's manifest and lock where present, actual App Router routes (`app/` or `src/app/`) and
+scoped instructions. Read relevant installed-version docs from that package's `node_modules/next/dist/docs/` when
+available, not a hoisted path guessed from the monorepo root.
 Next.js 16.2+ bundles documentation; 16.3+ supports managed instructions. Confirm behavior for the actual installed version
 using the [official agent guide](https://nextjs.org/docs/app/guides/ai-agents).
 

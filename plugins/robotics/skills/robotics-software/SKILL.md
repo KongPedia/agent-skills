@@ -9,7 +9,8 @@ Start at the owning package's README, actual SDK/transport contract, configurati
 original project guidance, not a ROS, Dora, Zenoh or robot SDK integration. A robotics selection does not install a
 framework, establish a real-time guarantee or authorize physical operations. Keep an existing integration unless
 the requested change requires replacing it. For a coherent Python/backend/UI example, read
-[the robotics use case](../../references/robotics.md) when designing those combined boundaries.
+[the robotics use case](../../references/robotics.md) when designing those combined boundaries; its example paths and
+layout do not override the consuming project's actual conventions.
 
 ## Contract-first procedure
 
@@ -32,7 +33,7 @@ the requested change requires replacing it. For a coherent Python/backend/UI exa
    remote action stopped; report an uncertain outcome and reconcile authoritative state before retrying a side effect.
 5. **Define observable results.** Distinguish rejected, admitted/queued, executing, succeeded, failed and unknown only
    where supported by the real protocol. A queued ACK is not physical completion. Preserve correlation, deadline,
-   idempotency and terminal-result semantics across the Python agent, API and UI; do not fabricate a terminal success.
+   idempotency and terminal-result semantics across the participating components; do not fabricate a terminal success.
 6. **Verify without actuation.** Use deterministic fakes and recorded/replayed fixtures for conversions, malformed or
    out-of-range values, drop, duplicate, reorder, stale data, clock reset, owner expiry, reconnect, cancellation and
    cleanup failure. Cover existing consumers and changed adapter behavior, not just an import or happy-path ACK.

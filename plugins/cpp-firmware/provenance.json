@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "cpp-firmware",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "sources": [
     {
       "id": "jeffallan",
@@ -37,7 +37,7 @@
         "sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241"
       },
       "local": "licenses/jeffallan-LICENSE",
-      "canonical_source": "source/.agents/licenses/jeffallan-LICENSE",
+      "canonical_source": "source/licenses/jeffallan-LICENSE",
       "source_sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
       "payload_sha256": "06dcddbb6908a0c6dd4a9e8ec822eea41d5a460a53089fecccc8a68049e99241",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -54,7 +54,7 @@
         "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
       },
       "local": "licenses/wshobson-LICENSE",
-      "canonical_source": "source/.agents/licenses/wshobson-LICENSE",
+      "canonical_source": "source/licenses/wshobson-LICENSE",
       "source_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
       "payload_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -71,7 +71,7 @@
         "sha256": "d1041af2bbfb5dfc2c82cf167860cbf26fa8654b8df7ba5109797b5c0d8f5909"
       },
       "local": "skills/embedded-systems/SKILL.md",
-      "canonical_source": "source/.agents/skills/embedded-systems/SKILL.md",
+      "canonical_source": "source/skills/embedded-systems/SKILL.md",
       "source_sha256": "c139324c2e171bdb45550d7551a5013289dbc39a23a59d9b128de5bae52d381c",
       "payload_sha256": "c139324c2e171bdb45550d7551a5013289dbc39a23a59d9b128de5bae52d381c",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -88,7 +88,7 @@
         "sha256": "3697ec9d7d5694d74096f9f7202d9b77b903b23b8dbd381b74b09126fdaf0caf"
       },
       "local": "skills/embedded-systems/references/communication-protocols.md",
-      "canonical_source": "source/.agents/skills/embedded-systems/references/communication-protocols.md",
+      "canonical_source": "source/skills/embedded-systems/references/communication-protocols.md",
       "source_sha256": "696c692b1aca6e389dd40b9ed28cc961a6eb3a05b51cc944ed8c52925574e5bd",
       "payload_sha256": "696c692b1aca6e389dd40b9ed28cc961a6eb3a05b51cc944ed8c52925574e5bd",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -105,7 +105,7 @@
         "sha256": "271bd099c0ce1d3ed7a9034ac6bb4ae4795de825a67abcf0201324536f179a7d"
       },
       "local": "skills/embedded-systems/references/memory-optimization.md",
-      "canonical_source": "source/.agents/skills/embedded-systems/references/memory-optimization.md",
+      "canonical_source": "source/skills/embedded-systems/references/memory-optimization.md",
       "source_sha256": "ce7884ca3e14d39d0a51c3a22109cfb303e0634754936f3fdd69dc7e1fd3fdc9",
       "payload_sha256": "ce7884ca3e14d39d0a51c3a22109cfb303e0634754936f3fdd69dc7e1fd3fdc9",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -122,7 +122,7 @@
         "sha256": "0361bf7eaf0c2c0bb52df1be3fbded65c18cbaa9fd1aab6c5db88386ed70dceb"
       },
       "local": "skills/embedded-systems/references/microcontroller-programming.md",
-      "canonical_source": "source/.agents/skills/embedded-systems/references/microcontroller-programming.md",
+      "canonical_source": "source/skills/embedded-systems/references/microcontroller-programming.md",
       "source_sha256": "531e1423a2fcec2ca2d38c66f288485ecde057349e1ed12df4f6a71bd2a71881",
       "payload_sha256": "531e1423a2fcec2ca2d38c66f288485ecde057349e1ed12df4f6a71bd2a71881",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -139,7 +139,7 @@
         "sha256": "54186ec70eb24cba60bc5426abc5ad74e8d57958462f3f8686199f4760445327"
       },
       "local": "skills/embedded-systems/references/power-optimization.md",
-      "canonical_source": "source/.agents/skills/embedded-systems/references/power-optimization.md",
+      "canonical_source": "source/skills/embedded-systems/references/power-optimization.md",
       "source_sha256": "edb1a1a2c27c360e277dc0349e523af0251a58f1503d86f7399a661bbb32e4ea",
       "payload_sha256": "edb1a1a2c27c360e277dc0349e523af0251a58f1503d86f7399a661bbb32e4ea",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -156,7 +156,7 @@
         "sha256": "39b8debafb19d471e49e83b74d8098a497b73d3e02b949a4860385c1b13258bb"
       },
       "local": "skills/embedded-systems/references/rtos-patterns.md",
-      "canonical_source": "source/.agents/skills/embedded-systems/references/rtos-patterns.md",
+      "canonical_source": "source/skills/embedded-systems/references/rtos-patterns.md",
       "source_sha256": "d84515ac17031aacf025eb833d42f28943efef047879b546d35b3db57cb0c3fa",
       "payload_sha256": "d84515ac17031aacf025eb833d42f28943efef047879b546d35b3db57cb0c3fa",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -173,7 +173,7 @@
         "sha256": "63a43567f4656199946939d3894ba2fc0b7c61c77640f2b1f52c65e4159d67af"
       },
       "local": "skills/memory-safety-patterns/SKILL.md",
-      "canonical_source": "source/.agents/skills/memory-safety-patterns/SKILL.md",
+      "canonical_source": "source/skills/memory-safety-patterns/SKILL.md",
       "source_sha256": "8cfe5997826228741f4cac7e886f38c7dd91fa91f77e1fe9f52960068131ee34",
       "payload_sha256": "8cfe5997826228741f4cac7e886f38c7dd91fa91f77e1fe9f52960068131ee34",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -190,7 +190,7 @@
         "sha256": "91d450b3a66444872d56ce4061e4126de416510172494fe7f6cf4c937ca1b882"
       },
       "local": "skills/memory-safety-patterns/references/details.md",
-      "canonical_source": "source/.agents/skills/memory-safety-patterns/references/details.md",
+      "canonical_source": "source/skills/memory-safety-patterns/references/details.md",
       "source_sha256": "50ea510e76ae9feb328fa6ab6ede7a857e18d7fa3446b92cd7a588b4813b33c6",
       "payload_sha256": "50ea510e76ae9feb328fa6ab6ede7a857e18d7fa3446b92cd7a588b4813b33c6",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
@@ -200,30 +200,30 @@
   "supporting_resources": [
     {
       "local": "references/architecture.md",
-      "canonical_source": "source/.agents/references/architecture.md",
-      "source_sha256": "0996b7537b72ed63748bd288cbacc210eaf0969c7b57a97b2709dd2efec83978",
-      "payload_sha256": "006aa65bac14c53e31b27ffdcb5dc98b851f0755f35f541f5ab8ed7d345c2243",
+      "canonical_source": "source/references/architecture.md",
+      "source_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
+      "payload_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "references/cpp-firmware.md",
-      "canonical_source": "source/.agents/references/cpp-firmware.md",
+      "canonical_source": "source/references/cpp-firmware.md",
       "source_sha256": "3ca63b29c6554b1da42d9d49aef243b654c91258a1bf210138ab5a5d039a7d34",
       "payload_sha256": "3ca63b29c6554b1da42d9d49aef243b654c91258a1bf210138ab5a5d039a7d34",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "references/development.md",
-      "canonical_source": "source/.agents/references/development.md",
-      "source_sha256": "d3247be5b674a951db7e135ae6dfa2e7adddc1bda993a735a7d07fca0f67f8e6",
-      "payload_sha256": "98a0a1408014a4d0ff6bc0860a3766b99757a7ff5f1057911d3389d012ffe817",
+      "canonical_source": "source/references/development.md",
+      "source_sha256": "cf10af03b16c19faec5635256ff56e07ae0a2a3dbc8e38097fb04a360674d868",
+      "payload_sha256": "7238d8f61ae74b4fc63161b320a82d746e311aed387832f03aea25b91153e5c1",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     },
     {
       "local": "references/engineering.md",
-      "canonical_source": "source/.agents/references/engineering.md",
-      "source_sha256": "1dad6033ffb06ab9f633e1d562e57c12bf1527a45943807f4599c37038067b1b",
-      "payload_sha256": "f626353a93c04bd24e9b1aaf6f3cbc7e6836b689d9baa67bbfbcec2e433b1ccd",
+      "canonical_source": "source/references/engineering.md",
+      "source_sha256": "109d0a535695c1bb8d2fb6a938e94e664852eb5029df9f3d6900ee38c2733418",
+      "payload_sha256": "4843e65ffc4118364719c6c2124aa68c8788e046c134c1b44e9089987c0f8c57",
       "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
     }
   ],
