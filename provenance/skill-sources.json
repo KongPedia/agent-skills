@@ -681,8 +681,8 @@
       "source_id": "anthropic",
       "source": "plugins/frontend-design/skills/frontend-design/SKILL.md",
       "upstream_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
-      "sha256": "656e1852946fa21bba7c781ff97eb3ba7271012c6eae17e0091376d6deda9a81",
-      "modifications": " Added same-bundle conditional UI UX Pro Max pointer for scoped visual/UX work; preserve existing project design and behavior.",
+      "sha256": "2c1506c51de8a49833dcf87068cd6de71e5fb8b92642869241371bcf5f4a8ced",
+      "modifications": "Added same-bundle conditional UI UX Pro Max pointer for scoped visual/UX work; preserve existing project design and behavior. Add a prominent file-carried modification notice for these local routing/scope changes under the retained Apache-2.0 terms.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",

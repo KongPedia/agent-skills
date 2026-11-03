@@ -6,6 +6,9 @@ license: Complete terms in LICENSE.txt
 
 # Frontend Design
 
+> Modified by KongLabs for this distribution: added conditional UI UX Pro Max routing and consuming-project
+> design/behavior safeguards. The upstream procedure is otherwise retained.
+
 For visual UI creation, redesign or polish, also read [UI UX Pro Max](../ui-ux-pro-max/SKILL.md) before
 choosing layout, typography, color or interaction details. Use its focused local guidance within the authorized
 scope; preserve the consuming project's existing design system, content and behavior unless change is requested.
