@@ -68,6 +68,11 @@ codex plugin marketplace add KongPedia/agent-skills --ref v0.1.0
 claude plugin marketplace add 'KongPedia/agent-skills#v0.1.0'
 ```
 
+This is a historical first-release pin, not an instruction to install the current working tree. A frozen
+`v0.1.0` does not follow later skill or layout changes. To inspect pending local changes, use the reviewed local
+checkout described above; do not assume a new version in `catalog.json` has already been committed or published
+as a Git tag. Existing same-name registrations still require source/cache inspection before any deliberate change.
+
 Do not run this as an automatic replacement for an existing same-name registration. Private Git credentials/access
 use normal host/Git mechanisms; the URLs do not grant access or prove a successful fetch, and credentials do not belong
 in template answers. A project's advanced
@@ -81,6 +86,17 @@ a Copier repair task. Automatic installation uses the already established host s
 left empty. `stable` is a reviewed moving channel only when maintained, not an independently verified payload lock.
 Neither local nor private Git delivery requires public visibility or a directory submission. Actual release, private
 authentication and hosted CI results require their own evidence; these commands do not certify App/Claude discovery.
+
+## Ready plugins, not install-time builds
+
+The marketplace selects an existing `plugins/<bundle>` directory. Its canonical `skills/` and prepared metadata,
+licenses and local resources are Git-managed ready-to-install content. `codex plugin add` installs that package;
+it does not run `scripts/build_plugins.py`, render Copier templates or install product dependencies.
+Maintainers prepare and check changed metadata/resources before distribution. Consumers do not need the provider's
+maintainer environment. UI UX Pro Max's optional local search has its own existing-Python requirement.
+
+A host cache is an installed copy, not another editable source of truth. Update the provider's recorded canonical
+file, distribute the reviewed version, then refresh and inspect the host installation separately.
 
 ## Activation is not trust or adherence
 
@@ -103,8 +119,8 @@ through `/hooks` where supported and respect hook-disable policy. Never override
 
 Each package has portable root `plugin.json` for Codex and `.claude-plugin/plugin.json` for Claude. `.codex-plugin` is
 an optional compatibility location, not a consumer directory for selected skills.
-Common's Claude-native `agents/*.md` derive from `source/agents/*.toml`. Matching `exports/codex/agents/*.toml` are optional
-explicit provisioning artifacts: Codex 0.160.0 and the inspected bundled 0.162.0-alpha.17.2 do not load agents from plugins.
+Common's Claude-native `agents/*.md` derive from canonical `plugins/common/exports/codex/agents/*.toml`.
+Those TOMLs are optional explicit provisioning artifacts: Codex 0.160.0 and the inspected bundled 0.162.0-alpha.17.2 do not load agents from plugins.
 Use built-in Codex agents by default; custom roles require separate native `.codex/agents` provisioning. A skill's
 `agents/openai.yaml` is interface metadata, not custom-agent registration.
 

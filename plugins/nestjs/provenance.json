@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "nestjs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "sources": [],
   "files": [],
   "authored_files": [
@@ -9,12 +9,12 @@
       "name": "nestjs-backend",
       "origin": "Original Project Blueprints framework-boundary guidance with official documentation links; not an upstream documentation or skill import.",
       "local": "skills/nestjs-backend/SKILL.md",
-      "canonical_source": "source/skills/nestjs-backend/SKILL.md",
+      "canonical_source": "plugins/nestjs/skills/nestjs-backend/SKILL.md",
       "source_sha256": "fc7a26720c1a571333fea233de04aad9240c0eec9b310e854758b7b73f109b30",
       "payload_sha256": "fc7a26720c1a571333fea233de04aad9240c0eec9b310e854758b7b73f109b30",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     }
   ],
   "supporting_resources": [],
-  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the installed file. No hash proves runtime invocation or adherence."
 }

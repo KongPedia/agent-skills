@@ -1,6 +1,6 @@
 {
   "name": "typescript",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "TypeScript runtime, module, package and type boundaries",
   "author": {
     "name": "KongLabs"

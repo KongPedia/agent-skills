@@ -1,7 +1,7 @@
 # Upstream candidate review
 
 This review selects reusable decision procedures, not the largest possible skill count. The canonical catalog contains
-41 procedures after preserving the existing 39 and adding domain modeling and Python type safety. Project-specific
+42 procedures after preserving the existing 39 and adding domain modeling, Python type safety and UI UX Pro Max. Project-specific
 SDK/protocol commands, authority and build environments remain with their consuming repositories.
 
 ## Sources and review depth
@@ -41,18 +41,39 @@ GitHub stars were used only to find candidates, not as evidence of skill quality
 The [frontend workflow guide](frontend-workflows.md) maps the retained procedures to design, critique, accessibility,
 React performance and composition; the existing evaluations do not yet cover UI tasks.
 
-| Inspected candidate | Decision | Reason and limit |
+| Inspected candidate | Decision on 2026-11-02 | Reason and limit |
 | --- | --- | --- |
 | [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/3a13158ff1f32156cbe144108de48eda2ecaed9a) | Defer | Design search/data overlaps existing guidance. Its Python search tooling and Claude plugin-root paths need host-specific compatibility and behavioral evaluation before an unmodified portable import. |
 | [Microsoft Playwright CLI skill](https://github.com/microsoft/playwright-cli/tree/c2d8d199459d1480491bebf0a6b3587136b673fa) | Defer | Useful optional browser tooling, but it needs a CLI/browser runtime. A shared skill does not authorize installation, destructive browser actions or application execution. |
 | Existing Anthropic frontend-design, Impeccable and Vercel UI skills | Retain | They already cover design direction, UI critique/polish, interface review, React performance and composition; Impeccable here is an instruction-only adaptation, not its upstream runtime. |
 
-No new skill or runtime was imported from this comparison. Reconsider a candidate only for a demonstrated gap with
-its immutable source, complete resources/licenses, compatible target hosts and independently evaluated outcomes.
+The 2026-11-02 comparison imported no new skill or runtime. The separately authorized addition below supersedes
+UI UX Pro Max's deferral; the other decisions remain unchanged.
+
+### UI UX Pro Max addition, 2026-11-03
+
+The user subsequently requested UI UX Pro Max and its selection during UI work. The `react-ui` bundle now owns
+`ui-ux-pro-max`, pinned to [upstream `713eef51b04efc98d6fa565323b495f7c9c89fd4`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/713eef51b04efc98d6fa565323b495f7c9c89fd4).
+The import retains the procedure and its needed standard-library Python search/data, with immutable upstream hashes,
+reviewed local adaptations and MIT license evidence in the [central ledger](../provenance/skill-sources.json). It excludes the upstream installer,
+marketplace/plugin setup, hooks and host/browser/MCP configuration.
+Reviewed runtime adaptations stop design generation on data-read failures and reject symlinked managed persistence
+paths before writing. These narrow safety changes have separate local hashes; upstream hashes remain immutable.
+
+Selection covers visual creation, redesign and polish, including style, palette, typography, layout and dashboard UX
+choices. It complements existing design/refinement entrypoints instead of replacing them; nonvisual frontend and
+backend-only fixes stay outside that trigger. Existing product design, real content/telemetry, interactions and native
+framework constraints win over catalog suggestions. Search is read-only by default; optional persistence needs explicit
+write scope. The [frontend workflow guide](frontend-workflows.md) owns the task map.
+
+This is an authorized source/packaging and routing addition, not evidence of fresh-session discovery, model adherence,
+rendered UI improvement or accessibility conformance. Existing behavior evaluations do not cover UI tasks, and their
+frozen inputs and outcomes are unchanged. Host refresh and actual UI-result comparison remain separate evidence layers.
 
 ## Packaging and acceptance boundary
 
-- Exactly one canonical owner per skill; bundles compose the same sources without combination-specific repositories.
+- Exactly one canonical plugin owner per skill; bundles install directly from those Git-managed skill directories,
+  without a second source tree or combination-specific repositories.
 - Keep task-triggered monorepo work in common and actual Rust-async guidance in Rust; neither requires an extra option.
 - Full referenced resources and required license/NOTICE evidence travel in closed plugin payloads.
 - Project commands/contracts/safety are consuming-repository lookups, not copied organization-specific assumptions.

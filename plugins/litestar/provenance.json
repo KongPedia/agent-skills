@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "litestar",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "sources": [],
   "files": [],
   "authored_files": [
@@ -9,12 +9,12 @@
       "name": "litestar-backend",
       "origin": "Original Project Blueprints Litestar development/review procedure linked to official versioned documentation; no upstream skill prose or ecosystem policy imported.",
       "local": "skills/litestar-backend/SKILL.md",
-      "canonical_source": "source/skills/litestar-backend/SKILL.md",
-      "source_sha256": "f8baccec379b9556e558a94c97cd9e787ebed0bc57bac424aa6f3599a2a1d1e5",
+      "canonical_source": "plugins/litestar/skills/litestar-backend/SKILL.md",
+      "source_sha256": "cc757d4f4800b47595c38d1cefc3d5c689af6a702460055f540d5c910f4f9d68",
       "payload_sha256": "cc757d4f4800b47595c38d1cefc3d5c689af6a702460055f540d5c910f4f9d68",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     }
   ],
   "supporting_resources": [],
-  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the installed file. No hash proves runtime invocation or adherence."
 }

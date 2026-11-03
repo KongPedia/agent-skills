@@ -2,11 +2,11 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "e91d7c4eabf8e367338f3d15148c1a0ac5ca61e48fd630736beb5ddfbcaf4211",
+    ".claude-plugin/plugin.json": "877231a1031d68fbf1171fc6d2b73802de494519993dfc5596590b6aa2ce3a95",
     "DEPENDENCIES.md": "97c3def40b02faf2fda0c38af8f359cfe6f6b910a1e8060f8424488e488e479f",
     "THIRD-PARTY-NOTICES.md": "7fb2cb2518e5ef47168a0ee7310f3887a3ab4c59f02b8f42846bc4093ddfeb5b",
-    "plugin.json": "db76e5562a8d66d078778579773b5d8429d50d6ae482a41fdbe896f9281841ce",
-    "provenance.json": "acacb3d44c0ad28b3383fc0f9596c550ba2d99bb78dce3b161cc7e9cfc8e8b5a",
+    "plugin.json": "e98fdf80fc5522e2cd785f427f02f4b5f8095d8e2e2603c0292062ef126ae4bb",
+    "provenance.json": "2b7f560e765e241c0378010e5ca70d2f3a7455a9d4dfc91ba5b8448d1301d9fe",
     "skills/nextjs-app-router/SKILL.md": "7d4741ddf37b63ffc02c3a08e22b53540b5f70c7066f131a85ac7bd430f15355"
   }
 }

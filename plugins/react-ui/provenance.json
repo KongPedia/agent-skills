@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "react-ui",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "sources": [
     {
       "id": "anthropic",
@@ -21,6 +21,16 @@
         "impeccable"
       ],
       "resource_scope": "Adapted selected instruction-only web audit/critique/polish/harden entrypoint plus craft-floor and Operate text references and upstream NOTICE; excludes launchers, binaries/downloads, scripts/detector, hooks, native agents/platform refs, storage/live/generation/document-setup workflows."
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "revision": "713eef51b04efc98d6fa565323b495f7c9c89fd4",
+      "license": "licenses/ui-ux-pro-max-LICENSE",
+      "skills": [
+        "ui-ux-pro-max"
+      ],
+      "resource_scope": "Complete selected SKILL.md and its two references, all canonical local search data including supplied font/icon provenance and license metadata, and four standard-library runtime modules. Portable entrypoint and reviewed runtime data-error/persistence safety adaptations; excludes upstream installers, host plugin adapters/hooks, templates, gallery, maintainer validators and tests. Search recommendations are not downloaded asset licenses or host/runtime/adherence proof."
     },
     {
       "id": "vercel-agent-skills",
@@ -59,10 +69,10 @@
         "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
       },
       "local": "licenses/anthropic-LICENSE",
-      "canonical_source": "source/licenses/anthropic-LICENSE",
+      "canonical_source": "plugins/react-ui/licenses/anthropic-LICENSE",
       "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
       "payload_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -76,10 +86,10 @@
         "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
       },
       "local": "licenses/impeccable-LICENSE",
-      "canonical_source": "source/licenses/impeccable-LICENSE",
+      "canonical_source": "plugins/react-ui/licenses/impeccable-LICENSE",
       "source_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
       "payload_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -93,10 +103,21 @@
         "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb"
       },
       "local": "licenses/impeccable-NOTICE.md",
-      "canonical_source": "source/licenses/impeccable-NOTICE.md",
+      "canonical_source": "plugins/react-ui/licenses/impeccable-NOTICE.md",
       "source_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
       "payload_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "LICENSE",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+      "modifications": "",
+      "local": "licenses/ui-ux-pro-max-LICENSE",
+      "canonical_source": "plugins/react-ui/licenses/ui-ux-pro-max-LICENSE",
+      "source_sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+      "payload_sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -110,10 +131,10 @@
         "sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651"
       },
       "local": "licenses/vercel-agent-skills-README.md",
-      "canonical_source": "source/licenses/vercel-agent-skills-README.md",
+      "canonical_source": "plugins/react-ui/licenses/vercel-agent-skills-README.md",
       "source_sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651",
       "payload_sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-web-interface-guidelines",
@@ -127,10 +148,10 @@
         "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
       },
       "local": "licenses/vercel-web-interface-guidelines-LICENSE",
-      "canonical_source": "source/licenses/vercel-web-interface-guidelines-LICENSE",
+      "canonical_source": "plugins/react-ui/licenses/vercel-web-interface-guidelines-LICENSE",
       "source_sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2",
       "payload_sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "anthropic",
@@ -144,16 +165,16 @@
         "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
       },
       "local": "skills/frontend-design/LICENSE.txt",
-      "canonical_source": "source/skills/frontend-design/LICENSE.txt",
+      "canonical_source": "plugins/react-ui/skills/frontend-design/LICENSE.txt",
       "source_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
       "payload_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "anthropic",
       "source": "plugins/frontend-design/skills/frontend-design/SKILL.md",
       "upstream_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
-      "modifications": "",
+      "modifications": "Added same-bundle conditional UI UX Pro Max pointer for scoped visual/UX work; preserve existing project design and behavior. Add a prominent file-carried modification notice for these local routing/scope changes under the retained Apache-2.0 terms.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
@@ -161,16 +182,16 @@
         "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
       },
       "local": "skills/frontend-design/SKILL.md",
-      "canonical_source": "source/skills/frontend-design/SKILL.md",
-      "source_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
-      "payload_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "canonical_source": "plugins/react-ui/skills/frontend-design/SKILL.md",
+      "source_sha256": "2c1506c51de8a49833dcf87068cd6de71e5fb8b92642869241371bcf5f4a8ced",
+      "payload_sha256": "2c1506c51de8a49833dcf87068cd6de71e5fb8b92642869241371bcf5f4a8ced",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
       "source": ".agents/skills/impeccable/SKILL.md",
       "upstream_sha256": "c26d6963fe2278f570930ea083ec89609ba094ee93b1ae825719ff5d29b9ac3c",
-      "modifications": "Retain name/version and design principles; replace launcher/plugin setup, runtime commands, native assets/agents and document mutation with selected manual web audit/critique/polish/harden routing, project authority and explicit evidence limits. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained.",
+      "modifications": "Retain name/version and design principles; replace launcher/plugin setup, runtime commands, native assets/agents and document mutation with selected manual web audit/critique/polish/harden routing, project authority and explicit evidence limits. Portable extraction: neutralize product-specific names, relocate canonical references, and apply scoped idiomatic/toolchain rules; original source and derivation retained. Added same-bundle conditional UI UX Pro Max pointer for scoped visual/UX work; preserve existing project design and behavior.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
@@ -178,10 +199,10 @@
         "sha256": "5dee7a723f4a6d9f66801ca00d8a42ef13a527ca9e9beef402b11ec82a5aa2bf"
       },
       "local": "skills/impeccable/SKILL.md",
-      "canonical_source": "source/skills/impeccable/SKILL.md",
-      "source_sha256": "a57de157c8e09fb901957941e70d743bca7c20fd1004206a9ec0b2f26a1d7bbd",
-      "payload_sha256": "a57de157c8e09fb901957941e70d743bca7c20fd1004206a9ec0b2f26a1d7bbd",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "canonical_source": "plugins/react-ui/skills/impeccable/SKILL.md",
+      "source_sha256": "72b8bd98be94b95d433f82c2bcc8e04cd4058c121d359141f0db5d210617a0a5",
+      "payload_sha256": "72b8bd98be94b95d433f82c2bcc8e04cd4058c121d359141f0db5d210617a0a5",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -195,10 +216,10 @@
         "sha256": "a87903b0b1a0cfe2a7870a6baf925617a78b63ddea81d2c0aad1d3c1892eb828"
       },
       "local": "skills/impeccable/reference/audit.md",
-      "canonical_source": "source/skills/impeccable/reference/audit.md",
+      "canonical_source": "plugins/react-ui/skills/impeccable/reference/audit.md",
       "source_sha256": "e64e596c3dccb93bab1a70470e40d205a6fd8315b459f88dac01fb8186ba2d70",
       "payload_sha256": "e64e596c3dccb93bab1a70470e40d205a6fd8315b459f88dac01fb8186ba2d70",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -212,10 +233,10 @@
         "sha256": "4cd085aa5c6fd75c859b5ff5c0ce238b456b1f2765ab7a76d56dbb3f31a9bda9"
       },
       "local": "skills/impeccable/reference/craft-floor.md",
-      "canonical_source": "source/skills/impeccable/reference/craft-floor.md",
+      "canonical_source": "plugins/react-ui/skills/impeccable/reference/craft-floor.md",
       "source_sha256": "55e371ebb9920c769c4d399652b97f43f8e56861aab4dfd1b3f3fec5c03d8ae1",
       "payload_sha256": "55e371ebb9920c769c4d399652b97f43f8e56861aab4dfd1b3f3fec5c03d8ae1",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -229,10 +250,10 @@
         "sha256": "ae9f1a6eb893e93c69b6d5cee0ed4a2e408c9e4abeec70b26dd693fa298f386d"
       },
       "local": "skills/impeccable/reference/critique.md",
-      "canonical_source": "source/skills/impeccable/reference/critique.md",
+      "canonical_source": "plugins/react-ui/skills/impeccable/reference/critique.md",
       "source_sha256": "7ed90dadf13dc630bb5cba578691c1c82dc36ef370e54d83a532b6e9a8de9f0c",
       "payload_sha256": "7ed90dadf13dc630bb5cba578691c1c82dc36ef370e54d83a532b6e9a8de9f0c",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -246,10 +267,10 @@
         "sha256": "efaabafb5e323f35a3d9e277ea6078f7d0a45bcce10d5e5f219c0ac79fcc7834"
       },
       "local": "skills/impeccable/reference/harden.md",
-      "canonical_source": "source/skills/impeccable/reference/harden.md",
+      "canonical_source": "plugins/react-ui/skills/impeccable/reference/harden.md",
       "source_sha256": "03e63bf24554fbc6445c1776f7ad0d677bf183bd532d6f3fbec2d914259d27bc",
       "payload_sha256": "03e63bf24554fbc6445c1776f7ad0d677bf183bd532d6f3fbec2d914259d27bc",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -263,10 +284,10 @@
         "sha256": "7573cb221807d138f235264841758e6b40e73123c027ec7918127a53fb090262"
       },
       "local": "skills/impeccable/reference/operate.md",
-      "canonical_source": "source/skills/impeccable/reference/operate.md",
+      "canonical_source": "plugins/react-ui/skills/impeccable/reference/operate.md",
       "source_sha256": "c28c4c8b894ee767dc28a19692488495659abb492f11b8a2ec75ab7dc32459d5",
       "payload_sha256": "c28c4c8b894ee767dc28a19692488495659abb492f11b8a2ec75ab7dc32459d5",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "impeccable",
@@ -280,10 +301,516 @@
         "sha256": "8b4516afa38c4b690ea6fb466decf23e43392fdb3e4da72c85480803691fbe16"
       },
       "local": "skills/impeccable/reference/polish.md",
-      "canonical_source": "source/skills/impeccable/reference/polish.md",
+      "canonical_source": "plugins/react-ui/skills/impeccable/reference/polish.md",
       "source_sha256": "4f7440aa8b9072919b1783a19ae4aecb9a10276a5383d3cffcea351a9f20bf5d",
       "payload_sha256": "4f7440aa8b9072919b1783a19ae4aecb9a10276a5383d3cffcea351a9f20bf5d",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "1bdfb422c97d5e813768af422750882b71ff1554978da0b8a43c95de242765f7",
+      "modifications": "Preserve the complete procedure, local search/data and references; scope UI triggers, use the discovered skill-directory path with an existing Python 3 interpreter and -B, prioritize consuming-project design/behavior/version constraints, make design-system generation contextual and persistence explicitly authorized, and distinguish static search from rendered verification. No installers, hooks or host changes. Require JSON match provenance before using or persisting recommendations; disclose unmatched fallbacks and the upstream React legacy-filter limitation instead of claiming React 18 compatibility. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged. Explain fail-closed data-read errors and managed-output symlink rejection without claiming a concurrent-filesystem sandbox.",
+      "local": "skills/ui-ux-pro-max/SKILL.md",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/SKILL.md",
+      "source_sha256": "1b32b4b93669e103655778e586984acc172d9a7a15c8c6bd64198db5ab1ece6c",
+      "payload_sha256": "1b32b4b93669e103655778e586984acc172d9a7a15c8c6bd64198db5ab1ece6c",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/app-interface.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/app-interface.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/app-interface.csv",
+      "source_sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+      "payload_sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/catalog-summary.json",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "4ca9ee8697984ed678a69a3bfbb788fb7f826d564f22cae5d094df8879517217",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/catalog-summary.json",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/catalog-summary.json",
+      "source_sha256": "4ca9ee8697984ed678a69a3bfbb788fb7f826d564f22cae5d094df8879517217",
+      "payload_sha256": "4ca9ee8697984ed678a69a3bfbb788fb7f826d564f22cae5d094df8879517217",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/charts.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/charts.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/charts.csv",
+      "source_sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+      "payload_sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/colors.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/colors.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/colors.csv",
+      "source_sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+      "payload_sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/data-provenance.json",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/data-provenance.json",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/data-provenance.json",
+      "source_sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+      "payload_sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/google-font-licenses.json",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/google-font-licenses.json",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/google-font-licenses.json",
+      "source_sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+      "payload_sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/google-fonts.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/google-fonts.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/google-fonts.csv",
+      "source_sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+      "payload_sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/icons.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/icons.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/icons.csv",
+      "source_sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+      "payload_sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/landing.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/landing.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/landing.csv",
+      "source_sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+      "payload_sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/motion.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/motion.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/motion.csv",
+      "source_sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+      "payload_sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "source_sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+      "payload_sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/products.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "5756125e2b0e0d2360926f175d0975c8cd846c7589e5e2ce02631ff645e66361",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/products.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/products.csv",
+      "source_sha256": "5756125e2b0e0d2360926f175d0975c8cd846c7589e5e2ce02631ff645e66361",
+      "payload_sha256": "5756125e2b0e0d2360926f175d0975c8cd846c7589e5e2ce02631ff645e66361",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/react-performance.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/react-performance.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/react-performance.csv",
+      "source_sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+      "payload_sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/angular.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "source_sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+      "payload_sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/astro.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "source_sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+      "payload_sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "source_sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+      "payload_sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/flutter.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "source_sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+      "payload_sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "source_sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+      "payload_sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/javafx.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "source_sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+      "payload_sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "source_sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+      "payload_sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/laravel.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "source_sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+      "payload_sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "source_sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+      "payload_sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "9c0179d559abe39ad63b958b54cb29c82be1dd20706430476096ea8967bfa328",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "source_sha256": "9c0179d559abe39ad63b958b54cb29c82be1dd20706430476096ea8967bfa328",
+      "payload_sha256": "9c0179d559abe39ad63b958b54cb29c82be1dd20706430476096ea8967bfa328",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "source_sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+      "payload_sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/react-native.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "source_sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+      "payload_sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/react.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/react.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/react.csv",
+      "source_sha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1",
+      "payload_sha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "source_sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+      "payload_sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/svelte.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "source_sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+      "payload_sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "source_sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+      "payload_sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/threejs.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "source_sha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+      "payload_sha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/uno.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "source_sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+      "payload_sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/uwp.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "source_sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+      "payload_sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/vue.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "source_sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+      "payload_sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/winui.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "source_sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+      "payload_sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/wpf.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "source_sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+      "payload_sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/styles.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "a6b37e5925d20b4c4b885a8a24aead64e1fcc779c3f0be91cfbe350de5628953",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/styles.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/styles.csv",
+      "source_sha256": "a6b37e5925d20b4c4b885a8a24aead64e1fcc779c3f0be91cfbe350de5628953",
+      "payload_sha256": "a6b37e5925d20b4c4b885a8a24aead64e1fcc779c3f0be91cfbe350de5628953",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/typography.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/typography.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/typography.csv",
+      "source_sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+      "payload_sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/ui-reasoning.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "source_sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+      "payload_sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/ux-guidelines.csv",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "source_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+      "payload_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": ".claude/skills/ui-ux-pro-max/references/pro-rules.md",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/references/pro-rules.md",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/references/pro-rules.md",
+      "source_sha256": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23",
+      "payload_sha256": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": ".claude/skills/ui-ux-pro-max/references/quick-reference.md",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/references/quick-reference.md",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/references/quick-reference.md",
+      "source_sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876",
+      "payload_sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/core.py",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "caf92bdcf2579c9a7d6af4f53c54ee9d3c8f05472cfab77aaec38bef120ec63e",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/scripts/core.py",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/scripts/core.py",
+      "source_sha256": "caf92bdcf2579c9a7d6af4f53c54ee9d3c8f05472cfab77aaec38bef120ec63e",
+      "payload_sha256": "caf92bdcf2579c9a7d6af4f53c54ee9d3c8f05472cfab77aaec38bef120ec63e",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/design_system.py",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103",
+      "modifications": "Propagate required data-read/search errors instead of silently generating default recommendations; include conditional motion/page sources. Validate managed persistence paths for symlinks and containment, and finish data-dependent page formatting before filesystem mutation. Preserve explicitly selected output-root resolution and existing-file/force semantics; preflight is not a concurrent-path-replacement sandbox. Remove whitespace-only padding on blank code/docstring lines; executable AST and non-docstring literals are unchanged.",
+      "local": "skills/ui-ux-pro-max/scripts/design_system.py",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/scripts/design_system.py",
+      "source_sha256": "70aba2d06cfedcc072a4622e07f36a0eb7e8703635f0c8d3e3a6e33f50c29ace",
+      "payload_sha256": "70aba2d06cfedcc072a4622e07f36a0eb7e8703635f0c8d3e3a6e33f50c29ace",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+      "modifications": "",
+      "local": "skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "source_sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+      "payload_sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/search.py",
+      "source_id": "ui-ux-pro-max",
+      "upstream_sha256": "9fd5acc991142fd43c3afe7be0f6720911b668f3988b34e74b5cbc41d58e7947",
+      "modifications": "Report expected design-generation or persistence failures as clear stderr diagnostics with a nonzero exit, without printing a recommendation or suppressing the underlying error.",
+      "local": "skills/ui-ux-pro-max/scripts/search.py",
+      "canonical_source": "plugins/react-ui/skills/ui-ux-pro-max/scripts/search.py",
+      "source_sha256": "8ed521fef964c93bc883407f63f603f15cf19ad67dd7e9621fd5008a7bd88e86",
+      "payload_sha256": "8ed521fef964c93bc883407f63f603f15cf19ad67dd7e9621fd5008a7bd88e86",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -297,10 +824,10 @@
         "sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02"
       },
       "local": "skills/vercel-composition-patterns/SKILL.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/SKILL.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/SKILL.md",
       "source_sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02",
       "payload_sha256": "2040ee17a2f52988987926e71825f5f38a73928803cf8cd6493fadb31be92e02",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -314,10 +841,10 @@
         "sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5"
       },
       "local": "skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
       "source_sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5",
       "payload_sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -331,10 +858,10 @@
         "sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457"
       },
       "local": "skills/vercel-composition-patterns/rules/architecture-compound-components.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/architecture-compound-components.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/architecture-compound-components.md",
       "source_sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457",
       "payload_sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -348,10 +875,10 @@
         "sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad"
       },
       "local": "skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
       "source_sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad",
       "payload_sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -365,10 +892,10 @@
         "sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e"
       },
       "local": "skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
       "source_sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e",
       "payload_sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -382,10 +909,10 @@
         "sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227"
       },
       "local": "skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
       "source_sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227",
       "payload_sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -399,10 +926,10 @@
         "sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3"
       },
       "local": "skills/vercel-composition-patterns/rules/state-context-interface.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/state-context-interface.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/state-context-interface.md",
       "source_sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3",
       "payload_sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -416,10 +943,10 @@
         "sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3"
       },
       "local": "skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
       "source_sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3",
       "payload_sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -433,10 +960,10 @@
         "sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b"
       },
       "local": "skills/vercel-composition-patterns/rules/state-lift-state.md",
-      "canonical_source": "source/skills/vercel-composition-patterns/rules/state-lift-state.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-composition-patterns/rules/state-lift-state.md",
       "source_sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b",
       "payload_sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -450,10 +977,10 @@
         "sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9"
       },
       "local": "skills/vercel-react-best-practices/SKILL.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/SKILL.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/SKILL.md",
       "source_sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9",
       "payload_sha256": "c5ff7673eed5dd475a72bc14c37c7db91a485b887eec20b062d3923851540ef9",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -467,10 +994,10 @@
         "sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
       "source_sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
       "payload_sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -484,10 +1011,10 @@
         "sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
       "source_sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
       "payload_sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -501,10 +1028,10 @@
         "sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-init-once.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-init-once.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/advanced-init-once.md",
       "source_sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
       "payload_sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -518,10 +1045,10 @@
         "sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a"
       },
       "local": "skills/vercel-react-best-practices/rules/advanced-use-latest.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
       "source_sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
       "payload_sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -535,16 +1062,16 @@
         "sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42"
       },
       "local": "skills/vercel-react-best-practices/rules/async-api-routes.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-api-routes.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/async-api-routes.md",
       "source_sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
       "payload_sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
       "source": "skills/react-best-practices/rules/async-cheap-condition-before-await.md",
       "upstream_sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
-      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "modifications": "Relocate directory to match the existing skill frontmatter name. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
@@ -552,16 +1079,16 @@
         "sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c"
       },
       "local": "skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
-      "source_sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
+      "source_sha256": "35cf36fe8acba53a1db56c2f2183678731d6d2e33f8e76520765f3a1729c90ae",
       "payload_sha256": "35cf36fe8acba53a1db56c2f2183678731d6d2e33f8e76520765f3a1729c90ae",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
       "source": "skills/react-best-practices/rules/async-defer-await.md",
       "upstream_sha256": "f3c142d090615abdcc99d31c123be37b31f0f1ed8d9ec9f7789a3bc6883ae0fb",
-      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name.",
+      "modifications": "Remove trailing whitespace only from upstream code-example lines; guidance and examples otherwise unchanged. Relocate directory to match the existing skill frontmatter name. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
@@ -569,10 +1096,10 @@
         "sha256": "2791408daed30eda451bf779d5520add2655822ca2c0138d8e252f483a4b443e"
       },
       "local": "skills/vercel-react-best-practices/rules/async-defer-await.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-defer-await.md",
-      "source_sha256": "2791408daed30eda451bf779d5520add2655822ca2c0138d8e252f483a4b443e",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/async-defer-await.md",
+      "source_sha256": "62bbd2122d0569e6489c6f5474af5ea6385a038361d13239d52ce3d313477ef9",
       "payload_sha256": "62bbd2122d0569e6489c6f5474af5ea6385a038361d13239d52ce3d313477ef9",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -586,10 +1113,10 @@
         "sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a"
       },
       "local": "skills/vercel-react-best-practices/rules/async-dependencies.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-dependencies.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/async-dependencies.md",
       "source_sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
       "payload_sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -603,10 +1130,10 @@
         "sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961"
       },
       "local": "skills/vercel-react-best-practices/rules/async-parallel.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-parallel.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/async-parallel.md",
       "source_sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
       "payload_sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -620,10 +1147,10 @@
         "sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4"
       },
       "local": "skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
       "source_sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4",
       "payload_sha256": "0e12cf5488e4f81fae9751bdfce782cfac2c1d15c6f9dfbfc2a65879c97d90f4",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -637,10 +1164,10 @@
         "sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
       "source_sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
       "payload_sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -654,10 +1181,10 @@
         "sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
       "source_sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
       "payload_sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -671,10 +1198,10 @@
         "sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-conditional.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-conditional.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/bundle-conditional.md",
       "source_sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
       "payload_sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -688,10 +1215,10 @@
         "sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
       "source_sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
       "payload_sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -705,10 +1232,10 @@
         "sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
       "source_sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
       "payload_sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -722,10 +1249,10 @@
         "sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2"
       },
       "local": "skills/vercel-react-best-practices/rules/bundle-preload.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/bundle-preload.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/bundle-preload.md",
       "source_sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
       "payload_sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -739,10 +1266,10 @@
         "sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74"
       },
       "local": "skills/vercel-react-best-practices/rules/client-event-listeners.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-event-listeners.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/client-event-listeners.md",
       "source_sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74",
       "payload_sha256": "ca176a1970eefae528a91dd10f9af87ac3c337111b34913e6e89fbf997f91a74",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -756,10 +1283,10 @@
         "sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88"
       },
       "local": "skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
       "source_sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
       "payload_sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -773,10 +1300,10 @@
         "sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52"
       },
       "local": "skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
       "source_sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52",
       "payload_sha256": "750f7bf0917f8116aa399ceed1314e3663648615de198fa7ae429cb3faf6cc52",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -790,10 +1317,10 @@
         "sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3"
       },
       "local": "skills/vercel-react-best-practices/rules/client-swr-dedup.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
       "source_sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
       "payload_sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -807,10 +1334,10 @@
         "sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b"
       },
       "local": "skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
       "source_sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b",
       "payload_sha256": "745df2ce9e42f772bc82964a1fdcc40304ef254697f050f8144207980a051d1b",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -824,10 +1351,10 @@
         "sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf"
       },
       "local": "skills/vercel-react-best-practices/rules/js-cache-function-results.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
       "source_sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf",
       "payload_sha256": "08d12e0b734097e49cce5150a1f0dcf1f09447ea4e955fa18c166b511df8edcf",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -841,10 +1368,10 @@
         "sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311"
       },
       "local": "skills/vercel-react-best-practices/rules/js-cache-property-access.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
       "source_sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
       "payload_sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -858,10 +1385,10 @@
         "sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc"
       },
       "local": "skills/vercel-react-best-practices/rules/js-cache-storage.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-cache-storage.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-cache-storage.md",
       "source_sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
       "payload_sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -875,10 +1402,10 @@
         "sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746"
       },
       "local": "skills/vercel-react-best-practices/rules/js-combine-iterations.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
       "source_sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
       "payload_sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -892,10 +1419,10 @@
         "sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0"
       },
       "local": "skills/vercel-react-best-practices/rules/js-early-exit.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-early-exit.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-early-exit.md",
       "source_sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0",
       "payload_sha256": "d701adb3a486ad67979e050ce4eada0c80cc69a78c116d845e305022af9b1ba0",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -909,10 +1436,10 @@
         "sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0"
       },
       "local": "skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
       "source_sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
       "payload_sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -926,10 +1453,10 @@
         "sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4"
       },
       "local": "skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
       "source_sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
       "payload_sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -943,10 +1470,10 @@
         "sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391"
       },
       "local": "skills/vercel-react-best-practices/rules/js-index-maps.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-index-maps.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-index-maps.md",
       "source_sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
       "payload_sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -960,10 +1487,10 @@
         "sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624"
       },
       "local": "skills/vercel-react-best-practices/rules/js-length-check-first.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-length-check-first.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-length-check-first.md",
       "source_sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
       "payload_sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -977,10 +1504,10 @@
         "sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a"
       },
       "local": "skills/vercel-react-best-practices/rules/js-min-max-loop.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
       "source_sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a",
       "payload_sha256": "1f2b3f5ad0616932597ff78c635deb8cc032e5d9a7f3c7021aa9ba1b073b892a",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -994,10 +1521,10 @@
         "sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32"
       },
       "local": "skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
       "source_sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
       "payload_sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1011,10 +1538,10 @@
         "sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b"
       },
       "local": "skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
       "source_sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
       "payload_sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1028,10 +1555,10 @@
         "sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8"
       },
       "local": "skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
       "source_sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
       "payload_sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1045,10 +1572,10 @@
         "sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-activity.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-activity.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-activity.md",
       "source_sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
       "payload_sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1062,10 +1589,10 @@
         "sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
       "source_sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e",
       "payload_sha256": "9736845b133e8ffcb3c5b6d34403819366af44bf34498ad94e8154c081f9da3e",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1079,10 +1606,10 @@
         "sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
       "source_sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
       "payload_sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1096,10 +1623,10 @@
         "sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
       "source_sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
       "payload_sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1113,10 +1640,10 @@
         "sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
       "source_sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
       "payload_sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1130,10 +1657,10 @@
         "sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
       "source_sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259",
       "payload_sha256": "ad3e6edc56c3d253500713195e84b89b0dfff9efbe1726f7824f98eb9bf72259",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1147,10 +1674,10 @@
         "sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
       "source_sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
       "payload_sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1164,10 +1691,10 @@
         "sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
       "source_sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
       "payload_sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1181,10 +1708,10 @@
         "sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
       "source_sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
       "payload_sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1198,10 +1725,10 @@
         "sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
       "source_sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
       "payload_sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1215,10 +1742,10 @@
         "sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2"
       },
       "local": "skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
       "source_sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2",
       "payload_sha256": "4fddb807812b133b478d42bdbfd34d4e0389ca73f18f544d5f1fd419cffc2aa2",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1232,10 +1759,10 @@
         "sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
       "source_sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
       "payload_sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1249,10 +1776,10 @@
         "sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-dependencies.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
       "source_sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
       "payload_sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1266,10 +1793,10 @@
         "sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
       "source_sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
       "payload_sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1283,10 +1810,10 @@
         "sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-derived-state.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
       "source_sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
       "payload_sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1300,10 +1827,10 @@
         "sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
       "source_sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415",
       "payload_sha256": "508191c734a5537fc83eba2a131621f6b66790ecd0de59c5a635e9283f618415",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1317,10 +1844,10 @@
         "sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
       "source_sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2",
       "payload_sha256": "986490ede55bbe6c96e2c4df7433ff2c24949d078d168003ecf539dd332bc1f2",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1334,10 +1861,10 @@
         "sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
       "source_sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
       "payload_sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1351,10 +1878,10 @@
         "sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-memo.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-memo.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-memo.md",
       "source_sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
       "payload_sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1368,10 +1895,10 @@
         "sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
       "source_sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
       "payload_sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1385,10 +1912,10 @@
         "sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
       "source_sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
       "payload_sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1402,10 +1929,10 @@
         "sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
       "source_sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
       "payload_sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1419,10 +1946,10 @@
         "sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
       "source_sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
       "payload_sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1436,10 +1963,10 @@
         "sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-transitions.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-transitions.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-transitions.md",
       "source_sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
       "payload_sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1453,10 +1980,10 @@
         "sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
       "source_sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
       "payload_sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1470,10 +1997,10 @@
         "sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54"
       },
       "local": "skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
       "source_sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
       "payload_sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1487,10 +2014,10 @@
         "sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d"
       },
       "local": "skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
       "source_sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d",
       "payload_sha256": "a9c523800c3fc0af700bddb49039ee06beb49a5939c1640534dc5c9f5e83975d",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1504,10 +2031,10 @@
         "sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da"
       },
       "local": "skills/vercel-react-best-practices/rules/server-auth-actions.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-auth-actions.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-auth-actions.md",
       "source_sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da",
       "payload_sha256": "04e3cd723c4b3b21a2a9ab32661b1f262068ea94ab82fd70a644ad130d1df7da",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1521,10 +2048,10 @@
         "sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f"
       },
       "local": "skills/vercel-react-best-practices/rules/server-cache-lru.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-cache-lru.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-cache-lru.md",
       "source_sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
       "payload_sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1538,10 +2065,10 @@
         "sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c"
       },
       "local": "skills/vercel-react-best-practices/rules/server-cache-react.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-cache-react.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-cache-react.md",
       "source_sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
       "payload_sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1555,10 +2082,10 @@
         "sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37"
       },
       "local": "skills/vercel-react-best-practices/rules/server-dedup-props.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-dedup-props.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-dedup-props.md",
       "source_sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
       "payload_sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1572,16 +2099,16 @@
         "sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f"
       },
       "local": "skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
       "source_sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
       "payload_sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
       "source": "skills/react-best-practices/rules/server-no-shared-module-state.md",
       "upstream_sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
-      "modifications": "Relocate directory to match the existing skill frontmatter name.",
+      "modifications": "Relocate directory to match the existing skill frontmatter name. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/battlebang.git",
         "revision": "865ed626ac91128700fe3ff9dbbbec47e40cfe3a",
@@ -1589,10 +2116,10 @@
         "sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7"
       },
       "local": "skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
-      "source_sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
+      "source_sha256": "3bdd511bd8b408b7d9be735e80c8a92f2e46496423daac1fae509155498099a8",
       "payload_sha256": "3bdd511bd8b408b7d9be735e80c8a92f2e46496423daac1fae509155498099a8",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1606,10 +2133,10 @@
         "sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472"
       },
       "local": "skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
       "source_sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
       "payload_sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1623,10 +2150,10 @@
         "sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3"
       },
       "local": "skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
       "source_sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
       "payload_sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1640,10 +2167,10 @@
         "sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f"
       },
       "local": "skills/vercel-react-best-practices/rules/server-serialization.md",
-      "canonical_source": "source/skills/vercel-react-best-practices/rules/server-serialization.md",
+      "canonical_source": "plugins/react-ui/skills/vercel-react-best-practices/rules/server-serialization.md",
       "source_sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
       "payload_sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-agent-skills",
@@ -1657,10 +2184,10 @@
         "sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880"
       },
       "local": "skills/web-design-guidelines/SKILL.md",
-      "canonical_source": "source/skills/web-design-guidelines/SKILL.md",
+      "canonical_source": "plugins/react-ui/skills/web-design-guidelines/SKILL.md",
       "source_sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880",
       "payload_sha256": "787241d37a89315b28392fda0c52692dcc7211b3ce5bb4bdc0ea006f014f9880",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "vercel-web-interface-guidelines",
@@ -1674,13 +2201,13 @@
         "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
       },
       "local": "skills/web-design-guidelines/references/web-interface-guidelines.md",
-      "canonical_source": "source/skills/web-design-guidelines/references/web-interface-guidelines.md",
+      "canonical_source": "plugins/react-ui/skills/web-design-guidelines/references/web-interface-guidelines.md",
       "source_sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234",
       "payload_sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     }
   ],
   "authored_files": [],
   "supporting_resources": [],
-  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the installed file. No hash proves runtime invocation or adherence."
 }

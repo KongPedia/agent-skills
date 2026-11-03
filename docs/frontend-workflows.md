@@ -3,17 +3,30 @@
 Use this guide to select existing `react-ui` skills, not as a required workflow or a replacement for a project's
 design system, accessibility requirements, package instructions or the user's request. The bundle contains reviewed
 upstream skill material; its source, adaptations, licenses and pinned revisions remain in
-[`source/skill-sources.json`](../source/skill-sources.json).
+[`provenance/skill-sources.json`](../provenance/skill-sources.json).
 
 ## Choose by the requested work
 
 | Request | Skill | Boundary |
 | --- | --- | --- |
-| Create or substantially reshape a UI; avoid a generic look | [`frontend-design`](../source/skills/frontend-design/SKILL.md) | Start from the actual brief, audience and existing visual language. Upstream's fictional client scenario is not evidence about the current user. |
-| Audit, critique, polish or harden a specific existing UI | [`impeccable`](../source/skills/impeccable/SKILL.md) | Select the relevant instruction-only reference; preserve existing design and behavior unless redesign is requested. The upstream CLI, detector, hooks and browser tooling are not included. |
-| Review a target for interface and accessibility issues | [`web-design-guidelines`](../source/skills/web-design-guidelines/SKILL.md) | Use the pinned local checklist and report findings with locations and evidence. Interpret rules against the actual control and project. |
-| Examine React/Next.js rendering, data or bundle performance | [`vercel-react-best-practices`](../source/skills/vercel-react-best-practices/SKILL.md) | Apply relevant guidance to the installed framework and measured problem; a rule or build alone does not establish a performance gain. |
-| Change a React component's composition, state ownership or reusable API | [`vercel-composition-patterns`](../source/skills/vercel-composition-patterns/SKILL.md) | Use composition where the existing component and callers benefit; do not add compound components or context by default. |
+| Visual UI creation, redesign or polish; product-appropriate style, palette, typography, layout or dashboard UX choices | [`ui-ux-pro-max`](../plugins/react-ui/skills/ui-ux-pro-max/SKILL.md) | Select alongside the relevant design/refinement procedure below. Search suggestions are options, not authority to replace the current design system, content, interactions or framework. |
+| Create or substantially reshape a UI; avoid a generic look | [`frontend-design`](../plugins/react-ui/skills/frontend-design/SKILL.md) | Start from the actual brief, audience and existing visual language. Upstream's fictional client scenario is not evidence about the current user. |
+| Audit, critique, polish or harden a specific existing UI | [`impeccable`](../plugins/react-ui/skills/impeccable/SKILL.md) | Select the relevant instruction-only reference; preserve existing design and behavior unless redesign is requested. The upstream CLI, detector, hooks and browser tooling are not included. |
+| Review a target for interface and accessibility issues | [`web-design-guidelines`](../plugins/react-ui/skills/web-design-guidelines/SKILL.md) | Use the pinned local checklist and report findings with locations and evidence. Interpret rules against the actual control and project. |
+| Examine React/Next.js rendering, data or bundle performance | [`vercel-react-best-practices`](../plugins/react-ui/skills/vercel-react-best-practices/SKILL.md) | Apply relevant guidance to the installed framework and measured problem; a rule or build alone does not establish a performance gain. |
+| Change a React component's composition, state ownership or reusable API | [`vercel-composition-patterns`](../plugins/react-ui/skills/vercel-composition-patterns/SKILL.md) | Use composition where the existing component and callers benefit; do not add compound components or context by default. |
+
+For visual creation, redesign and polish, read `react-ui:ui-ux-pro-max` before settling visual choices. Keep
+`frontend-design` for design direction and implementation, Impeccable for critique/refinement, and
+`web-design-guidelines` for applicable interaction/accessibility review. Nonvisual state, reconnection, transport and
+backend-only changes do not trigger this visual workflow. Preserve existing product tokens, density, real telemetry,
+content, controls and native framework versions unless their change is actually requested.
+
+UI UX Pro Max includes its local standard-library Python search and data, not an upstream CLI installer, plugin hooks,
+browser runtime or MCP configuration. Resolve the packaged skill directory rather than assuming a Claude-only path.
+The default search reports suggestions without writing project files; optional persistence requires explicit write
+scope and must not create or overwrite the project's design-system records as setup. Reading guidance needs no Python
+installation, and a missing interpreter is a disclosed search limitation, not permission to install dependencies.
 
 UI-specific anti-slop guidance is already present in `frontend-design` and `impeccable`; neither provides an
 automatic detector in this bundle. Treat visual tropes as prompts for review, not a universal ban on fonts,
@@ -51,3 +64,4 @@ These links document the pinned origins, not additional installed components or 
 - [Impeccable at the pinned revision](https://github.com/pbakaus/impeccable/tree/936867543ac2576920d663cc9803597f6044f3ac) — this repository packages only the selected instruction-only adaptation described above.
 - [Vercel agent skills at the pinned revision](https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278)
 - [Vercel Web Interface Guidelines at the pinned revision](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/command.md)
+- [UI UX Pro Max at the pinned revision](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/713eef51b04efc98d6fa565323b495f7c9c89fd4) — adapted procedure with bundled local search/data; no installer or host configuration is imported.

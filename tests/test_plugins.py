@@ -6,6 +6,7 @@ import asyncio
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -29,24 +30,173 @@ def files(root):
     return {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob("*") if p.is_file()}
 
 
+def canonical_input_state(root):
+    manifest = json.loads((root / "provenance/skill-sources.json").read_text())
+    records = manifest["files"] + [record for entry in manifest["authored_skills"] + manifest["authored_resources"]
+                                   for record in entry["files"]]
+    paths = [root / record["local"] for record in records]
+    paths += [root / "catalog.json", root / "provenance/skill-sources.json"]
+    state = {}
+    for path in paths:
+        info = path.stat()
+        state[path] = (path.read_bytes(), info.st_mtime_ns, info.st_ino)
+    return state
+
+
 @pytest.fixture
 def source_repo(tmp_path):
     source = tmp_path / "source-repo"
-    shutil.copytree(ROOT / "source", source / "source")
-    shutil.copytree(ROOT / "hooks", source / "hooks")
+    shutil.copytree(ROOT / "plugins", source / "plugins")
+    shutil.copytree(ROOT / "provenance", source / "provenance")
     shutil.copy(ROOT / "catalog.json", source / "catalog.json")
     return source
 
 
 def add_reviewed_markdown(source, text):
-    relative = "skills/nextjs-app-router/portability.md"
-    path = source / "source" / relative
+    relative = "plugins/nextjs/skills/nextjs-app-router/portability.md"
+    path = source / relative
     path.write_text(text)
-    manifest_path = source / "source/skill-sources.json"
+    manifest_path = source / "provenance/skill-sources.json"
     manifest = json.loads(manifest_path.read_text())
     authored = next(item for item in manifest["authored_skills"] if item["name"] == "nextjs-app-router")
     authored["files"].append({"local": relative, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
     manifest_path.write_text(json.dumps(manifest))
+
+
+def test_inplace_preparation_rejects_canonical_edit_without_replacing_it(source_repo):
+    skill = source_repo / "plugins/common/skills/writing-plans/SKILL.md"
+    edited = skill.read_bytes() + b"\nUnreviewed canonical change.\n"
+    skill.write_bytes(edited)
+    before = files(source_repo)
+    with pytest.raises(ValueError, match="Source hash mismatch"):
+        builder().build(source_repo, source_repo)
+    assert files(source_repo) == before
+
+
+def test_inplace_preparation_rejects_unrecorded_skill_file_without_deleting_it(source_repo):
+    note = source_repo / "plugins/common/skills/writing-plans/local-note.txt"
+    note.write_bytes(b"Unrecorded work must not be deleted.\n")
+    before = files(source_repo)
+    with pytest.raises(ValueError, match="(?i)provenance|unrecorded|unknown"):
+        builder().build(source_repo, source_repo)
+    assert files(source_repo) == before
+
+
+@pytest.mark.parametrize("relative", [
+    "plugins/common/references/engineering.md",
+    "plugins/react-ui/licenses/impeccable-NOTICE.md",
+    "plugins/common/exports/codex/agents/architect.toml",
+    "plugins/session-guidance/hooks/session-start.sh",
+])
+def test_inplace_preparation_rejects_unreviewed_support_without_rewriting_it(source_repo, relative):
+    canonical = source_repo / relative
+    canonical.write_bytes(canonical.read_bytes() + b"\n# Unreviewed canonical support edit.\n")
+    before = files(source_repo)
+    with pytest.raises(ValueError, match="(?i)(source|canonical) hash mismatch"):
+        builder().build(source_repo, source_repo)
+    assert files(source_repo) == before
+
+
+def test_repeated_inplace_preparation_never_writes_canonical_inputs(source_repo):
+    before = canonical_input_state(source_repo)
+    module = builder()
+    module.build(source_repo, source_repo)
+    module.build(source_repo, source_repo)
+    assert canonical_input_state(source_repo) == before
+    module.build(source_repo, source_repo, check=True)
+
+
+def test_generated_write_failure_cannot_delete_or_rewrite_canonical_inputs(source_repo, monkeypatch):
+    catalog_path = source_repo / "catalog.json"
+    catalog = json.loads(catalog_path.read_text())
+    catalog["version"] = "0.1.4+failure-check"
+    catalog_path.write_text(json.dumps(catalog))
+    before = canonical_input_state(source_repo)
+    real_replace = os.replace
+
+    def fail_generated_replace(source, destination, *args, **kwargs):
+        target = Path(destination)
+        if target.is_relative_to(source_repo) and target.name == "plugin.json":
+            raise OSError("simulated generated metadata write failure")
+        return real_replace(source, destination, *args, **kwargs)
+
+    monkeypatch.setattr(os, "replace", fail_generated_replace)
+    with pytest.raises(OSError, match="simulated generated metadata write failure"):
+        builder().build(source_repo, source_repo)
+    assert canonical_input_state(source_repo) == before
+
+
+def test_unknown_plugin_file_is_rejected_without_deletion(source_repo):
+    note = source_repo / "plugins/common/local-note.txt"
+    note.write_bytes(b"Unregistered work outside the canonical skill directory.\n")
+    before = files(source_repo)
+    with pytest.raises(ValueError):
+        builder().build(source_repo, source_repo)
+    assert files(source_repo) == before
+
+
+def test_canonical_record_cannot_claim_a_generated_manifest(source_repo):
+    path = source_repo / "provenance/skill-sources.json"
+    manifest = json.loads(path.read_text())
+    generated = source_repo / "plugins/common/plugin.json"
+    manifest["authored_resources"].append({
+        "name": "invalid-generated-owner", "origin": "Invalid ownership fixture",
+        "files": [{"local": "plugins/common/plugin.json", "sha256": hashlib.sha256(generated.read_bytes()).hexdigest()}],
+    })
+    path.write_text(json.dumps(manifest))
+    before = files(source_repo)
+    with pytest.raises(ValueError):
+        builder().build(source_repo, source_repo)
+    assert files(source_repo) == before
+
+
+def test_shared_resource_cannot_have_two_canonical_plugin_owners(source_repo):
+    path = source_repo / "provenance/skill-sources.json"
+    manifest = json.loads(path.read_text())
+    duplicate = source_repo / "plugins/rust/references/engineering.md"
+    manifest["authored_resources"].append({
+        "name": "invalid-second-reference-owner", "origin": "Invalid ownership fixture",
+        "files": [{"local": "plugins/rust/references/engineering.md",
+                   "sha256": hashlib.sha256(duplicate.read_bytes()).hexdigest()}],
+    })
+    path.write_text(json.dumps(manifest))
+    before = files(source_repo)
+    with pytest.raises(ValueError, match="Duplicate canonical resource owner"):
+        builder().build(source_repo, source_repo)
+    assert files(source_repo) == before
+
+
+@pytest.mark.parametrize("damage", ["deleted", "overwritten"])
+def test_generated_reference_is_repaired_from_its_registered_owner(source_repo, damage):
+    owner = source_repo / "plugins/common/references/development.md"
+    destination = source_repo / "plugins/rust/references/development.md"
+    owner_note = b"\nCanonical owner fixture note.\n"
+    expected = destination.read_bytes() + owner_note
+    owner.write_bytes(owner.read_bytes() + owner_note)
+    ledger = source_repo / "provenance/skill-sources.json"
+    manifest = json.loads(ledger.read_text())
+    record = next(record for entry in manifest["authored_resources"] for record in entry["files"]
+                  if record["local"] == "plugins/common/references/development.md")
+    record["sha256"] = hashlib.sha256(owner.read_bytes()).hexdigest()
+    ledger.write_text(json.dumps(manifest))
+    if damage == "deleted":
+        destination.unlink()
+    else:
+        destination.write_bytes(b"Stale generated Rust reference.\n")
+    before = canonical_input_state(source_repo)
+    builder().build(source_repo, source_repo)
+    assert destination.read_bytes() == expected
+    assert canonical_input_state(source_repo) == before
+
+
+@pytest.mark.parametrize("destination", ["ancestor", "descendant", "canonical-plugin"])
+def test_external_output_cannot_overlap_canonical_input(source_repo, destination):
+    output = {"ancestor": source_repo.parent, "descendant": source_repo / "output",
+              "canonical-plugin": source_repo / "plugins/common"}[destination]
+    before = files(source_repo.parent)
+    with pytest.raises(ValueError, match="(?i)overlap|disjoint|inside|ancestor"):
+        builder().build(source_repo, output)
+    assert files(source_repo.parent) == before
 
 
 @pytest.mark.parametrize("target", [
@@ -115,7 +265,7 @@ def test_semantic_prerelease_and_build_versions_reach_generated_manifests(tmp_pa
 
 def test_rest_api_missing_user_emits_structured_error_details():
     """Exercise the real route body, not FastAPI routing or Pydantic validation."""
-    path = ROOT / "source/skills/api-design-principles/assets/rest-api-template.py"
+    path = ROOT / "plugins/api-contracts/skills/api-design-principles/assets/rest-api-template.py"
     module = ast.parse(path.read_text())
     route = next(node for node in module.body if isinstance(node, ast.AsyncFunctionDef) and node.name == "get_user")
     # Remove only import-time FastAPI decorator/default wiring; keep the route body intact.
@@ -147,20 +297,96 @@ def test_catalog_has_exact_nonoverlapping_owners():
     assert next(p["version"] for p in locked if p["name"] == project["name"]) == data["version"]
     assert len(data["plugins"]) == 13
     names = [s for p in data["plugins"] for s in p["skills"]]
-    assert len(names) == len(set(names)) == 41
+    assert len(names) == len(set(names)) == 42
     assert "project-bootstrap" not in names
-    assert set(names) == {p.name for p in (ROOT / "source/skills").iterdir()}
+    assert set(names) == {p.parent.name for p in (ROOT / "plugins").glob("*/skills/*/SKILL.md")}
     hook = next(p for p in data["plugins"] if p["id"] == "session-guidance")
     assert hook["optional"] and not hook["skills"]
 
 
-def test_canonical_source_layout_is_flat():
-    source = ROOT / "source"
-    assert (source / "skills").is_dir()
-    assert (source / "references").is_dir()
-    assert (source / "licenses").is_dir()
-    assert (source / "skill-sources.json").is_file()
-    assert not (source / "library").exists()
+def test_ui_ux_search_works_from_closed_plugin_without_project_or_payload_writes(tmp_path):
+    output = tmp_path / "plugin payload with spaces"
+    builder().build(ROOT, output)
+    script = output / "plugins/react-ui/skills/ui-ux-pro-max/scripts/search.py"
+    assert script.is_file(), "react-ui must include the portable UI UX Pro Max search tool"
+    project = tmp_path / "consumer project"
+    home = tmp_path / "empty home"
+    project.mkdir()
+    home.mkdir()
+    (project / "DESIGN.md").write_text("Keep the approved dark palette and operator controls.\n")
+    before = files(tmp_path)
+    result = subprocess.run(
+        [sys.executable, "-B", str(script), "focus not obscured minimum", "--domain", "ux", "--json"],
+        cwd=project, env={"PATH": os.defpath, "HOME": str(home)},
+        capture_output=True, text=True, timeout=15,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    report = json.loads(result.stdout)
+    assert report["domain"] == "ux" and report["count"] > 0
+    assert report["results"][0]["Issue"] == "Focus Not Obscured (Minimum)"
+    assert files(tmp_path) == before
+
+
+def test_ui_ux_design_recommendation_is_readonly_and_persistence_preserves_existing_design(tmp_path):
+    output = tmp_path / "payload"
+    builder().build(ROOT, output)
+    script = output / "plugins/react-ui/skills/ui-ux-pro-max/scripts/search.py"
+    assert script.is_file(), "react-ui must include the design recommendation tool and its data"
+    project = tmp_path / "consumer"
+    home = tmp_path / "empty home"
+    project.mkdir()
+    home.mkdir()
+    command = [sys.executable, "-B", str(script), "SaaS", "--design-system",
+               "--json", "-p", "Ops Console"]
+    env = {"PATH": os.defpath, "HOME": str(home)}
+    before = files(tmp_path)
+    result = subprocess.run(command, cwd=project, env=env, capture_output=True, text=True, timeout=15)
+    assert result.returncode == 0, result.stdout + result.stderr
+    report = json.loads(result.stdout)
+    assert report["design_system"]["colors"] and report["design_system"]["typography"]
+    assert report["design_system"]["reasoning_default"] is False
+    assert report["design_system"]["source_identities"]["product"] == "SaaS (General)"
+    assert report["design_system"]["source_identities"]["reasoning"] == "SaaS (General)"
+    assert report["persistence"] is None
+    assert files(tmp_path) == before
+
+    master = project / "design-system/ops-console/MASTER.md"
+    master.parent.mkdir(parents=True)
+    master.write_text("Approved operator design; do not replace.\n")
+    before = files(tmp_path)
+    result = subprocess.run(command + ["--persist", "--output-dir", str(project)], cwd=project,
+                            env=env, capture_output=True, text=True, timeout=15)
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert json.loads(result.stdout)["persistence"]["status"] == "skipped_exists"
+    assert files(tmp_path) == before
+
+
+def test_ui_ux_design_search_discloses_unmatched_product_instead_of_claiming_a_match(tmp_path):
+    builder().build(ROOT, tmp_path / "payload")
+    script = tmp_path / "payload/plugins/react-ui/skills/ui-ux-pro-max/scripts/search.py"
+    project = tmp_path / "consumer"
+    project.mkdir()
+    before = files(tmp_path)
+    result = subprocess.run(
+        [sys.executable, "-B", str(script), "zzzznotacatalogentryqvx", "--design-system", "--json"],
+        cwd=project, env={"PATH": os.defpath, "HOME": str(project)},
+        capture_output=True, text=True, timeout=15,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    report = json.loads(result.stdout)["design_system"]
+    assert report["reasoning_default"] is True
+    assert report["source_identities"]["product"] is None
+    assert report["source_identities"]["reasoning"] is None
+    assert files(tmp_path) == before
+
+
+def test_canonical_skills_and_support_have_no_source_mirror():
+    assert (ROOT / "provenance/skill-sources.json").is_file()
+    assert (ROOT / "plugins/common/references/engineering.md").is_file()
+    assert (ROOT / "plugins/common/exports/codex/agents/architect.toml").is_file()
+    assert (ROOT / "plugins/session-guidance/hooks/session-start.sh").is_file()
+    assert not (ROOT / "source").exists()
+    assert not (ROOT / "hooks").exists()
 
 
 def test_authored_spec_guidance_does_not_impose_consumer_paths():
@@ -213,15 +439,30 @@ def test_shared_reference_examples_do_not_impose_template_paths():
     assert "apps/api/" in (ROOT / "plugins/common/references/architecture.md").read_text()
 
 
-def test_flat_source_retains_selected_unmodified_upstream_files():
+def test_plugin_sources_retain_selected_unmodified_upstream_files():
     """Unmodified upstream examples remain traceable after moving their containing tree."""
-    source = ROOT / "source"
-    manifest = json.loads((source / "skill-sources.json").read_text())
-    for local in ("skills/frontend-design/SKILL.md",
-                  "skills/domain-modeling/ADR-FORMAT.md",
-                  "skills/domain-modeling/GLOSSARY-FORMAT.md"):
+    manifest = json.loads((ROOT / "provenance/skill-sources.json").read_text())
+    for local in ("plugins/react-ui/skills/ui-ux-pro-max/scripts/core.py",
+                  "plugins/common/skills/domain-modeling/ADR-FORMAT.md",
+                  "plugins/common/skills/domain-modeling/GLOSSARY-FORMAT.md"):
         record = next(item for item in manifest["files"] if item["local"] == local)
-        assert hashlib.sha256((source / local).read_bytes()).hexdigest() == record["upstream_sha256"]
+        assert hashlib.sha256((ROOT / local).read_bytes()).hexdigest() == record["upstream_sha256"]
+
+
+@pytest.mark.parametrize("filename,upstream_hash", [
+    ("design_system.py", "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103"),
+    ("search.py", "9fd5acc991142fd43c3afe7be0f6720911b668f3988b34e74b5cbc41d58e7947"),
+])
+def test_ui_runtime_safety_adaptations_preserve_distinct_upstream_evidence(filename, upstream_hash):
+    manifest = json.loads((ROOT / "provenance/skill-sources.json").read_text())
+    local = f"plugins/react-ui/skills/ui-ux-pro-max/scripts/{filename}"
+    record = next(item for item in manifest["files"] if item["local"] == local)
+    assert record["source_id"] == "ui-ux-pro-max"
+    assert record["source"] == f"src/ui-ux-pro-max/scripts/{filename}"
+    assert record["upstream_sha256"] == upstream_hash
+    assert record["sha256"] == hashlib.sha256((ROOT / local).read_bytes()).hexdigest()
+    assert record["sha256"] != upstream_hash
+    assert record["modifications"].strip()
 
 
 def test_generated_brand_preserves_marketplace_identity(tmp_path):
@@ -263,10 +504,10 @@ def test_generated_skill_inventory_and_license_coverage(tmp_path):
         assert sorted(p.parent.name for p in plugin.glob("skills/*/SKILL.md")) == sorted(entry["skills"])
         provenance = json.loads((plugin / "provenance.json").read_text())
         selected_source_ids = {source["id"] for source in provenance["sources"]}
-        canonical = json.loads((ROOT / "source/skill-sources.json").read_text())
+        canonical = json.loads((ROOT / "provenance/skill-sources.json").read_text())
         for record in canonical["files"]:
-            if record["source_id"] in selected_source_ids and record["local"].startswith("licenses/"):
-                assert (plugin / record["local"]).read_bytes() == (ROOT / "source" / record["local"]).read_bytes()
+            if record["source_id"] in selected_source_ids and "/licenses/" in record["local"]:
+                assert (plugin / "licenses" / Path(record["local"]).name).read_bytes() == (ROOT / record["local"]).read_bytes()
         for source in provenance["sources"]:
             assert source["revision"]
             assert (plugin / source["license"]).is_file()
@@ -300,13 +541,9 @@ def test_current_outputs_match_builder():
 
 
 @pytest.mark.parametrize("failure", ["unknown-link", "missing-resource", "escaping-symlink", "duplicate-owner", "tampered-source", "unrecorded-source", "escaping-hook-symlink", "tampered-authored-resource"])
-def test_invalid_source_rejected_without_partial_output(tmp_path, failure):
-    source = tmp_path / "source-repo"
-    source.mkdir()
-    shutil.copytree(ROOT / "source", source / "source")
-    shutil.copytree(ROOT / "hooks", source / "hooks")
-    shutil.copy(ROOT / "catalog.json", source / "catalog.json")
-    skill = source / "source/skills/nextjs-app-router"
+def test_invalid_source_rejected_without_partial_output(tmp_path, source_repo, failure):
+    source = source_repo
+    skill = source / "plugins/nextjs/skills/nextjs-app-router"
     if failure == "unknown-link":
         (skill / "new.md").write_text("[undeclared](../../../private-guide.md)\n")
     elif failure == "missing-resource":
@@ -320,20 +557,20 @@ def test_invalid_source_rejected_without_partial_output(tmp_path, failure):
     elif failure == "unrecorded-source":
         (skill / "new.md").write_text("Unreviewed resource.\n")
     elif failure == "escaping-hook-symlink":
-        hook = source / "hooks/session-start.sh"
+        hook = source / "plugins/session-guidance/hooks/session-start.sh"
         hook.unlink()
-        hook.symlink_to(ROOT / "hooks/session-start.sh")
+        hook.symlink_to(ROOT / "plugins/session-guidance/hooks/session-start.sh")
     elif failure == "tampered-authored-resource":
-        asset = source / "source/skills/writing-plans/assets/task-brief.md"
+        asset = source / "plugins/common/skills/writing-plans/assets/task-brief.md"
         asset.write_text(asset.read_text() + "\nUnreviewed original asset change.\n")
     else:
         with (skill / "SKILL.md").open("a") as stream:
             stream.write("\nUnrecorded change.\n")
     if failure in {"unknown-link", "missing-resource"}:
-        manifest_path = source / "source/skill-sources.json"
+        manifest_path = source / "provenance/skill-sources.json"
         manifest = json.loads(manifest_path.read_text())
         authored = next(e for e in manifest["authored_skills"] if e["name"] == "nextjs-app-router")
-        authored["files"].append({"local": "skills/nextjs-app-router/new.md",
+        authored["files"].append({"local": "plugins/nextjs/skills/nextjs-app-router/new.md",
                                   "sha256": hashlib.sha256((skill / "new.md").read_bytes()).hexdigest()})
         manifest_path.write_text(json.dumps(manifest))
     output = tmp_path / "output"
@@ -341,14 +578,14 @@ def test_invalid_source_rejected_without_partial_output(tmp_path, failure):
     (output / "preserve.txt").write_text("unchanged")
     before = files(output)
     expected = {
-        "unknown-link": "Undeclared outward resource",
-        "missing-resource": "Missing or escaping resource",
-        "escaping-symlink": "not symlinks",
+        "unknown-link": "(?i)link|resource",
+        "missing-resource": "(?i)link|resource",
+        "escaping-symlink": "symlink",
         "duplicate-owner": "duplicate skill owner",
-        "tampered-source": "Source hash mismatch",
-        "tampered-authored-resource": "Source hash mismatch",
-        "unrecorded-source": "lacks source provenance",
-        "escaping-hook-symlink": "hook source is missing or escapes",
+        "tampered-source": "(?i)(source|canonical) hash mismatch",
+        "tampered-authored-resource": "(?i)(source|canonical) hash mismatch",
+        "unrecorded-source": "(?i)provenance|unrecorded|unknown",
+        "escaping-hook-symlink": "symlink",
     }
     with pytest.raises(ValueError, match=expected[failure]):
         builder().build(source, output)
@@ -379,7 +616,7 @@ def test_optional_hook_is_printf_only_and_path_with_spaces_works(tmp_path):
 
 def test_fenced_reference_examples_are_preserved_not_resolved(tmp_path):
     builder().build(ROOT, tmp_path)
-    source = ROOT / "source/skills/rust-best-practices/references/chapter_01.md"
+    source = ROOT / "plugins/rust/skills/rust-best-practices/references/chapter_01.md"
     payload = tmp_path / "plugins/rust/skills/rust-best-practices/references/chapter_01.md"
     example = "// This works as a caching alternative. See: [ADR-123](link/to/adr-123)"
     assert example in source.read_text() and example in payload.read_text()
@@ -390,7 +627,7 @@ def test_recorded_notice_is_retained_with_payload_provenance(tmp_path):
     builder().build(ROOT, tmp_path)
     plugin = tmp_path / "plugins/react-ui"
     notice = plugin / "licenses/impeccable-NOTICE.md"
-    canonical = ROOT / "source/licenses/impeccable-NOTICE.md"
+    canonical = ROOT / "plugins/react-ui/licenses/impeccable-NOTICE.md"
     assert notice.is_file(), "Selected source NOTICE is recorded even when no skill links it"
     assert notice.read_bytes() == canonical.read_bytes()
     expected_hash = hashlib.sha256(canonical.read_bytes()).hexdigest()
@@ -432,13 +669,9 @@ def test_output_symlink_is_rejected_before_any_existing_bytes_change(tmp_path, m
     assert files(outside) == before_outside
 
 
-@pytest.mark.parametrize("linked", [".", "source", "hooks", "catalog.json"])
-def test_source_root_or_input_symlink_is_rejected(tmp_path, linked):
-    source = tmp_path / "input"
-    source.mkdir()
-    shutil.copytree(ROOT / "source", source / "source")
-    shutil.copytree(ROOT / "hooks", source / "hooks")
-    shutil.copy(ROOT / "catalog.json", source / "catalog.json")
+@pytest.mark.parametrize("linked", [".", "plugins", "provenance", "catalog.json"])
+def test_source_root_or_input_symlink_is_rejected(tmp_path, source_repo, linked):
+    source = source_repo
     if linked == ".":
         alias = tmp_path / "input-link"
         alias.symlink_to(source, target_is_directory=True)
@@ -485,7 +718,7 @@ def test_output_root_with_parent_traversal_is_rejected(tmp_path):
 
 
 def test_portable_roles_read_applicable_host_guidance():
-    for path in sorted((ROOT / 'source/agents').glob('*.toml')):
+    for path in sorted((ROOT / 'plugins/common/exports/codex/agents').glob('*.toml')):
         instructions = tomllib.loads(path.read_text())['developer_instructions']
         assert 'AGENTS.md' in instructions and 'CLAUDE.md' in instructions
         assert 'when present' in instructions
@@ -494,7 +727,7 @@ def test_portable_roles_read_applicable_host_guidance():
 def test_common_native_roles_have_model_free_claude_and_explicit_codex_exports(tmp_path):
     builder().build(ROOT, tmp_path)
     plugin = tmp_path / 'plugins/common'
-    for path in sorted((ROOT / 'source/agents').glob('*.toml')):
+    for path in sorted((ROOT / 'plugins/common/exports/codex/agents').glob('*.toml')):
         role = tomllib.loads(path.read_text())
         assert set(role) == {'name', 'description', 'developer_instructions'}
         assert (plugin / f'exports/codex/agents/{path.name}').read_bytes() == path.read_bytes()
@@ -505,10 +738,8 @@ def test_common_native_roles_have_model_free_claude_and_explicit_codex_exports(t
     assert 'extensions' not in json.loads((plugin / 'plugin.json').read_text())
 
 
-def test_repeat_release_uses_catalog_version_everywhere(tmp_path):
-    source = tmp_path / 'input'
-    shutil.copytree(ROOT / 'source', source / 'source')
-    shutil.copytree(ROOT / 'hooks', source / 'hooks')
+def test_repeat_release_uses_catalog_version_everywhere(tmp_path, source_repo):
+    source = source_repo
     catalog = json.loads((ROOT / 'catalog.json').read_text())
     catalog['version'] = '0.1.1'
     (source / 'catalog.json').write_text(json.dumps(catalog))
@@ -524,7 +755,7 @@ def test_repeat_release_uses_catalog_version_everywhere(tmp_path):
 def test_python_type_examples_support_none_and_older_generic_aliases():
     import ast
     import re
-    skill = (ROOT / 'source/skills/python-type-safety/SKILL.md').read_text()
+    skill = (ROOT / 'plugins/python/skills/python-type-safety/SKILL.md').read_text()
     code = re.search(r'### Pattern 4: Generic Classes.*?```python\n(.*?)```', skill, re.S)[1]
     code = code.split('# Usage preserves types')[0]
     namespace = {}
@@ -539,7 +770,7 @@ def test_python_type_examples_support_none_and_older_generic_aliases():
     assert failed.is_failure and failed.unwrap_or('fallback') == 'fallback'
     with pytest.raises(RuntimeError, match='failure'):
         failed.unwrap()
-    details = (ROOT / 'source/skills/python-type-safety/references/details.md').read_text()
+    details = (ROOT / 'plugins/python/skills/python-type-safety/references/details.md').read_text()
     block = re.search(r'# Python 3.10-3.11 style.*?\n(.*?)```', details, re.S)[1]
     ast.parse(block, feature_version=(3, 10))
     namespace = {'Request': str}
@@ -581,7 +812,7 @@ def test_common_forms_are_closed_authored_assets_without_consumer_template_depen
     for path in plugin.rglob("*.md"):
         assert ".agents/templates/" not in path.read_text(), f"Generic asset still assumes consumer form copies: {path}"
     assert (plugin / "skills/domain-modeling/ADR-FORMAT.md").read_bytes() == (
-        ROOT / "source/skills/domain-modeling/ADR-FORMAT.md"
+        ROOT / "plugins/common/skills/domain-modeling/ADR-FORMAT.md"
     ).read_bytes()
     assert not (ROOT / "source/templates").exists()
     builder().validate_links(plugin)

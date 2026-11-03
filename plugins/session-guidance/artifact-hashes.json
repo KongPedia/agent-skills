@@ -2,12 +2,12 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "c98d2c6ceb2e1db5507e88f39488afcc2a63a0bbc2022c3af6b39c6632931223",
+    ".claude-plugin/plugin.json": "0dff9f611315d6363919a917f26be3f6451634ecada45298e9217a9e369d06bc",
     "DEPENDENCIES.md": "d1206a0651c58b49869c1ac0d0b3c96cbd03c53fb90ad1869f5429f889d6bf29",
     "THIRD-PARTY-NOTICES.md": "3698a9968535067cbb6d3ce46dbe94deae4d3f177e29b049de8bec93dfe821c5",
     "hooks/hooks.json": "c45209c413df92692681d6c333bed209e4684c442f3bf2e4ecbf35541fd2598c",
     "hooks/session-start.sh": "3ffb7d401bc7d92285dc9a0966d39b30515a955fe9eb1356bbf1b86dcdd2b030",
-    "plugin.json": "a6c8cf7270417b15bd48daf4504de64c6a9236e0344abe557a62582a363c4c9f",
-    "provenance.json": "3dfb58192e03e5e2b2038e62a58d899acd58b9588abf5c1f84c1186c4e34e9fa"
+    "plugin.json": "bcde9ec524122fd731f5ce290e002f39c9413b85076df076537db96177f31bfa",
+    "provenance.json": "b72641919273bdd7aed599ba10f29488cee818fa2f1aa17b86050915e328357f"
   }
 }

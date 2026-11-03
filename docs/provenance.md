@@ -1,90 +1,116 @@
-# Source provenance and closed payloads
+# Canonical provenance and closed plugin payloads
 
-The canonical library began at `source/.agents` with the reviewed Project Blueprints reusable skill/resource snapshot;
-it now resides under `source/`. Copier bootstrap
-instructions are not a shared skill. The canonical inventory is now 41 procedures with retained immutable upstream and
-derivation records. The initial extraction was uncommitted; do not invent a source Git revision. Historical extraction
-byte-equality counts are not a current blanket preservation claim after later recorded changes.
+The canonical library began at the historical `source/.agents` path with a reviewed Project Blueprints
+skill/resource snapshot. It later used `source/skills`; those paths are retained only in historical derivation
+evidence. The current 42 skill trees live once under their owner `plugins/<bundle>/skills/` directories.
+The initial extraction was uncommitted; do not invent a Git revision for it. Historical byte-equality counts
+are not a current blanket preservation claim after later reviewed adaptations.
 
-Existing imported skill trees were not rewritten when the full development, architecture and robotics references moved
-into `source/.agents/references/` (now `source/references/`). Three authored skill routing links changed and
-their local hashes were recorded.
-The complete shared references remain canonical here; generated products keep local contracts, not copied manuals.
+Copier bootstrap instructions belong to `project-blueprints`. Generated products keep real contracts, commands,
+specs and ADRs, not copied shared skill bodies or methodology manuals.
 
-## One source, generated adapters
+## Canonical inputs and generated destinations
 
-Edit canonical source only, review its existing upstream/local changes and update the recorded local SHA-256 when
-that adaptation changes. Keep the immutable original upstream hash and derivation history. A source hash mismatch
-stops the build. Version/bundle ownership lives in `catalog.json`; plugin payloads and marketplace JSON are regenerated.
+[`provenance/skill-sources.json`](../provenance/skill-sources.json) is the central v2 ledger. Its `local` file paths
+and source license pointers are repository-relative, not relative to this document or a removed source folder.
+Imported records retain their immutable repository, revision, upstream path/hash and existing derivation evidence.
+The local `sha256` records independently reviewed canonical bytes. Preparation checks it; preparation does not
+update it to approve whatever it finds.
 
-The builder performs a finite, explicit transformation:
+Canonical inputs have explicit owners:
 
-1. Copy every file in each selected skill tree; never replace a procedure with a summary.
-2. Keep same-bundle skill links local and include their actual resource targets.
-3. Replace cross-bundle skill links with stable `bundle:skill` identities and a selection note. The target procedure
-   stays under its one canonical owner; dependencies are explicit composition metadata, not silently installed.
-4. Replace declared project-context links—README, routing, local structure/specs/ADRs and other
-   declared contextual lookups—with explicit lookups in the **consuming repository**. They do not assert every project
-   has that file; inspect current authority and native manifests instead of borrowing template assumptions.
-5. Include canonical engineering/Rust/C++ and full development/architecture/robotics references when reached by the
-   selected procedures. Close their packaged references with the same rules; do not replace worked cases with summaries.
-6. Include every recorded license/NOTICE file for each selected imported source, preserving bytes. Reject undeclared outward references,
-   missing resources, absolute local paths and symlinks. Preflight every managed destination and its ancestors,
-   including existing plugin-tree nodes, before reading or replacing output; reject wrong path types as well.
+- Every skill body, asset, script and data file belongs to one `plugins/<bundle>/skills/<skill>/` tree.
+- Common owns shared engineering, development and architecture references. Rust, C++ firmware and Robotics own
+  their respective domain references. The ledger identifies each canonical reference path.
+- Each imported license/NOTICE has one designated canonical plugin owner. Other packages receive required copies.
+- Generic model-free role TOMLs are canonical at `plugins/common/exports/codex/agents/*.toml`. Common's Claude
+  `agents/*.md` are generated adapters. The TOMLs are optional explicit Codex provisioning artifacts, not evidence
+  that Codex automatically registers plugin roles.
+- `plugins/session-guidance/hooks/session-start.sh` is the canonical printf-only advisory. Its generated
+  `hooks/hooks.json` uses native default discovery; opt-in activation and hook trust remain separate.
 
-Markdown links inside fenced code examples remain examples, not resource declarations. External documentation links
-remain external; this build checks local resource closure, not current availability or correctness of every remote URL.
+Edit the recorded canonical owner, not another bundle's generated reference/license copy, host cache or metadata.
+All canonical inputs, including promoted references, roles and the hook, need reviewed local hash evidence.
+Original organization-authored resources retain truthful origin records without invented upstream hashes or licenses.
+
+## Preparation is not a second skill tree
+
+`scripts/build_plugins.py` retains the maintainer preparation and `--check` interface. It performs finite,
+explicit work:
+
+1. Validate catalog ownership, canonical paths, reviewed hashes and source/license metadata before mutation.
+2. Read canonical skill trees without rewriting them. Same-bundle links stay local; cross-bundle skill links use
+   stable `bundle:skill` identities and selection notes. Project-context instructions are consuming-repository
+   lookups, not assertions that a particular template layout exists.
+3. Resolve shared resources from their recorded canonical owner, never from an old generated destination. Include
+   needed copies in each independent package and adapt their links for that destination bundle.
+4. Generate manifests, per-plugin provenance/hashes, notices, composition notes, marketplace indexes, Claude role
+   adapters and optional hook configuration. Preserve every recorded required license/NOTICE byte.
+5. Validate the complete staged package: missing resources, undeclared outward paths, absolute local links,
+   conflicting owners and symlinks fail. Installed Markdown must stay inside its own plugin root.
+6. Update only explicit generated destinations. Canonical input paths and generated write paths must be disjoint,
+   including canonical files inside `references/`, `licenses/`, `exports/` and `hooks/`. Never replace the whole
+   `plugins/` tree or use artifact hashes as deletion authority. Per-file atomic writes are not a whole-tree
+   transaction; verify the complete result before publication.
+
+A temporary staged payload may contain copies for validation or installation testing. It is not another
+Git-tracked authoring tree. `--check` checks prepared metadata/resource consistency without writing files.
+
+Markdown links inside fenced code examples remain examples, not resource declarations. External documentation
+links remain external; local closure checks do not establish availability or correctness of every remote URL.
 
 ## Separate hashes for separate claims
 
-Each generated `provenance.json` filters the selected source/license records and records:
+Each package's generated `provenance.json` uses plugin-relative `local` and license paths, unlike the central
+ledger's repository-relative canonical paths. It filters selected source/license records and records:
 
-- `upstream_sha256`: original upstream bytes at the immutable upstream revision;
-- `source_sha256`: reviewed canonical local bytes before portable path rewriting;
-- `payload_sha256`: actual installed bytes after transformation;
-- `canonical_source`: the traceable source path; existing derivation records stay intact.
+- `upstream_sha256`: original upstream bytes at the immutable revision;
+- `source_sha256`: reviewed canonical local bytes;
+- `payload_sha256`: actual bytes in that installed package;
+- `canonical_source`: the actual repository-relative canonical path.
 
-`artifact-hashes.json` lists every actual payload file's SHA-256 except itself. It detects stale/modified artifacts,
-not malicious source selection, runtime loading, model compliance or product safety. License evidence and source
-metadata are payload-local; no installed Markdown link relies on another plugin's cache directory or on this Git root.
+Source and payload hashes can be equal for a canonical skill installed without transformation. A shared reference
+can have different canonical and destination hashes after cross-bundle link adaptation. Existing derivation
+repository/revision/path/hash values stay historical; moving the current file does not rewrite its origin.
+
+`artifact-hashes.json` lists every actual package file's SHA-256 except itself, including canonical files. It detects
+stale or modified package bytes; it is not a write/deletion allowlist. Hash agreement does not prove safe source
+selection, runtime loading, model compliance or product safety. Every installed local resource is package-local;
+no installed Markdown link relies on another plugin's cache directory or the provider Git root.
 
 ## Licensing and distribution boundary
 
-Local/private distribution needs no public directory, but still must respect source licenses, attribution and team
-access rights. Imported sources retain their individual notices. Some original team procedures/resources do not yet
-have a selected public license. No root license or manifest-wide MIT claim is fabricated. Before public publication,
-a human must review original material licensing, upstream attribution/notice obligations, trademarks and information
-that should not be public. Local passing tests are not a legal/license clearance.
+Local/private distribution needs no public directory, but must respect source licenses, attribution and team access
+rights. Imported sources retain their individual notices. Some original team procedures/resources do not have a
+selected public license. Do not fabricate a root license or manifest-wide MIT claim. Public publication needs
+separate human review of original material, upstream obligations, trademarks and proprietary scope. Passing local
+checks is not legal/license clearance.
 
-## Current canonical additions and roles
+## Canonical additions and roles
 
-The full upstream `domain-modeling` and `python-type-safety` directories extend the original inventory to 41; pinned
-raw hashes, local adaptations and licenses are recorded beside the bodies. The Python addition has a distinct source
-identity/revision, so earlier wshobson imports are not silently reattributed. The public source audit explains exclusions.
-Engineering/Rust/C++ and the full shared development/architecture/robotics references are canonical here and packaged
-as needed, not independently maintained in the template or copied into generated project docs. They are maintained
-separately from imported skill trees; changes to shared references can affect guidance read by those skills even when
-their upstream-derived files remain byte-identical.
-Four model-free generic role TOMLs have one canonical source and generated Claude/native-Codex-export adapters.
-Exported role configuration is not evidence of Codex plugin agent registration.
+The full upstream `domain-modeling` and `python-type-safety` directories extended the earlier inventory to 41.
+Their immutable raw hashes, narrow adaptations and licenses remain recorded. Python type safety has a distinct
+source identity/revision; earlier wshobson imports are not silently reattributed.
 
-## Shared documentation versus product artifacts
+UI UX Pro Max extends the inventory to 42 under `react-ui`. Its adapted procedure, references and standard-library
+Python search/data retain immutable upstream and reviewed local hashes plus MIT evidence. Upstream installers,
+host plugin/hook setup and platform templates are excluded. Suggestions do not override product design or native
+toolchains; persistence needs explicit write scope. Historical behavior-evaluation inputs and results are unchanged.
+The local runtime adaptation propagates data-read failures instead of silently recommending defaults and rejects
+symlinked managed output paths before persistence. Its reviewed local hashes differ from the pinned upstream hashes.
 
-Complete development, architecture and robotics worked references moved from the template into canonical
-`source/references`. They retain their useful examples, with updated consuming-project links and root
-`apps`/`packages` layout examples. Common links development/architecture; Robotics links its own example.
-These are generated closed payload resources with source/payload hashes, not copied project methodology documents.
-Project specs, ADRs, ownership, commands and local policy remain project-owned artifacts.
-
+Shared development, architecture and robotics worked references retain their useful cases, with consuming-project
+lookups and layout examples. They are canonical under their owning plugin and included where needed, not independently
+maintained in the template. These references can affect guidance even when an imported skill's bytes are unchanged.
 
 ## Reusable artifact forms
 
-Common owns optional task/change forms under their existing skill `assets/` directories. Docs Sync owns one combined
+Common owns optional task/change forms in existing skill `assets/` directories. Docs Sync owns one combined
 package/folder README guide; Domain Modeling retains Matt Pocock's existing `ADR-FORMAT.md`, not a second ADR form.
-These are shared resources, not consuming-project lookups. Existing project formats and filled product records remain
-authoritative; assets do not require a document for every task or folder.
+Existing project formats and filled records remain authoritative; assets do not require a document for every task.
 
-`authored_skills` records original procedure files and their assets; `authored_resources` separately records original
-team assets attached to imported skills. Both require reviewed source hashes. They generate `authored_files` provenance
-without invented upstream hashes or licenses. Imported entrypoint adaptations retain their original upstream hashes.
-The former source `.agents/templates` mirror is removed; neither blueprint sources nor new products keep form copies.
+`authored_skills` records original procedures and assets; `authored_resources` records original supporting inputs.
+Both retain reviewed local hashes without invented upstream hashes or licenses. Canonical skill files and assets
+appear in installed `authored_files`; non-skill supporting inputs and generated adapters appear in
+`supporting_resources`. Imported files remain in `files` and retain their original upstream hashes. The former
+`.agents/templates` mirror was removed; neither blueprint sources nor new products keep another form library.

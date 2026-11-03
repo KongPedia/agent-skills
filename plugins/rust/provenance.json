@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "bundle": "rust",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "sources": [
     {
       "id": "apollo-rust-best-practices",
@@ -48,10 +48,10 @@
         "sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa"
       },
       "local": "licenses/wshobson-LICENSE",
-      "canonical_source": "source/licenses/wshobson-LICENSE",
+      "canonical_source": "plugins/common/licenses/wshobson-LICENSE",
       "source_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
       "payload_sha256": "25ee5b10745b5772693ec03702d85b7eadfd2feed5acbd677a267d1a600f6aaa",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Generated destination copy from its registered canonical owner; portable link rewriting only."
     },
     {
       "source": "plugins/systems-programming/skills/rust-async-patterns/SKILL.md",
@@ -65,10 +65,10 @@
         "sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df"
       },
       "local": "skills/rust-async-patterns/SKILL.md",
-      "canonical_source": "source/skills/rust-async-patterns/SKILL.md",
+      "canonical_source": "plugins/rust/skills/rust-async-patterns/SKILL.md",
       "source_sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
       "payload_sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source": "plugins/systems-programming/skills/rust-async-patterns/references/details.md",
@@ -82,10 +82,10 @@
         "sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d"
       },
       "local": "skills/rust-async-patterns/references/details.md",
-      "canonical_source": "source/skills/rust-async-patterns/references/details.md",
+      "canonical_source": "plugins/rust/skills/rust-async-patterns/references/details.md",
       "source_sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
       "payload_sha256": "cd8a987c59cf704b7a2145e0dea6891b10194e7304b894bd14a5692d9fdfa76d",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
@@ -99,10 +99,10 @@
         "sha256": "5857372aefe51aa520b77cb0d16ad02a898a8f7ed6f2f614d6fbadd3d76a4106"
       },
       "local": "skills/rust-best-practices/SKILL.md",
-      "canonical_source": "source/skills/rust-best-practices/SKILL.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/SKILL.md",
       "source_sha256": "0adacbf41980b03a2bb77cc6423dd115568af53b1d238b726f65e6758345af14",
       "payload_sha256": "0adacbf41980b03a2bb77cc6423dd115568af53b1d238b726f65e6758345af14",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
@@ -116,16 +116,16 @@
         "sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361"
       },
       "local": "skills/rust-best-practices/references/apollo-LICENSE.md",
-      "canonical_source": "source/skills/rust-best-practices/references/apollo-LICENSE.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/apollo-LICENSE.md",
       "source_sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
       "payload_sha256": "37fe5c19dc6b3904a11dc50b4ac4a2463625ace4d2aa3b8c417c58bd58cfb361",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
       "source": "skills/rust-best-practices/references/chapter_01.md",
       "upstream_sha256": "def0d5dc6ad2c8e143aed03c888c3f55b7f2b8f245c563e970f8fa951f7d7b52",
-      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
         "revision": "896080943c2801ee289e51a88743fead88305643",
@@ -133,10 +133,10 @@
         "sha256": "ffefea1dd08289d63036f3e587edca311e067cdea9776ec3557a80bfbbd0063b"
       },
       "local": "skills/rust-best-practices/references/chapter_01.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_01.md",
-      "source_sha256": "ffefea1dd08289d63036f3e587edca311e067cdea9776ec3557a80bfbbd0063b",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_01.md",
+      "source_sha256": "5445dc21afdbed2868f36ed0af83453003b5e251d3b0007811fe84db7e723e16",
       "payload_sha256": "5445dc21afdbed2868f36ed0af83453003b5e251d3b0007811fe84db7e723e16",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
@@ -150,16 +150,16 @@
         "sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093"
       },
       "local": "skills/rust-best-practices/references/chapter_02.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_02.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_02.md",
       "source_sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093",
       "payload_sha256": "d139267423bc30d8a1b20815c5ae4468ec9290f99283e1d10f7ce40c1b6d5093",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
       "source": "skills/rust-best-practices/references/chapter_03.md",
       "upstream_sha256": "fd673405cc1b5094d44d59eac4634e35525d7103d34b43178ee37277f392e15f",
-      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
         "revision": "896080943c2801ee289e51a88743fead88305643",
@@ -167,10 +167,10 @@
         "sha256": "5a575bb71809e110e511500e474175c60b8c088d951416624d6e0f474b71cd0f"
       },
       "local": "skills/rust-best-practices/references/chapter_03.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_03.md",
-      "source_sha256": "5a575bb71809e110e511500e474175c60b8c088d951416624d6e0f474b71cd0f",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_03.md",
+      "source_sha256": "d4804891228cbb81cb8fab8465302bddac356c2d777ba55f0261adf999b9425b",
       "payload_sha256": "d4804891228cbb81cb8fab8465302bddac356c2d777ba55f0261adf999b9425b",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
@@ -184,16 +184,16 @@
         "sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88"
       },
       "local": "skills/rust-best-practices/references/chapter_04.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_04.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_04.md",
       "source_sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88",
       "payload_sha256": "d1400798e15e25fd55f102d55e10c2b7935a0a851404f140e578102a578d9b88",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
       "source": "skills/rust-best-practices/references/chapter_05.md",
       "upstream_sha256": "fb753a7515e11c1bc84d853d8b6d3442dd810d607f2b153595248d57232b8d38",
-      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
         "revision": "896080943c2801ee289e51a88743fead88305643",
@@ -201,16 +201,16 @@
         "sha256": "117b432d821efd40fd251167f83b0deef5b1cde462d239617ac53b3e29464dfd"
       },
       "local": "skills/rust-best-practices/references/chapter_05.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_05.md",
-      "source_sha256": "117b432d821efd40fd251167f83b0deef5b1cde462d239617ac53b3e29464dfd",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_05.md",
+      "source_sha256": "2f1c8da1bab7eecb105c31575ae6e015ec2e87f3f8ed11c4a3eed25ab46bf0b3",
       "payload_sha256": "2f1c8da1bab7eecb105c31575ae6e015ec2e87f3f8ed11c4a3eed25ab46bf0b3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
       "source": "skills/rust-best-practices/references/chapter_06.md",
       "upstream_sha256": "cff0a6826a23a9c4337700757cc67f4741aa4be81cd56925601b110752d38534",
-      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
         "revision": "896080943c2801ee289e51a88743fead88305643",
@@ -218,10 +218,10 @@
         "sha256": "00c9249914e6951723c5f02a088c31ec3734da9f6fd4862631581a6683241dc6"
       },
       "local": "skills/rust-best-practices/references/chapter_06.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_06.md",
-      "source_sha256": "00c9249914e6951723c5f02a088c31ec3734da9f6fd4862631581a6683241dc6",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_06.md",
+      "source_sha256": "311f124a563f0be390e1ef5d45900f87990b3fe2f971dab57b7cfbf29b00616b",
       "payload_sha256": "311f124a563f0be390e1ef5d45900f87990b3fe2f971dab57b7cfbf29b00616b",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
@@ -235,16 +235,16 @@
         "sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2"
       },
       "local": "skills/rust-best-practices/references/chapter_07.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_07.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_07.md",
       "source_sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2",
       "payload_sha256": "e75deaa4fd0e85fa8631fc1f530cdefca7df2af8193764a3759a8ced427386b2",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
       "source": "skills/rust-best-practices/references/chapter_08.md",
       "upstream_sha256": "54c1548a28586ebb373fe508ce0d885d78bc83e579aabd89836d2a53f7129a8b",
-      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders.",
+      "modifications": "Normalize trailing whitespace and terminal newline only for repository text/whitespace checks; retain substantive handbook text, examples and fenced illustrative ADR placeholders. Plugin-owned migration: adopt the already validated installed Markdown link adaptation as canonical; upstream and prior derivation hashes remain unchanged.",
       "derivation": {
         "repository": "https://github.com/KongPedia/unitree-webrtc-rs.git",
         "revision": "896080943c2801ee289e51a88743fead88305643",
@@ -252,10 +252,10 @@
         "sha256": "847f98424297eee067aaf7634e17b55336f227783c41d28629a15bb039448e28"
       },
       "local": "skills/rust-best-practices/references/chapter_08.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_08.md",
-      "source_sha256": "847f98424297eee067aaf7634e17b55336f227783c41d28629a15bb039448e28",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_08.md",
+      "source_sha256": "893ca1f0b4bd9e0383feac48f6fb675bd02c8e6afc84575f82b9d3ac0ad91ff1",
       "payload_sha256": "893ca1f0b4bd9e0383feac48f6fb675bd02c8e6afc84575f82b9d3ac0ad91ff1",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "apollo-rust-best-practices",
@@ -269,10 +269,10 @@
         "sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344"
       },
       "local": "skills/rust-best-practices/references/chapter_09.md",
-      "canonical_source": "source/skills/rust-best-practices/references/chapter_09.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/chapter_09.md",
       "source_sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344",
       "payload_sha256": "79ca017a7c29a97bc4a765cdbb90bc95bf4444e676a1672fa77230f52fe80344",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "google-rust-styleguide",
@@ -286,10 +286,10 @@
         "sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3"
       },
       "local": "skills/rust-best-practices/references/google-rust-style-guide.md",
-      "canonical_source": "source/skills/rust-best-practices/references/google-rust-style-guide.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/google-rust-style-guide.md",
       "source_sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
       "payload_sha256": "3fe2ecf2480a594396f2c7635a9cdaaf30a01c753b47b010e05cfe2ea92987f3",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "google-rust-styleguide",
@@ -303,10 +303,10 @@
         "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
       },
       "local": "skills/rust-best-practices/references/google-styleguide-LICENSE.md",
-      "canonical_source": "source/skills/rust-best-practices/references/google-styleguide-LICENSE.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/google-styleguide-LICENSE.md",
       "source_sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
       "payload_sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     },
     {
       "source_id": "google-rust-styleguide",
@@ -320,42 +320,46 @@
         "sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33"
       },
       "local": "skills/rust-best-practices/references/google-styleguide-licensing.md",
-      "canonical_source": "source/skills/rust-best-practices/references/google-styleguide-licensing.md",
+      "canonical_source": "plugins/rust/skills/rust-best-practices/references/google-styleguide-licensing.md",
       "source_sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33",
       "payload_sha256": "775a3f7231221ec544713622fdbb74ac8150eed763dc77b7a81a22d246024d33",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     }
   ],
   "authored_files": [],
   "supporting_resources": [
     {
+      "origin": "Existing repository-maintained shared references, model-free role TOMLs and printf-only advisory hook, relocated unchanged from the pre-migration working snapshot. No new upstream identity or blanket license is assigned.",
       "local": "references/architecture.md",
-      "canonical_source": "source/references/architecture.md",
+      "canonical_source": "plugins/common/references/architecture.md",
       "source_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
       "payload_sha256": "511944c98aa891cd877bdcfb3d22655ffd14d613746e17163b6d27ab47248012",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Generated destination copy from its registered canonical owner; portable link rewriting only."
     },
     {
+      "origin": "Existing repository-maintained shared references, model-free role TOMLs and printf-only advisory hook, relocated unchanged from the pre-migration working snapshot. No new upstream identity or blanket license is assigned.",
       "local": "references/development.md",
-      "canonical_source": "source/references/development.md",
+      "canonical_source": "plugins/common/references/development.md",
       "source_sha256": "cf10af03b16c19faec5635256ff56e07ae0a2a3dbc8e38097fb04a360674d868",
       "payload_sha256": "7238d8f61ae74b4fc63161b320a82d746e311aed387832f03aea25b91153e5c1",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Generated destination copy from its registered canonical owner; portable link rewriting only."
     },
     {
+      "origin": "Existing repository-maintained shared references, model-free role TOMLs and printf-only advisory hook, relocated unchanged from the pre-migration working snapshot. No new upstream identity or blanket license is assigned.",
       "local": "references/engineering.md",
-      "canonical_source": "source/references/engineering.md",
+      "canonical_source": "plugins/common/references/engineering.md",
       "source_sha256": "109d0a535695c1bb8d2fb6a938e94e664852eb5029df9f3d6900ee38c2733418",
       "payload_sha256": "4843e65ffc4118364719c6c2124aa68c8788e046c134c1b44e9089987c0f8c57",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Generated destination copy from its registered canonical owner; portable link rewriting only."
     },
     {
+      "origin": "Existing repository-maintained shared references, model-free role TOMLs and printf-only advisory hook, relocated unchanged from the pre-migration working snapshot. No new upstream identity or blanket license is assigned.",
       "local": "references/rust.md",
-      "canonical_source": "source/references/rust.md",
+      "canonical_source": "plugins/rust/references/rust.md",
       "source_sha256": "1e29e965373669a64795466cee98307bc511f375c214e0bc771dd69e0b36ceda",
       "payload_sha256": "1e29e965373669a64795466cee98307bc511f375c214e0bc771dd69e0b36ceda",
-      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
     }
   ],
-  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the installed file. No hash proves runtime invocation or adherence."
 }
