@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "marketplace": "konglabs-agent-skills",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": "https://github.com/KongPedia/agent-skills.git",
   "publication_status": "Public Git repository; imported source notices apply; no blanket license selected for original material.",
   "plugins": [
@@ -59,7 +59,8 @@
         "vercel-composition-patterns",
         "frontend-design",
         "impeccable",
-        "web-design-guidelines"
+        "web-design-guidelines",
+        "ui-ux-pro-max"
       ],
       "requires": [
         "typescript"

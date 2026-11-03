@@ -23,7 +23,8 @@ required language or runtime for skill consumers.
 
 Tasks declare selected bundles, canonical `bundle:skill` IDs, runtime modules, allowed file changes and named checks.
 The negative control is deliberate, not Copier's normal Python-profile selection. These six tasks do not cover all
-41 skills. Checkers stay outside the agent's writable workspace.
+42 current skills, including UI UX Pro Max, or UI design quality. Historical reports retain their frozen skill inputs
+and denominators. Checkers stay outside the agent's writable workspace.
 
 ## Default: existing-login model, isolated grader
 
@@ -57,10 +58,10 @@ Output must be new. Omit `--task` for all six or repeat it for selected IDs. `--
 pairs; paired arms stay sequential and alternate order across trials. There are no automatic trial retries.
 
 Both arms receive identical task prompts, model, medium reasoning, initial fixture and wall-time budget. Candidate
-copies complete generated bundle snapshots to `.agents/skills/<bundle>/`, preserving resources/references and
+copies complete prepared plugin snapshots to `.agents/skills/<bundle>/`, preserving resources/references and
 namespaces for native project-local loading. There is no candidate-only “use this skill” prompt. `vanilla` supplies no
 project skills; a reviewed prior checkout can replace it for version comparisons. Evaluated payloads are actual
-`plugins/` bytes, not unbuilt source edits. Do not overwrite global plugin caches or user-registered sources.
+`plugins/` bytes, including canonical skills and their prepared closed-package resources. Do not overwrite global plugin caches or user-registered sources.
 
 The runner disables inventoried ambient skills by exact `SKILL.md` paths, including resolved aliases, not directories
 or names. The inspected host used 56 selectors. Native instructions remain enabled; the experimental discovery-skip

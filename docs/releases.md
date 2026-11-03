@@ -10,10 +10,12 @@ publication and this document grant none. Record actual GitHub publication/CI re
 
 ## One source, one release version
 
-1. Edit canonical procedures/resources or roles, not generated `plugins/`. Preserve upstream revisions/licenses and
-   separately record reviewed local changes. Keep stable plugin identities after first publication.
+1. Edit canonical plugin skills or the resource owner in `provenance/skill-sources.json`, not generated destination
+   copies or metadata. Preserve immutable upstream/derivation evidence and licenses, review local hashes separately,
+   and keep stable plugin identities after first publication.
 2. Update `catalog.json` version and matching `pyproject.toml`; run `uv lock` **without** `--upgrade` and review pins.
-3. Rebuild plugins, run locked pytest and builder `--check`, then review artifact/provenance/license diffs. Release
+3. Prepare generated metadata/resources, run locked pytest and preparation `--check`, then review canonical,
+   artifact/provenance and license diffs. Preparation must not rewrite canonical skills, role TOMLs or the hook. Release
    notes name changed triggers, compatibility, hook changes, observed checks and omitted host/session evidence.
 4. With release authorization, commit and tag the reviewed commit as immutable `vX.Y.Z`. The existing private first release
    uses `v0.1.0`; it does not authorize a future release. Validation rejects a
@@ -29,7 +31,7 @@ not a copy of the source inventory. Changes to that contract need coordinated co
 ## Host updates
 
 Projects normally emit activation flags only and use the index already registered on each host. A local index follows
-its accessible checkout and reviewed generated artifacts; it has no imaginary Git channel. When using a Git source,
+its accessible checkout and reviewed ready-to-install plugin files; it has no imaginary Git channel. When using a Git source,
 a reviewed moving `stable` channel can advance shared updates without editing every project selection. Immutable refs
 are an explicit freeze. Neither source choice is a per-project installed-version lock when hosts share identity/cache.
 
@@ -41,8 +43,8 @@ version is not a reliable installed-payload update. An already enabled bundle ke
 
 | Registered source ref | What a host refresh can receive |
 | --- | --- |
-| `main` | The reviewed current `main` commit, including a rebuilt `0.1.1` release |
-| Team-maintained moving `stable` | `0.1.1` only after the team advances that channel |
+| `main` | The reviewed current `main` commit and its prepared plugin version |
+| Team-maintained moving `stable` | A reviewed release only after the team advances that channel |
 | Immutable `v0.1.0` or commit | The same frozen payload; a new version elsewhere does not retarget it |
 
 For a **new** host registration that deliberately follows `main`:
@@ -75,7 +77,7 @@ installed payloads. Selection/routing changes and the first migration from custo
 reviewed product changes; a host refresh never retires those local files. Shared provider releases also do not require
 a template version bump merely because skill bodies changed.
 
-For local Codex sources, rebuild reviewed artifacts/version, follow the selected-install/refresh flow and inspect
+For local Codex sources, prepare reviewed metadata/resources and version, follow the selected-install/refresh flow and inspect
 installed metadata; Git marketplace upgrade is not a local-checkout publication mechanism.
 
 For Claude, refresh both the listing and each selected installed plugin, then reload/start a new session. These are
@@ -108,7 +110,7 @@ manual migration from old draft templates; no automatic destructive retirement i
 ## Validation workflow
 
 `.github/workflows/validate.yml` limits its built-in token to read-only permissions and uses immutable action SHAs. It runs locked tests, deterministic
-artifact checks and tag/catalog/package/lock agreement; it does not publish, deploy, grant trust or contact hardware.
+metadata/resource checks and tag/catalog/package/lock agreement; it does not publish, deploy, grant trust or contact hardware.
 The optional cross-repository job runs only on trusted pushes to the configured branches/release tags. An unset
 `BLUEPRINTS_CONTRACT_REF` or any pull request (including forks) skips that layer: **not verified**, not a passing contract.
 Ordinary repository validation still runs on pull requests. Do not change this to a privileged PR trigger to expose

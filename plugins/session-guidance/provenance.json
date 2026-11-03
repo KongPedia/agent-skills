@@ -1,10 +1,19 @@
 {
   "schema_version": 1,
   "bundle": "session-guidance",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "sources": [],
   "files": [],
   "authored_files": [],
-  "supporting_resources": [],
-  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence."
+  "supporting_resources": [
+    {
+      "origin": "Existing repository-maintained shared references, model-free role TOMLs and printf-only advisory hook, relocated unchanged from the pre-migration working snapshot. No new upstream identity or blanket license is assigned.",
+      "local": "hooks/session-start.sh",
+      "canonical_source": "plugins/session-guidance/hooks/session-start.sh",
+      "source_sha256": "3ffb7d401bc7d92285dc9a0966d39b30515a955fe9eb1356bbf1b86dcdd2b030",
+      "payload_sha256": "3ffb7d401bc7d92285dc9a0966d39b30515a955fe9eb1356bbf1b86dcdd2b030",
+      "transformation": "Canonical plugin-owned bytes; no rewriting."
+    }
+  ],
+  "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; payload_sha256 is the installed file. No hash proves runtime invocation or adherence."
 }

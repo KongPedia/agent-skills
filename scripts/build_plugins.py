@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Build closed plugin payloads from reviewed source; never touch agent host configuration."""
+"""Prepare closed plugins from plugin-owned canonical files; never touch agent host configuration."""
 from __future__ import annotations
 
 import argparse
 from copy import deepcopy
 import hashlib
 import json
+import os
 from pathlib import Path
 import posixpath
 import re
-import shutil
 import tempfile
 import tomllib
 from urllib.parse import unquote, urlsplit
@@ -24,14 +24,6 @@ SEMVER = re.compile(
     r"(?:\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?"
     r"(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
 )
-# These are consuming-project contracts, not files installed from a plugin cache.
-PROJECT_CONTEXT = {
-    "README.md": ".agents/README.md",
-    "../README.md": "README.md",
-    "../docs/adr/README.md": "docs/adr/README.md",
-    "../docs/specs/README.md": "docs/specs/README.md",
-    "../docs/structure.md": "docs/structure.md",
-}
 PORTABLE_REFERENCES = {
     f"references/{name}.md"
     for name in ("engineering", "rust", "cpp-firmware", "development", "architecture", "robotics")
@@ -89,10 +81,27 @@ def markdown_parts(text: str):
             yield True, line
 
 
+def plugin_path(relative: str, ids: set[str]) -> tuple[str, str]:
+    if (not isinstance(relative, str) or relative.startswith("/") or "\\" in relative
+            or posixpath.normpath(relative) != relative):
+        raise ValueError(f"Provenance source path is not canonical: {relative}")
+    parts = relative.split("/")
+    if len(parts) < 3 or parts[0] != "plugins" or parts[1] not in ids:
+        raise ValueError(f"Canonical source must belong to a declared plugin: {relative}")
+    return parts[1], "/".join(parts[2:])
+
+
+def canonical_records(manifest):
+    authored = manifest["authored_skills"] + manifest.get("authored_resources", [])
+    return manifest["files"] + [record for entry in authored for record in entry["files"]]
+
+
 def load_source(root: Path):
-    for path in (root, root / "source", root / "hooks", root / "catalog.json"):
+    for path in (root, root / "plugins", root / "provenance", root / "provenance/skill-sources.json", root / "catalog.json"):
         if path.is_symlink():
             raise ValueError(f"Canonical source root/input must not be a symlink: {path}")
+    if (root / "source").exists() or (root / "hooks").exists():
+        raise ValueError("Legacy source/ or hooks/ authoring trees must be migrated to their plugin owners")
     catalog = json.loads((root / "catalog.json").read_text())
     if catalog.get("schema_version") != 1 or not IDENTIFIER.fullmatch(catalog.get("marketplace", "")):
         raise ValueError("Invalid catalog schema or marketplace identity")
@@ -102,6 +111,7 @@ def load_source(root: Path):
     ids = [p["id"] for p in plugins]
     if len(ids) != len(set(ids)) or any(not IDENTIFIER.fullmatch(p) for p in ids):
         raise ValueError("Invalid or duplicate plugin identity")
+    ids = set(ids)
     owners = {}
     for plugin in plugins:
         for required in plugin.get("requires", []):
@@ -111,34 +121,61 @@ def load_source(root: Path):
             if not IDENTIFIER.fullmatch(skill) or skill in owners:
                 raise ValueError(f"Invalid or duplicate skill owner: {skill}")
             owners[skill] = plugin["id"]
-    source = root / "source"
-    for path in source.rglob("*"):
+    if {p.name for p in (root / "plugins").iterdir() if p.is_dir()} != ids:
+        raise ValueError("Plugin directories differ from declared catalog identities")
+    for path in (root / "plugins").rglob("*"):
         if path.is_symlink():
-            raise ValueError(f"Canonical source must contain ordinary files, not symlinks: {path}")
-    actual = {p.name for p in (source / "skills").iterdir() if p.is_dir()}
-    if set(owners) != actual:
-        raise ValueError(f"Skill ownership differs from canonical source: {set(owners) ^ actual}")
-    manifest = json.loads((source / "skill-sources.json").read_text())
-    authored = manifest["authored_skills"] + manifest.get("authored_resources", [])
-    records = manifest["files"] + [f for entry in authored for f in entry["files"]]
+            raise ValueError(f"Canonical/plugin files must not be symlinks: {path}")
+    actual = {(plugin["id"], p.name) for plugin in plugins
+              for p in (root / "plugins" / plugin["id"] / "skills").glob("*") if p.is_dir()}
+    expected = {(owner, name) for name, owner in owners.items()}
+    if actual != expected:
+        raise ValueError(f"Skill ownership differs from canonical source: {expected ^ actual}")
+    manifest = json.loads((root / "provenance/skill-sources.json").read_text())
+    if manifest.get("version") != 2:
+        raise ValueError("Canonical provenance must use repository-relative version 2 paths")
+    records = canonical_records(manifest)
+    recorded = set()
+    shared = {}
     for record in records:
         relative = record["local"]
-        if relative.startswith("/") or posixpath.normpath(relative) != relative or "\\" in relative:
-            raise ValueError(f"Provenance source path is not canonical: {relative}")
-        path = source / relative
-        if not path.resolve().is_relative_to(source.resolve()) or not path.is_file():
-            raise ValueError(f"Missing or escaping provenance source: {record['local']}")
+        pid, target = plugin_path(relative, ids)
+        if relative in recorded:
+            raise ValueError(f"Duplicate canonical provenance source: {relative}")
+        recorded.add(relative)
+        if target.startswith("skills/"):
+            if len(target.split("/")) < 3 or owners.get(target.split("/")[1]) != pid:
+                raise ValueError(f"Canonical skill has the wrong owner: {relative}")
+        elif target in PORTABLE_REFERENCES or target.startswith("licenses/"):
+            if target in shared:
+                raise ValueError(f"Duplicate canonical resource owner: {target}")
+            shared[target] = relative
+        elif pid == "common" and re.fullmatch(r"exports/codex/agents/[a-z0-9-]+\.toml", target):
+            pass
+        elif relative != "plugins/session-guidance/hooks/session-start.sh":
+            raise ValueError(f"Resource is not declared canonical: {relative}")
+        path = root / relative
+        if not path.resolve().is_relative_to(root.resolve()) or not path.is_file():
+            raise ValueError(f"Missing or escaping provenance source: {relative}")
         if digest(path.read_bytes()) != record["sha256"]:
-            raise ValueError(f"Source hash mismatch: {record['local']}; review and record local adaptation first")
-    recorded = {record["local"] for record in records}
-    for path in (source / "skills").rglob("*"):
-        if path.is_file() and path.relative_to(source).as_posix() not in recorded:
-            raise ValueError(f"Skill resource lacks source provenance: {path.relative_to(source)}")
-    hook = root / "hooks/session-start.sh"
-    if hook.is_symlink() or not hook.resolve().is_relative_to(root.resolve()) or not hook.is_file():
-        raise ValueError("Optional hook source is missing or escapes this repository")
-    for name in owners:
-        entry = (source / f"skills/{name}/SKILL.md").read_text()
+            raise ValueError(f"Source hash mismatch: {relative}; review and record local adaptation first")
+    for plugin in plugins:
+        for path in (root / "plugins" / plugin["id"] / "skills").rglob("*"):
+            if path.is_file() and path.relative_to(root).as_posix() not in recorded:
+                raise ValueError(f"Skill resource lacks source provenance: {path.relative_to(root)}")
+    hook = "plugins/session-guidance/hooks/session-start.sh"
+    if "session-guidance" in ids and hook not in recorded:
+        raise ValueError("Optional hook source lacks reviewed canonical provenance")
+    source_ids = [entry["id"] for entry in manifest["sources"]]
+    if len(source_ids) != len(set(source_ids)):
+        raise ValueError("Duplicate imported source identity")
+    for source in manifest["sources"]:
+        if source["license"] not in recorded:
+            raise ValueError(f"Missing canonical license evidence: {source['id']}")
+    if any(record["source_id"] not in source_ids for record in manifest["files"]):
+        raise ValueError("Imported file has an unknown source identity")
+    for name, owner in owners.items():
+        entry = (root / "plugins" / owner / "skills" / name / "SKILL.md").read_text()
         if not re.search(rf"^name:\s*{re.escape(name)}\s*$", entry, re.MULTILINE):
             raise ValueError(f"Skill frontmatter name differs from its canonical identity: {name}")
     return catalog, owners, manifest
@@ -146,12 +183,16 @@ def load_source(root: Path):
 
 def render(root: Path) -> dict[str, bytes]:
     catalog, owners, manifest = load_source(root)
-    source = root / "source"
-    output: dict[str, bytes] = {}
+    ids = {entry["id"] for entry in catalog["plugins"]}
+    records = {record["local"]: record for record in canonical_records(manifest)}
+    resources = {plugin_path(path, ids)[1]: path for path in records
+                 if plugin_path(path, ids)[1] in PORTABLE_REFERENCES
+                 or plugin_path(path, ids)[1].startswith("licenses/")}
     source_by_id = {record["id"]: record for record in manifest["sources"]}
     record_by_path = {record["local"]: record for record in manifest["files"]}
     authored = manifest["authored_skills"] + manifest.get("authored_resources", [])
     authored_by_path = {f["local"]: entry for entry in authored for f in entry["files"]}
+    output: dict[str, bytes] = {}
     for plugin in catalog["plugins"]:
         pid = plugin["id"]
         payload: dict[str, bytes] = {}
@@ -159,26 +200,28 @@ def render(root: Path) -> dict[str, bytes]:
         cross_bundles = set(plugin.get("requires", []))
         selected_sources: set[str] = set()
 
-        def destination(path: str) -> str:
-            if path.startswith("/") or posixpath.normpath(path) != path or "\\" in path:
-                raise ValueError(f"Resource path is not canonical: {path}")
-            if path.startswith("skills/"):
-                return path
-            if path in PORTABLE_REFERENCES or path.startswith("licenses/"):
-                return path
-            raise ValueError(f"Resource is not declared portable: {path}")
-
         def add(path: str) -> str:
-            dest = destination(path)
+            owner, dest = plugin_path(path, ids)
             if path in copied:
-                return dest
-            real = (source / path).resolve()
-            if not real.is_relative_to(source.resolve()) or not real.is_file():
-                raise ValueError(f"Missing or escaping resource: {path}")
-            copied[path] = dest  # Mark before recursion for same-bundle reference cycles.
-            data = real.read_bytes()
-            if real.suffix.lower() == ".md":
-                data = rewrite(data.decode(), path, dest).encode()
+                return copied[path]
+            if path not in records or (owner != pid and dest not in resources):
+                raise ValueError(f"Resource is not declared portable: {path}")
+            copied[path] = dest
+            data = (root / path).read_bytes()
+            if path.endswith(".md"):
+                text = data.decode()
+                rewritten = rewrite(text, path, dest)
+                # Only destination copies are transformed; canonical input bytes never are.
+                if owner != pid:
+                    data = rewritten.encode()
+                for prose, line in markdown_parts(data.decode()):
+                    if prose:
+                        for match in re.finditer(r"shared skill `([a-z0-9-]+):([a-z0-9-]+)`", line):
+                            bundle, skill = match.groups()
+                            if owners.get(skill) != bundle:
+                                raise ValueError(f"Unknown shared skill identity: {bundle}:{skill}")
+                            if bundle != pid:
+                                cross_bundles.add(bundle)
             payload[dest] = data
             if path in record_by_path:
                 selected_sources.add(record_by_path[path]["source_id"])
@@ -190,28 +233,26 @@ def render(root: Path) -> dict[str, bytes]:
                 return original
             relative, anchor = parsed
             target = posixpath.normpath(posixpath.join(posixpath.dirname(path), relative))
-            if target == "skill-sources.json":
-                resolved = "provenance.json"
-            elif target in PROJECT_CONTEXT:
-                target = PROJECT_CONTEXT[target]
-                suffix = f"#{anchor}" if anchor else ""
-                return (f"{label} (look up `{target}{suffix}` in the consuming repository; "
-                        "its current project guidance remains authoritative)")
-            elif target.startswith("skills/"):
-                parts = target.split("/")
+            try:
+                owner, key = plugin_path(target, ids)
+            except ValueError as error:
+                raise ValueError(f"Undeclared outward resource: {path} -> {target}") from error
+            if key.startswith("skills/"):
+                parts = key.split("/")
                 other_skill = parts[1] if len(parts) > 1 else ""
-                if other_skill not in owners:
+                if owners.get(other_skill) != owner:
                     raise ValueError(f"Unknown shared skill resource: {path} -> {target}")
-                owner = owners[other_skill]
+                if target not in records:
+                    raise ValueError(f"Missing or escaping resource: {path} -> {target}")
                 if owner != pid:
-                    if not (source / target).is_file():
-                        raise ValueError(f"Missing cross-bundle resource: {target}")
                     cross_bundles.add(owner)
                     return (f"{label} (shared skill `{owner}:{other_skill}`; select the `{owner}` "
                             "bundle when that task boundary is in scope)")
                 resolved = add(target)
-            elif target in PORTABLE_REFERENCES or target.startswith("licenses/"):
-                resolved = add(target)
+            elif key in resources:
+                resolved = add(resources[key])
+            elif key == "provenance.json":
+                resolved = key
             else:
                 raise ValueError(f"Undeclared outward resource: {path} -> {target}")
             replacement = posixpath.relpath(resolved, posixpath.dirname(dest))
@@ -220,79 +261,80 @@ def render(root: Path) -> dict[str, bytes]:
             return original.replace(raw, replacement, 1)
 
         def rewrite(text: str, path: str, dest: str) -> str:
-            # Reference definitions remain links; no current project-context definition is used.
-            def reference(m):
-                result = resolve(m[2], path, dest, m[1], m[0])
+            def reference(match):
+                result = resolve(match[2], path, dest, match[1], match[0])
                 if not result.startswith("["):
                     raise ValueError(f"Context lookup must be inline, not a link definition: {path}")
                 return result
             return "".join(
-                REFERENCE.sub(reference, INLINE.sub(lambda m: resolve(m[2], path, dest, m[1], m[0]), line))
+                REFERENCE.sub(reference, INLINE.sub(lambda match: resolve(match[2], path, dest, match[1], match[0]), line))
                 if prose else line for prose, line in markdown_parts(text)
             )
 
-        for skill in plugin["skills"]:
-            for path in sorted((source / "skills" / skill).rglob("*")):
-                if path.is_file():
-                    add(path.relative_to(source).as_posix())
-        # Preserve every recorded license/NOTICE, not only the source's primary license pointer.
+        for path in sorted(records):
+            if plugin_path(path, ids)[0] == pid:
+                add(path)
         licensed_sources = set()
         while selected_sources - licensed_sources:
             for sid in sorted(selected_sources - licensed_sources):
                 add(source_by_id[sid]["license"])
-                for record in manifest["files"]:
-                    if record["source_id"] == sid and record["local"].startswith("licenses/"):
-                        add(record["local"])
+                for path, record in record_by_path.items():
+                    if record["source_id"] == sid and plugin_path(path, ids)[1].startswith("licenses/"):
+                        add(path)
                 licensed_sources.add(sid)
         role_records = []
         if pid == "common":
-            for path in sorted((source / "agents").glob("*.toml")):
-                data = path.read_bytes()
+            for path in sorted(records):
+                owner, key = plugin_path(path, ids)
+                if owner != pid or not key.startswith("exports/codex/agents/"):
+                    continue
+                data = (root / path).read_bytes()
                 role = tomllib.loads(data.decode())
-                if set(role) != {"name", "description", "developer_instructions"} or role["name"] != path.stem:
+                stem = Path(path).stem
+                if set(role) != {"name", "description", "developer_instructions"} or role["name"] != stem:
                     raise ValueError(f"Invalid portable role: {path}")
-                export = f"exports/codex/agents/{path.name}"
-                native = f"agents/{path.stem}.md"
-                payload[export] = data
+                native = f"agents/{stem}.md"
                 payload[native] = ("---\nname: " + role["name"] + "\ndescription: "
                                    + json.dumps(role["description"]) + "\n---\n\n"
                                    + role["developer_instructions"].strip() + "\n").encode()
-                for target in (export, native):
-                    role_records.append({"local": target, "canonical_source": f"source/agents/{path.name}",
-                                         "source_sha256": digest(data), "payload_sha256": digest(payload[target]),
-                                         "transformation": "Explicit Codex export or Claude native Markdown adapter; no model or permission defaults."})
+                role_records.append({"local": native, "canonical_source": path,
+                                     "source_sha256": digest(data), "payload_sha256": digest(payload[native]),
+                                     "transformation": "Claude native Markdown adapter from canonical role TOML; no model or permission defaults."})
         filtered_sources = []
         for sid in sorted(selected_sources):
             record = deepcopy(source_by_id[sid])
             record["license"] = copied[record["license"]]
-            record["skills"] = [s for s in record["skills"] if s in plugin["skills"]]
+            record["skills"] = [skill for skill in record["skills"] if skill in plugin["skills"]]
             if "dependencies" in record:
-                record["dependencies"] = {s: deps for s, deps in record["dependencies"].items() if s in plugin["skills"]}
+                record["dependencies"] = {skill: deps for skill, deps in record["dependencies"].items() if skill in plugin["skills"]}
             filtered_sources.append(record)
         provenance_records = []
         authored_records = []
         extra_resources = []
         for path, dest in sorted(copied.items()):
-            common = {"local": dest, "canonical_source": f"source/{path}",
-                      "source_sha256": digest((source / path).read_bytes()),
+            common = {"local": dest, "canonical_source": path,
+                      "source_sha256": digest((root / path).read_bytes()),
                       "payload_sha256": digest(payload[dest]),
-                      "transformation": "Explicit portable link rewriting only; source bytes remain separately recorded."}
+                      "transformation": ("Canonical plugin-owned bytes; no rewriting."
+                                         if plugin_path(path, ids)[0] == pid else
+                                         "Generated destination copy from its registered canonical owner; portable link rewriting only.")}
             if path in record_by_path:
                 record = deepcopy(record_by_path[path])
                 record.pop("local")
                 record.pop("sha256")
                 provenance_records.append({**record, **common})
-            elif path in authored_by_path:
-                authored_records.append({"name": authored_by_path[path]["name"],
-                                         "origin": authored_by_path[path]["origin"], **common})
+            elif dest.startswith("skills/"):
+                entry = authored_by_path[path]
+                authored_records.append({"name": entry["name"], "origin": entry["origin"], **common})
             else:
-                extra_resources.append(common)
+                entry = authored_by_path[path]
+                extra_resources.append({"origin": entry["origin"], **common})
         payload["provenance.json"] = json_bytes({
             "schema_version": 1, "bundle": pid, "version": catalog["version"],
             "sources": filtered_sources, "files": provenance_records, "authored_files": authored_records,
             "supporting_resources": extra_resources + role_records,
             "note": "upstream_sha256 is upstream; source_sha256 is the reviewed canonical local source; "
-                    "payload_sha256 is the transformed installed file. No hash proves runtime invocation or adherence.",
+                    "payload_sha256 is the installed file. No hash proves runtime invocation or adherence.",
         })
         description = DESCRIPTIONS.get(pid, f"Reviewed {pid} engineering procedures")
         base = {"name": pid, "version": catalog["version"], "description": description,
@@ -311,8 +353,8 @@ def render(root: Path) -> dict[str, bytes]:
         payload["THIRD-PARTY-NOTICES.md"] = (
             f"# Third-party notices: {pid}\n\n"
             + ("Selected imported sources retain their licenses and immutable revisions in `provenance.json`:\n\n"
-               + "".join(f"- {s['id']}: {s['repository']} at `{s['revision']}`; license evidence `{s['license']}`.\n"
-                         for s in filtered_sources)
+               + "".join(f"- {source['id']}: {source['repository']} at `{source['revision']}`; license evidence `{source['license']}`.\n"
+                         for source in filtered_sources)
                if filtered_sources else "This bundle contains original organization-authored material only.\n")
             + "\nNo blanket license for organization-authored material has been selected. "
               "Public publication requires a separate license review and decision.\n"
@@ -321,22 +363,25 @@ def render(root: Path) -> dict[str, bytes]:
             payload["hooks/hooks.json"] = json_bytes({"hooks": {"SessionStart": [{"hooks": [{
                 "type": "command", "command": 'sh "${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh"',
             }]}]}})
-            payload["hooks/session-start.sh"] = (root / "hooks/session-start.sh").read_bytes()
         payload["artifact-hashes.json"] = json_bytes({"schema_version": 1, "algorithm": "sha256",
-            "files": {p: digest(data) for p, data in sorted(payload.items())}})
+            "files": {path: digest(data) for path, data in sorted(payload.items())}})
         for path, data in payload.items():
             output[f"plugins/{pid}/{path}"] = data
     output[".agents/plugins/marketplace.json"] = json_bytes({
         "name": catalog["marketplace"], "interface": {"displayName": "KongLabs Agent Skills"},
-        "plugins": [{"name": p["id"], "source": {"source": "local", "path": f"./plugins/{p['id']}"},
+        "plugins": [{"name": plugin["id"], "source": {"source": "local", "path": f"./plugins/{plugin['id']}"},
                      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
-                     "category": "Productivity"} for p in catalog["plugins"]],
+                     "category": "Productivity"} for plugin in catalog["plugins"]],
     })
     output[".claude-plugin/marketplace.json"] = json_bytes({
         "name": catalog["marketplace"], "owner": {"name": "KongLabs"},
-        "plugins": [{"name": p["id"], "source": f"./plugins/{p['id']}",
-                     "description": DESCRIPTIONS.get(p["id"], p["id"])} for p in catalog["plugins"]],
+        "plugins": [{"name": plugin["id"], "source": f"./plugins/{plugin['id']}",
+                     "description": DESCRIPTIONS.get(plugin["id"], plugin["id"])} for plugin in catalog["plugins"]],
     })
+    unknown = sorted(path.relative_to(root).as_posix() for path in (root / "plugins").rglob("*")
+                     if path.is_file() and path.relative_to(root).as_posix() not in output)
+    if unknown:
+        raise ValueError("Unknown plugin files lack canonical or generated ownership: " + ", ".join(unknown[:12]))
     return output
 
 
@@ -388,35 +433,62 @@ def validate_output_paths(output: Path) -> None:
             raise ValueError(f"Managed output tree must not contain a symlink: {path}")
 
 
+def atomic_write(path: Path, data: bytes) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=path.parent, prefix=f".{path.name}.", delete=False) as stream:
+            temporary = Path(stream.name)
+            stream.write(data)
+        temporary.chmod(0o644)
+        os.replace(temporary, path)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
 def build(root: Path, output: Path, check: bool = False) -> None:
     validate_output_paths(output)
+    if root.is_symlink():
+        raise ValueError(f"Canonical source root/input must not be a symlink: {root}")
+    same_root = root.resolve() == output.resolve()
+    if not same_root and (root.resolve().is_relative_to(output.resolve()) or output.resolve().is_relative_to(root.resolve())):
+        raise ValueError("Source/output overlap is not allowed except explicit in-place preparation")
     rendered = render(root)
-    # Validate the complete staged payload before replacing any existing generated output.
+    manifest = json.loads((root / "provenance/skill-sources.json").read_text())
+    canonical = {record["local"] for record in canonical_records(manifest)}
+    actual = {path.relative_to(output).as_posix(): path.read_bytes()
+              for path in (output / "plugins").rglob("*") if path.is_file()}
+    for relative in (".agents/plugins/marketplace.json", ".claude-plugin/marketplace.json"):
+        if (output / relative).is_file():
+            actual[relative] = (output / relative).read_bytes()
+    unknown = sorted(set(actual) - set(rendered))
+    if unknown:
+        raise ValueError("Unknown plugin/output files are not owned generated paths: " + ", ".join(unknown[:12]))
+    for relative, data in rendered.items():
+        path = output / relative
+        if path.exists() and not path.is_file():
+            raise ValueError(f"Managed output path has the wrong file type: {path}")
+        if same_root and relative in canonical and actual.get(relative) != data:
+            raise ValueError(f"Preparation would change canonical source: {relative}")
     with tempfile.TemporaryDirectory(prefix="agent-skills-build-") as temp:
         stage = Path(temp)
-        for path, data in rendered.items():
-            target = stage / path
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(data)
+        for relative, data in rendered.items():
+            path = stage / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
         for plugin in (stage / "plugins").iterdir():
             validate_links(plugin)
         if check:
-            actual = {p.relative_to(output).as_posix(): p.read_bytes() for p in (output / "plugins").rglob("*") if p.is_file()}
-            for path in (".agents/plugins/marketplace.json", ".claude-plugin/marketplace.json"):
-                if (output / path).is_file():
-                    actual[path] = (output / path).read_bytes()
             if actual != rendered:
-                changed = sorted(set(actual) ^ set(rendered) | {p for p in actual.keys() & rendered.keys() if actual[p] != rendered[p]})
+                changed = sorted(set(actual) ^ set(rendered) | {path for path in actual.keys() & rendered.keys() if actual[path] != rendered[path]})
                 raise ValueError("Generated artifacts are stale: " + ", ".join(changed[:12]))
             return
-        output.mkdir(parents=True, exist_ok=True)
-        target = output / "plugins"
-        if target.exists():
-            shutil.rmtree(target)
-        shutil.copytree(stage / "plugins", target)
-        for path in (".agents/plugins/marketplace.json", ".claude-plugin/marketplace.json"):
-            (output / path).parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(stage / path, output / path)
+        for relative, data in rendered.items():
+            if same_root and relative in canonical:
+                continue
+            if actual.get(relative) != data:
+                atomic_write(output / relative, data)
 
 
 def main() -> None:
@@ -428,7 +500,8 @@ def main() -> None:
         build(root, root, check=args.check)
     except (ValueError, KeyError, OSError) as error:
         parser.exit(1, f"error: {error}\n")
-    print("Generated plugin payloads match reviewed sources." if args.check else "Built closed plugin payloads and host catalogs.")
+    print("Plugin payloads match reviewed canonical inputs." if args.check
+          else "Prepared plugin metadata and resources without rewriting canonical inputs.")
 
 
 if __name__ == "__main__":

@@ -24,6 +24,8 @@ On working product surfaces, precision and restraint often show more craft than 
 2. Resolve a concrete component, route or surface and select the matching workflow below. A missing design
    document does not make an established product greenfield. Preserve the brief, content, behavior and visual
    identity unless redesign is actually requested.
+   For visual polish, redesign or UX/accessibility decisions, also read [UI UX Pro Max](../ui-ux-pro-max/SKILL.md)
+   and select a focused applicable search/reference; recommendations do not replace the existing product system.
 3. For editing, read [reference/craft-floor.md](reference/craft-floor.md) after direction is settled.
    Its aesthetic examples are heuristics, never authority to replace established operator layout or tokens.
 4. Inspect rendered states only when the requested scope permits browser/application execution. With source
