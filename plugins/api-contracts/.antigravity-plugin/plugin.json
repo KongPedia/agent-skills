@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "api-contracts",
+  "version": "0.1.5",
+  "description": "API and wire contract design and review",
+  "author": {
+    "name": "KongLabs"
+  }
+}

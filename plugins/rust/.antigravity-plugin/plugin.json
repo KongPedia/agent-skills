@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "rust",
+  "version": "0.1.5",
+  "description": "Rust ownership, fallibility, public modules and native checks",
+  "author": {
+    "name": "KongLabs"
+  }
+}

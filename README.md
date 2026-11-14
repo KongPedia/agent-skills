@@ -66,6 +66,7 @@ plugins/<bundle>/skills/<skill>/               # Canonical procedures/resources;
 plugins/<owner>/references/                    # Canonical shared references owned by that plugin
 plugins/<owner>/licenses/                      # Canonical license/NOTICE evidence owned by that plugin
 plugins/common/exports/codex/agents/*.toml      # Canonical generic roles; explicit Codex provisioning artifacts
+plugins/<bundle>/.antigravity-plugin/plugin.json # Generated Antigravity manifest for skill-bearing bundles
 plugins/session-guidance/hooks/session-start.sh # Canonical optional printf-only advisory
 provenance/skill-sources.json                  # Reviewed canonical paths/hashes and immutable upstream evidence
 scripts/build_plugins.py                      # Standard-library validation/preparation and --check
@@ -77,7 +78,8 @@ Each `plugins/<bundle>/` is both the authoring home and an installable package w
 skill-bearing bundles also have `skills/`. A bundle and plugin are the same installation unit here; there is no second skill tree under `source/`.
 Project-local `.agents/skills/` is a separate discovery mechanism, not a required copy of the shared skills.
 Each plugin's root `plugin.json` is the portable format; `.codex-plugin/plugin.json` is an optional Codex
-compatibility location rather than a second authored package.
+compatibility location rather than a second authored package. Skill-bearing bundles also have a generated
+`.antigravity-plugin/plugin.json` and share the same skill bodies/resources; no separate `.antigravity/` skill tree exists.
 
 Edit a canonical skill or the canonical resource owner recorded in the [v2 ledger](provenance/skill-sources.json).
 Preparation checks reviewed hashes without updating the ledger, preserves canonical files, and generates only
@@ -142,6 +144,11 @@ Plugins enabled globally remain enabled unless the trusted project's configurati
 identity. The Copier integration records true/false for every team bundle and leaves unrelated user plugins untouched.
 Installing a plugin, enabling it, trusting its hook, fresh-session discovery and correct task invocation are separate
 checks. Versions are host-managed, not independent per-repository locks.
+
+For Google Antigravity, see [local bundle installation and limits](docs/hosts.md#google-antigravity).
+This is generated packaging support, not verified Antigravity runtime behavior. In particular, Common contains
+Claude role adapters that Antigravity may discover; use the documented skills-only alternative until those roles are
+reviewed and tested. `session-guidance` has no Antigravity adapter.
 
 ## Role adapters, not invented native support
 

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "react-ui",
+  "version": "0.1.5",
+  "description": "React composition, frontend design, performance and accessibility",
+  "author": {
+    "name": "KongLabs"
+  }
+}

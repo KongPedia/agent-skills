@@ -341,6 +341,10 @@ def render(root: Path) -> dict[str, bytes]:
                 "author": {"name": "KongLabs"}}
         payload["plugin.json"] = json_bytes({"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", **base})
         payload[".claude-plugin/plugin.json"] = json_bytes(base)
+        if plugin["skills"]:
+            payload[".antigravity-plugin/plugin.json"] = json_bytes({
+                "$schema": "https://antigravity.google/schemas/v1/plugin.json", **base,
+            })
         payload["DEPENDENCIES.md"] = (
             f"# {pid}: selection and authority\n\n"
             + ("When this workflow reaches their boundary, also select these separately owned bundles: "

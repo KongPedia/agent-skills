@@ -124,6 +124,77 @@ Those TOMLs are optional explicit provisioning artifacts: Codex 0.160.0 and the 
 Use built-in Codex agents by default; custom roles require separate native `.codex/agents` provisioning. A skill's
 `agents/openai.yaml` is interface metadata, not custom-agent registration.
 
+## Google Antigravity
+
+Skill-bearing bundles include a generated `.antigravity-plugin/plugin.json`, using the existing bundle ID and catalog
+version. They reuse the same `skills/`, resources and license evidence; do not create a second `.antigravity/` tree.
+Antigravity supports this multi-provider manifest location with components at the plugin root.
+See Google's [plugin authoring guide](https://antigravity.google/docs/build-plugins/).
+
+### Local installation
+
+Use a reviewed local checkout and select each bundle explicitly. `requires` and `DEPENDENCIES.md` describe composition,
+not automatic dependency installation. The Codex/Claude marketplace indexes do not register an Antigravity marketplace.
+This repository does not document unverified GitHub monorepo-subdirectory installation syntax.
+
+The following commands follow Google's [plugin CLI documentation](https://antigravity.google/docs/plugins).
+They have not been executed against a working Antigravity CLI for this change; install the official CLI separately,
+review its version/help, and run them from this checkout only after reviewing the package:
+
+```bash
+agy plugin validate --json ./plugins/python
+agy plugin install ./plugins/python
+agy plugin list --json
+```
+
+Inspect every validation finding before installation. Multi-provider packages can warn about a shadowed root
+`plugin.json` or other tools' files. Do not suppress unknown warnings; `--strict` treats all warnings as errors.
+Native CLI validation and installation remain separate from fresh-session discovery and invocation.
+For maintainer installation tests, use disposable host configuration rather than personal settings/authentication.
+
+Google documents project plugins at `.agents/plugins/<plugin>/` and global plugins at
+`~/.gemini/config/plugins/<plugin>/`. Project-only skills use `.agents/skills/<skill>/SKILL.md`, and global skills use
+`~/.gemini/config/skills/<skill>/SKILL.md`. Use `.agents/` for new projects, not legacy `.agent/`.
+Project provisioning remains owned by the consuming project or `project-blueprints`; no Copier integration is added here.
+
+### Common roles and the skills-only alternative
+
+**Do not treat installing Common as skills-only.** Its `agents/*.md` are generated Claude adapters, and Antigravity's
+default plugin discovery can expose those files as custom agents. Their Antigravity behavior and tool/permission
+semantics have not been validated. Until reviewed and tested, prefer a skills discovery manifest for Common rather
+than installing its whole plugin. Do not infer safety restrictions from the role prose alone.
+
+Google's [customization discovery guide](https://antigravity.google/docs/customization-discovery/) supports a personal
+`~/.gemini/config/skills.json` pointing to existing skill directories. This documentation-only example loads Common
+skills without selecting its plugin-level agents; replace the absolute path and merge with any existing entries:
+
+```json
+{
+  "entries": [
+    {
+      "path": "/absolute/path/to/agent-skills/plugins/common/skills"
+    }
+  ]
+}
+```
+
+Keep the reviewed checkout available. This route follows its current files, not a separately installed version;
+review changes before refreshing. Include other required bundles explicitly, preserve existing personal configuration,
+and inspect Customizations or the CLI skill list in a fresh session to verify loaded names and paths. Then invoke a
+selected skill and verify access to its bundled references/scripts. No such Antigravity session test is claimed here.
+
+### Unsupported components and release limits
+
+- `session-guidance` intentionally has no Antigravity manifest: its existing `hooks/hooks.json` and printf-only advisory
+  are not an Antigravity hook port. No Antigravity root `hooks.json` or permission changes are added.
+- No Antigravity-specific role adapter, MCP configuration, marketplace submission or host installation is added.
+- Shared skill prose can reference host-specific tools or project paths. Packaging checks do not prove those tools
+  exist or that an Antigravity agent follows the procedure; report missing capabilities instead of inventing substitutes.
+- Replacing or refreshing an installed bundle is a host operation. Inspect the native CLI's supported update behavior,
+  source/version and installed bytes; do not edit its cache or assume a provider checkout change updated an installation.
+
+These are local packaging instructions, not a published Antigravity Marketplace listing or a release authorization.
+
 ## References and limits
 
 - [OpenAI local/private catalogs, packaging and registration](https://developers.openai.com/plugins/build/plugins#how-local-marketplaces-work)

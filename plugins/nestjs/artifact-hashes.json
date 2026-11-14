@@ -2,11 +2,12 @@
   "schema_version": 1,
   "algorithm": "sha256",
   "files": {
-    ".claude-plugin/plugin.json": "29d6d1e007664146db0c2db66aedd62bd71421986331e33d8466772973a6a3d8",
+    ".antigravity-plugin/plugin.json": "420d6df680e8f2be2c799b0fa7377ffe67f0722a727d6f2bac9e1bda20d88854",
+    ".claude-plugin/plugin.json": "e918a25b0979a278427767baa9140192a415bd419969f047cb2e20b826e12817",
     "DEPENDENCIES.md": "89491b06121d68555daf911c10aa337e90b0ae7411b3270275e3e84ee7acbc33",
     "THIRD-PARTY-NOTICES.md": "aa2160681a9939cdd7d7bcaae1ebb38846bdd964e40e9c082e707cdc5ec5bd1a",
-    "plugin.json": "91c8f87c83d5b5b62db43c8b7aa81b9ddd55d3d4c5b872b8850a868c5b3e2612",
-    "provenance.json": "3f0c716bf6112c713c796112cc52fb7e9658e6a978e4054b182c76b0dc40a20e",
+    "plugin.json": "f6d66da35529b9fa60c56272b31296d8bbca35085801c8bc1b6aa17f5dd790c6",
+    "provenance.json": "6d1cd3ea231de4ceb5dd2abd7af7a7b2e0923cb621545f4da55ea0b1cffe1db9",
     "skills/nestjs-backend/SKILL.md": "fc7a26720c1a571333fea233de04aad9240c0eec9b310e854758b7b73f109b30"
   }
 }

@@ -259,8 +259,51 @@ def test_semantic_prerelease_and_build_versions_reach_generated_manifests(tmp_pa
     output = tmp_path / "output"
     builder().build(source_repo, output)
     for plugin in catalog["plugins"]:
-        for relative in ("plugin.json", ".claude-plugin/plugin.json", "provenance.json"):
+        manifests = ["plugin.json", ".claude-plugin/plugin.json", "provenance.json"]
+        if plugin["skills"]:
+            manifests.append(".antigravity-plugin/plugin.json")
+        for relative in manifests:
             assert json.loads((output / "plugins" / plugin["id"] / relative).read_text())["version"] == version
+
+
+def test_antigravity_manifests_share_skill_payloads_and_exclude_hook_only_bundle(tmp_path):
+    builder().build(ROOT, tmp_path)
+    catalog = json.loads((ROOT / "catalog.json").read_text())
+    for entry in catalog["plugins"]:
+        plugin = tmp_path / "plugins" / entry["id"]
+        path = plugin / ".antigravity-plugin/plugin.json"
+        if not entry["skills"]:
+            assert not path.exists(), "The Claude-only advisory hook is not an Antigravity plugin"
+            assert not (plugin / "hooks.json").exists()
+            continue
+        assert path.is_file(), "Skill bundles must be installable as native Antigravity plugins"
+        manifest = json.loads(path.read_text())
+        assert manifest == {
+            "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+            **json.loads((plugin / ".claude-plugin/plugin.json").read_text()),
+        }
+        assert {p.parent.name for p in (plugin / "skills").glob("*/SKILL.md")} == set(entry["skills"])
+        assert not (plugin / ".antigravity-plugin/skills").exists()
+        hashes = json.loads((plugin / "artifact-hashes.json").read_text())["files"]
+        assert hashes[".antigravity-plugin/plugin.json"] == hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+@pytest.mark.parametrize("damage", ["deleted", "overwritten"])
+def test_antigravity_manifest_is_repaired_without_rewriting_canonical_inputs(source_repo, damage):
+    module = builder()
+    module.build(source_repo, source_repo)
+    path = source_repo / "plugins/python/.antigravity-plugin/plugin.json"
+    expected = path.read_bytes()
+    if damage == "deleted":
+        path.unlink()
+    else:
+        path.write_bytes(b"stale generated metadata\n")
+    before = canonical_input_state(source_repo)
+    with pytest.raises(ValueError, match="Generated artifacts are stale"):
+        module.build(source_repo, source_repo, check=True)
+    module.build(source_repo, source_repo)
+    assert path.read_bytes() == expected
+    assert canonical_input_state(source_repo) == before
 
 
 def test_rest_api_missing_user_emits_structured_error_details():
@@ -642,7 +685,9 @@ def test_recorded_notice_is_retained_with_payload_provenance(tmp_path):
 @pytest.mark.parametrize("check", [False, True])
 @pytest.mark.parametrize("managed", [".", ".agents", ".agents/plugins", ".agents/plugins/marketplace.json",
                                       ".claude-plugin", ".claude-plugin/marketplace.json",
-                                      "plugins", "plugins/common/plugin.json"])
+                                      "plugins", "plugins/common/plugin.json",
+                                      "plugins/common/.antigravity-plugin",
+                                      "plugins/common/.antigravity-plugin/plugin.json"])
 def test_output_symlink_is_rejected_before_any_existing_bytes_change(tmp_path, managed, check):
     output = tmp_path / "output"
     output.mkdir()

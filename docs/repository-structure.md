@@ -45,6 +45,7 @@ agent-skills/
 │   │   ├── licenses/                 # 소유 원본 또는 생성된 라이선스/NOTICE 사본
 │   │   ├── plugin.json               # 생성: portable 플러그인 manifest
 │   │   ├── .claude-plugin/plugin.json # 생성: Claude manifest
+│   │   ├── .antigravity-plugin/plugin.json # 생성: 스킬 번들의 Antigravity manifest
 │   │   ├── provenance.json           # 생성: 이 패키지 파일의 출처/변환
 │   │   ├── artifact-hashes.json      # 생성: 패키지 파일 해시
 │   │   ├── DEPENDENCIES.md           # 생성: 명시적 번들 선택 안내
@@ -67,6 +68,8 @@ agent-skills/
 
 이 지도는 모든 번들이 `skills/`, `references/`, `licenses/`를 가진다는 뜻이 아닙니다.
 예를 들어 `session-guidance`에는 스킬이 없습니다. 실제 포함 파일은 해당 패키지와 출처 기록을 확인합니다.
+`session-guidance`에는 Antigravity manifest도 없습니다. Antigravity 설치·Common 역할 어댑터의 제약은
+[호스트 안내](hosts.md#google-antigravity)를 확인합니다. 스킬 원본은 클라이언트별로 복제하지 않습니다.
 `.venv/`, `.pytest_cache/`, `.omx/` 같은 로컬 실행 산출물은 스킬 작성 원본이 아닙니다.
 
 ## 스킬·번들·프로필·스캐폴드의 차이

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "robotics",
+  "version": "0.1.5",
+  "description": "Robot/device units, clocks, authority, freshness and safety boundaries",
+  "author": {
+    "name": "KongLabs"
+  }
+}

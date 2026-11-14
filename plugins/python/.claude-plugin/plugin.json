@@ -1,6 +1,6 @@
 {
   "name": "python",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Python package, design, error, resource, async and testing procedures",
   "author": {
     "name": "KongLabs"

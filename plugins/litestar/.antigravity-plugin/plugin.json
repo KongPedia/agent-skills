@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "litestar",
+  "version": "0.1.5",
+  "description": "Litestar HTTP, dependency and lifecycle boundaries",
+  "author": {
+    "name": "KongLabs"
+  }
+}

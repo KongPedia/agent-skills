@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "nestjs",
+  "version": "0.1.5",
+  "description": "NestJS modules, providers, DTO and HTTP boundaries",
+  "author": {
+    "name": "KongLabs"
+  }
+}

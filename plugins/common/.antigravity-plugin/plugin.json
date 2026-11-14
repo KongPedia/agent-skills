@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "common",
+  "version": "0.1.5",
+  "description": "Task-scoped shared engineering, design, testing and review procedures",
+  "author": {
+    "name": "KongLabs"
+  }
+}

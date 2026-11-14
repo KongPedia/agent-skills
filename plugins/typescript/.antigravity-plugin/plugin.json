@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "typescript",
+  "version": "0.1.5",
+  "description": "TypeScript runtime, module, package and type boundaries",
+  "author": {
+    "name": "KongLabs"
+  }
+}

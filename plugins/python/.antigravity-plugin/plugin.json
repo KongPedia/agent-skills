@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "python",
+  "version": "0.1.5",
+  "description": "Python package, design, error, resource, async and testing procedures",
+  "author": {
+    "name": "KongLabs"
+  }
+}

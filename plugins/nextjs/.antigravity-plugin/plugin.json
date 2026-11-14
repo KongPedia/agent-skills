@@ -1,0 +1,9 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "nextjs",
+  "version": "0.1.5",
+  "description": "Next.js App Router, server/client, data and HTTP boundaries",
+  "author": {
+    "name": "KongLabs"
+  }
+}
